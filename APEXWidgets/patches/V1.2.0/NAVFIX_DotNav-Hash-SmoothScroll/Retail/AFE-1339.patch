@@ -1,0 +1,198 @@
+From f3a822567e76f8b5d7d00c185d3c85cff465ca0e Mon Sep 17 00:00:00 2001
+From: AlphaPoint BrianMcLendon <ap_bmclendon@AlphaPoints-MacBook-Pro.local>
+Date: Mon, 30 Apr 2018 08:13:46 -0400
+Subject: [PATCH 1/2] AFE-1304: Fixed Sidebar > Balances accordion
+ functionality
+
+---
+ sidebar.html | 19 ++++++++++++++-----
+ 1 file changed, 14 insertions(+), 5 deletions(-)
+
+diff --git a/sidebar.html b/sidebar.html
+index fa52bd1..60001f1 100644
+--- a/sidebar.html
++++ b/sidebar.html
+@@ -6,12 +6,21 @@
+     <a class="sidebar-nav-item" href="send-request.html"><i class="material-icons">send</i> Send / Request <span id="UserRequestsCount"></span></a>
+     <a class="sidebar-nav-item" href="my-accounts.html"><i class="material-icons">account_balance_wallet</i> My Accounts</a>
+     <a class="sidebar-nav-item" href="trade.html"><i class="material-icons">insert_chart</i>Trade</a>
+-    <div class="my-accounts-col sidebar-nav-item">
+-
+-        <div ap-widget='UserTable' hide-header class="ap-userTable"></div>
+-
++    <div id="accordion">
++        <div class="card">
++            <div class="card-header" id="headingThree">
++                <h5 class="mb-0">
++                    <a class="collapsed sidebar-nav-item card-header" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
++                        <i class="material-icons">account_balance</i>Balances</a>
++                </h5>
++            </div>
++            <div id="collapseThree" class="collapse">
++                <div class="my-accounts-col sidebar-nav-item">
++                    <div ap-widget='UserTable' hide-header class="ap-userTable"></div>
++                </div>
++            </div>
++        </div>
+     </div>
+-
+     <a class="sidebar-nav-item" href="deposit-withdraw.html"><i class="material-icons">account_balance</i> Deposit / Withdraw</a>
+     <a class="sidebar-nav-item" href="settings.html"><i class="material-icons">settings</i> Settings</a>
+     <a class="sidebar-nav-item" href="help.html"><i class="material-icons">help</i> Help</a>
+
+From 011af3c9cfa976f861128e3f5eed1b14b543a568 Mon Sep 17 00:00:00 2001
+From: AlphaPoint BrianMcLendon <ap_bmclendon@AlphaPoints-MacBook-Pro.local>
+Date: Mon, 30 Apr 2018 08:23:24 -0400
+Subject: [PATCH 2/2] AFE-1339: Integrated Dot-Nav Styling Fix
+
+---
+ js/script.js | 129 +++++++++++++++++++----------------------------------------
+ 1 file changed, 41 insertions(+), 88 deletions(-)
+
+diff --git a/js/script.js b/js/script.js
+index 291aa56..c96fd8e 100644
+--- a/js/script.js
++++ b/js/script.js
+@@ -42,101 +42,54 @@ $(function () {
+ // =============================================
+ // onScroll eventListener for dotNav
+ // =============================================
+-const runOnScroll = () => {
+-
+-    switch (true) {
+-        case window.location.href.indexOf("home") > -1:
+-            $(".dot-nav .active-dot").removeClass("active-dot");
+-            $(".dot-nav li a .hover-text.active-hover-text").removeClass("active-hover-text")
+-            $(".dot-nav li a[href='#home']").parent().addClass("active-dot");
+-            $(".dot-nav li a[href='#home'] > .hover-text").addClass("active-hover-text");
+-            $('.dot-nav li').css({
+-                'border-color': 'white'
+-            });
+-            $('.dot-nav a .hover-text').css({
+-                'color': 'white'
+-            });
+-            $('.nav').css({
+-                'background': 'transparent',
+-                'border-bottom': '0'
+-            });
+ 
+-            $('.logo h1').css({
+-                'color': 'white'
+-            });
+-            break;
+-        case window.location.href.indexOf("features") > -1:
+-            $(".dot-nav .active-dot").removeClass("active-dot");
+-            $(".dot-nav li a .hover-text.active-hover-text").removeClass("active-hover-text")
+-            $(".dot-nav li a[href='#features']").parent().addClass("active-dot");
+-            $(".dot-nav li a[href='#features'] > .hover-text").addClass("active-hover-text");
+-            $('.dot-nav li').css({
+-                'border-color': 'white'
+-            });
+-            $('.dot-nav a .hover-text').css({
+-                'color': 'white'
+-            });
+-            $('.nav').css({
+-                'background': 'transparent',
+-                'border-bottom': '0'
+-            });
+-
+-            $('.logo h1').css({
+-                'color': 'white'
+-            });
+-            break;
+-        case window.location.href.indexOf("about") > -1:
+-            $(".dot-nav .active-dot").removeClass("active-dot");
+-            $(".dot-nav li a .hover-text.active-hover-text").removeClass("active-hover-text")
+-            $(".dot-nav li a[href='#about']").parent().addClass("active-dot");
+-            $(".dot-nav li a[href='#about'] > .hover-text").addClass("active-hover-text");
+-            $('.dot-nav li').css({
+-                'border-color': 'white'
+-            });
+-            $('.dot-nav a .hover-text').css({
+-                'color': 'white'
+-            });
+-            $('.nav').css({
+-                'background': 'transparent',
+-                'border-bottom': '0'
+-            });
+ 
+-            $('.logo h1').css({
+-                'color': 'white'
+-            });
+-            break;
+-        case window.location.href.indexOf("contact") > -1:
+-            $(".dot-nav .active-dot").removeClass("active-dot");
+-            $(".dot-nav li a .hover-text.active-hover-text").removeClass("active-hover-text")
+-            $(".dot-nav li a[href='#contact']").parent().addClass("active-dot");
+-            $(".dot-nav li a[href='#contact'] > .hover-text").addClass("active-hover-text");
+-            $('.dot-nav li').css({
+-                'border-color': '#3b4251'
+-            });
+-            $('.dot-nav a .hover-text').css({
+-                'color': '#3b4251'
+-            });
+-            $('.nav').css({
+-                'background': '#0d141d',
+-                'border-bottom': '1px solid rgba(0, 0, 0, 0.15)'
+-            });
+-            break;
+-        default:
+-            break;
++$(window).scroll(function() {DotNavCheck();});
++$( document ).ready(function() {DotNavCheck();});
++function DotNavCheck() {
++
++    var position_C = $('#contact').offset().top,
++    position_A = $('#about').offset().top,
++    position_F = $('#features').offset().top,
++    position_H = $('#home').offset().top,
++    windowHeight = $(window).height(),
++    scrollDistance = $(document).scrollTop(),
++    offset = 58,
++    canChange = true,
++    changeThis,
++    color_border = "white",
++    color_hoverText = "white",
++    nav_background = "transparent",
++    nav_borderBottom = "0",
++    color_h1 = true;
++
++    if( scrollDistance > (position_C - ( (windowHeight/2)+ offset )) ){
++        changeThis = "contact";
++        color_border = "#3b4251";
++        color_hoverText = "#3b4251";
++        nav_background = "#0d141d";
++        nav_borderBottom = "1px solid rgba(0, 0, 0, 0.15)";
++        color_h1 = false;
++    }else if( scrollDistance > (position_A - ( (windowHeight/2)+ offset )) ){ changeThis = "about";
++    }else if( scrollDistance > (position_F - ( (windowHeight/2)+ offset )) ){ changeThis = "features";
++    }else if( scrollDistance > (position_H - ( (windowHeight/2)+ offset )) ){ changeThis = "home";
++    }else{ canChange = false; } 
++
++    if(canChange == true){
++        // console.log(changeThis+ " is in view!");
++        $(".dot-nav .active-dot").removeClass("active-dot");
++        $(".dot-nav li a .hover-text.active-hover-text").removeClass("active-hover-text");
++        $(".dot-nav li a[href='#"+changeThis+"']").parent().addClass("active-dot");
++        $(".dot-nav li a[href='#"+changeThis+"'] > .hover-text").addClass("active-hover-text");
++        $('.dot-nav li').css({'border-color': color_border });
++        $('.dot-nav a .hover-text').css({'color': color_hoverText });
++        $('.nav').css({ 'background': nav_background, 'border-bottom': nav_borderBottom });
++        if(color_h1 == true){ $('.logo h1').css({ 'color': 'white' }); }
+     }
+ }
+ 
+ $(document).ready(function () {
+ 
+-    window.addEventListener("scroll", runOnScroll);
+-
+-    // let dotNavItems = document.querySelectorAll(".dot-nav li");
+-    // // console.log(dotNavItems);
+-    // for (let dot of dotNavItems) {
+-    //     window.addEventListener("scroll", runOnScroll);
+-    //     (dotNavItems.addEventListener("click", runOnScroll);
+-    // }
+-
+     // =============================================
+     // Hamburger Menu Functionality
+     // =============================================

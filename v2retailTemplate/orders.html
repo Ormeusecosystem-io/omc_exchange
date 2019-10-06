@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+    ================================================== -->
+  <title>ORME | Orders</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Favicon -->
+  <link rel="icon" href="./images/logos/orme-fav.png">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+  <!--[if IE]><link rel="shortcut icon" href="./images/logos/orme-fav.png"><![endif]-->
+
+  <!-- Fonts
+    ================================================== -->
+  <!-- <link href='https://fonts.googleapis.com/css?family=Poppins:400,300,500,700,600|Ubuntu:300' rel='stylesheet' type='text/css'> -->
+
+  <!-- Icons
+    ================================================== -->
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+
+  <!-- Stylesheets
+    ================================================== -->
+  <link rel="stylesheet" href="assets/css/shift-styles.css">
+  <link rel="stylesheet" href="assets/css/retail/style-milan.css">
+  
+
+  <!--link rel="stylesheet" href="css/bootstrap-theme.min.css"-->
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+       body{
+        background: #3d4267;
+      }
+      .container{
+        display: flex;
+        width: 100%;
+        max-width: 1440px;
+        margin: 75px auto 40px;
+        margin-top: 75px;
+        padding: 40px 40px 0;
+        box-sizing: border-box;
+      }
+    </style>
+</head>
+
+<body>
+  <div ap-widget="Orders" hide-header></div>
+  
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108807921-7"></script>
+
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-108807921-7', 'auto');
+      ga('send', 'pageview');
+  </script>
+
+  <!-- Js Files -->
+  <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/lib/jquery.smooth-scroll.min.js"></script>
+  <script type="text/javascript" src="js/lib/slick.min.js"></script>
+  <script type="text/javascript" src="js/lib/jquery.magnific-popup.min.js"></script>
+  <script type="text/javascript" src="js/lib/jquery.waypoints.min.js"></script>
+  <script type="text/javascript" src="js/lib/inview.min.js"></script>
+  <script type="text/javascript" src="js/lib/jquery.countTo.js"></script>
+  <script type="text/javascript" src="js/lib/jquery.ajaxchimp.min.js"></script>
+  <script type="text/javascript" src="js/lib/validator.js"></script>
+
+
+
+
+  <!-- Third Party -->
+  <!-- <script src="js/lib/jquery-3.2.0.min.js"></script> -->
+  <script src="js/lib/embed.cryptowatch.js"></script>
+  <script src="js/lib/growl.js"></script>
+  <!-- <script src="js/lib/bootstrap.min.js"></script> -->
+
+  <!-- Coti -->
+  <script src="js/config.js"></script>
+  <script src="js/library.min.js"></script>
+  <script src="js/widgets.min.js"></script>
+  <script src='js/tester.js'></script>
+
+  <!-- Charting Library -->
+  <script type="text/javascript" src="libs/charting_library_new/charting_library.min.js"></script>
+  <script type="text/javascript" src="libs/charting_library_new/datafeed/udf/datafeed.js"></script>
+  <script type="text/javascript" src="libs/charting_library_new/datafeed/ChartAPI.js"></script>
+  <script src="js/lib/menu.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+      var loadCount = 0;
+      var totalLoadCount = 2; // number of html pieces loaded
+
+    // $('#menu').load('sidebar-mobile.html', runRenders);
+    // $('.sidebar').load('sidebar.html', runRenders);
+
+      function runRenders() {
+        loadCount++;
+
+        if (loadCount >= totalLoadCount) {
+          renderWidgetWrapper();
+          renderWidget();
+          renderActionWrapper();
+          renderTranslation();
+          changeLanguage();
+
+        }
+        $('#right').css('opacity','1');
+      }
+      function toggleMobileMenu(){
+          $('.menu, .menu-hamburger, .menu-hamburger span').toggleClass('open');
+      }
+
+
+    })
+  </script>
+</body>
+
+</html>

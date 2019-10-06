@@ -1,0 +1,140 @@
+.theme-docs-header {
+  margin-bottom: 20px;
+  background-image: linear-gradient($page-title-banner-deg-gradient, $page-title-banner-bg-mu, $page-title-banner-bg-omega $page-title-banner-percent);
+  .page-title {
+      @include font-styling($page-title-banner-header-font-family, $page-title-banner-header-font-size, $page-title-banner-header, $page-title-banner-header-bg);
+  }
+  h1 {
+    margin-bottom: 20px;
+  }
+}
+.inner-page {
+  h1 {
+    color: $inner-page-default-header;
+  }
+  h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  h3,
+  h4 {
+    @include font-styling($inner-page-default-header-font-family, $inner-page-default-header-font-size, $inner-page-default-text, $inner-page-default-header-bg);
+  }
+  p {
+    @include font-styling($inner-page-default-text-font-family, $inner-page-default-text-font-size, $inner-page-default-text, $inner-page-default-text-bg);
+  }
+  
+  a {
+    @include font-styling($inner-page-default-link-font-family, $inner-page-default-link-font-size, $inner-page-default-link, $inner-page-default-link-bg);
+    &:hover {
+        color: $inner-page-default-link-hover;
+        background: $inner-page-default-link-bg-hover;
+        text-decoration: underline;
+    }
+  }
+  li {
+    font-size: 14px;
+    a {
+      font-size: 14px;
+    }
+  }
+  th,
+  td {
+    font-size: 14px;
+  }
+}
+
+.customer-story-content {
+  background: $inner-page-bg;
+}
+
+.lead-in-header {
+  @include font-styling($inner-page-blurb-header-font-family, $inner-page-blurb-header-font-size, $inner-page-blurb-header, $inner-page-blurb-header-bg);
+}
+
+p.lead-in-blurb {
+  @include font-styling($inner-page-lead-in-blurb-font-family, $inner-page-lead-in-blurb-font-size, $inner-page-lead-in-blurb, $inner-page-lead-in-blurb-bg);
+  font-weight: 300;
+}
+
+// need to add class to html
+.inner-page-label {
+  @include font-styling($inner-page-label-font-family, $inner-page-label-font-size, $inner-page-label, $inner-page-label-bg);
+}
+
+// need to add class into html of pages and replace the <b> elements
+.lead-in-blurb-highlight {
+  @include font-styling($inner-page-lead-in-blurb-highlight-font-family, $inner-page-lead-in-blurb-highlight-font-size, $inner-page-lead-in-blurb-highlight, $inner-page-lead-in-blurb-highlight-bg);
+}
+
+
+.blt-item {
+  @include font-styling($inner-page-list-item-font-family, $inner-page-list-item-font-size, $inner-page-list-item, $inner-page-list-item-bg);
+  line-height: 1.2em;
+  margin-bottom: 25px;
+  padding-right: 75px;
+  position: relative;
+  &:before {
+      font-size: $inner-page-list-item-icon-size;
+      color: $inner-page-list-item-icon;
+      background: $inner-page-list-item-icon-bg;
+      // margin-left: -2em;
+      // position: absolute;
+      // display: block;
+      // top: 50%;
+      // -webkit-transform: translateY(-50%);
+      // -moz-transform: translateY(-50%);
+      // -ms-transform: translateY(-50%);
+      // transform: translateY(-50%);
+  }
+}
+
+
+.logo:visited {
+  color: #fff;
+}
+
+.about-2-intro {
+  margin: 0;
+  .lead-in-blurb {
+      line-height: 2;
+  }
+}
+
+#nav {
+  position: initial;
+}
+#footerId {
+  margin-top: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: $inner-page-footer-bg;
+  p, h5, a, span {
+    color: $inner-page-footer-color;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .login-buttons {
+    color: $inner-page-btn-color
+  }
+}
+.main-navigation-header {
+  #header-nav {
+    height: 50px;
+  }
+  .navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  .navbar-brand-logo-link {
+    .navbar-brand-logo {
+      max-height: 100%;
+    }
+  }
+  a {
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}

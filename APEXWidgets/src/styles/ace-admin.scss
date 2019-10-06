@@ -1,0 +1,75 @@
+
+html, .page-content{
+
+  background: $siteBackground;
+}
+
+// .page-content {
+//
+//   background-color: $siteBackground;
+// }
+
+.navbar .navbar-brand {
+
+  padding: 4px 12px !important;
+
+  img {
+    height: 37px;
+  }
+}
+
+.ace-nav>li.light-blue>a {
+  background-color: $headerColor;
+}
+
+#social {
+  img {
+    top: -9px;
+    height: 50px;
+    position: relative;
+  }
+}
+
+body, .sub-heading, .main-heading {
+  color: $siteTextColor !important;
+}
+
+.main-container:before {
+  background-color: $siteBackground;
+}
+
+#navbar {
+  background: $headerColor !important;
+  color: $headerTextColor !important;
+  a {
+    color: $headerTextColor;
+  }
+}
+
+.footer-content {
+  background: $footerColor !important;
+  color: $footerTextColor;
+}
+
+#sidebar {
+  background: $navBarColor;
+  color: $navBarTextColor;
+  a , a span {
+    background: $navBarColor;
+    color: $navBarTextColor;
+  }
+
+}
+
+.sidebar-toggle {
+  background-color: $navBarColor !important;
+  color: $navBarTextColor;
+  border-color: $navBarTextColor !important;
+
+  .ace-icon {
+    border-color: $navBarColor !important;
+    color: $navBarColor !important;
+    background-color: $navBarTextColor !important;
+  }
+
+}

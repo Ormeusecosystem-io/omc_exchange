@@ -1,0 +1,140 @@
+From ed27c616b61481e726976bc1031d87f74188b94d Mon Sep 17 00:00:00 2001
+From: brian mclendon <brianmclendon@brians-MacBook-Pro.local>
+Date: Wed, 9 May 2018 13:27:37 -0400
+Subject: [PATCH] AFE:1387 - Refactored and updated landing page ticker
+
+---
+ src/misc/ticker/ticker-block-pxchange.js | 58 +++++++++++++++++++++-----------
+ src/misc/ticker/ticker-block.js          | 16 ++++++++-
+ src/widgets/ticker-scrolling.js          |  2 +-
+ 3 files changed, 55 insertions(+), 21 deletions(-)
+
+diff --git a/src/misc/ticker/ticker-block-pxchange.js b/src/misc/ticker/ticker-block-pxchange.js
+index 389e4827..52fa2d7b 100644
+--- a/src/misc/ticker/ticker-block-pxchange.js
++++ b/src/misc/ticker/ticker-block-pxchange.js
+@@ -5,13 +5,13 @@ import { formatNumberToLocale } from '../../widgets/helper';
+ const downTrend = {
+     color: 'lightcoral',
+     verticalAlign: 'bottom',
+-    marginLeft: '20px'
++    marginLeft: '5px'
+ };
+ 
+ const upTrend = {
+     color: 'lightgreen',
+     verticalAlign: 'bottom',
+-    marginLeft: '20px'
++    marginLeft: '5px'
+ };
+ 
+ const TickerBlockPxChange = props => {
+@@ -29,24 +29,44 @@ const TickerBlockPxChange = props => {
+         formatNumberToLocale(pxBefore24HrChange - props.lastTradedPx, AlphaPoint.config.tickerScrollingPxChangeDecimals || 2) || '-'
+       : formatNumberToLocale(props.lastTradedPx - pxBefore24HrChange, AlphaPoint.config.tickerScrollingPxChangeDecimals || 2) || '-';
+ 
+-    return (
+-        <div className="ticker-block">
+-            <i className={`cf cf-${props.cryptoFontSuffix}`} />
+-            <p className="ticker-symbol">{props.symbol} {pxChangeDirection}
+-            <br />
+-            <span> {(props.rolling24HrPxChange < 0) && '-'}{convertedPxChange} {props.product2Symbol} | {formatNumberToLocale(props.rolling24HrPxChange, AlphaPoint.config.tickerScrollingPxChangeDecimals || 2)} %</span></p>
+-              <p className="ticker-last-trade">{props.lastTradedPx + ' '}
+-                  <span className="currency">
+-                      {props.product2Symbol}
+-                  </span></p>
+-                <p className="ticker-session-high">High:
+-                    <span className="high">{' ' + props.sessionHigh} {props.showHighSymbol && props.product2Symbol}</span>
++    if(props.lastTradedPx > 0) {
++        return (
++            <div className="ticker-block">
++                <i className={`cf cf-${props.cryptoFontSuffix}`} />
++                <p className="ticker-symbol">{props.symbol} {pxChangeDirection}</p>
++                <p className="ticker-rolling"> {(props.rolling24HrPxChange < 0) && '-'}{convertedPxChange} {props.product2Symbol} | {formatNumberToLocale(props.rolling24HrPxChange, AlphaPoint.config.tickerScrollingPxChangeDecimals || 2)}%</p>
++                <p className="ticker-last-trade">{props.lastTradedPx + ' '}
++                    <span className="currency">
++                        {props.product2Symbol}
++                    </span></p>
++                    <p className="ticker-session-high">High:
++                        <span className="high">{' ' + props.sessionHigh} {props.showHighSymbol && props.product2Symbol}</span>
++                    </p>
++                <p>
++                
+                 </p>
+-              <p>
+-            
+-            </p>
+-        </div>
+-    );
++            </div>
++        );
++    }else{
++        return (
++            <div className="ticker-block" style={{display: "none"}}>
++                <i className={`cf cf-${props.cryptoFontSuffix}`} />
++                <p className="ticker-symbol">{props.symbol} {pxChangeDirection}
++                <br />
++                <span> {(props.rolling24HrPxChange < 0) && '-'}{convertedPxChange} {props.product2Symbol} | {formatNumberToLocale(props.rolling24HrPxChange, AlphaPoint.config.tickerScrollingPxChangeDecimals || 2)} %</span></p>
++                <p className="ticker-last-trade">{props.lastTradedPx + ' '}
++                    <span className="currency">
++                        {props.product2Symbol}
++                    </span></p>
++                    <p className="ticker-session-high">High:
++                        <span className="high">{' ' + props.sessionHigh} {props.showHighSymbol && props.product2Symbol}</span>
++                    </p>
++                <p>
++                
++                </p>
++            </div>
++        );
++    }
+ };
+ 
+ 
+diff --git a/src/misc/ticker/ticker-block.js b/src/misc/ticker/ticker-block.js
+index f3413e1c..e7668595 100644
+--- a/src/misc/ticker/ticker-block.js
++++ b/src/misc/ticker/ticker-block.js
+@@ -3,7 +3,8 @@ import React from 'react';
+ import { formatNumberToLocale } from '../../widgets/helper';
+ 
+ const TickerBlock = props => {
+-    return (
++    if(props.lastTradedPx > 0) {
++        return (
+             <div className="ticker-block">
+                 <p className="ticker-symbol">{props.symbol}</p>
+                 <p className="ticker-last-trade">{props.lastTradedPx + ' '}
+@@ -14,6 +15,19 @@ const TickerBlock = props => {
+                     <span className="high">{' ' + props.sessionHigh}</span></p>
+             </div>
+         );
++    }else{
++        return (
++            <div className="ticker-block" style={{display: "none"}}>
++                <p className="ticker-symbol">{props.symbol}</p>
++                <p className="ticker-last-trade">{props.lastTradedPx + ' '}
++                    <span className="currency">
++                        {props.currencySymbol}
++                    </span></p>
++                <p className="ticker-session-high">high:
++                    <span className="high">{' ' + props.sessionHigh}</span></p>
++            </div>
++        );
++    }
+ };
+ 
+ TickerBlock.defaultProps = {
+diff --git a/src/widgets/ticker-scrolling.js b/src/widgets/ticker-scrolling.js
+index 502863fe..f163d757 100644
+--- a/src/widgets/ticker-scrolling.js
++++ b/src/widgets/ticker-scrolling.js
+@@ -35,7 +35,7 @@ class TickerScrolling extends React.Component {
+         const TickerBlock = AlphaPoint.config.tickerBlock ? this.state.tickerBlocks[AlphaPoint.config.tickerBlock] : this.state.tickerBlocks['TickerBlock'];
+                 
+         return (
+-            <div className="ticker">
++            <div className="ticker" id={this.state.instruments.length}>
+                 {this.state.instruments
+                     .map(ins => {
+                             return (

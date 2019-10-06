@@ -1,0 +1,31 @@
+.main#sign-in,
+.main#sign-up {
+  padding-top: 50px;
+  min-height: 100vh;
+  background: $sign-in-up-bg;
+  .login-home-splash-logo {
+      height: 80px;
+  }
+  .ap-header {
+      .ap-title {
+          color: $sign-in-up-header-title;
+          text-align: center;
+      }
+  }
+  .btn.underline.submit {
+      color: $sign-in-up-primary-cta-text;
+      background: $sign-in-up-primary-cta-bg;
+      border: solid 1px $sign-in-up-primary-cta-border;
+  }
+  .reset-password-button {
+      color: $sign-in-up-secondary-cta-text;
+      background: $sign-in-up-secondary-cta-bg;
+  }
+  #registerForm {
+      .clearfix>div {
+          display: block;
+          text-align: center;
+          margin: 0 auto;
+      }
+  }
+}

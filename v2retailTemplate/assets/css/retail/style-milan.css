@@ -1,0 +1,6487 @@
+*:focus {
+  outline: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0px; /*removes default style*/
+  font-family: 'Work Sans', sans-serif;
+}
+.ap-title{
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+#balances-table{
+  padding-top: 11px;
+}
+.balances-table {
+  margin-bottom: 40px;
+}
+.menu-holder{
+  width: 300px;
+  background-color: rgb(70, 75, 114);
+  padding: 23px 0 23px 20px;
+  margin-bottom: 2px;
+  box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif;
+}
+.menu-holder h4{
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+.menu-holder > ul{
+  list-style: none;
+}
+.menu-holder > ul li {
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #bfc2d7;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: flex;
+}
+.menu-holder > ul li > img{
+  margin-left: 10px;
+}
+.menu-holder > ul li:hover{
+  background-color: #50567c;
+}
+#overlay{
+  position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(61, 66, 103, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1002;
+}
+#overlay #popup{
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.1);
+  background-color: rgb(70, 75, 114);
+  width: 441px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 62px 38px 40px;
+  box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif;
+  max-width: 95%;
+}
+
+#overlay #popup.verification h2{
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+#overlay #popup.verification > p{
+  width: 420px;
+  max-width: 100%;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #9ba0be;
+  margin-bottom: 28px;
+}
+#overlay #popup.verification > div{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+#overlay #popup.verification > div > button{
+  width: 233.2px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: #0091ff;
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+  outline: none;
+}
+#overlay #popup.verification > div > button.disabled{
+  background-color: rgb(80, 85, 123);
+  cursor: not-allowed;
+}
+#overlay #popup.verification > div > span{
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #bfc2d7;
+  cursor: pointer;
+}
+#overlay #popup.verification > ul{
+  list-style: none;
+  width: 100%;
+  margin-bottom: 30px;
+}
+#overlay #popup.verification > ul > li{
+  padding: 19px 15px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(61, 66, 99, 0.5);
+  margin-bottom: 2px;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #bfc2d7;
+  position: relative;
+}
+#tooltip-trigger{
+  display: flex;
+  align-items: center;
+}
+#tooltip-trigger > img{
+  margin-left: 10px;
+}
+/* #overlay #popup.verification > ul > li #tooltip-trigger:hover ~ #tooltip{
+  display: initial;
+} */
+#overlay #popup.verification > ul > li #tooltip{
+  position: absolute;
+  width: 175px;
+  height: 103px;
+  box-shadow: 0 2px 12px 0 rgba(52, 57, 92, 0.5);
+  background-color: #60668a;
+  z-index: 100;
+  top: -104px;
+  left: 90px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+#overlay #popup.verification > ul > li #tooltip:after{
+  top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(96, 102, 138, 0);
+	border-top-color: #60668a;
+	border-width: 10px;
+	margin-left: -10px;
+}
+#overlay #popup.verification{
+  padding: 40px 25px 30px;
+  width: 540px;
+}
+
+#overlay #popup > img{
+  margin-bottom: 57px;
+}
+#overlay #popup > p {
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+#overlay #popup #actions{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+#overlay #popup #actions > button:first-child{
+  border: none;
+  background: none;
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #bfc2d7;
+  outline: none;
+  font-family: 'Work Sans', sans-serif;
+}
+#overlay #popup #actions > button:last-child{
+  width: 190px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: #0091ff;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  outline: none;
+  font-family: 'Work Sans', sans-serif;
+}
+#confirmationDisclaimer{
+  background: rgb(65, 70, 108);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #bfc2d7;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  padding: 15px;
+  box-sizing: border-box;
+  margin-bottom: 24px;
+}
+#confirmationDisclaimer > p:first-child{
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.confirmation-disclaimer-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.confirmation-disclaimer-wrapper label {
+  display: flex;
+  align-items: center;
+  margin: 0 0 20px;
+  width: 100%;
+  font-family: book;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #bfc2d7;
+  cursor: pointer;
+}
+.disclaimerConfirmationCheckboxUI {
+  display: inline-block;
+  margin: 0 16px 0 20px;
+  border: solid 1px #cad4e3;
+  transition: 0.3s background ease;
+  width: 16px;
+  height: 16px;
+}
+
+.disclaimerConfirmationCheckboxUI.checked {
+  background-color: #0091ff;
+}
+.confirmation-disclaimer-wrapper label input {
+  width: 300px;
+  height: 15px;
+  font-family: ClanOT;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+  display: none;
+}
+.column {
+  display: flex;
+  flex-direction: column; /*places the left and right headers above the bottom content*/
+}
+
+nav#mobile .menu.open{
+  z-index: 100;
+}
+
+#left {
+  position: relative;
+  flex-shrink: 0; /*makes sure that content is not cut off in a smaller browser window*/
+  border: 1px solid #ebebeb;
+}
+
+
+
+@media (max-width: 768px) {
+  #left {
+    display: none;
+  }
+}
+
+.transfer-inputs-wrapper{
+  width: 100%;
+}
+
+.otc-title, .otc-purchase-history{
+  margin-bottom: 50px;
+  font-family: book;
+  font-weight: normal;
+}
+
+.history-table{
+  width: 1040px;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+.history-table td:last-child{
+  text-transform: capitalize;
+}
+
+.table-wrapper{
+  margin: 30px 0;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 3.9px 0.1px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  width: 1100px;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+#invalid-amount{
+  font-family: book !important;
+  color: #b40403 !important;
+  font-size: 13px;
+  bottom: 12px;
+  width: 100%;
+  font-weight: bold !important;
+  position: absolute;
+  top: 95px;
+}
+
+.invalidAmountInput{
+  border: 1px solid #b40403;
+}
+
+.history-table th{
+  text-align: left;
+  padding: 22px 10px;
+  font-size: 13px;
+  color: #333333;
+  font-family: medium;
+  font-weight: normal;
+}
+
+.history-table td{
+  padding: 20px 10px;
+  color: rgb(51, 51, 51);
+  font-family: book;
+  font-size: 13px;
+}
+
+.destinationWallet{
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.history-table tr#top-table{
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+}
+
+#otc-container{
+  font-family: book;
+  font-size: 13px;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 650px;
+}
+
+#otc-container > button{
+  background-color: rgb(22, 155, 213);
+  color: #fff;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 2px;
+}
+
+.currency-input{
+  display: flex;
+} 
+
+.currency-input.discount{
+  margin-bottom: 40px;
+  justify-content: center;
+}
+
+#otc-container h2{
+  color: green;
+  font-weight: bold;
+  margin: 30px 0;
+  text-align: center;
+}
+
+#volume-table{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+#volume-table > div{
+  width: 210px;
+}
+
+#select-currency-arrow{
+  height: 6px;
+  width: 11px;
+  background-image: url(../../../images/icons/crescent-dd_12X6.svg);
+  pointer-events: none;
+  top: 22px;
+  position: absolute;
+  right: 5px;
+  background-repeat: no-repeat;
+}
+
+#volume-table h3{
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#volume-table ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#volume-table ul > li{
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+#volume-table ul.range-list > li{
+  justify-content: space-between;
+  width: 110px;
+}
+
+.currency-input input{
+  height: 50px;
+  box-sizing: border-box;
+  width: 160px;
+  text-indent: 10px;
+  background: #fff;
+  border: 1px solid rgb(179, 179, 179);
+}
+
+.inner-left .currency-input #btc-icon{
+  background-image: url("../../../images/icons/bitcoin_selected.svg");
+}
+
+#otc-container #convert-icon{
+  background-image: url("../../../images/icons/convert.png");
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 35px;
+  margin: 0 15px;
+  position: relative;
+  top: -5px;
+}
+
+#otc-container #convert-icon.rotate{
+  animation:spin 0.5s linear infinite;
+  -webkit-animation:spin 0.5s linear infinite;
+  -moz-animation:spin 0.5s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+#otc-container > .wallet-address{
+  width: 100%;
+  position: relative;
+}
+
+#otc-container > .wallet-address > input{
+  height: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  text-indent: 10px;
+  margin-bottom: 30px;
+}
+
+#otc-container #inputes-wrapper{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+#otc-container #inputes-wrapper > .inner-left .select-wrapper{
+  position: relative;
+  width: 90px;
+}
+
+#otc-container #inputes-wrapper > .inner-left .select-wrapper > .btc-icon{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("../../../images/icons/bitcoin_selected.svg");
+  background-repeat: no-repeat;
+  top: 14px;
+  left: 15px;
+  background-size: contain;
+  pointer-events: none;
+}
+
+#otc-container #inputes-wrapper > .inner-left .select-wrapper > .eth-icon{
+position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("../../../images/icons/eth_selected.svg");
+  background-repeat: no-repeat;
+  top: 15px;
+  left: 15px;
+  background-size: contain;
+  pointer-events: none;
+}
+
+.orme-icon{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("../../../images/icons/1998.png");
+  background-repeat: no-repeat;
+  top: 13px;
+  left: 15px;
+  background-size: contain;
+  pointer-events: none;
+}
+
+#otc-container #inputes-wrapper > .inner-left .select-wrapper > select{
+  height: 100%;
+  width: 100%;
+  padding-left: 40px;
+  -webkit-appearance: none;
+}
+
+#otc-container #inputes-wrapper > .inner-right, #otc-container #inputes-wrapper > .inner-left{
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  justify-content: space-between;
+  position: relative;
+}
+#otc-container .currency-input .orme-currency{
+  width: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border: 1px solid rgb(179, 179, 179);
+  box-sizing: border-box;
+  padding-left: 40px;
+  position: relative;
+}
+.transfer-inputs-wrapper > .transfer-input-holder{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 440px;
+  margin: 0 auto 40px;
+  max-width: 100%;
+}
+.transfer-inputs-wrapper > .transfer-input-holder > input{
+  width: 100%;
+  height: 48px;
+  background-color: #4e5478;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #bac0da;
+  padding: 0 10px;
+  box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif;
+}
+.transfer-inputs-wrapper > .transfer-input-holder > input::placeholder{
+  color: #bac0da;
+}
+.transfer-inputs-wrapper > .transfer-input-holder > label{
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.transfer-inputs-wrapper > .transfer-input-holder > p{
+  position: absolute;
+  color: salmon;
+  font-size: 12px;
+  bottom: -18px; 
+}
+.ap-widget.buysell{
+  margin-left: 57px;
+}
+.ap-widget.buysell h1{
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  margin: 0 0 20px 10px;
+}
+.ap-widget.buysell .inner > div{
+  background-color: rgb(70, 75, 114);
+    padding: 20px 20px 42px;
+}
+.ap-widget.buysell .row{
+  margin: 0;
+}
+.wallet-address > span{
+  position: absolute;
+  font-family: book;
+  color: #b40403;
+  font-size: 13px;
+  bottom: 12px;
+  left: 0;
+  font-weight: bold;
+}
+.custom-amount-form-inputs{
+  position: relative;
+}
+.buy-sell-boxes-custom .error{
+  position: absolute;
+  color: salmon;
+  font-size: 10px;
+  bottom: -13px;
+  left: 0;
+}
+
+.transfer-inputs-wrapper > p{
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #9ba0be;
+  margin-bottom: 20px;
+}
+.transfer-inputs-wrapper > p > span{
+  font-weight: 600;
+  color: #ffffff;
+}
+.transfer-inputs-wrapper > p.center{
+  text-align: center;
+}
+.transfer-inputs-wrapper > p#thankyou{
+  font-size: 17px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.isLoading{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: #ffffffcc;
+  z-index: 10000 ;
+  cursor: not-allowed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.transfer-button-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.transfer-button-wrapper > button#yes, .btn-action.openIframe{
+  width: 233.2px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: #0091ff;
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-action.openIframe{
+  width: 110px !important;
+}
+.account-transactions-table .ap-title, #right .ap-title{
+  display: none;
+}
+.transfer-button-wrapper > button#no{
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #bfc2d7;
+  border: none;
+    outline: none;
+    background: none;
+}
+.transfer-button-wrapper > button#yes > div{
+  background: url("../../../images/icons/buttonicons_paynow_16X16.svg");
+  width: 16px;
+  height: 16px;
+  margin-right: 9px;
+}
+
+.transfer-button-wrapper > button#no > div{
+  background: url("../../../images/icons/buttonIcon_cancel_withdraw_16X16.svg");
+  width: 16px;
+  height: 16px;
+  margin-right: 9px;
+}
+
+.close-transfer{
+  position: absolute;
+    transform: rotate(45deg);
+    top: 6px;
+    right: 10px;
+    font-size: 11px;
+    font-size: 25px;
+    font-family: auto;
+    cursor: pointer;
+}
+
+#right {
+  display: flex;
+  flex-grow: 9;
+  transition: 0.3s opacity ease-in;
+}
+.top-left {
+  flex-shrink: 0;
+}
+
+.top-right {
+  flex-shrink: 0;
+  display: inline-flex;
+}
+
+.bottom {
+  flex-grow: 1; /*ensures that the container will take up the full height of the parent container*/
+  overflow-y: auto; /*adds scroll to this container*/
+}
+
+/* SIDEBAR */
+#sidebar-logo {
+  height: 37px;
+  /* width: 122px; */
+  margin: auto;
+}
+#verifyAccount, #verifyAccountMobile{
+  background: #2DD796;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  font-family: book;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 170px;
+  font-weight: bold;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+#accountVerification{
+  font-family: book;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 20px;
+  border: none;
+  background: no-repeat;
+  cursor: default;
+  align-items: center;
+}
+#accountVerification > img{
+  margin-right: 10px;
+}
+.sidebar {
+  position: fixed;
+  font-family: book;
+  font-size: 13px;
+  line-height: 2.31;
+  text-align: left;
+  color: #333333;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  top: 0;
+  box-shadow: 0px 2px 3.9px 0.1px rgba(0, 0, 0, 0.3) !important;
+  height: 100vh;
+  z-index: 1000;
+  background: rgb(244, 247, 252);
+}
+
+.sidebar-nav-item-big {
+  display: flex;
+  height: 120px;
+  align-items: center;
+  /* margin:5px; */
+  flex-grow: 2;
+}
+.orders-title{
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  font-family: 'Work Sans', sans-serif;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+.orders-subtitle{
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  color: #bfc2d7;
+  margin-bottom: 14px;
+}
+.sidebar-nav-item {
+  display: flex;
+  height: 80px;
+  justify-content: space-around;
+  flex-grow: 1;
+  align-items: center;
+  text-decoration: none;
+  border-top: 1px solid #ebebeb;
+}
+.sidebar-nav-item.active {
+  background-color: #194aad;
+}
+
+.sidebar-nav-item span {
+  font-family: book;
+  font-size: 13px;
+  line-height: 2.31;
+  text-align: left;
+  color: #333333;
+  margin-left: 23px;
+}
+
+.tabs-main span {
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+.tabs-main span > img{
+  margin-right: 10px;
+}
+.balance-table-heading span {
+  text-align: left;
+}
+
+.sidebar-nav-item.active span {
+  color: #ffffff;
+}
+
+.sidebar-nav-item:hover {
+  background-color: #194aad;
+  font-family: book;
+  font-size: 13px;
+
+  line-height: 2.31;
+
+  text-align: left;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.menu_crescent {
+  background-image: url("../../../images/icons/menuCrescent_18X24.svg");
+  height: 24px;
+  width: 18px;
+  /* justify-self: flex-end; */
+  margin-left: auto;
+  visibility: hidden;
+}
+
+.sidebar-nav-item.active .menu_crescent,
+.sidebar-nav-item:hover .menu_crescent {
+  visibility: visible;
+}
+
+.sidebar-nav-item:hover span {
+  color: #ffffff;
+}
+
+.sidebar-icon {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+}
+
+.sidebar-nav-item:hover .sidebar-icon,
+.sidebar-nav .sidebar-nav-item.active .sidebar-icon {
+  filter: brightness(100);
+  /* transform: rotate(360deg);
+	transition: 1s all linear; */
+  /* transform: translateX(10px,10px); */
+}
+
+/* / SIDEBAR */
+
+/* Tabs Content */
+
+.site-title {
+  font-size: 24px;
+
+  color: #2bbfdf;
+  font-family: medium;
+}
+
+.transactions-history-table-body > div{
+  padding: 20px 0;
+  border-bottom: 1px solid #50567c;
+}
+
+@media (min-width: 769px) {
+  
+  .confirm-paragraph-section {
+    margin: 0 auto;
+    text-align: center;
+    font-family: book;
+    font-size: 15px;
+  }
+
+  .get-symbol-pricing {
+    display: flex;
+    justify-content: center;
+    width: initial;
+  }  
+
+  .get-symbol-pricing p {
+    width:auto !important;
+  }
+  .transaction-bottom-row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .transaction-detail {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .transactions-history-transaction-id,
+  .transactions-history-transaction-product,
+  .transactions-history-transaction-time {
+    display: none;
+  }
+
+  .ap-trades .open-button {
+    display: flex;
+  }
+  .ap-balances .open-button {
+    display: none;
+  }
+  .account-transactions-table .open-button {
+    display: flex;
+  }
+  /* .bottom-row {
+		display:none !important;
+	} */
+  .payment-method-checkboxes-desktop {
+    display: flex;
+  }
+  .payment-method-checkboxes-mobile {
+    display: none;
+  }
+}
+
+.action-verb {
+  text-transform: lowercase;
+}
+
+
+@media (max-width: 768px) {
+  .table-wrapper{
+    background-color: unset;
+    box-shadow: none;
+    padding: 0;
+  }
+  #otc-container #inputes-wrapper{
+    flex-direction: column;
+  }
+  #otc-container #convert-icon{
+    margin: 15px;
+  }
+  .destinationWallet{
+    width: unset;
+    padding-left: 20px;
+  }
+  .history-table{
+    border: 0;
+    width: unset;
+  }
+  .history-table thead{
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  .history-table tr{
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  .history-table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .6em;
+    text-align: right;
+    color: inherit;
+    padding: 15px 10px;
+  }
+  .history-table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+  }
+  
+  .history-table td:last-child {
+    border-bottom: 0;
+  }
+  #volume-table > div{
+    width: 100%;
+  }
+  #otc-container{
+    height: unset;
+  }
+  #verifyAccount, #verifyAccountMobile{
+    margin-bottom: 0;
+    margin-right: auto;
+  }
+  #right {
+    background-position: right;
+    margin-left: 0;
+    width: 100%;
+  }
+ 
+
+  .account-transactions-table .open-button {
+    /* right: -14px !important; */
+    position: relative;
+    left: 0 !important;
+  }
+
+  .ap-trades .open-button {
+    position: relative;
+  }
+
+  .sort-icon{
+    left: 0 !important;
+  }
+  .site-title {
+    font-size: 18px;
+  }
+
+  .ap-modal .pad {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: left !important;
+  }
+
+  .ap-modal .pad h3 {
+    margin-left: 5%;
+  }
+
+  .withdraw-digital .inner {
+    margin-top: 10px !important;
+  }
+  .deposit-cash > div:first-child, .ap-widget.buy > div:first-child {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    font-size: 10px;
+    border-bottom: #ebebeb 1px solid;
+    height: 59px;
+    align-items: center;
+  }
+
+  .withdraw-cash .ap-title{
+	  top:1px !important;
+	  position: relative;
+  }
+
+  .withdraw-cash > div:first-child {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    font-size: 10px;
+    border-bottom: #ebebeb 1px solid;
+    height: 59px;
+    align-items: center;
+  }
+
+  .withdraw-pad p {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  #withdraw-form-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #withdraw-form-container ul {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    padding-right: 2%;
+  }
+
+  #withdraw-form-container li {
+    padding: 0 !important;
+    justify-content: initial;
+  }
+
+  .withdraw-form-left .withdraw-cash-comment {
+    display:none;
+  }
+
+  .ap-modal .instructions p {
+    font-family: book;
+    font-size: 10px;
+    line-height: 1.54;
+    text-align: justify;
+    color: #111111;
+    width: 100%;
+  }
+
+  .right-block > div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* .payment_method_checkboxes {
+		display:none !important;
+	} */
+
+  .ap-modal .ap-header {
+    margin: 5px auto !important;
+  }
+
+  #buysell-error-modal{
+    margin: 0;
+    height: auto !important;
+    max-width: 100% !important;
+  }
+
+  #buysell-error-modal .ap-header{
+    padding: 0 5%;
+    margin: 5px 0 0 0 !important;
+  }
+
+  #buysell-error-modal .ap-header-actions-btn-close{
+    position: initial !important;
+  }
+
+  #buysell-error-modal .modal-body{
+    margin: 0 !important;
+    position: initial !important;
+  }
+
+  .ap-modal .instructions {
+    width: 100% !important;
+	border-right: 0 !important;
+	margin-top: 23px;
+  }
+
+  .ap-modal .instructions h3 {
+    font-size: 13px !important;
+    font-family: medium !important;
+  }
+
+  #content-texts .section-title {
+    font-size: 14px;
+  }
+  #content-texts p#content-description {
+    font-size: 10px;
+    width: 80%;
+  }
+}
+.section-title {
+  margin-top: 10px;
+  font-family: book;
+  font-size: 30px;
+  font-weight: normal;
+
+  line-height: 36px;
+
+  text-align: left;
+  color: #111111;
+}
+
+#content-description {
+  font-family: book;
+  font-size: 15px;
+  font-weight: normal;
+
+  line-height: 2;
+
+  text-align: left;
+  color: #111111;
+  width: 50%;
+}
+.ap-widget.deposit{
+  margin-left: 57px;
+}
+.ap-widget.deposit .ap-title{
+  display: none;
+}
+
+.settings-container > h3{
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  margin: 11px 0 0 0;
+  border: none;
+  font-family: 'Work Sans', sans-serif;
+  padding-left: 10px;
+  padding-bottom: 21px;
+  box-sizing: border-box;
+}
+#twoFA-container-expanded{
+  margin-left: 57px;
+}
+#layout{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(51, 55, 88, 0.6);
+  z-index: 1002;
+}
+#layout > #popup{
+  width: 360px;
+  height: 360px;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.1);
+  background-color: #3d4267;
+  padding: 38px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+#layout > #popup > img{
+  margin-top: 30px;
+  margin-bottom: 56px;
+}
+#layout > #popup > p{
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 58px;
+}
+#layout > #popup > button{
+  width: 190px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: #0091ff;
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  #content-texts {
+    padding: 20px 0;
+    margin: 74px 2% 0 38px;
+  }
+}
+
+.pricing-table-content p {
+  text-align: center !important;
+}
+
+
+.buy-sell-boxes-custom hr {
+  color: #ebebeb;
+  background-color: #ebebeb;
+  opacity: 0.5;
+}
+
+.re-captcha-container {
+  display: flex;
+  justify-content: center;
+}
+
+.pricing-table hr {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  color: #ebebeb;
+  background-color: #ebebeb;
+  opacity: 0.5;
+}
+
+.withdraw-cash input {
+  background-color: #f8f8f8;
+  padding-left:10px;  
+  border-bottom: #ebebeb;
+  max-width:410px;
+}
+
+.withdraw-form-right p {
+  font-size: 10px !important;
+  line-height: 2;
+  color: #333333;
+  border: none !important;
+}
+
+.withdraw-cash form p {
+  margin: 20px 0;
+  font-family: book;
+  font-size: 13px;
+  line-height: 1.54;
+  text-align: justify;
+  color: #333333;
+}
+
+.withdraw-cash form p:first-child {
+  margin-left:10px;
+  
+}
+
+.twoFA-container-expanded > div > div > p {
+  max-width: 328px;
+  width: 100%;
+  font-family: book;
+  font-size: 13px;
+  font-weight: normal;
+
+  line-height: 1.54;
+
+  text-align: justify;
+  color: #111111;
+}
+
+.ap-modal .instructions p {
+  font-family: book;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.54;
+  text-align: justify;
+  color: #111111;
+}
+
+.service-item h3 {
+  padding-bottom: 17px;
+  border-bottom: 1px solid #ebebeb;
+  width: 100%;
+  font-family: book;
+}
+
+.ap-modal .instructions h3 {
+  font-family: medium;
+  font-size: 15px;
+  line-height: 2;
+  text-align: left;
+  color: #111111;
+}
+#OrdersTable{
+  background-color: rgb(70, 75, 114);
+  padding: 0 20px;
+  padding-bottom: 42px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+#OrdersTable .expanded-data{
+  animation-name: slideDown;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  padding: 0;
+}
+
+#OrdersTable .expanded-data > ul{
+  list-style: none;
+}
+
+#OrdersTable .expanded-data > ul > li{
+  display: flex;
+  justify-content: space-between;
+  padding: 17px 10px;
+  background-color: #373c5f;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  border-bottom: 1px solid #2c3050;
+  color: #bfc2d7;
+}
+
+#OrdersTable .expanded-data > ul > li:last-child{
+  padding: 8px 0;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+#OrdersTable .expanded-data > ul > li:last-child > img{
+  transform: rotate(180deg);
+}
+#OrdersTable .header{
+  font-family: 'Work Sans', sans-serif;
+  padding-top: 25px;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  padding-bottom: 20px;
+  text-align: left;
+}
+#OrdersTable td{
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #bfc2d7;
+  padding: 20px 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #50567c;
+}
+
+.settings-accordion .row > p,
+.settings-accordion .row > div > p {
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #bfc2d7;
+  font-family: 'Work Sans', sans-serif;
+}
+
+
+.settings-accordion .row > div > p:nth-child(2) {
+  font-family: book;
+  font-size: 13px;
+  line-height: 2.31;
+  color: #333333;
+  padding: 0px 15px;
+  margin-left: 5px;
+}
+
+#content-texts p {
+  font-family: book;
+  font-weight: normal;
+  line-height: 2;
+  text-align: left;
+  max-width: 768px;
+  color: #111111; 
+}
+
+/* Balances Widget */
+#right{
+  margin-left: 57px;
+}
+#search_button {
+  margin-left: auto;
+  margin-right: 10px;
+  background-image: url("../../../images/icons/searchIcon_24X24.svg");
+  height: 24px;
+  width: 24px;
+}
+
+.balances-table #search_button {
+  display: none;
+}
+
+
+
+.transactions-header-container .header  {
+  padding-top: 25px;
+}
+
+.table-div-headings .row,
+.ap-body .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.table-div-headings .row {
+  padding: 25px 0 34px;
+  margin: 0;
+}
+.confirm-modal .ap-body .row {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.buy-sell-boxes-custom .row:last-child {
+  margin: 0 auto;
+  position: relative;
+  top: -10px;
+}
+
+#buyFixed .ap-body .row {
+  padding: initial;
+  width: 92%;
+  justify-content: space-between;
+  display: flex;
+}
+
+#buyFixed .ap-body .row:last-child,
+#buyFixed .ap-body .row:last-child .error-container,
+#buyFixed .ap-body .row:last-child .error-container .text-center {
+  width:100%;
+}
+
+#buyFixed .ap-body .row:last-child .error-container .text-center {
+  margin-top: 32px;
+}
+
+.ap-trades {
+  width: 90%;
+  margin-left: 60px;
+  flex-direction: row;
+  justify-content: space-between;
+  /* padding: 5px; */
+  flex-grow: 1;
+  display: flex;
+}
+
+.ap-trades thead {
+  border-bottom: #ebebeb 1px solid;
+}
+
+.inner .top-row {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #bfc2d7;
+    padding: 15px 0;
+    border-bottom: 1px solid #50567c;
+}
+
+.hidden-sm,
+.hidden-md,
+.hidden-lg {
+  display: none;
+}
+
+.balance-table-heading {
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+.balance-table-heading:first-child{
+  padding-left: 10px;
+}
+.balance-table-heading:first-child, .balance-table-heading:nth-child(2){
+  width: 10%;
+}
+.balance-table-heading:nth-child(4) {
+  width: 13%;
+}
+.balance-table-heading:nth-child(3){
+  width: 15%;
+}
+.balance-table-heading:nth-child(5){
+  width: 15%;
+}
+.balance-table-heading:last-child{
+  width: 37%;
+}
+.ap-balances {
+  font-family: 'Work Sans', sans-serif;
+  background-color: rgb(70, 75, 114);
+  padding: 0 10px;
+  padding-bottom: 42px;
+  box-sizing: border-box;
+}
+.ap-balances .ap-title{
+  display: none;
+}
+.header-tabs {
+  display: none;
+}
+.deposit-button img path {
+  fill: #ffffff;
+}
+
+.deposit-button{
+  width: 110px;
+  height: 30px;
+  border-radius: 3px;
+  background-color: #2dc8a6;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  font-family: 'Work Sans', sans-serif;
+  margin-right: 10px;
+}
+.transfer-button {
+  width: 110px;
+  height: 30px;
+  border-radius: 3px;
+  background-color: #0091ff;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  font-family: 'Work Sans', sans-serif;
+  margin-right: 10px;
+}
+
+.deposit-button-cancel-text {
+  margin-left:-10px;
+}
+
+.withdraw-button {
+  width: 110px;
+  height: 30px;
+  border-radius: 3px;
+  background-color: #60668a;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.balances-value {
+  display: flex;
+}
+.balances-value:first-child{
+  padding-left: 10px;
+}
+.balances-value:first-child, .balances-value:nth-child(2){
+  width: 10%;
+  display: flex;
+  align-items: center;
+}
+.balances-value:nth-child(4){
+  width: 13%;
+}
+.balances-value:nth-child(3){
+  width: 15%;
+}
+.balances-value:nth-child(5){
+  width: 15%;
+}
+
+.balances-value:nth-child(6){
+  width: 37%;
+}
+
+.btn-action {
+  display: flex;
+  border: none;
+  box-shadow: none !important;
+}
+
+.btn-action img {
+  height: 16px;
+  width: 16px;
+}
+
+.icon-USD {
+  background-image: url("../../../images/icons/coins_usd_24X24.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+}
+
+.icon-XRP {
+  background-image: url("../../../images/icons/coins_xrp_24X24.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+}
+
+.icon-BCH {
+  background-image: url("../../../images/icons/coins_bitcoinCash_24X24.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+}
+
+.icon-LTC {
+  background-image: url("../../../images/icons/coins_litecoin_24X24.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+}
+
+.tables-title {
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  font-family: 'Work Sans', sans-serif;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+.sort-icon {
+  background-repeat: no-repeat;
+  background-image: url("/img/drop2.svg");
+  height: 6px;
+  width: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.transactions-pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.pagi {
+  list-style: none;
+  display: flex;
+  width: 200px;
+  margin: 0 auto;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #bfc2d7;
+  font-family: 'Work Sans', sans-serif;
+  margin-top: 20px;
+}
+
+.pagi li {
+  cursor: pointer;
+}
+
+.pagi .active {
+  font-weight: bold;
+}
+
+
+.account-action-buttons button {
+  display: flex !important;
+  justify-content: space-evenly;
+  align-items: center;
+}
+/* / Balaces Widget */
+
+/* DEPOSIT MODAL */
+
+.ap-widget {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.table-responsive{
+  background-color: rgb(70, 75, 114);
+  padding: 0 20px;
+  padding-bottom: 42px;
+  margin-bottom: 40px;
+}
+.ap-modal .ap-widget {
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 3.9px 0.1px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  max-width:994px;
+}
+
+.ap-modal .ap-widget.transfer{
+  background-color: rgb(70, 75, 114);
+  width: 540px;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  padding: 45px 25px 30px;
+  border-radius: 0;
+  box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.ap-modal .ap-widget.transfer > .ap-body{
+  padding: 0;
+}
+
+.ap-modal .error-block {
+  font-family: bold;
+  width: 100%;
+  display: flex;
+  color: #e35959b3;
+  font-size: 14px;
+  padding-left: 5%;
+  margin-top: 10px;
+}
+
+.ap-modal .ap-title {
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 24px;
+}
+
+.ap-modal .pad {
+  display: flex;
+}
+
+.ap-modal .instructions {
+  width: 50%;
+  border-right: 1px solid #ebebeb;
+  padding-right: 20px; 
+}
+
+.ap-modal .right-block {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.payment_method_checkboxes {
+  display: none !important;
+  justify-content: space-evenly;
+  flex-direction: column;
+  z-index: 0;
+  margin-top: 15px;
+  flex-grow: 1;
+  padding-left: 0px;
+  font-family: book;
+  font-size: 13px;
+}
+
+.payment_method_checkboxes label {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  min-width: 65px !important;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.payment_method_checkboxes input {
+  display: none;
+}
+
+.radio-button {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  box-sizing: border-box;
+  border: solid 1px #2cbddf;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.radio-button-checked {
+  width: 6px;
+  height: 6px;
+  background-color: #2cbddf;
+  border-radius: 100%;
+  transition: 0.2s all ease-in;
+  display: block;
+  opacity: 0;
+}
+
+.ap-modal .cancel-button {
+  margin-top: 10px;
+}
+
+.ap-modal .btn-action {
+  text-align: center;
+  width: initial;
+}
+
+.ap-modal_inner {
+  width: 60% !important;
+  margin: 50px auto;
+}
+
+.ap-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(61, 66, 103, 0.5);
+  z-index: 1002;
+}
+
+.widthdraw-pad {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.withdraw-form-header {
+  margin-top: 40px;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.withdraw-form-title {
+  font-family: book;
+  font-size: 13px;
+  line-height: 1.54;
+  text-align: justify;
+  color: #333333;
+}
+
+#withdraw-form-container {
+  display: flex;
+}
+
+.withdraw-digital label {
+  display: none;
+}
+
+.withdraw-digital,{
+  max-width:994px;
+}
+
+.deposit .pull-right {
+  display: flex;
+  justify-content: space-between;
+}
+
+.deposit-cash .form-group label {
+  display: none;
+}
+
+#withdraw-form-container label {
+  display: none;
+}
+
+.deposit-cash .form-group label.error, .withdraw-cash .form-group label.error, .withdraw-digital .form-group label.error{
+  display: initial !important;
+  color: #b40403;
+  font-size: 10px;
+  font-weight: bold;
+  position: absolute;
+  font-family: book;
+}
+
+.withdraw-digital .form-group label.error{
+  bottom: -14px;
+}
+
+.deposit-cash .form-group label.error{
+  bottom: 1px;
+}
+
+.withdraw-cash .form-group label.error{
+  bottom: 6px;
+}
+
+
+.withdraw-digital input {
+	border: 1px solid #ebebeb;
+	padding: 9px 0;
+	border-bottom: #ebebeb solid 1px;
+	background-color: #f8f8f8;
+	padding-left: 10px !important;
+	border-top: #ebebeb 1px solid;
+}
+
+.withdraw-digital .form-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.withdraw-digital-amount-input {
+  width: 88% !important;
+  text-align: left;
+}
+
+.withdraw-digital .form-group:first-child {
+  width: auto !important;
+}
+
+.deposit-cash-form-container input,
+.deposit-cash-form-container textarea {
+  border: none;
+  background-color: #f8f8f8;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  font-family:book;
+}
+
+.deposit-cash .btn-action{
+  padding: 0 17px;
+  width: 115px;
+  justify-content: space-between;
+}
+
+.deposit-cash-form-container input {
+  border-bottom: #ebebeb 1px solid;
+  box-sizing: border-box;
+}
+
+.deposit-cash-form-container textarea {
+  resize: none;
+  border: #ebebeb 1px solid;
+}
+
+.deposit-cash-action-seperator {
+  height:1px;
+  width:100%;
+  background-color:#ebebeb;
+  margin-top:60px;
+  margin-bottom:42px;
+}
+
+.deposit-cash-action-seperator-mobile {
+  display: none;
+}
+
+.withraw-externaladdress-input input {
+  width: 100%;
+  background-color: #f8f8f8;
+}
+
+.withdraw-digital input:focus {
+  border-bottom: solid 1px #04a6caf0;
+  transition: 0.3s all ease-in;
+}
+
+.buy-sell-boxes-custom .row input {
+  padding: 5px;
+  margin-right: 20px;
+  border: none;
+}
+
+.twoFA-container-expanded > div > div > .form-group > input {
+  border: 0;
+  border-bottom: solid 1px #ebebeb;
+  width: 234px;
+  padding: 10px 5px;
+  background-color: #f8f8f8;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+}
+
+.twoFA-container-expanded > div > div > .form-group > input:focus {
+  border-bottom: solid 1px #04a6caf0;
+  transition: 0.3s all ease-in;
+}
+
+#withdraw-form-container input {
+  border: none;
+}
+
+.withdraw-form-textarea {
+  width: 100% !important;
+  padding: 5px;
+}
+
+#withdraw-form-container ul {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding-right: 2%;
+}
+
+.service-item ol li {
+  display: list-item;
+  font-family: book;
+  font-size: 13px;
+  color: #111111;
+}
+
+#withdraw-form-container li {
+  padding: 25px 0;
+  /* border-top:1px solid #ebebeb; */
+}
+
+.withdraw-cash textarea {
+  width: 100%;
+  height: 100px;
+  padding-left: 20px;
+  padding-top: 9px;
+}
+
+#withdraw-form-container input,
+#withdraw-form-container textarea {
+  font-family: book;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 2.75;
+  text-align: left;
+  color: #999999;
+}
+
+#withdraw-form-container li input {
+  border-bottom: solid 1px #ebebeb;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#twoFA .switcher input {
+  display: none;
+}
+
+#withdraw-form-container li input:focus {
+  border-bottom: solid 1px #04a6caf0;
+  transition: 0.3s all ease-in;
+}
+
+#withdraw-form-container li textarea {
+  background-color: #f8f8f8;
+  border: solid 1px #ebebeb;
+  resize: none;
+  max-width: 410px;
+  max-height: 100px;
+  height: 100%;
+  margin: 0 41px;
+  padding-left: 10px !important;
+}
+#withdraw-form-container li textarea:focus {
+  border: solid 1px #04a6caf0;
+  transition: 0.3s all ease-in;
+}
+
+#widthdraw-form-bottom-text {
+  font-family: book;
+  font-size: 12px;
+  font-weight: normal;
+
+  line-height: 2.75;
+
+  text-align: left;
+  color: #333333;
+}
+
+.withdraw-modal-actions {
+  width: 100% !important;
+}
+
+.withdraw-modal-actions {
+  right:0px !important;
+}
+.withdraw-modal-actions .pull-right {
+  display: flex;
+  justify-content: center !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  width: 100% !important;
+}
+
+.withdraw-modal-actions .pull-right {
+  margin-left: auto;
+  display: flex;
+  /* width: 22%; */
+}
+
+.withdraw-modal-actions .pull-right .close-withdraw {
+	margin-right:10px !important;
+}
+
+
+.deposit .qr-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.1);
+  background-color: rgb(70, 75, 114);
+  padding: 30px;
+  position: relative;
+}
+
+.deposit .qr-container > span{
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 20px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  transform: rotate(135deg);
+}
+
+.generate {
+  background-color: #2bbfdf !important;
+  color: #ffffff !important;
+  display:none !important;
+}
+
+.deposit .btn-action,{
+  width: 155px;
+  height: 34px;
+  border-radius: 17px;
+  background-color: #ffffff;
+  border: solid 1px #2bbfdf !important;
+  font-family: book;
+  font-size: 15px;
+  text-align: center;
+  color: #2bbfdf;
+  display: flex;
+  align-items: center;
+  text-transform:uppercase;
+}
+
+
+.withdraw-digital .btn {
+  font-size: 13px;
+}
+
+.withdraw-cash .withdraw-modal-actions .btn-action,
+.withdraw .withdraw-modal-actions .btn-action {
+  font-family: book;
+  font-weight: normal;
+  text-align: center;
+  color: #2bbfdf;
+  border-radius: 17px;
+  background-color: #ffffff;
+  border: solid 1px #2bbfdf !important;
+  margin-left: -20px;
+  position: relative;
+}
+#no-activity{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 35px;
+  border-bottom: none;
+}
+#no-activity > img{
+  margin-bottom: 22px;
+}
+#no-activity > p {
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+.withraw-externaladdress-input div {
+  width: 100%;
+  position: relative;
+}
+
+.transactions-history-table-header > div {
+  display: flex;
+  align-items: center;
+  width: 20%;
+}
+.transactions-history-table-header > div:first-child{
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+.transactions-history-transaction-id{
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+.transactions-header-text{
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+.transaction-history-container{
+  font-family: 'Work Sans', sans-serif;
+  background-color: rgb(70, 75, 114);
+  padding: 0 10px;
+  padding-bottom: 42px;
+}
+
+.twoFA-container-expanded > div {
+  width: 100%;
+  max-width: 554px;
+  margin: 0 auto;
+}
+
+
+.withdraw-modal-actions .btn-action div {
+  text-transform: uppercase;
+}
+
+#withdraw-cancel-button-icon {
+  height: 13px;
+  width: 13px;
+  background-image: url("../../../images/icons/buttonIcon_cancel_withdraw_16X16.svg");
+  fill: #2bbfdf;
+}
+
+.withdraw-cancel-button-text {
+  margin-left:10px;
+  font-size:13px;
+}
+
+#deposit-cancel-button-icon {
+  height: 13px;
+  width: 13px;
+  background-image: url("../../../images/icons/buttonIcon_cancel_withdraw_16X16.svg");
+  fill: #2bbfdf;
+}
+
+.withdraw-modal-withdraw-button,
+#withdraw-modal-withdraw-button {
+  width: 132px;
+  height: 34px;
+  mix-blend-mode: undefined;
+  border-radius: 17px;
+  background-color: #2bbfdf;
+  color: #ffffff;
+  border: none;
+}
+
+.withdraw-cash .withdraw-modal-withdraw-button {
+  margin-left: 0 !important;
+  border-radius: 17px;
+  background-color: #2bbfdf !important;
+  color: #ffffff !important;
+}
+
+.withdraw-modal-withdraw-button-icon,
+#withdraw-modal-withdraw-button-icon {
+  height: 16px;
+  width: 16px;
+  background-image: url("../../../images/icons/buttonIcon_withdraw_16X16.svg");
+}
+
+.pricing-deal-container {
+  display: flex;
+  flex-direction: column;
+}
+.pricing-deal-container:hover > .pricing-table-content, .pricing-deal-container:hover > .bottom-box{
+  background-color: #1299ff;
+}
+.pricing-deal-container:hover button{
+  background-color: #1fd6b3;
+}
+
+.pricing-deal-container:hover .get{
+  background-color: #1c81d6 !important;
+}
+
+.pricing-deal-container .bottom-box{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  background-color: #565c82;
+}
+.pricing-deal-container .bottom-box .get{
+  width: 190px;
+  height: 42px;
+  background-color: #3e446a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
+
+
+.tab {
+  color: #666666;
+}
+
+.buy-sell-container .tabs-main {
+  display: flex;
+}
+.buy-sell-container .tabs-main .tab {
+  width: 118px;
+}
+
+.buy-sell-container .ap-widget {
+  padding: 0;
+}
+
+.buy-sell-boxes {
+  width: 230px;
+  display: flex;
+}
+.buy-sell-boxes:not(:last-child){
+  margin-right: 14px;
+}
+.buy-sell-boxes > div {
+  width:100%;
+}
+.buy-sell-boxes-custom > .row {
+  width: 100% !important;
+}
+
+.buy-sell-boxes-custom > .row  > div {
+  width:100%;
+}
+.buy-sell-boxes-custom .bottom-box{
+  height: 211px;
+  box-sizing: border-box;
+}
+.buy-sell-boxes-custom {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.pricing-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.pricing-table .pricing-table-content {
+  background-color: #565c82;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.buy-sell-boxes-custom .pricing-table-content {
+  font-size: 16px;
+}
+
+.buy-sell-boxes-custom input{
+  width: 200px;
+  height: 42px;
+  background-color: #4e5478;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  outline: none;
+  display: flex;
+  align-items: center;
+  padding: 0 60px 0 10px;
+  box-sizing: border-box;
+}
+.bottom-box > div > .input-group-addon{
+  position: absolute;
+  top: 11px;
+  right: 10px;
+  color: #9294a9;
+}
+.buy-sell-boxes-custom input::placeholder{
+  color: #ffffff;
+}
+
+.pricing-table .pricing-table-content * {
+  width: 100%;
+}
+
+.confirm-transaction-button-text {
+  font-size:15px !important;
+  letter-spacing: 1.5px;
+  font-family:news;
+}
+
+.pricing-table button {
+  width: 190px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: #60668a;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.transactions-container {
+  margin-top: 20px;
+}
+
+.table-div-headings {
+  border-bottom: 1px solid #50567c;
+}
+
+.confirm-transaction-bottom-row button {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.confirm-modal button {
+  margin-left: auto;
+  width: 233px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricing-table .pricing-table-content button {
+  display: none;
+}
+
+.pricing-table-title {
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-family: book;
+  font-size: 18px;
+  line-height: 3.33;
+}
+
+.pricing-table-title span:last-child {  
+  font-size: 31px;
+  padding: 0 !important;
+  margin: 0 !important;
+  line-height:1.5 !important;
+}
+
+.buy-sell-boxes-custom .pricing-table-price {
+  width: 75%;
+  margin: auto;
+}
+
+#content-texts .pricing-table-price {
+  font-family: book;
+  font-size: 26px;
+
+  line-height: 1.33;
+  text-align: center;
+  color: #ffffff;
+  height: auto;
+}
+
+#content-texts .pricing-table-for {
+  font-size: 26px;
+  /* line-height: 1.67; */
+  color: #ffffff;
+  margin-left: 10px;
+}
+
+.pricing-amount {
+  font-family: medium;
+  font-size: 60px;
+
+  line-height: 1;
+  text-align: center;
+  color: #333333;
+}
+
+.pricing-sybmol {
+  font-size: 36px;
+  line-height: 2.33;
+  font-family: medium;
+  color: #333333;
+}
+
+.pricing-table-popular-heading {
+  background-color: #1299ff;
+  border-radius: 10px 10px 0 0;
+  height: 30px;
+  font-size: 17px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pricing-table-popular-heading-placeholder {
+  height: 30px;
+}
+.deposit-cash > div > .ap-header, .withdraw-cash > div > .ap-header{
+  padding: 5% 5% 0 5%;
+  position: relative;
+}
+
+.ap-modal .ap-body {
+  padding: 0 5%;
+}
+
+.ap-close-button-row {
+  display: flex;
+}
+
+#buysell-error-modal { 
+    height: 400px;
+    max-width: 553px;
+}
+
+#buysell-error-modal #closeBtn{
+  width: 66px;
+  height: 66px;
+  border-radius: 100%;
+  border: 1px solid #e18915;
+  margin: 70px auto 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#buysell-error-modal #closeBtn > div{
+  transform: rotate(45deg);
+  color: #e18915;
+  font-size: 60px;
+  font-weight: normal;
+  font-family: initial;
+}
+
+#buysell-error-modal .ap-widget {
+  height:100%;
+  width:100%;
+}
+
+#buysell-error-modal .ap-header-actions-btn-close {
+  font-size: 26px;
+  position: relative;
+  left: 18px;
+  top: 0;
+  cursor:pointer;
+}
+
+#buysell-error-modal .modal-body {
+  display: flex;
+  justify-content: center;
+  margin: auto auto;
+  position: relative;
+  top: -40px;
+  color: #333333;
+  font-size: 13px;
+  font-family: book;
+  line-height: 1.54;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.ap-close-button {
+  margin-left: auto;
+  height: 14px;
+  width: 14px;
+  margin-right: 26px;
+  margin-top: 20px;
+  background-image: url(../../../images/icons/closeIcon_10X10.svg);
+  cursor: pointer;
+}
+
+.balances-table th {
+  padding: 5px;
+  border-top: #ebebeb 1px solid;
+  border-bottom: #ebebeb 1px solid;
+  text-align: left;
+  font-family: medium;
+  line-height: 30px;
+  font-size: 13px;
+  color: #333333;
+}
+.withdraw-digital .pad{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.deposit .pad {
+  display: flex;
+  justify-content: space-between;
+}
+#praxisIframe{
+  opacity: 1;
+  transition: 2s all ease;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  height: 100%;
+  width: 100% !important;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99999;
+  background: #fffffff5;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+.settings-container{
+  margin-left: 57px;
+  font-family: 'Work Sans', sans-serif;
+}
+.deposit .right-block, .withdraw-digital .right-block{
+  width: 497px;
+  background-color: rgb(70, 75, 114);
+  padding: 25px 15px;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  font-family: 'Work Sans', sans-serif;
+  position: relative;
+}
+
+.deposit .right-block.BTC, .withdraw-digital .right-block.BTC{
+  background-image: url(/img/bitcoin-bg.svg);
+}
+
+.deposit .right-block.ETH, .withdraw-digital .right-block.ETH{
+  background-image: url(/img/eth-bg.svg);
+}
+
+.withdraw-digital .right-block > .amount-holder {
+  display: flex;
+  border-bottom: 1px solid #50567c;
+  margin-top: 30px;
+  position: relative;
+}
+.error-block{
+  display: none !important;
+}
+.withdraw-digital .right-block .error{
+  position: absolute;
+  top: 40px;
+  color: salmon;
+  font-size: 12px;
+  padding-left: 10px;
+}
+.withdraw-digital .right-block > .amount-holder > .error{
+  top: 27px;
+}
+.withdraw-digital .right-block > .amount-holder > input{
+  width: 200px;
+  border: none;
+  background: none;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #bfc2d7;
+  padding: 0 10px 10px;
+  box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif;
+  outline: none;
+}
+.withdraw-digital .right-block > p{
+  font-size: 13px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  padding-left: 10px;
+  margin-top: 16px;
+}
+.withdraw-digital .please-note{
+  display: flex;
+  padding-left: 10px;
+  margin-top: 16px;
+}
+.withdraw-digital .please-note span{
+  font-size: 13px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  padding-right: 10px;
+}
+.withdraw-digital .please-note div{
+  font-size: 13px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #bfc2d7;
+  max-width: 260px;
+}
+.withdraw-digital .right-block button{
+  width: 150px;
+  height: 30px;
+  border-radius: 3px;
+  background-color: #ffaa44;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  outline: none;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Work Sans', sans-serif;
+  margin-top: 43px;
+}
+.withdraw-digital .right-block button > img{
+  width: 12px;
+  margin-right: 13px;
+}
+.withdraw-digital .right-block > p span{
+  font-size: 13px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #bfc2d7;
+  padding-right: 10px;
+}
+.withdraw-digital .right-block > .amount-holder > div{
+  display: flex;
+  width: 255px;
+  align-items: center;
+  padding-bottom: 6px;
+}
+.withdraw-digital .right-block > .amount-holder > div > span{
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #bfc2d7;
+  padding-right: 9px;
+}
+.withdraw-digital .right-block > .amount-holder > div > div{
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #ffffff;
+}
+.withdraw-digital .right-block > input{
+  width: 100%;
+  border: none;
+  background: none;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #bfc2d7;
+  padding: 0 10px 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #50567c;
+  font-family: 'Work Sans', sans-serif;
+  outline: none;
+}
+
+.withdraw-digital .right-block > input::placeholder, .withdraw-digital .right-block > .amount-holder > input::placeholder{
+  color: #bfc2d7;
+}
+
+.deposit .right-block > p:first-child{
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  margin-bottom: 17px;
+}
+.deposit .right-block .actions{
+  display: flex;
+  font-family: 'Work Sans', sans-serif;
+  margin-top: 30px;
+}
+.deposit .right-block .actions button{
+  border: none;
+  height: 30px;
+  border-radius: 3px;
+  background-color: #60668a;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Work Sans', sans-serif;
+}
+.deposit .right-block .actions button:first-child{
+  width: 140px;
+  margin-right: 10px;
+}
+.deposit .right-block .actions button:last-child{
+  width: 150px;
+}
+.deposit .right-block .actions button img{
+  margin-right: 10px;
+}
+.deposit .right-block .note-title{
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  margin: 34px 0 16px;
+  color: #ffffff;
+}
+.deposit .right-block .note{
+  font-size: 13px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #bfc2d7;
+  max-width: 390px;
+}
+.process-withdraw {
+  width: 194px !important;
+  border-radius: 17px !important;
+  background-color: #2bbfdf !important;
+  color: #ffffff !important;
+  text-transform: uppercase;
+}
+
+.deposit-cash .pad {
+  display: flex;
+  flex-direction: column;
+}
+
+.deposit .inner > .pad {
+  /* margin-top: 41px; */
+}
+
+.close-withdraw {
+  margin-right: 6px;
+  width: 115px !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 17px;
+}
+
+.process-withdraw{
+  padding: 0 17px;
+  justify-content: space-between;
+}
+
+#deposit_payment_method_text {
+  display: flex;
+  align-items: center;
+}
+
+#deposit_payment_method_text > span{
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffaa44;
+}
+
+.withdraw-cash form {
+  width: 100%;
+}
+
+.withdraw-cash input,
+.withdraw-cash textarea {
+  max-width:410px;
+}
+
+.withdraw-cash .withdraw-cash-comment {
+  position:relative;
+  left:20px;
+}
+
+.withdraw-cash-title-bold {
+  font-family: medium;
+}
+
+.withdraw-pad {
+  padding: 30px 0;
+}
+.withdraw-digital h1, .deposit h1{
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+.withdraw-digital .inner {
+  margin-top: 10px;
+}
+.withdraw-digital .left{
+  width: 500px;
+  background-color: rgb(70, 75, 114);
+  padding: 25px 20px 40px;
+  box-sizing: border-box;
+  margin-right: 6px;
+}
+.withdraw-digital .inner .pad h3 {
+  font-family: medium;
+  font-size: 15px;
+  line-height: 1.33;
+}
+
+.withdraw-digital .inner .pad strong {
+  font-size: 13px;
+  font-family: medium;
+  line-height: 30px;
+}
+
+.buy-sell-boxes-custom .row > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.deposit-cash .form-group > div, .withdraw-cash .form-group > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+
+.confirm-modal > .confirm-buy-detail:first-child {
+  border-top: 1px solid #ebebeb;
+}
+
+.confirm-buy-detail div:last-child {
+  margin-right: 10px;
+  font-size: 15px;
+  font-family: medium;
+}
+
+.withdraw-cash .pull-right {
+  display: flex;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 81px;
+  align-items: center;
+}
+
+.deposit-cash .pull-right button {
+  margin-right: 10px;
+  width: 115px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 17px;
+  background-color: #ffffff;
+  border: solid 1px #2bbfdf !important;
+  color: #2bbfdf;
+}
+
+.deposit-cash .pull-right button:disabled{
+  cursor: not-allowed;
+}
+
+.twoFA-container-expanded > .twoFA-buttons button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 115px;
+  min-height: 34px;
+  box-sizing: border-box;
+  border-radius: 17px;
+  padding: 0px 15px;
+  margin: 0 10px;
+  border: solid 1px #2bbfdf;
+  background-color: #ffffff;
+  font-family: book;
+  font-size: 13px;
+  text-align: center;
+  color: #2bbfdf;
+}
+
+.pad .form-group:first-child {
+  height: 100%;
+  width: 50%;
+}
+
+.withdraw-digital .withraw-comment-input {
+  display: none !important;
+}
+.withdraw-external-address-input {
+  margin-bottom: 10px;
+}
+
+.withdraw-digital-max {
+  border-radius: 17px !important;
+  background-color: #2bbfdf !important;
+  color: #ffffff !important;
+  text-transform: uppercase;
+}
+
+.deposit-cash .pull-right {
+  display: flex;
+  padding: 0px 0px;
+  justify-content: flex-end;
+  margin-bottom: 35px;
+}
+
+.withdraw-cash .withdraw-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.withdraw-cash .withdraw-modal-actions .pull-right {
+  height: auto;
+  margin-bottom: 20px !important;
+  margin-top: 20px !important;
+}
+
+.btn-action.withdraw-modal-withdraw-button{
+  width: 132px !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 17px;
+}
+
+.withdraw-digital .withdraw-modal-actions {
+  border: none !important;
+}
+
+.select-symbols {
+  width: 50%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.confirm-transaction-title {
+  width: 834px;
+  height: 60px;
+  background-color: #1a4aae;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.ap-widget .confirm-modal {
+  padding: 0px;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.ap-widget .confirm-modal .text-center {
+  border:none;
+}
+
+.confirm-modal .ap-body {
+  display: flex;
+  flex-direction: column;
+}
+.deposit .left{
+  width: 500px;
+  background-color: rgb(70, 75, 114);
+  padding: 25px 20px 40px;
+  box-sizing: border-box;
+  margin-right: 6px;
+}
+.deposit .left  > p, .withdraw-digital .left  > p, .withdraw-digital .left  > p, .withdraw-digital .left  > p{
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+.deposit .left .balances, .withdraw-digital .left .balances{
+  width: 100%;
+  max-width: 410px;
+  float: right;
+}
+.deposit .left .balances .row, .withdraw-digital .left .balances .row{
+  margin: 0;
+  padding: 17px 0 18px;
+  border-bottom: 1px solid #50567c;
+  justify-content: flex-start;
+}
+.deposit .left .balances .row > div:first-child, .withdraw-digital .left .balances .row > div:first-child{
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #bfc2d7;
+  width: 180px;
+}
+.deposit .left .balances .row > div:nth-child(2), .withdraw-digital .left .balances .row > div:nth-child(2){
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+.deposit .left #dropdown, .withdraw-digital .left #dropdown{
+  width: 100%;
+  max-width: 500px;
+  border-bottom: 1px solid #50567c;
+  padding-bottom: 9px;
+  position: relative;
+  margin-top: 15px;
+}
+.withdraw-digital{
+  margin-left: 57px;
+  margin-bottom: 40px;
+}
+.withdraw-digital .ap-title{
+  display: none;
+}
+.deposit .left #dropdown ul, .withdraw-digital .left #dropdown ul{
+  position: absolute;
+  list-style: none;
+  top: 35px;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.1);
+  width: 100%;
+  z-index: 1000;
+  background: rgb(70, 75, 114);
+}
+.deposit .left #dropdown ul li, .withdraw-digital .left #dropdown ul li{
+  display: flex;
+  padding: 10px;
+  cursor: pointer;
+}
+.deposit .left #dropdown ul li:hover, .withdraw-digital .left #dropdown ul li:hover{
+  background: #60668a;
+}
+.deposit .left #dropdown ul li img, .withdraw-digital .left #dropdown ul li img{
+  margin-right: 10px;
+}
+.deposit .left #dropdown > div, .withdraw-digital .left #dropdown > div{
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  position: relative;
+  cursor: pointer;
+}
+.deposit .left #dropdown > div #drop-icon, .withdraw-digital .left #dropdown > div #drop-icon{
+  position: absolute;
+  right: 0;
+  top: 10px;
+  cursor: pointer;
+}
+.deposit .left #dropdown > div > img, .withdraw-digital .left #dropdown > div > img{
+  margin-right: 10px;
+}
+.confirm-modal .col-sm-12 {
+  align-self: center;
+  font-family: book;
+  font-size: 15px;
+  font-weight: normal;
+
+  line-height: 2;
+
+  text-align: center;
+  color: #111111;
+  margin-top: 10px;
+}
+
+.ap-widget .confirm-modal .confirm-transaction-title {
+  width: 100%;
+}
+
+.confirm-buy-detail {
+  display: flex;
+  width: 100%;
+  height: 59px;
+  border-bottom: 1px solid #ebebeb;
+  justify-content: space-between;
+  align-items: center;
+  font-family: book;
+  font-size: 12px;
+  line-height: 2.75;
+  text-align: left;
+}
+
+.confirm-modal .ap-header-actions-btn-close {
+  display: flex;
+  justify-content: flex-end;
+  right: -40px;
+  position: relative;
+  top: -107px;
+  font-size: 34px;
+  cursor:pointer;
+}
+
+.confirm-modal .ap-title {
+  padding-bottom:0;
+}
+
+.transaction-details-container {
+  display: flex;
+  margin-top: 30px;
+}
+
+.text-left {
+  width: 48%;
+}
+
+.confirm-modal-right-fields {
+  width: 50%;
+}
+
+.confirm-modal-right-fields .confirm-buy-detail {
+  border-bottom: none !important;
+}
+
+.confirm-net-detail {
+  background-color: #e9f8fc;
+  margin-top: 2px;
+  padding-left: 10px;
+}
+
+.confirm-transaction-bottom-row {
+  margin-top: 45px;
+  display: flex;
+  justify-content: right;
+}
+
+.confirm-modal .btn-modal {
+  width: auto;
+  font-family: news;
+  font-size: 15px;
+  font-weight: normal;
+  display: flex;
+  justify-content: space-evenly;
+  line-height: 2;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: #ffffff;
+  margin-right: 0px !important;
+  height: 50px;
+  border-radius: 25px;
+}
+
+.confirm-modal .net-amount-value {
+  position: relative;
+  left: -14px;
+}
+
+.confirm-transaction-submit-icon {
+  background-image: url("../../../images/icons/buttonIcon_buy_white_16X16.svg");
+  height: 16px !important;
+  width: 16px;
+}
+
+.process-withdraw-button-icon {
+  background-image: url("../../../images/icons/buttonIcon_process_16X16.svg");
+  height: 16px;
+  width: 16px;
+}
+
+.sidebar-nav-item {
+  cursor:pointer;
+}
+
+.withdraw-digital-max-button-icon {
+  background-image: url("../../../images/icons/buttonIcon_max_16X16.svg");
+  height: 16px;
+  width: 16px;
+  margin-left: 20px;
+}
+
+.withdraw-digital-max-button-text {
+  margin-left: 15px;
+}
+
+#withdraw-form-container .form-group {
+  width: 100% !important;
+}
+
+/* ------ SETTINGS ------ */
+
+.header {
+  position: relative;
+}
+
+.transactions-header-container .header {
+  font-family: 'Work Sans', sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+.transaction-header-number, .recent-transactions-account-id{
+  width: 5%;
+}
+
+.transaction-header-time, .recent-transactions-account-time{
+  width: 16%;
+  padding-left: 5px;
+  box-sizing: border-box;
+}
+
+.transaction-header-executionid, .recent-transactions-account-executionid{
+  width: 10%;
+  box-sizing: border-box;
+  
+}
+
+.transaction-header-fee, .recent-transactions-account-fee{
+  width: 15%;
+  box-sizing: border-box;
+}
+
+.transaction-header-total, .recent-transactions-account-total{
+  width: 10%;
+}
+
+.transaction-header-price, .recent-transactions-account-price{
+  width: 15%;
+  box-sizing: border-box;
+}
+
+.transaction-header-size, .recent-transactions-account-quantity{
+  width: 15%;
+}
+
+.transaction-header-side, .recent-transactions-account-side{
+  width: 6%;
+}
+
+.transaction-header-pair, .recent-transactions-account-pair{
+  width: 8%;
+  box-sizing: border-box;
+}
+
+.header.nudge, .recent-transactions-account-name{
+  width: 9%;
+  padding-left: 10px;
+}
+
+.recent-transactions-top-row{
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #bfc2d7;
+  border-bottom: 1px solid #50567c;
+  padding: 20px 0;
+  font-family: 'Work Sans', sans-serif;
+}
+
+/* .header.nudge{
+  width: 116px
+}
+
+.transaction-header-number {
+  width: 74px;
+}
+.transaction-header-pair {
+  width: 91px;
+}
+.transaction-header-side {
+  width: 92px;
+}
+.transaction-header-size {
+  width: 91px;
+}
+.transaction-header-total {
+  left: 28px;
+}
+.transaction-header-fee {
+  left: 54px;
+}
+.transaction-header-executionid {
+  left: 15px;
+}
+.transaction-header-time {
+  left: -5px;
+} */
+
+.transactions-history-transaction-total {
+  left: -38px;
+  position: relative;
+  /* left: -66px; */
+}
+
+.transaction-top-row {
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #bfc2d7;
+  width: 100%;
+  font-family: 'Work Sans', sans-serif;
+}
+
+
+
+@media (max-width: 768px) {
+  .buy-sell-boxes-custom .row input {
+    background-color:initial !important;
+  }
+  #OrdersTable td{
+    font-size: 12px;
+  }
+
+  .get-symbol-pricing {
+    display:flex;
+    flex-direction:row !important;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    width: 33%;
+    margin-top: 5px;
+    text-transform: uppercase;    
+  }
+
+  .get-symbol-pricing .pricing-table-for {
+    display:block !important;
+    text-transform: uppercase;
+  }
+
+  .buy-sell-boxes-custom .input-group {
+    display: flex;
+    font-family: book;
+    font-size: 13px;
+    line-height: 2.31;
+    text-align: left;
+    color: #666666;
+    border: none;
+    border-bottom: #ebebeb solid 1px;
+    justify-content: space-around;
+    align-items: center;
+    width: 88%;
+    margin: 10px auto;
+    background-color:initial !important;
+    padding-left:10px;
+  }
+
+  .pagi { 
+    margin-top: 20px;
+  }
+
+  .deposit-cash-action-seperator {
+    display: none;
+  }
+
+  .deposit-cash-action-seperator-mobile {
+    height:1px;
+    width:100%;
+    background-color:#ebebeb;
+    margin-bottom:42px;
+    display:block;
+  }
+
+  .withdraw-cash .withdraw-cash-comment {
+    position:relative;
+    left:0 !important;
+  }
+
+  .withdraw-cash form p:first-child {
+    justify-self: left !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    left: -35px !important;
+    position: relative;
+}
+
+  .pricing-table-price {
+    width:auto !important;
+  }
+
+  #balances-table-header {
+    margin-top: 0;
+    height: initial !important;
+  }
+
+
+  .row > .balance-value {
+    margin-left: auto;
+    margin-right: 30px;
+  }
+
+
+  .ap-trades {
+    width: 100%;
+    margin: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+
+  .deposit-cash .ap-title,
+  .withdraw-cash .ap-title {
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+
+  .deposit-cash textarea {
+    font-size: 13px;
+    background-color: #f8f8f8;
+    margin-top: 10px;
+    border: solid 1px #ebebeb !important;
+    padding: 20px 20px 0 20px !important;
+  }
+
+  .deposit-cash .ap-close-button {
+    top: -7px;
+    right: -21px;
+    position: relative;
+  }
+
+  #withdraw-form-container li textarea {
+    margin:0 auto;
+    width: 76%;
+  }
+
+  .withdraw-digital .ap-close-button {
+    margin: 0px !important;
+  }
+
+  .ap-modal .ap-header {
+    padding: 0;
+    margin: 0;
+    left: 0;
+    top: 0;
+    position: relative;
+  }
+
+  .deposit .ap-header {
+    padding: 0 !important;
+    margin: 0 auto !important;
+    position: relative;
+  }
+
+  .confirm-modal .ap-header {
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 60px;
+  }
+
+  .deposit-cash-form-container input {
+    border: none;
+    background-color: #f8f8f8;
+    width: 100% !important;
+    padding: 0 !important;
+    height: 60px;
+    border-top: #ebebeb solid 1px !important;
+    padding-left: 40px !important;
+  }
+
+  .withdraw-digital .form-group {
+	  padding:0 !important;
+  }
+
+  .withdraw-digital .form-group div {
+	  height: 100% !important;
+    width: 100%;
+  }
+
+  .withdraw-digital-max {
+	margin-left: 25px;
+  }
+
+  .process-withdraw {
+	  margin-left:initial !important;
+  }
+
+  .withdraw-digital .form-group input {
+    color: black !important;
+    height:100%;
+    max-width: 100%;
+  }
+
+  .withdraw-digital .ap-modal .ap-header {
+    margin: 0 auto !important;
+  }
+
+
+  .ap-close-button-row {
+    display: flex;
+    position: relative;
+    right: 15px;
+    top: -5px;
+  }
+
+  .withdraw-comment-input {
+	  text-align: center;
+  }
+
+  .withdraw-cash .ap-close-button {
+    margin-top: 0px;
+    top: 5px;
+    position: relative;
+    left: 20px;
+  }
+
+  .deposit-cash p {
+    font-family: book;
+    font-size: 10px !important;
+    line-height: 1.8;
+    padding-left: 40px !important;
+  }
+
+  .payment-method-checkboxes-mobile p {
+    width: auto !important;
+  }
+
+  .withdraw-cash .ap-body p {
+    margin: 0 !important;
+    height: 59px;
+    border-bottom: #ebebeb 1px solid;
+    display: flex;
+    align-items: center;
+  }
+
+  #withdraw-form-container input {
+    border-bottom: solid 1px #ebebeb;
+    display: block;
+    width: 100%;
+    height: 59px;
+    background-color: #f8f8f8;
+    padding-left: 41px;
+  }
+
+  .withdraw-cash .withdraw-pad {
+    padding: 0;
+  }
+
+  .deposit-cash-form-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 26px;
+  }
+
+  .withdraw-digital .form-group:first-child {
+    width: 50% !important;
+  }
+
+  .pad .form-group:first-child {
+    width: 100%;
+  }
+  .deposit-cash .pad > div:first-child {
+    margin-top: 26px;
+  }
+
+  .deposit-cash .pull-right {
+    margin: 20px auto !important;
+    padding: 0 !important;
+    justify-content: center !important;
+}
+
+  .deposit-cash-form-container textarea {
+    border: none;
+    background-color: #f8f8f8;
+    width: 100%;
+    /* padding: 0 10px !important; */
+  }
+
+  .deposit-cash .clearfix {
+    margin-bottom: 40px;
+  }
+
+  .deposit-cash .ap-title {
+	top: 0px !important;
+  }
+
+  .ap-modal .ap-title {
+    border: none;
+    margin-left: 20px;
+    min-width: 110px;
+    font-family: book;
+    font-size: 13px;
+    text-align: center;
+    color: #333333;
+    position: relative;
+    top: 6px;
+  }
+
+  .withdraw-cash-title-bold {
+    margin-left: 3px;
+  }
+
+  .confirm-modal {
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 100vh;
+  }
+
+  .confirm-modal .ap-title {
+    top: 0;
+    margin: 0;
+  }
+
+  .withdraw-modal-actions .pull-right {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .ap-modal .ap-body p {
+    padding: 0% 5%;
+    width: 90%;
+  }
+
+  #deposit_payment_method_text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .ap-modal .ap-body {
+    width: 100%;
+    padding: 0px !important;
+  }
+
+  .payment-method-checkboxes-desktop {
+    display: none;
+  }
+  .payment-method-checkboxes-mobile {
+    display: flex;
+  }
+
+  .deposit .inner > .pad {
+    margin-top: 0;
+  }
+
+  .ap-modal_inner {
+    width: 100% !important;
+    /* margin: 50px auto; */
+    min-height: 100%;
+  }
+  .action-buttons-row .account-action-buttons {
+    display: flex !important;
+    width: auto !important;
+    justify-content: center;
+}
+
+
+  .action-buttons-row .account-action-buttons .deposit-button {
+    margin-left:0;
+    margin-right:0;    
+
+  }
+
+
+  .recent-transactions-account-name {
+    left: -10px;
+    position: relative;
+  }
+
+  .recent-transactions-account-total {
+    position: relative;
+    right: 0px;
+  }
+  .balances-table {
+    width: 100%;
+    flex-direction: column;
+    margin: 10px 0;
+    border-radius: unset;
+    box-shadow: none;
+  }
+
+  .ap-balances {
+    margin: 0;
+    width: 100%;
+  }
+
+  .transaction-row .transaction-detail {
+    display: flex;
+    justify-content: space-between;
+    font-family: book;
+    font-size: 10px;
+    color: #333333;
+    height: 43px;
+    align-items: center;
+  }
+
+  .transaction-row .transaction-detail-name {
+    margin-left: 40px;
+    font-size: 10px;
+    font-family: medium;
+  }
+
+  .transaction-row .transaction-detail-value {
+    margin-right: 32px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+
+  .transaction-bottom-row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+
+}
+
+.title-blue-bg {
+  width: 100%;
+  font-family: book;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+
+  line-height: 1.67;
+
+  text-align: left;
+  color: #001111;
+  margin-top: 22px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.inner .settings-accordion {
+  background-color: rgb(70, 75, 114);
+  padding: 30px 20px;
+}
+
+.inner #twoFA {
+  align-items: center;
+  padding: 20px 40px 20px 10px;
+  margin: 0;
+  border-bottom: 1px solid #50567c;
+}
+
+.twoFA-container-expanded > div > img {
+  margin: 0 40px;
+}
+
+#resetPassContainer {
+  align-items: center;
+  border-top: 1px solid #50567c;
+  border-bottom: 1px solid #50567c;
+  padding: 13px 40px 13px 10px;
+  margin: 0;
+}
+
+
+.update2Fa > img{
+  cursor: pointer;
+}
+
+.update2Fa > span{
+  color: #333333;
+  cursor: initial;
+}
+#resetPassContainer button {
+  width: 110px;
+  height: 30px;
+  border-radius: 3px;
+  background-color: #60668a;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  font-family: 'Work Sans', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#resetPassContainer button > img{
+  margin-right: 14px;
+}
+
+/* #resetPassContainer button a {    
+  margin-left: 8px;
+} */
+
+#resetPassContainer img {    
+  cursor: pointer;
+}
+.activeEnable > img{
+  vertical-align: bottom;
+  margin-right: 12px;
+  width: unset;
+  height: unset;
+  transform: unset;
+  display: initial;
+}
+.settings-accordion .row > div:first-child {
+  justify-content: flex-start;
+  padding-bottom: 8px;
+}
+
+#resetPassContainer .switcher label,
+#twoFA .switcher label{
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #868cad;
+}
+#accountStatus{
+  padding: 0 50px 20px 10px;
+  margin: 0;
+}
+#twoFA .switcher label.disable{
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #868cad;
+}
+#twoFA .switcher label.enable{
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #00d381;
+}
+#resetPassContainer .switcher label,
+#twoFA .switcher label.activeEnable {
+  width: 110px;
+  height: 30px;
+  border-radius: 3px;
+  background-color: #0091ff;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  padding: 8px 16px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+#twoFA .switcher label.activeDisable{
+  width: 110px;
+  height: 30px;
+  border-radius: 3px;
+  background-color: #60668a;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  padding: 8px 18px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+#twoFA .switcher label.activeDisable > img{
+  vertical-align: sub;
+  margin-right: 10px;
+}
+
+#twoFA .switcher span {
+  pointer-events: none;
+  cursor: pointer;
+  top: -3px;
+  box-sizing: border-box;
+  position: absolute;
+  transition: all 0.5s;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-image: linear-gradient(to top, #ffffff, #ffffff);
+  box-shadow: 0px 4px 6.7px 0.4px rgba(2, 2, 2, 0.2);
+}
+
+.update2Fa .update-button {
+  position: relative;
+  left: 95px;
+}
+
+.twoFA-container-expanded > .twoFA-buttons button:last-child {
+  background-color: #2bbfdf;
+  color: #ffffff;
+  font-family: medium;
+}
+
+
+#towFAexpand img {
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  margin-bottom: 26px;
+}
+
+#twoFA > .update2Fa button img {
+  margin: 0 7px;
+}
+.twoFA-container-expanded{
+  margin-left: 57px;
+}
+#towFAexpand h3 {
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  text-align: center;
+}
+#towFAexpand{
+  padding-top: 0;
+}
+#towFAexpand > div{
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-group.wrapperClassPlaceHolder{
+  width: 280px;
+  height: 42px;
+  opacity: 0.5;
+  background-color: #4e5478;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8px;
+  box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif;
+  max-width: 100%;
+}
+#copy{
+  margin: 0;
+  width: 80px;
+  height: 30px;
+  border-radius: 3px;
+  background-color: #60668a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  cursor: pointer;
+}
+.form-group.wrapperClassPlaceHolder > input{
+  font-size: 13px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #bcbfd4;
+  border: none;
+  background: transparent;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: 'Work Sans', sans-serif;
+}
+#progress-bar > #progress-bar-row{
+  max-height: 50px;
+  width: 100%;
+  background:transparent;
+  max-width: 554px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  margin: 47px 0 42px;
+}
+#or-copy{
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+#progress-bar > #progress-bar-row .circle{
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: 4px solid rgb(35, 85, 145);
+  font-size: 14px;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  display: inline-flex;
+  align-items:center;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: #0091ff;
+}
+#progress-bar > #progress-bar-row .stroke{
+  width: 100%;
+  height: 2px;
+  background-color: #50567c;
+}
+.QR-wrapper{
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(70, 75, 114);
+  padding: 27px;
+  box-sizing: border-box;
+  align-items: center;
+  flex-direction: column;
+  margin: 33px auto 48px;
+}
+.twoFA-container-expanded .step-box .next{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.twoFA-container-expanded .step-box .next .previous{
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #bfc2d7;
+  cursor: pointer;
+  margin-right: auto;
+}
+.twoFA-container-expanded .step-box .next p{
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #bfc2d7;
+  margin-right: 14px;
+}
+.twoFA-container-expanded .step-box .next button{
+  width: 190px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: #0091ff;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+.twoFA-container-expanded .step-box:nth-child(2) input{
+  width: 152px;
+  height: 15px;
+  font-size: 13px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #bcbfd4;
+  border: none;
+  background: transparent;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.twoFA-container-expanded .step-box:nth-child(2) #or-copy{
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+.twoFA-container-expanded .step-box:nth-child(2) #copy{
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  cursor: pointer;
+  justify-content: center;
+}
+#copy-code{
+  height: 15px;
+  width: 15px;
+  background-image: url("/img/copy-img.svg");
+  background-repeat: no-repeat;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.twoFA-buttons > .wrapperClassPlaceHolder{
+  width: 460px;
+  margin: 40px auto 260px;
+  max-width: 100%;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  background-color: rgb(70, 75, 114);
+  padding: 0 60px;
+}
+.twoFA-buttons > .wrapperClassPlaceHolder > input{
+  width: 340px !important;
+  height: 48px !important;
+  background-color: #4e5478 !important;
+  margin: 0 !important;
+  border: none !important;
+  padding: 10px !important;
+  box-sizing: border-box !important;
+  max-width: 100% !important;
+  font-size: 13px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #bcbfd4;
+}
+.twoFA-buttons > .wrapperClassPlaceHolder > p{
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  margin-bottom: 11px;
+  width: 100%;
+  padding-left: 10px;
+}
+#towFAexpand .step-title{
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+}
+.app-buttons-wrapper{
+  background-color: rgb(70, 75, 114);
+  width: 100%;
+  max-width: 554px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px 0;
+  margin-top: 96px;
+  margin-bottom: 243px;
+}
+#towFAexpand .step-description{
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.63;
+  letter-spacing: normal;
+  text-align: center;
+  color: #bfc2d7;
+}
+
+#towFAexpand .step-title > span:first-child{
+  width: 32px;
+  height: 32px;
+  background-color: #194aad;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  margin-right: 8px;
+  font-family: medium;
+}
+#towFAexpand .step-title > span:last-child{
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.33;
+  font-family: medium;
+}
+
+.twoFA-container-expanded > .twoFA-buttons {
+  margin: 20px 0;
+  justify-content: flex-end;
+}
+
+#towFAexpand .twoFA-container-expanded > .twoFA-buttons > button > img {
+  width: 16px;
+  height: 16px;
+}
+#towFAexpand .twoFA-container-expanded > .twoFA-buttons button:last-child img {
+  filter: brightness(1000%);
+  margin: 0 10px;
+}
+
+.update-2fa-btn{
+  width: 233px;
+  border-radius: 17px;
+  background-color: #2bbfdf;
+  border: none;
+  font-size: 13px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  font-family: news;
+  margin-bottom: 10px;
+}
+.update-2fa-btn > img{
+  width: 13px !important;
+  height: 12px !important;
+  margin-right: 7px;
+}
+
+.close-2fa-btn{
+  width: 233px;
+  height: 34px;
+  border-radius: 17px;
+  border: solid 1px #2bbfdf;
+  background-color: #ffffff;
+  color: #2bbfdf;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: book;
+}
+
+.close-2fa-btn > img{
+  width: 13px !important;
+  height: 13px !important;
+  margin-right:10px;
+}
+@media(max-width: 1400px){
+  .buy-sell-boxes{
+    width: 200px;
+  }
+}
+@media(max-width: 1344px){
+  .twoFA-container-expanded > div{
+    flex-direction: column;
+  }
+}
+@media(max-width: 1200px){
+  .balances-table{
+    margin-bottom: 40px;
+  }
+  .transaction-top-row{
+    align-items: center;
+  }
+  .transactions-history-table-body > div{
+    padding: 10px 0;
+  }
+  .inner #twoFA{
+    padding: 20px 0;
+  }
+  #accountStatus{
+    padding: 0 0 10px 0;
+  }
+  #sidebar{
+    display: none;
+  }
+  .buy-sell-boxes-custom .error{
+    bottom: -12px;
+  }
+  .buy-sell-boxes{
+    width: 150px;
+    margin-right: 10px;
+  }
+  .pricing-table .pricing-table-content{
+    font-size: 24px;
+    height: 60px;
+  }
+  .pricing-deal-container .bottom-box{
+    padding: 16px 13px;
+  }
+  .ap-widget.buysell{
+    margin-left: 0;
+    width: 100%;
+  }
+  .buy-sell-boxes-custom .bottom-box{
+    height: unset;
+    padding-top: 9px;
+  }
+  .buy-sell-boxes-custom input, .form-group.wrapperClassPlaceHolder{
+    height: 30px;
+  }
+  .buy-sell-boxes-custom input{
+    padding: 0 40px 0 0;
+  }
+  .bottom-box > div > .input-group-addon{
+    top: 8px;
+    font-size: 14px;
+  }
+  .bottom-box > div{
+    margin-bottom: 14px !important;
+  }
+  .ap-widget.buysell .inner > div{
+    padding: 30px 10px 42px;
+  }
+  .pricing-deal-container .bottom-box .get{
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 20px;
+    height: 32px;
+  }
+  .pricing-table .pricing-table-content{
+    font-size: 14px;
+  }
+  .account-status{
+    max-width: unset;
+  }
+  .pricing-table button{
+    width: 100%;
+    height: 30px;
+  }
+  #resetPassContainer{
+    padding: 10px 0;
+  }
+  #account-verification-container{
+    margin-left: 0 !important;
+    max-width: unset !important;
+  }
+  .settings-container, .twoFA-container-expanded{
+    margin-left: 0;
+  }
+  .transaction-top-row{
+    font-size: 12px;
+  }
+  .withdraw-digital{
+    margin-left: 0;
+  }
+  .transactions-history-table-header > div:first-child, .transaction-top-row > div:first-child{
+    width: 15% !important;
+  }
+  .transactions-history-transaction-product, .transactions-history-table-header > div:nth-child(3){
+    width: 15% !important;
+  }
+  .transactions-history-transaction-total, .transactions-history-table-header > div:nth-child(4), .transactions-history-transaction-time , .transactions-history-table-header > div:nth-child(5){
+    width: 25% !important;
+  }
+  .ap-widget.deposit{
+    margin-left: 0;
+  }
+  .transactions-history-table-header > div:first-child, .transaction-top-row > div{
+    padding-left: 0;
+  }
+  .deposit .pad, .withdraw-digital .pad{
+    flex-direction: column;
+    align-items: center;
+  }
+  .deposit .left, .withdraw-digital .left{
+    margin-bottom: 2px;
+    width: 100%;
+    max-width: 500px;
+    margin-right: 0;
+  }
+  .deposit .right-block, .withdraw-digital .right-block{
+    width: 100%;
+    max-width: 500px;
+  }
+  #right{
+    margin-left: 0;
+  }
+  .tables-title{
+    padding-left: 0;
+    font-size: 16px;
+  }
+}
+@media (max-width: 1260px) {
+
+  #twoFA > div > p:first-child {
+    width: auto;
+  }
+  #twoFA > div > p:nth-child(2) {
+    display: none;
+  }
+}
+@keyframes slideDown {
+	0% {
+		transform: translateY(-100%);
+	}
+	50%{
+		transform: translateY(8%);
+	}
+	65%{
+		transform: translateY(-4%);
+	}
+	80%{
+		transform: translateY(4%);
+	}
+	95%{
+		transform: translateY(-2%);
+	}			
+	100% {
+		transform: translateY(0%);
+	}		
+}
+@media (max-width: 768px) {
+  .recent-transactions-top-row-open{
+    animation-name: slideDown;
+    -webkit-animation-name: slideDown;	
+
+    animation-duration: 1s;	
+    -webkit-animation-duration: 1s;
+
+    animation-timing-function: ease;	
+    -webkit-animation-timing-function: ease;	
+  }
+  .recent-transactions-top-row-open > ul{
+    list-style: none;
+    width: 100%;
+  }
+  .recent-transactions-top-row.expanded{
+    border-bottom: none;
+  }
+  .transaction-header-number, .recent-transactions-account-id {
+      width: 15%;
+  }
+  .transaction-header-pair, .recent-transactions-account-pair {
+      width: 20%;
+      box-sizing: border-box;
+  }
+  .transaction-header-side, .recent-transactions-account-side {
+      width: 15%;
+  }
+  .transaction-header-size, .recent-transactions-account-quantity {
+      width: 25%;
+  }
+  .transaction-header-price, .recent-transactions-account-price {
+      width: 15%;
+      box-sizing: border-box;
+  }
+  .transaction-header-total, .recent-transactions-account-total {
+      width: 10%;
+  }
+  .transaction-header-fee, .recent-transactions-account-fee {
+      width: 15%;
+      box-sizing: border-box;
+  }
+  .transaction-header-executionid, .recent-transactions-account-executionid {
+      width: 10%;
+      box-sizing: border-box;
+  }
+  .transaction-header-time, .recent-transactions-account-time {
+      width: 25%;
+      padding-left: 5px;
+      box-sizing: border-box;
+  }
+  .recent-transactions-top-row-open > ul > li{
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 10px;
+    background-color: #373c5f;
+    font-size: 12px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    border-bottom: 1px solid #2c3050;
+    color: #bfc2d7;
+  }
+  .recent-transactions-top-row-open > ul > li:last-child{
+    padding: 8px 0;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .recent-transactions-top-row-open > ul > li:last-child > img{
+    transform: rotate(180deg);
+  }
+  .table-responsive{
+    padding: 0 10px 42px;
+  }
+  .ap-widget.buysell h1{
+    font-size: 16px;
+  }
+  #currency-alt-select-container{
+    width: 100px !important;
+  }
+  .ap-widget.buysell .row{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .buy-sell-boxes:nth-child(even){
+    margin-right: 0;
+  }
+  .ap-balances .inner > .row{
+    flex-direction: column;
+    border-bottom: 1px solid #50567c;
+  }
+  .inner .top-row{
+    border-bottom: none;
+    font-size: 12px;
+  }
+  .balances-value:nth-child(2), .balance-table-heading:nth-child(2){
+    display: none;
+  }
+  .table-div-headings .row{
+    padding: 25px 0 22px;
+  }
+  .balance-table-heading:last-child{
+    display: none;
+  }
+  .balance-table-heading, .balances-value{
+    width: 25% !important;
+  }
+  .balance-table-heading{
+    display: flex;
+    align-items: center;
+  }
+  .account-action-buttons{
+    width: 100% !important;
+    margin-bottom: 14px;
+    justify-content: start;
+    padding: 0 10px;
+    box-sizing: border-box;
+    display: flex !important;
+  }
+	.container{
+    padding: 40px 10px 0 !important;
+  }
+	.payment_method_checkboxes label{
+		width:70px;
+
+	}
+
+  .twoFA-container-expanded > div > div {
+    margin-right: 0;
+  }
+  #resetPassContainer > div:first-child,
+  #twoFA > div:first-child {
+    justify-content: space-between;
+  }
+  .twoFA-container-expanded > .twoFA-buttons button {
+    margin: 20px 0;
+  }
+
+  #resetPassContainer > .update2Fa button,
+  #twoFA > .update2Fa button {
+    padding-left: 0;
+  }
+  #resetPassContainer > .update2Fa button img,
+  #twoFA > .update2Fa button img {
+    margin-left: 0;
+  }
+
+  .twoFA-container-expanded > div > div > p {
+    margin: 20px auto;
+  }
+
+  .twoFA-container-expanded > .twoFA-buttons {
+    justify-content: space-around;
+  }
+}
+
+/* ------ SETTINGS END------ */
+
+/* ------   Help   ------ */
+
+#help.content {
+  margin-left: 100px;
+  margin-top: 20px;
+  max-width: 80%;
+  min-height: 100vh;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 50px;
+  padding: 30px;
+  background: #fff;
+  margin-bottom: 30px;
+  box-shadow: 0px 2px 3.9px 0.1px rgba(0, 0, 0, 0.3);
+}
+
+.service-item {
+  display: grid;
+  align-items: start;
+  grid-template-columns: minmax(50px, auto);
+  grid-template-rows: minmax(50px, auto);
+  justify-items: start;
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+
+.service-item:hover {
+  box-shadow: 0px 2px 3.9px 0.1px rgba(0, 0, 0, 0.6);
+}
+
+.service-item ol {
+  display: grid;
+  grid-gap: 10px;
+}
+
+.service-item .help-text-item {
+  color: #111111;
+  font-family: book;
+  font-size: 13px;
+  margin: 60px 10px 0 60px;
+}
+
+/* ------ Help END ------ */
+
+@media (max-width: 768px) {
+  #OrdersTable{
+    padding: 0 10px 42px;
+  }
+  #OrdersTable .header:last-child{
+    width: 20%;
+  }
+  #help.content {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .service-item {
+    padding: 30px 0px;
+  }
+
+  .service-item .help-text-item {
+    font-family: book;
+    font-size: 13px;
+    margin: 60px 10px 0 30px;
+  }
+}
+
+.ap-widget > .confirm-modal {
+  padding: 45px 0;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.confirm-modal .modal-body {
+  padding: 0 5% !important;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+.document-type-select{
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  width: 230px;
+  margin: 0;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+#document-type-select-container{
+  width: 100%;
+  margin-bottom: 35px;
+  position: relative;
+  border-bottom: 1px solid #50567c;
+  padding-bottom: 9px;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff !important;
+}
+#document-type-select-container span{
+  text-transform: capitalize;
+}
+#document-type-select-container ul{
+  position: absolute;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    top: 20px;
+    width: 100%;
+    background-color: #565c82;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+#document-type-select-container ul li{
+  padding: 20px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+#document-type-select-container ul li:first-child{
+  border-bottom: solid 1px #656b94;
+}
+
+#document-type-select-container ul li:hover{
+  background: #4e5478;
+}
+.buy-sell-boxes-custom .input-group {
+  display: flex;
+  font-family: book;
+  font-size: 13px;
+  line-height: 2.31;
+  text-align: left;
+  color: #666666;
+  border: none;
+  border-bottom: #ebebeb solid 1px;
+  justify-content: space-around;
+  align-items: center;
+  width: 88%;
+  margin: 10px auto;
+  background-color: #f8f8f8;
+  padding-left:10px;
+}
+
+.buy-sell-boxes-custom .input-group:last-child {
+  background-color:transparent;
+}
+
+.buy-sell-boxes-custom .input-group input {
+  background-color: #f8f8f8 ;
+}
+
+.buy-sell-boxes-custom .pricing-table-title {
+  font-family: book;
+  font-size: 30px;
+
+  line-height: 1.6;
+
+  text-align: center;
+  color: #ffffff;
+}
+.tabs-main{
+  display: flex;
+  color: #ffffff;
+  margin-bottom: 34px;
+}
+.buy-sell-boxes-custom .action {
+  width: 20%;
+  margin-right: auto;
+}
+.bottom-box > div{
+  position: relative;
+  margin-bottom: 20px;
+  max-width: 100%;
+  font-family: 'Work Sans', sans-serif;
+}
+.bottom-box > div:nth-child(2){
+  margin-bottom: 27px;
+}
+.btn-disabled-true {
+  opacity: 0.5;
+  cursor: initial !important;
+}
+
+.buy-sell-boxes-custom .btn {
+  border-radius: 25px;
+  background-color: #2bbfdf;
+  width: 159px;
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  color: #fff;
+  font-family: book;
+  text-transform: uppercase;
+  margin: 70px auto 0;
+  align-items: center;
+  cursor: pointer;
+}
+
+#select-currency-submit-arrow {
+  height: 6px;
+  width: 11px;
+  background-image: url("/img/drop-copy3.svg");
+  pointer-events: none;
+  top: 6px;
+  position: absolute;
+  right: 0;
+  background-repeat: no-repeat;
+}
+
+.withdraw-digital-double-check {
+  margin-top: 30px;
+}
+
+.currency-alt-select select {
+  border: none;
+}
+
+.currency-alt-select {
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+  position: relative;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+#currency-alt-select-container {
+  position: relative;
+  width: 145px;
+  border-bottom: 1px solid #50567c;
+  padding-bottom: 9px;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff !important;
+}
+
+#currency-alt-select-container ul{
+  position: absolute;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    top: 25px;
+    width: 100%;
+    background-color: #565c82;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+#currency-alt-select-container ul li{
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+#currency-alt-select-container ul li:hover{
+  background: #4e5478;
+}
+
+
+#currency-alt-select-container ul li img{
+  margin-right: 10px;
+}
+
+#currency-alt-select-container select {
+  background-color: transparent;
+  width: 100%;
+  -moz-appearance: none;
+   -webkit-appearance: none;
+   appearance: none;
+}
+
+.error-container {
+  position: relative;
+  width: 90%;
+}
+
+.custom-amount-error-container {
+  background-color: rgb(225, 89, 89);
+  color: rgb(255, 255, 255);
+  padding: 5px 16px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  margin-top: 10px;
+}
+
+.deposit-cash {
+  font-family: book;
+  font-size: 13px;
+  line-height: 2.31;
+  text-align: justify;
+  color: #333333;
+}
+
+.deposit-cash-text-block {
+  margin-top: 40px;
+}
+
+.deposit-cash-form-container {
+  display: flex;
+  margin-top: 24px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#deposit-cash-form-left {
+  display: flex;
+  flex-direction: column;
+}
+
+#deposit-cash-form-left,
+#deposit-cash-form-right {
+  width: 49%;
+}
+
+.btn-submit {
+  background-color: #2bbfdf !important;
+  color: #fff !important;
+}
+
+#deposit-submit-button-icon {
+  height: 13px;
+  width: 13px;
+  background-image: url("../../../images/icons/buttonIcon_deposit_withdraw_16X16.svg");
+}
+
+.transaction-history-container i {
+  display:none;
+}
+
+.transactions-history-table-header {
+  display: flex;
+  padding: 25px 0 15px;
+  margin: 0;
+}
+.pagination{
+  list-style: none;
+  display: flex;
+  width: 200px;
+  margin: 0 auto;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #bfc2d7;
+  font-family: 'Work Sans', sans-serif;
+  margin-top: 20px;
+}
+.pagination > li{
+  cursor: pointer;
+}
+.pagination > li.active{
+  font-weight: bold;
+}
+.transactions-history-transaction-product {
+  position: relative;
+  left: 0;
+}
+
+.pricing-table-mobile-content {
+  width: 100% !important;
+  display: none;
+}
+
+.confirm-transaction-title-mobile {
+  display: none;
+}
+
+.pricing-table-mobile {
+  display: none !important;
+}
+
+.transactions-history-transaction-id,
+.transactions-history-transaction-product,
+.transactions-history-transaction-time {
+  display: flex;
+}
+
+.transaction-top-row > div {
+  width: 20%;
+  position: initial;
+  text-align: left;
+}
+.transactions-header-container {
+  display: flex;
+}
+
+.transactions-header-container {
+  /* display: flex; */
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media (min-width: 769px) {
+
+  .confirm-buy-detail-net-amount {
+    display:none;
+  }
+
+  .withdraw-modal-actions {
+    margin-left: auto;
+    width: auto !important;
+    margin-top: 65px;
+    margin-bottom: 25px;
+  }
+  .buy-sell-boxes-custom .btn {
+    margin: 33px auto;
+  }
+
+	.withdraw-cash .withdraw-modal-actions .pull-right {
+    width: 30% !important;
+    margin-left:auto !important;
+    right:20px;
+    position: relative;
+	}
+
+	.withdraw-form-right textarea {
+		margin:0 !important;
+		padding: 0 !important;	
+	}
+
+  #withdraw-form-container li {
+		margin:0 !important;
+    padding: 0 !important;		
+    left:0px !important;
+  }
+
+  .withdraw-form-right .withdraw-cash-comment {
+    display:none;
+  }
+  
+  .withdraw-form-right .withdraw-cash-comment {
+    padding: 0px;
+    justify-content: left;
+    position: relative;
+    left: 21px;
+  }
+
+
+	.withdraw-form-left .withdraw-cash-comment {
+		margin:0 !important;
+		padding:0 !important;
+		text-align:left;
+		justify-content: left;
+		padding-left:10px;
+	}
+
+	.deposit .btn-action {
+		margin-right: 10px !important;
+	  }
+
+	.deposit-cash .pull-right button {
+    margin:0 !important;
+    text-transform: uppercase;
+	}
+
+	.deposit-cash .pull-right .btn-inverse {
+		margin-right:5px !important;
+	}
+
+	.deposit-cash-form-right {
+		display: flex;
+	}
+
+	.pad .form-group:first-child {
+		height: initial !important;
+		width: 100%;
+	}
+
+  .transactions-history-transaction-total {
+    left: -86px;
+    position: relative;
+    /* left: -66px; */
+  }
+  .currency-detail-rows {
+    display: flex;
+    justify-content: space-between;
+    font-family: book;
+    font-size: 10px;
+    color: #333333;
+    height: 43px;
+    align-items: center;
+  }
+
+  */ .withdraw-button {
+    margin: 10px 0px;
+    margin-left: 0 !important;
+  }
+
+}
+
+@media (min-width: 1178px) {
+  
+ 
+
+  .account-action-buttons {
+    display: flex;
+    flex-direction: initial;
+    justify-content: flex-start;
+    align-items: initial;
+  }
+
+  .ap-trades .open-button {
+    right: -8px !important;
+    position: relative;
+    display: none;
+  }
+
+
+
+  .ap-balances .open-button {
+    display: none;
+  }
+
+  .account-transactions-table .open-button {
+    display: none;
+  }
+
+  .recent-transactions-account-pair,
+  .recent-transactions-account-side,
+  .recent-transactions-account-quantity,
+  .recent-transactions-account-price,
+  .recent-transactions-account-executionid,
+  .recent-transactions-account-fee,
+  .recent-transactions-account-time,
+  .recent-transactions-account-id {
+    display: block;
+  }
+}
+
+/** BUY SELL MOBILE **/
+@media (max-width: 768px) {
+  .pricing-table-popular-heading. .pricing-table-popular-heading-placeholder{
+    height: 24px;
+    font-size: 14px;
+  }
+  .confirm-modal .net-amount-value {
+    position: relative;
+    left: 11px;
+  }
+
+  .deposit-cash-text-block {
+    margin-top: 0px;
+  }
+
+  hr {
+    display:none;
+  }
+  .ap-modal .ap-widget {
+  min-height: 100vh;
+    border-radius: unset;
+  }
+
+  .deposit .ap-close-button {
+    margin: 0;
+    padding: 0;
+  }
+  .btn-orange .confirm-transaction-submit-icon {
+    width: 16px !important;
+    margin-left: 0px;
+  }
+
+
+  .buy-sell-container .tabs-main {
+    display: flex;
+    max-width: 334px;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+  .error-container {
+    display: none !important;
+  }
+
+  .confirm-modal .col-sm-12 p {
+    padding: 0 63px 62px;
+    font-size: 13px;
+  }
+
+  #content-texts p {
+    font-size: 14px !important;
+    display: inline;
+    margin-left: 5px;
+}
+
+  .pricing-table-price {
+    margin-top: 20px !important;
+    margin-left: auto;
+  }
+
+  .pricing-table-separator,
+  .pricing-table-for,
+  .pricing-table-price {
+    display: none !important;
+  }
+
+  .buy-sell-boxes-custom .pricing-table-for,
+  .buy-sell-boxes-custom .pricing-table-price,
+  .buy-sell-boxes-custom .input-group {
+    display: flex !important;
+  }
+  .pricing-table .pricing-table-content * {
+    width: initial;
+    color: #fff;
+  }
+
+  .pricing-table-small-text span {
+    font-weight: bold;
+  }
+
+  .pricing-table-big-text {
+    font-family: book;
+    font-size: 24px;
+    line-height: 1.25;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+  
+
+  .pricing-table-small-text {
+    font-family: book;
+    font-size: 22px;
+    line-height: 2.31;
+    text-transform: uppercase;
+  }
+
+  .pricing-table-mobile {
+    margin: 0 auto;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    width: 100% !important;
+    align-items: center;
+  }
+
+  .pricing-table-mobile .btn {
+    top: -10px;
+    position: relative;
+  }
+
+  .pricing-table-mobile .popoular-placeholder {
+    margin-left: auto;
+    height: 24px;
+    display: none !important;
+  }
+
+  #content-texts {
+    padding: 0 !important;
+    margin: 107px auto 27px;
+    max-width: 333px;
+  }
+
+  #content-texts .section-title {
+    font-family: medium;
+    font-size: 15px;
+  }
+
+  .pricing-table-mobile-content {
+    display: flex;
+    flex-direction: column !important;
+    color: #fff !important;
+    margin: 0 auto;
+    width: 100% !important;
+    position: relative;
+    top: 10px;
+  }
+
+  .pricing-table-mobile-content input {
+    background-color: transparent;
+  }
+
+  .pricing-table-mobile-content .action {
+    color: #fff !important;
+    height: auto !important;
+    font-family: book;
+    font-size: 13px !important;
+    text-transform: uppercase;
+    line-height: 2.31;
+  }
+  .custom-amount-form-inputs {
+    display: none;
+  }
+
+  .buy-sell-boxes-custom .row > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: initial;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .buy-sell-boxes-custom .pricing-table-content .input-group {
+    width: 78% !important;
+    border-bottom-color: #1e4595;
+    margin: 23px auto !important;
+    max-height: 36px;
+  }
+
+  .buy-sell-boxes-custom .row input {
+    padding: 0;
+    color: #fff !important;
+    font-size: 18px;
+    font-family: medium;
+    left: 10px;
+    position: relative;
+  }
+
+  .buy-sell-boxes-custom .input-group:last-child,
+  .buy-sell-boxes-custom .form-control {
+    color: #fff !important;
+  }
+
+
+  .buy-sell-boxes-custom .pull-right {
+    color: #fff;
+    /* left: -197px; */
+    position: relative;
+    height: auto;
+    font-size: 18px;
+    font-family: medium;
+  }
+
+  .buy-sell-boxes-custom .text-center {
+    margin: 0 auto !important;
+    height: auto !important;
+  }
+
+  .buy-sell-boxes-custom .text-center a {
+    justify-content: space-evenly;
+  }
+
+  .buy-sell-boxes-custom .btn {
+    height: 50px;
+    margin-top: 20px !important;
+    margin-bottom: 20px;
+  }
+
+  .buy-sell-boxes-custom .btn > div {
+    height: auto;
+  }
+
+  .action-fee {
+    position: relative;
+    left: -25px;
+  }
+
+  .buy-sell-boxes .pricing-table-mobile button {
+    border-radius: 25px;
+    background-color: #2bbfdf;
+    width: 159px;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+    font-family: book;
+    text-transform: uppercase;
+    margin: 10px auto 0;
+    align-items: center;
+  }
+
+  ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #999999;
+    opacity: 1; /* Firefox */
+  }
+
+  ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: white;
+  }
+
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: white;
+  }
+
+  .confirm-modal .modal-body {
+    padding: 0 !important;
+  }
+
+  .transaction-details-container .confirm-modal {
+    height: auto;
+  }
+
+  .confirm-modal .text-left {
+    width: 100%;
+  }
+
+  .transaction-details-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .empty-place-holder {
+    display: none;
+  }
+
+  .confirm-modal-right-fields {
+    width: 100%;
+  }
+
+  .confirm-buy-detail {
+    padding: 0 40px;
+    width: 80%;
+    background-color: transparent;
+    border-bottom: 1px solid #ebebeb;
+  }
+
+  .confirm-buy-detail:first-child {
+    border-top: 1px solid #ebebeb;
+  }
+  .confirm-buy-detail:last-child {
+    border-bottom: 1px solid #ebebeb !important;
+  }
+
+  .confirm-modal .confirm-paragraph-section {
+    align-self: center;
+    font-family: book;
+    font-size: 13px;
+    text-align: center;
+    margin: 40px 0 40px 0 !important;
+  }
+
+  .confirm-modal .confirm-paragraph-section p {
+    padding: 0 10px;
+  }
+
+  .confirm-modal .col-sm-12 {
+    align-self: center;
+    font-family: book;
+    font-size: 15px;
+    text-align: center;
+    margin: 85px 0 0 0 !important;
+  }  
+
+  .confirm-modal .btn-modal {
+    margin: 71px auto;
+  }
+
+  .confirm-modal .confirm-transaction-bottom-row .btn {
+    margin: 0 auto!important;
+  }
+
+  .confirm-buy-detail > div:last-child {
+    font-size: 15px !important;
+    text-align: right;
+
+    color: #333333;
+    font-family: medium !important;
+  }
+
+  .confirm-transaction-title {
+    display: none;
+  }
+
+  .confirm-transaction-title-mobile {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    color: #ffffff;
+    background-color: #1a4aae;
+  }
+
+  .ap-header-actions-btn-close {
+    position: relative;
+    right: 26px;
+    top: -1px;
+    font-size: 28px;
+    cursor:pointer;
+  }
+
+  .confirm-modal
+    .confirm-transaction-title-mobile
+    .ap-header-actions-btn-close {
+    display: flex;
+  }
+
+  .confirm-modal .ap-header-actions-btn-close {
+    justify-content: flex-end;
+    right: 19px !important;
+    top: initial !important;
+    position: relative;
+    font-size: 34px;
+    cursor: pointer;
+    color: white;
+  }
+
+  .ap-header-text {
+      margin: 0 auto;
+      font-size: 18px;
+      left: 13px;
+      position: relative;
+  }
+
+  .confirm-net-detail {
+    display: none;
+  }
+}
+/** END OF BUY SELL MOBILE **/
+
+/* .recent-transactions-account-id {
+  width: 20px;
+  margin-left: -22px;
+} */
+
+/* .recent-transactions-account-quantity {
+  margin-left: -15px;
+} */
+
+/* .recent-transactions-account-executionid {
+  position:relative;
+  left:-12px;
+}
+
+.recent-transactions-account-fee {
+  position:relative;
+  left:-10px;
+} */
+
+/* .recent-transactions-account-pair {
+  position: relative;
+  left:-5px;
+} */
+
+/* .recent-transactions-account-side {
+  position: relative;
+  left:-10px;
+} */
+
+/* .recent-transactions-account-total {
+  position: relative;
+  left:-8px;
+} */
+
+.withdraw-cash .withdraw-modal-withdraw-button-icon {
+  background-image:url("../../../images/icons/buttonIcon_withdraw_white_white_16X16.svg");
+  height: 13px;
+  width: 13px;
+}
+
+@media(max-width: 768px){
+  #tooltip-trigger{
+    display: initial;
+    width: 40%;
+  }
+  #tooltip-trigger > img{
+    vertical-align: middle;
+  }
+  .transaction-header-total, .recent-transactions-account-total{
+    width: 82px;
+    direction: rtl;
+  }
+  .withdraw-cash .form-group label.error, .deposit-cash .form-group label.error{
+    z-index: 0;
+    left: 3px;
+  }
+  .withdraw-digital .form-group label.error{
+    left: 5px;
+  }
+  #close-success-btn{
+    width: 100%;
+    background: #50e3c2;
+    color: #fff;
+    position: relative;
+  }
+}
+@media(max-width: 1177px){
+}
+.transaction-header-executionid > .transactions-header-text{
+  line-height: 1;
+}
+
+.invalidInput{
+  border: 1px solid salmon !important;
+}
+.successIcon{
+  width: 67px !important;
+  height: 67px !important;
+  border-radius: 100%;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../../images/icons/popupIcon_success.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.successIcon.thankyou{
+  margin: 0 auto 20px;
+}
+
+.success{
+  color: #50e3c2;
+  font-size: 17px;
+  font-family: book;
+  font-weight: 600;
+  margin-bottom: 40px;
+  line-height: 1;
+}
+
+.pad-success{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 45px 0 80px 0;
+  font-family: book;
+}
+
+#close-success-btn{
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+  line-height: 1;
+}
+#close-success-btn > span{
+  transform: rotate(45deg);
+  font-size: 26px;
+  cursor: pointer;
+}
+#close-success-btn > div{
+  display: none;
+}
+.deposit-cash h2{
+  text-align: center;
+  width: 426px;
+  max-width: 80%;
+  color: #333333;
+  font-size: 15px;
+  font-family: book;
+  margin-bottom: 25px;
+}
+.deposit-cash .pad-success{
+  padding-top: 25px;
+  padding-bottom: 70px;
+}
+.deposit-cash .successIcon{
+  margin-bottom: 40px;
+}
+.deposit-cash .success{
+  margin-bottom: 30px;
+  margin-left: 0 !important;
+}
+#deposit-info-table{
+  display: flex;
+  width: 834px;
+  max-width: 90%;
+  justify-content: space-between
+}
+#deposit-info-table .inner-info{
+  width: 409px;
+  max-width: 48%;
+}
+#deposit-info-table .header-title{
+  background-color: rgb(234, 248, 252);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.67;
+}
+#deposit-info-table .body-info{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 25px;
+}
+p#note{
+  width: 505px;
+  max-width: 80%;
+  text-align: center;
+  font-size: 13px;
+  margin-top: 40px;
+  margin-bottom: 35px;
+}
+.buttons-wrapper{
+  display: flex;
+}
+.buttons-wrapper > #close, .pad-success #close, #buysell-error-modal #close, .btn-action#closeNote{
+  font-family: book;
+  font-weight: normal;
+  text-align: center;
+  color: #2bbfdf;
+  border-radius: 17px;
+  background-color: #ffffff;
+  border: solid 1px #2bbfdf !important;
+  position: relative;
+  font-size: 13px;
+  align-items: center;
+  justify-content: center;
+  width: 115px;
+}
+.actionsWrapper{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 40px;
+}
+
+.btn-action#closeNote{
+  width: 110px !important;
+}
+
+#buysell-error-modal #close{
+  margin-top: 40px;
+}
+.pad-success #close, .buttons-wrapper #close, #buysell-error-modal #close{
+  width:115px;
+}
+.buttons-wrapper #save, .buttons-wrapper #print{
+    background-color: #2bbfdf;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 17px;
+    border-radius: 17px;
+    font-size: 13px;
+    margin-left: 20px;
+}
+#buysell-error-modal .modal-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#deposit-save-button-icon{
+  height: 13px;
+  width: 13px;
+  background-image: url(../../../images/icons/buttonIcon_deposit_withdraw_16X16.svg);
+  background-repeat: no-repeat;
+  fill: #2bbfdf;
+  padding-right: 11px;
+}
+#deposit-print-button-icon{
+  height: 13px;
+  width: 13px;
+  background-image: url(../../../images/icons/buttonIcon_print_16X16.svg);
+  background-repeat: no-repeat;
+  fill: #2bbfdf;
+  padding-right: 11px;
+}
+#deposit-close-button-icon{
+  height: 12px;
+  width: 12px;
+  background-image: url(../../../images/icons/closeIcon_blue_10X10.svg);
+  background-repeat: no-repeat;
+  fill: #2bbfdf;
+  padding-right: 11px;
+}
+#deposit_ticket_created{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: book;
+  width: 100%;
+}
+#withdrawFiat-note{
+  margin-bottom: 40px;
+}
+#copy-address{
+  height: 15px;
+  width: 15px;
+  background-image: url(../../../images/icons/copy.svg);
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.twoFA-container-expanded .google-play{
+  width: 180px;
+  height: 57px;
+  background-image: url(../../../images/icons/button_googlePlay_135X40.svg);
+  background-repeat: no-repeat;
+  margin-right: 40px;
+}
+
+.twoFA-container-expanded .app-store{
+  width: 180px;
+  height: 57px;
+  background-image: url(../../../images/icons/button_appleStore_135X40.svg);
+  background-repeat: no-repeat;
+}
+.twofa-button-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+#resetPassContainer span{
+  color: #333333;
+}
+.deposit-cash .actions-wrapper{
+  display: flex;
+  padding: 0px 0px;
+  justify-content: flex-end;
+  margin-bottom: 35px;
+}
+.deposit-cash .actions-wrapper > .btn-inverse{
+  margin-right: 5px;
+  text-transform: uppercase;
+  width: 115px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 17px;
+  background-color: #ffffff;
+  border: 1px solid #2bbfdf;
+  color: #2bbfdf;
+  padding: 0 17px;
+  height: 34px;
+}
+.deposit-cash .actions-wrapper > .btn-submit{
+  width: 115px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 17px;
+  border: 1px solid #2bbfdf !important;
+  background-color: #2bbfdf !important;
+  color: #fff !important;
+  padding: 0 17px;
+  height: 34px;
+  text-transform: uppercase;
+}
+.deposit-cash .pad > .create-tickect-title{
+  margin-top: 30px;
+}
+@media(min-width: 769px){
+  .successPopup{
+    max-width: 600px !important;
+  }
+}
+@media(max-width: 768px){
+  .orders-title{
+    padding-left: 0;
+    margin-bottom: 12px;
+  }
+  .recent-transactions-account-time{
+    text-align: right;
+  }
+  .transaction-header-time{
+    justify-content: flex-end;
+  }
+  .buy-sell-boxes-custom .error2{
+    bottom: 160px;
+    left: 13px;
+  }
+
+  #copy-address{
+    height: 20px;
+    width: 20px;
+  }
+  body{
+    overflow-x: hidden;
+  }
+  .actions-wrapper{
+    justify-content: center !important;
+    width: 100%;
+  }
+  .deposit-cash-form-container > #deposit-cash-form-left, .deposit-cash-form-container > #deposit-cash-form-right{
+    width: 100%;
+  }
+  .withdraw-pad{
+    margin-bottom: 150px;
+  }
+  .withdraw-pad .withdraw-modal-actions{
+    justify-content: center;
+    margin-top: 20px;
+  }
+  #close-success-btn > div{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100px;
+    font-family: book;
+    font-size: 18px;
+    height: 25px;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  #resetPassContainer img{
+    right: 0;
+    bottom: 10px;
+  }
+  .twofa-button-wrapper{
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+  .twoFA-container-expanded > div > div > .form-group > input{
+    margin-bottom: 20px;
+  }
+  .twoFA-container-expanded > div{
+    justify-content: center;
+  }
+  .twoFA-container-expanded .google-play, .twoFA-container-expanded .app-store{
+    width: 193px;
+    height: 59px;
+  }
+  .twoFA-container-expanded .step-box:first-child, .twoFA-container-expanded .step-box:nth-child(2), .twoFA-container-expanded .step-box:last-child{
+    width: 100%;
+  }
+  .twoFA-container-expanded .step-box:nth-child(2) input{
+    width: 100%;
+  }
+  .twoFA-container-expanded > div > div > .form-group > input{
+    width: 100%;
+    height: 60px;
+    max-width: 100%;
+  }
+  .update-2fa-btn{
+    width: 141px;
+    margin-bottom: 0;
+  }
+  .close-2fa-btn{
+    width: 115px;
+    margin-right: 14px;
+  }
+  #resetPassContainer p{
+    width: 100%;
+    font-size: 13px;
+  }
+  #resetPassContainer span{
+    font-size: 10px;
+  }
+  #resetPassContainer button{
+    position: initial;
+  }
+
+  .QR-wrapper{
+    display: flex;
+    justify-content: center;
+  }
+  .app-buttons-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #deposit-info-table{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+  }
+  .deposit-cash .pad-success{
+    margin-bottom: 70px;
+  }
+  .deposit-cash .success{
+    width: 90%;
+    text-align: center;
+    line-height: 1.5;
+  }
+  #deposit-info-table .inner-info{
+    max-width: 100%;
+    width: 100%;
+  }
+  #deposit-info-table .body-info{
+    text-align: left;
+    padding-left: 40px;
+    margin-bottom: 15px;
+  }
+  p#note{
+    font-size: 13px !important;
+    padding: 0 !important;
+    line-height: 2.31;
+    margin-top: 10px;
+  }
+  .buttons-wrapper{
+    flex-wrap: wrap;
+    width: 70%;
+    height: 100px;
+    justify-content: center;
+  }
+  .success{
+    margin-left: 0;
+    text-align: center;
+  }
+  #deposit-cash-form-left, #deposit-cash-form-right{
+    height: auto;
+  }
+}
+@media(max-width: 583px){
+  .buttons-wrapper{
+    justify-content: flex-end;
+  }
+}
+@media(min-width: 1177px) and (max-width: 1336px){
+  .recent-transactions-top-row {
+    font-size: 11px;
+  }
+}
+@media(max-height: 720px){
+  section#overview .middle-container h1{
+    font-size: 32px;
+    width: 363px;
+  }
+
+  section#overview .middle-container a{
+    margin-top: 30px;
+  }
+
+  section#overview .middle-container button{
+    min-height: 80px;
+    width: 360px;
+  }
+
+  .deposit-cash .pad-success{
+    padding: 0 0 20px;
+  }
+}
+@media(max-width: 375px){
+  #twoFA .switcher label.activeEnable, #twoFA .switcher label.activeDisable{
+    margin-left: 10px;
+    width: 100%;
+  }
+}
+@media(max-width: 360px){
+
+  .activeEnable > img, .activeDisable > img{
+    display: none;
+  }
+}
+@media(max-width: 320px){
+  .transaction-header-number, .recent-transactions-account-id{
+    width: 13%;
+  }
+  .transaction-header-size, .recent-transactions-account-quantity{
+    width: 27%;
+    justify-content: flex-end;
+  }
+  .buy-sell-boxes:nth-child(odd){
+    margin-right: 0;
+  }
+  .buy-sell-boxes:first-child{
+    margin-bottom: 24px;
+  }
+  #currency-alt-select-container {
+    width: 85px !important;
+  }
+}

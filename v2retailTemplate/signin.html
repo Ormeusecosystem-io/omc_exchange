@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <title>CoinTrader</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="icon" href="./images/logos/orme-fav.png">
+    <!--[if IE]><link rel="shortcut icon" href="./images/logos/orme-fav.png"><![endif]-->
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <meta name="author" content="CoinTrader">
+    <!-- Stylesheets -->
+    <!-- Bootstrap v4.0.0-beta.6 -->
+    <link href="assets/css/bootstrap-reboot.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-grid.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/shift-styles.css" rel="stylesheet">
+    <!-- Font Awesomes -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro|Didact+Gothic|Roboto" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+</head>
+
+<body id="top">
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!-- Main Content -->
+    <div class="main" id="sign-in" role="main">
+        <section class="container">
+            <div class="row text-center">
+                <img src="images/logos/company-logo-white.png" class="login-home-splash-logo company-logo-svg" />
+            </div>
+            <div class="row">
+                <div class="login-container text-center col-sm-6">
+                    <div ap-widget="LoginForm" to='my-accounts.html' hideCancelBtn="true">
+                        <div class="ap-form-test">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- End Main -->
+    <div id="widget-modal" class="widget-modal">
+        <span class="close-m close-widget"></span>
+        <div class="widget-modal-container">
+            <div id="VerifyEmail" ap-widget="VerifyEmailV2" class="hide" hide-header hideCancelBtn="true">
+                <div class="ap-form-test"></div>
+            </div>
+            <div id="ResetPassword" ap-widget="ResetPasswordV2" class="hide" hide-header hideCancelBtn="true">
+                <div class="ap-form-test"></div>
+            </div>
+            <div id="ConfirmWithdraw" ap-widget="ConfirmWithdrawV2" class="hide" hide-header hideCancelBtn="true">
+                <div class="ap-form-test"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+    <script src="js/lib/growl.js"></script>
+    <!-- Coti -->
+    <script src="js/config.js"></script>
+    <script src="js/library.min.js"></script>
+    <script type="text/javascript">
+    AlphaPoint.config.v2Widgets = true;
+    $(document).ready(function() {
+        // $('#footerId').load('footer.html');
+        var loadCount = 0;
+        var totalLoadCount = 1; // number of html pieces loaded
+        $('.footer').load('footer.html', runRenders);
+        function runRenders() {
+            loadCount++;
+            if (loadCount >= totalLoadCount) {
+                renderWidgetWrapper();
+                renderWidget();
+                renderActionWrapper();
+                renderTranslation();
+                changeLanguage();
+            }
+        }
+    });
+    </script>
+    <script src="js/widgets.min.js"></script>
+</body>
+
+</html>

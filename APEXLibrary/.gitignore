@@ -1,0 +1,9 @@
+node_modules
+.idea
+.vscode
+pids
+*.pid
+*.seed
+.DS_Store
+build
+package-lock.json

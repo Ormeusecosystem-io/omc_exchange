@@ -1,0 +1,84 @@
+<div id="sidebar" class="sidebar-nav">
+    
+    <a class="sidebar-nav-item-big" href="my-accounts.html"><img id="sidebar-logo" src="images/logos/orme-dark.png" /></a>
+
+    <div ap-widget="VerifyAccount"></div>
+    <a class="sidebar-nav-item" href="my-accounts.html">
+        <img class="sidebar-icon" src="images/icons/menuIcons_01_myaccount_40X40.svg" />
+        <span ap-translate="SIDEBAR.MENU_MY_ACCOUNTS">My Accounts</span>
+        <div class="menu_crescent"></div>
+    </a>
+    <a class="sidebar-nav-item" href="buy-sell.html">
+        <img class="sidebar-icon" src="images/icons/menuIcons_02_buysell_40X40.svg" />
+        <span ap-translate="SIDEBAR.MENU_BUY_SELL">Buy / Sell</span>
+        <div class="menu_crescent"></div>
+    </a>
+
+    <!-- <a class="sidebar-nav-item" href="trade.html">
+        <img class="sidebar-icon" src="images/icons/menuIcons_03_protrade_40X40.svg" />
+        <span ap-translate="SIDEBAR.MENU_PRO_TRADE">Pro Trade</span>
+        <div class="menu_crescent"></div>
+    </a> -->
+    <a class="sidebar-nav-item" href="settings.html">
+        <img class="sidebar-icon" src="images/icons/menuIcons_04_settings_40X40.svg" />
+        <span ap-translate="SIDEBAR.MENU_SETTINGS">Settings</span>
+        <div class="menu_crescent"></div>
+    </a>
+    
+    <a class="sidebar-nav-item" href="help.html">
+        <img class="sidebar-icon" src="images/icons/menuIcons_05_faq_40X40.svg" />
+        <span ap-translate="SIDEBAR.MENU_HELP">Help</span>
+        <div class="menu_crescent"></div>
+    </a>
+    <a class="sidebar-nav-item" onClick="navigate();">
+        <img class="sidebar-icon" src="images/icons/menuIcons_06_signout_40X40.svg" />
+        <span ap-translate="SIDEBAR.MENU_LOGOUT">Sign Out</span>
+        <div class="menu_crescent"></div>
+    </a>
+</div>
+
+
+<!-- Better to load this code below here which changes the active highlight in the sidebar...otherwise must run on each page. -->
+
+<script type="text/javascript">
+function navigate(){
+    window.location = '/';
+}
+
+$(function() {
+
+    console.log('run render * ')
+    //console.log("got here");
+     var pgurl = window.location.href.substr(window.location.href.lastIndexOf("/")+1);
+     $("#sidebar a").each(function(){
+          if($(this).attr("href") == pgurl || $(this).attr("href") == '' )
+          $(this).closest('.sidebar-nav-item').addClass("active");
+     })
+      
+      
+})
+
+        // $(document).ready(function() {
+
+
+        //     var loadCount = 0;
+        //     var totalLoadCount = 2; // number of html pieces loaded
+
+
+        //     function runRenders() {
+        //         loadCount++;
+
+        //         if (loadCount >= totalLoadCount) {
+        //             renderWidgetWrapper();
+        //             renderWidget();
+        //             renderActionWrapper();
+        //             renderTranslation();
+        //             changeLanguage();
+
+        //         }
+                
+        //     }
+
+        // });
+
+</script>

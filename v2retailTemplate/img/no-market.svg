@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+    <defs>
+        <linearGradient id="a" x1="0%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#DA3983"/>
+            <stop offset="48.94%" stop-color="#A9559E"/>
+            <stop offset="100%" stop-color="#647DC6"/>
+        </linearGradient>
+        <linearGradient id="b" x1="-29.028%" x2="156.242%" y1="29.223%" y2="50%">
+            <stop offset="0%" stop-color="#DA3983"/>
+            <stop offset="48.94%" stop-color="#A9559E"/>
+            <stop offset="100%" stop-color="#647DC6"/>
+        </linearGradient>
+        <linearGradient id="c" x1="14.268%" x2="80.752%" y1="50%" y2="48.198%">
+            <stop offset="0%" stop-color="#60668A"/>
+            <stop offset="100%" stop-color="#C24790"/>
+        </linearGradient>
+        <linearGradient id="d" x1="47.254%" x2="72.249%" y1="0%" y2="341.257%">
+            <stop offset="0%" stop-color="#DA3983"/>
+            <stop offset="48.94%" stop-color="#A9559E"/>
+            <stop offset="100%" stop-color="#647DC6"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#60668A" fill-rule="nonzero" d="M12.5 28H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h24a2 2 0 0 1 2 2v10.5h24V2a2 2 0 0 1 2-2h24a2 2 0 0 1 2 2v24a2 2 0 0 1-2 2H54a2 2 0 0 1-2-2V15.5H28V26a2 2 0 0 1-2 2H15.5v24H26a2 2 0 0 1 2 2v24a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V54a2 2 0 0 1 2-2h10.5V28zM4 4v20h20V4H4zm52 0v20h20V4H56zM4 56v20h20V56H4z"/>
+        <path fill="url(#a)" fill-rule="nonzero" d="M63 46c9.389 0 17 7.611 17 17s-7.611 17-17 17-17-7.611-17-17 7.611-17 17-17zm0 4c-7.18 0-13 5.82-13 13s5.82 13 13 13 13-5.82 13-13-5.82-13-13-13z"/>
+        <path fill="url(#b)" d="M65 61h5a2 2 0 1 1 0 4h-5v5a2 2 0 1 1-4 0v-5h-5a2 2 0 1 1 0-4h5v-5a2 2 0 1 1 4 0v5z" transform="rotate(45 63 63)"/>
+        <path fill="url(#c)" fill-rule="nonzero" d="M26.203 67.487l22.99-3-.388-2.974-22.99 3z"/>
+        <path fill="url(#d)" fill-rule="nonzero" d="M64.5 49v-3h-3v3h3zm0-6v-3h-3v3h3zm0-6v-.8h-3v.8h3z"/>
+    </g>
+</svg>

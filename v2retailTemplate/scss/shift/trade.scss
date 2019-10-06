@@ -1,0 +1,700 @@
+@import './depth-chart';
+@import '../variables';
+
+header {
+    padding: 22px 15px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Work Sans', sans-serif;
+    box-sizing: border-box;
+    background-color: #3d4267;
+    margin-bottom: 3px;
+  ul {
+      list-style-type: none;
+  }
+  .header-left-col {
+      display: flex;
+      width: 80%;
+      li {
+          margin-right: 20px;
+          &:first-of-type {
+              margin-right: 40px;
+              display: flex;
+              align-items: center;
+              font-size: 16px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #ffffff;
+          }
+          &:nth-of-type(2){
+              display: flex;
+              align-items: center;
+          }
+      }
+      .logo {
+          height: 30px;
+        //   min-width: 191px;
+      }
+      .ticker-wrapper {
+          white-space: nowrap;
+          display: flex;
+          margin-left: 10px;
+          margin-top: 5px;
+          .last-price,
+          .day-stat {
+              margin-right: 12.5%;
+          }
+      }
+  }
+  .header-right-col {
+      display: flex;
+      justify-content: flex-end;
+      width: 20%;
+      .user-menu-container {
+          font-size: .8em;
+          margin-top: 15px;
+          white-space: nowrap;
+      }
+      .register-container,
+      .login-container {
+          position: relative;
+          top: 12px;
+          right: 5px;
+      }
+      .menu-hamburger {
+          margin-top: 9px;
+          margin-left: 15px;
+      }
+  }
+}
+
+.sidebar {
+    .menu-hamburger-close {
+        margin-top: 1px;
+        visibility: hidden;
+    }
+
+    &.isOpen {
+        z-index: 15;
+        position: fixed;
+        .menu-hamburger-close {
+            visibility: visible;
+        }
+    }
+} // Styles for Widget containers
+.widget-container {
+    margin-bottom: 3px;
+    background-color: #3d4267;
+    padding: 15px;
+    box-sizing: border-box;
+    height: 100%;
+    .widget-header {
+        .ui-elements {
+            padding: 0 8px;
+            margin-left: 7px;
+            padding-top: 2px;
+            span {
+                cursor: pointer;
+            }
+        }
+        .responsive-tabs-menu-icon {
+            position: absolute;
+            right: 10px;
+            cursor: pointer;
+        }
+        .responsive-tabs-menu-container {
+            .arrow-up {
+                position: absolute;
+                top: 31px;
+                right: 4px;
+                width: 0;
+                height: 0;
+                border-left: 12px solid transparent;
+                border-right: 12px solid transparent;
+                border-bottom: 12px solid $trade-widget-responsive-tab-menu-bg;
+                z-index: 11;
+            }
+            .responsive-tabs-menu {
+                position: absolute;
+                background-color: $trade-widget-responsive-tab-menu-bg;
+                right: -3px;
+                top: 43px;
+                list-style-type: none;
+                text-align: right;
+                border-radius: 3px;
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+                z-index: 10;
+                li {
+                    font-size: 2em;
+                    padding: 10px;
+                    cursor: pointer;
+                    color: $trade-widget-responsive-tab-menu-item;
+                    &:first-of-type {
+                        margin-top: 5px;
+                    }
+                    &:last-of-type {
+                        margin-bottom: 5px;
+                    }
+                    &:hover {
+                        background: $trade-widget-responsive-tab-menu-hover-bg;
+                    }
+                }
+            }
+        }
+        .widget-tabs {
+            display: flex;
+            list-style-type: none;
+            border-bottom: 1px solid #50567c;
+            li {
+                font-size: 16px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #bfc2d7;
+                cursor: pointer;
+                &.active {
+                    font-size: 16px;
+                    font-weight: 500;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    color: #ffffff;
+                    padding-bottom: 14px;
+                }
+                &:first-child{
+                    margin-right: 20px;
+                }
+            }
+            &.responsive {
+                width: 100%;
+            }
+        }
+    }
+}
+.widget-container.order-book .inner{
+    height: 1011px;
+    overflow-y: auto;
+}
+
+.widget-container.order-book .inner::-webkit-scrollbar{
+    display: none;
+}
+
+.widget-container.order-entry-section{
+    height: 618px;
+}
+// Styles for individual widget containers
+
+// Ticker Wrapper
+.ticker-wrapper {
+  .last-price {
+    & > span {
+        color: #00d381;
+      margin-top: 4px;
+      & > span {
+        color: $trade-header-ticker-sell;
+      }
+    }
+  }
+}
+
+// Order Entry Container
+.order-entry {
+    width: 100%;
+    .tab-bg {
+        width: 100%;
+    }
+}
+
+.d-select {
+    position: relative;
+    .greyLine {
+        bottom: 10px;
+        right: 0;
+    }
+
+    input#select1:checked~.greyLine {
+        bottom: 10px;
+        left: 20px;
+    }
+}
+
+.button-wrap.pad {
+    button.btn.btn-action {
+        float: none;
+    }
+}
+
+// PRICE CHART STYLES
+// LINE STYLES SET IN CONFIG.JS "mainSeriesProperties.candleStyle.upColor", etc
+// MAIN CHART BG COLOR SET IN CONFIG.JS "paneProperties.background"
+#ap-trading-view-chart {
+  background-color: transparent;
+  // padding: 10px;
+}
+#library-container {
+  border: none;
+  background-color: transparent;
+}
+.header-chart-panel {
+  background-color: transparent;
+  a,
+  .button,
+  .apply-common-tooltip {
+    background-color: $trade-price-chart-button-bg;
+    border: none;
+    svg {
+      fill: $trade-price-chart-button;
+    }
+    cursor: pointer;
+  }
+  .quick {
+    span {
+        font-size: 13px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #bac0da;
+        border: none;
+        font-size: 13px;
+        background: transparent;
+    }
+  }
+  .button.disabled {
+    color: rgba(200, 200, 200, .5) !important;
+    background-color: transparent;
+    cursor: default;
+  }
+}
+.tv-main-panel {
+  background-color: transparent;
+}
+.tv-side-toolbar {
+  border-right: 1px solid transparent;
+  background-color: transparent;
+  svg {
+    fill: $trade-price-chart-sidebar-button !important;
+  }
+  .selected {
+    svg {
+      fill: $trade-price-chart-sidebar-button-selected !important;
+    }
+  }
+}
+// END PRICE CHART STYLES
+
+// DEPTH CHART STYLING
+// Default depth chart styling is in './depth-chart.scss'
+// To adjust styling, copy applicable section from depth-chart.scss and edit here
+// Colors & fonts are handled via variables.scss
+#depth-chart-container {
+    min-width: 310px;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 45px;
+    .highcharts-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        line-height: normal;
+        z-index: 0;
+        /* #1072 */
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        font-size: 12px;
+    }
+
+    .highcharts-background {
+        fill: $trade-widget-bg-color;
+        fill-opacity: 0;
+    }
+
+    .highcharts-area {
+        fill-opacity: 0.35;
+        stroke-width: 0;
+    }
+
+    .highcharts-title {
+        font-size: 16px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #ffffff;
+        text-transform: capitalize;
+        fill: #ffffff;
+    }
+
+    .highcharts-grid-line {
+        fill: none;
+        stroke: white;
+        stroke-opacity: 0;
+    }
+
+    @for $i from 1 through length($depth-chart-colors) {
+        $color: nth($depth-chart-colors, $i);
+        .highcharts-color-#{$i - 1} {
+            fill: $color;
+            stroke: $color;
+        }
+    }
+}
+
+.booktable {
+    .CellBidPrice {
+        color: $shift_green_subdued;
+    }
+
+    .CellAskPrice {
+        color: #ec5e5e;
+    }
+    #askRows>span {
+        &:last-child {
+            background-color: $shift_red;
+        }
+    }
+    #bidRows>span {
+        &:first-child {
+            background-color: $shift_green;
+        }
+    }
+}
+.current-instrument {
+    h3 {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+}
+
+// Shift Ticker Styling
+.selectable-ticker {
+    .ticker-input {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 0;
+        border-bottom: 1px solid #50567c;
+        input {
+            background-color: #4e5478;
+            width: 200px;
+            border: none;
+            outline: none;
+            font-size: 13px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            height: 42px;
+            color: #bac0da;
+            padding: 0 10px;
+        }
+        input::placeholder{
+            color: #bac0da;
+        }
+        p {
+            font-size: 14px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #bfc2d7;
+            display: flex;
+            align-items: center;
+        }
+    }
+    .ticker-instruments {
+        height: 95px;
+        &:hover::-webkit-scrollbar {
+            width: 10px;
+        }
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+        &::-webkit-scrollbar-track {
+            background: transparent; 
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #555; 
+            border-radius: 0px;
+        }
+        &::-webkit-scrollbar-thumb:hover {
+            background: #888;
+        }
+        .ticker-row{
+            font-size: 12px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #bac0da;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            padding: 22px 0 0;
+        }
+    }
+}
+
+// Trade tables styling
+.buyFont {
+    color: #00d381;
+}
+
+.sellFont {
+    color: #e85d5e;
+}
+
+// Hidden widget elements
+.ap-header-actions-btn-close {
+    visibility: hidden;
+}
+
+.ap-title,
+.module-head {
+    display: none;
+}
+
+.wrapper {
+    min-height: 0;
+}
+
+// Logged Out rules
+.trade-page.loggedout {
+    header {
+        .account-select-container {
+            display: none;
+        }
+        .header-right-col {
+            min-width: 210px;
+        }
+    }
+}
+
+#advancedOrdersModal{
+    width: 680px;
+    background-color: #2c3050;
+    padding: 15px 15px 24px 15px;
+    #tabs{
+        display: flex;
+        justify-content: center;
+        margin-top: 33px;
+    }
+    .ap-header{
+        min-height: unset;
+        padding: 0;
+        font-size: unset;
+        padding-bottom: 14px;
+        border-bottom: 1px solid #50567c;
+    }
+    .ap-title{
+        font-size: 16px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #ffffff;
+        display: initial;
+    }
+    .clearfix{
+        display: flex;
+        .form-group:first-child{
+            margin-right: 20px;
+        }
+    }
+    .clearfix.inputs-row{
+        margin-bottom: 27px;
+        .select-wrapper{
+            position: relative;
+            img{
+                position: absolute;
+                right: 10px;
+                top: 49px;
+                z-index: 2;
+                pointer-events: none;
+            }
+        }
+        .select-wrapper > .form-group{
+            margin-right: 0;
+        }
+    }
+    .clearfix.summary{
+        padding: 18px 0 3px;
+        border-top: 1px solid #50567c;
+        border-bottom: 1px solid #50567c;
+    }
+    .holder{
+        display: flex;
+        align-items: center;
+        margin-bottom: 46px;
+        
+        .selcet-wrapper:first-child{
+            margin-right: 20px;
+            position: relative;
+            select{
+                width: 240px !important;
+                height: 42px;
+                border: solid 1px #50567c;
+                border-radius: 0;
+                background-color: #2c3050;
+                border: solid 1px #50567c;
+                font-size: 13px;
+                font-weight: 500;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #bac0da;
+                padding-left: 10px;
+                box-sizing: border-box;
+            }
+            img{
+                position: absolute;
+                right: 10px;
+                top: 20px;
+                pointer-events: none;
+            }
+        }
+        .selcet-wrapper:nth-child(2){
+            margin-right: 40px;
+            position: relative;
+            select{
+                width: 240px !important;
+                height: 42px;
+                border: solid 1px #50567c;
+                border-radius: 0;
+                background-color: #2c3050;
+                border: solid 1px #50567c;
+                font-size: 13px;
+                font-weight: 500;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #bac0da;
+                padding-left: 10px;
+                box-sizing: border-box;
+            }
+            img{
+                position: absolute;
+                right: 10px;
+                top: 20px;
+                pointer-events: none;
+            }
+        }
+        .to{
+            font-size: 12px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #bfc2d7;
+        }
+        .from{
+            font-size: 12px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #ffffff;
+            margin-top: 3px;
+        }
+    }
+    .form-control{
+        margin: 0 20px 0 0;
+        border-radius: unset !important;
+        background-color: #4e5478;
+        font-size: 13px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #bac0da;
+    }
+    .amount-input{
+        width: 180px;
+        height: 42px;
+        margin: 0;
+    }
+    .form-control:not(.amount-input){
+        width: 140px;
+    }
+    .peg-price{
+        width: 130px !important;
+        margin: 10px 0 0;
+        border: solid 1px #50567c;
+        background-color: #2c3050;
+    }
+    .form-group{
+        padding: 0 !important;
+        margin: unset;
+        max-width: 180px;
+    }
+    .pad:first-child{
+        padding-right: 113px;
+        padding-left: 20px;
+    }
+    .pad >div{
+        display: flex;
+        font-size: 12px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #ffffff;
+        margin-bottom: 15px;
+        justify-content: space-between;
+        > div:first-child{
+            width: 105px;
+        }
+    }
+    .pad > div.pad.error-block{
+        color: salmon;
+    }
+    .buttons{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 23px;
+        button{
+            margin: 0;
+        }
+        button#cancel{
+            background-color: #60668a;
+        }
+    }
+    select{
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+}
+
+// Responsive rules
+@media screen and (max-width: 900px) {
+    .header-ticker-container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .account-select-container {
+        display: none;
+    }
+}

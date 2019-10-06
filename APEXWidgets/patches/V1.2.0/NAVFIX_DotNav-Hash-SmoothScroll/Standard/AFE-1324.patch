@@ -1,0 +1,156 @@
+From 897d998d258dc58aa204cc325e6a2097d02bfa0e Mon Sep 17 00:00:00 2001
+From: AlphaPoint BrianMcLendon <ap_bmclendon@AlphaPoints-MacBook-Pro.local>
+Date: Thu, 26 Apr 2018 13:34:00 -0400
+Subject: [PATCH] AFE-1324: Refactor Dot-Nav JS
+
+---
+ js/script.js | 130 +++++++++++++++++++----------------------------------------
+ 1 file changed, 41 insertions(+), 89 deletions(-)
+
+diff --git a/js/script.js b/js/script.js
+index 49c6141..263d194 100644
+--- a/js/script.js
++++ b/js/script.js
+@@ -38,101 +38,53 @@ $(function () {
+ // =============================================
+ // onScroll eventListener for dotNav
+ // =============================================
+-const runOnScroll = () => {
+-
+-    switch (true) {
+-        case window.location.href.indexOf("home") > -1:
+-            $(".dot-nav .active-dot").removeClass("active-dot");
+-            $(".dot-nav li a .hover-text.active-hover-text").removeClass("active-hover-text")
+-            $(".dot-nav li a[href='#home']").parent().addClass("active-dot");
+-            $(".dot-nav li a[href='#home'] > .hover-text").addClass("active-hover-text");
+-            $('.dot-nav li').css({
+-                'border-color': 'white'
+-            });
+-            $('.dot-nav a .hover-text').css({
+-                'color': 'white'
+-            });
+-            $('.nav').css({
+-                'background': 'transparent',
+-                'border-bottom': '0'
+-            });
+-
+-            $('.logo h1').css({
+-                'color': 'white'
+-            });
+-            break;
+-        case window.location.href.indexOf("features") > -1:
+-            $(".dot-nav .active-dot").removeClass("active-dot");
+-            $(".dot-nav li a .hover-text.active-hover-text").removeClass("active-hover-text")
+-            $(".dot-nav li a[href='#features']").parent().addClass("active-dot");
+-            $(".dot-nav li a[href='#features'] > .hover-text").addClass("active-hover-text");
+-            $('.dot-nav li').css({
+-                'border-color': 'white'
+-            });
+-            $('.dot-nav a .hover-text').css({
+-                'color': 'white'
+-            });
+-            $('.nav').css({
+-                'background': 'transparent',
+-                'border-bottom': '0'
+-            });
+ 
+-            $('.logo h1').css({
+-                'color': 'white'
+-            });
+-            break;
+-        case window.location.href.indexOf("about") > -1:
+-            $(".dot-nav .active-dot").removeClass("active-dot");
+-            $(".dot-nav li a .hover-text.active-hover-text").removeClass("active-hover-text")
+-            $(".dot-nav li a[href='#about']").parent().addClass("active-dot");
+-            $(".dot-nav li a[href='#about'] > .hover-text").addClass("active-hover-text");
+-            $('.dot-nav li').css({
+-                'border-color': 'white'
+-            });
+-            $('.dot-nav a .hover-text').css({
+-                'color': 'white'
+-            });
+-            $('.nav').css({
+-                'background': 'transparent',
+-                'border-bottom': '0'
+-            });
+-
+-            $('.logo h1').css({
+-                'color': 'white'
+-            });
+-            break;
+-        case window.location.href.indexOf("contact") > -1:
+-            $(".dot-nav .active-dot").removeClass("active-dot");
+-            $(".dot-nav li a .hover-text.active-hover-text").removeClass("active-hover-text")
+-            $(".dot-nav li a[href='#contact']").parent().addClass("active-dot");
+-            $(".dot-nav li a[href='#contact'] > .hover-text").addClass("active-hover-text");
+-            $('.dot-nav li').css({
+-                'border-color': '#3b4251'
+-            });
+-            $('.dot-nav a .hover-text').css({
+-                'color': '#3b4251'
+-            });
+-            $('.nav').css({
+-                'background': '#0d141d',
+-                'border-bottom': '1px solid rgba(0, 0, 0, 0.15)'
+-            });
+-            break;
+-        default:
+-            break;
++$(window).scroll(function() {DotNavCheck();});
++$( document ).ready(function() {DotNavCheck();});
++function DotNavCheck() {
++
++    var position_C = $('#contact').offset().top,
++    position_A = $('#about').offset().top,
++    position_F = $('#features').offset().top,
++    position_H = $('#home').offset().top,
++    windowHeight = $(window).height(),
++    scrollDistance = $(document).scrollTop(),
++    offset = 58,
++    canChange = true,
++    changeThis,
++    color_border = "white",
++    color_hoverText = "white",
++    nav_background = "transparent",
++    nav_borderBottom = "0",
++    color_h1 = true;
++
++    if( scrollDistance > (position_C - ( (windowHeight/2)+ offset )) ){
++        changeThis = "contact";
++        color_border = "#3b4251";
++        color_hoverText = "#3b4251";
++        nav_background = "#0d141d";
++        nav_borderBottom = "1px solid rgba(0, 0, 0, 0.15)";
++        color_h1 = false;
++    }else if( scrollDistance > (position_A - ( (windowHeight/2)+ offset )) ){ changeThis = "about";
++    }else if( scrollDistance > (position_F - ( (windowHeight/2)+ offset )) ){ changeThis = "features";
++    }else if( scrollDistance > (position_H - ( (windowHeight/2)+ offset )) ){ changeThis = "home";
++    }else{ canChange = false; } 
++
++    if(canChange == true){
++        // console.log(changeThis+ " is in view!");
++        $(".dot-nav .active-dot").removeClass("active-dot");
++        $(".dot-nav li a .hover-text.active-hover-text").removeClass("active-hover-text");
++        $(".dot-nav li a[href='#"+changeThis+"']").parent().addClass("active-dot");
++        $(".dot-nav li a[href='#"+changeThis+"'] > .hover-text").addClass("active-hover-text");
++        $('.dot-nav li').css({'border-color': color_border });
++        $('.dot-nav a .hover-text').css({'color': color_hoverText });
++        $('.nav').css({ 'background': nav_background, 'border-bottom': nav_borderBottom });
++        if(color_h1 == true){ $('.logo h1').css({ 'color': 'white' }); }
+     }
+ }
+ 
+ $(document).ready(function () {
+ 
+-    window.addEventListener("scroll", runOnScroll);
+-
+-    // let dotNavItems = document.querySelectorAll(".dot-nav li");
+-    // // console.log(dotNavItems);
+-    // for (let dot of dotNavItems) {
+-    //     window.addEventListener("scroll", runOnScroll);
+-    //     (dotNavItems.addEventListener("click", runOnScroll);
+-    // }
+-
+     // =============================================
+     // Hamburger Menu Functionality
+     // =============================================

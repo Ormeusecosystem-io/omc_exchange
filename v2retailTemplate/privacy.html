@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <title>ORME | Privacy</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+
+    <link rel="icon" href="./images/logos/orme-fav.png">
+    <!--[if IE]><link rel="shortcut icon" href="./images/logos/orme-fav.png"><![endif]-->
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <meta name="autor" content="ShiftMarket">
+    <!-- Stylesheets -->
+    <!-- Bootstrap v4.0.0-beta.6 -->
+    <!-- <link href="assets/css/bootstrap-reboot.min.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/bootstrap-grid.min.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
+    <link href="assets/css/shift-styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+    <!-- Font Awesomes -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Maven+Pro|Didact+Gothic|Roboto" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <!-- jQuery -->
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <!-- Animate On Scroll (AOS) Library -->
+    <!-- <link href="assets/css/aos.css" rel="stylesheet"> -->
+    <!-- <script src="js/aos.js"></script> -->
+    <!-- Javascript Smooth Scroll Library -->
+    <!-- <script src="js/smooth-scroll.min.js"></script> -->
+
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <!-- CSS: NAVBAR -->
+    <div ap-widget="Navbar"></div>
+    <style>
+        .main-container{
+            width: 100%;
+            max-width: 620px;
+            margin: 0 auto;
+            font-family: 'Work Sans', sans-serif;
+            margin-bottom: 100px;
+        }
+        .login-container > #login-footer{
+            position: absolute;
+            bottom: -20px;
+            display: flex;
+            flex-direction: row;
+            max-width: 100%;
+            font-size: 10px;
+            font-family: book;
+        }
+        #disclaimer{
+            max-width: 100%;
+            font-size: 9px;
+            font-family: book;
+            text-align: center;
+            padding: 0 30px;
+            margin-top: 30px;
+        }
+        #disclaimer-mobile{
+            display: none;
+            max-width: 100%;
+            font-size: 9px;
+            font-family: book;
+            text-align: center;
+            padding: 0 10px;
+            margin-top: 30px;
+            height: 100%;
+            margin-bottom: 30px;
+        }
+        .ap-modal{
+            flex-direction: column;
+        }
+        .login-container > #login-footer > a{
+            color: inherit;
+            text-decoration: none;
+        }
+        .login-container > #login-footer > a:first-child{
+            margin-right: auto;
+        }
+        .login-container > #login-footer > a:not(:first-child){
+            margin-left: 10px;
+        }
+        /* footer {
+            position:relative;
+        } */
+        #risk-note{
+                font-size: 8px;
+                margin-bottom: 10px;
+                line-height: 1.5;
+                padding: 0 30px;
+            }
+        body{
+            overflow-x: hidden;
+        }
+        ol{
+            padding-left: 30px;
+        }
+        li{
+            line-height: 1.5;
+        }
+        .underline{
+            text-decoration: underline;
+        }
+        .bold{
+            font-weight: bold;
+        }
+        .red{
+            color: red;
+        }
+        #last-updated{
+            font-style: italic;
+            padding-top: 20px;
+            padding: 30px 0; 
+            font-size: 13px;
+        }
+        .terms-content > ul {
+            padding-left: 30px;
+            max-width: 85%;
+        }
+        .terms-content h3{
+            margin: 18px 0;
+        }
+        .terms-content > ul > li{
+            font-size: 15px;
+            line-height: 2;
+            padding-bottom: 10px;
+        }
+        .terms-content > ul > li > ul{
+            padding-left: 30px;
+        }
+        .terms {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            width: auto;
+            max-width: 1397px;
+            font-family: book;
+            margin-top:200px;
+        }
+
+        .terms-title {
+            font-size: 38px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #323756;
+            margin-bottom: 77px;
+        }
+
+        .fees-paragraph {
+            margin-top:66px;
+            font-size: 15px;
+            line-height: 2;
+            text-align: justify;
+            color: #111111;
+            padding: 0 0 0 40px;
+        }
+
+        .fees-considerations {
+            margin-top:35px;
+            font-size: 15px;
+            line-height: 2;
+            text-align: justify;
+            color: #111111;
+            padding: 0 0 0 60px;
+        }
+
+        .fees-pair-boxes {
+            flex-grow:1;
+            max-width: 454px;
+            height: 80px;
+            margin-left:20px;
+        }
+
+        .fees-pair-boxes-title {
+            height: 80px;
+            background-color: #194aad;
+            font-size: 15px;
+            color: #ffffff;
+            align-items: center;
+            display: flex;
+        }
+
+        .fees-pair-boxes-title span {
+            padding-left:40px;
+            font-family:medium;
+        }
+
+        .fees-pair-boxes-container {
+            margin-top:103px;
+            display:flex;
+            flex-direction:row;
+        }
+
+        .terms-content-title {
+            max-width:833px;
+        }
+        .fees-content-right {
+            max-width:494px;
+        }
+
+        .fees-pair-boxes-row {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            height:40px;
+            align-items:center;
+            border-top:#ebebeb solid 1px;
+            font-size: 13px;
+        }
+
+        .fees-pair-boxes-row div {
+            flex-grow:1;
+            width: 33%;
+        }
+
+        .bold-row {
+            font-family:medium;
+            font-size:11px;
+        }
+
+        .fees-pair-boxes-data {
+            padding:30px 40px;
+            border-radius: 4px;
+            background-color: #ffffff;
+            box-shadow: 0px 2px 3.9px 0.1px rgba(0, 0, 0, 0.3);
+        }
+
+        #mobileImg{
+            display: none;
+        }
+
+        #desktopImg{
+            width:350px;
+        }
+
+        #mobileImg, #desktopImg{
+            max-width: 50%;
+        }
+
+        .copyright{
+            background-color:transparent;
+            background-color:#daecf0;
+            text-align:center;
+            padding:10px;
+            font-family:book;
+            font-size:12px;
+        }
+
+        .terms-content p{
+            margin: 16px 0;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            #disclaimer-mobile{
+                display: initial;
+                margin-top: 0;
+            }
+            #disclaimer{
+                display: none;
+            }
+            .login-container{
+                overflow-y: scroll;
+            }
+            #ap-widget-login-form{
+                display: initial;
+            }
+            .login-container > #login-footer{
+                bottom: 0;
+                top: 600px;
+                height: 30px;
+                padding: 0 10px;
+                box-sizing: border-box;
+            }
+            .terms {
+                padding: 0 10px;
+            }
+
+            .fees-pair-boxes-container {
+                flex-direction:column;
+                height: auto;
+                margin:10px 0;
+            }
+
+            .fees-pair-boxes {
+                margin:0 0 10px 0 ;
+                height:auto;
+            }
+            
+            .fees-paragraph {
+                margin-top:initial;
+            }
+
+            .terms-title,
+            .fees-paragraph {
+                padding-left:10px;
+                width:94%;
+            }
+
+            .fees-paragraph {
+                font-size:12px;
+            }
+
+            .fees-considerations {
+                padding-left:25px;
+                width: 90%;
+                font-size:12px;
+            }
+
+            .fees-paragraph {
+                margin-left:0;
+            }
+
+            footer {
+                position: relative;
+                margin-top: 104px;
+            }
+
+            #mobileImg{
+                display: initial;
+            }
+            #desktopImg{
+                display: none;
+            }
+            .terms-content{
+                font-size: 15px;
+            }
+        }
+    </style>
+    <div class="terms">
+        <div class="main-container">
+            <div class="terms-content-title">
+                <h1 class="terms-title">Privacy policy</h1>
+            </div>
+            <div class="terms-content">
+               <p>
+                ORME (the "Company") and its affiliated companies (together: “ORME”) are dedicated to providing you with the highest level of transparency and control over the use of your data. In order for us to provide you with our services we are required to collect and process certain personal information about you and your activity.
+               </p>
+               <p>
+                    By entrusting us with your information, we would like to assure you of our commitment to keep such information private. We have taken measurable steps to protect the confidentiality, security and integrity of this Information. We encourage you to review the following information carefully.
+               </p>
+               <p class="bold">
+                    Grounds for data collection
+               </p>
+               <p>
+                    Processing of your “Personal Data” (meaning any information which may potentially allow your identification with reasonable means) is necessary for the performance of our contractual obligations towards you, for providing you with our services and the operation of our website(s) (the “Website” and “Service” respectively), to protect our legitimate interests and for compliance with legal and regulatory obligations. When you use our Service, you consent to the collection, storage, use, disclosure and other uses of your Personal Data as described in this Privacy Policy.
+               </p>
+               <p class="bold">
+                    How do we receive data about you? 
+               </p>
+               <p>
+                    We receive your Personal Data from various sources: 
+               </p>
+               <p>
+                    <span class="underline">Registration information</span> – When you voluntarily provide us your personal details in order to create an account on the Website or register to our Service (for example, your name and email address);
+               </p>
+               <p>
+                    <span class="underline">When you communicate with us</span> – For example, when you send us an email or contact us through the "contact us" form on our Website, we collect the Personal Data you provided us with.
+               </p>
+               <p>
+                    <span class="underline">Technical information</span> – When operating our Services, we use various technological tracking tools to collect information regarding your use of the Website. Along with our partners, we may use tracking technologies such as cookies, JavaScript, beacons and Local Storage, which are used to store content information and preferences. 
+               </p>
+               <p>
+                    <span class="underline">Third party information</span> – We may receive your data from third party providers who help us with the provision and maintenance of our Services, such as analytics vendors and others.
+               </p>
+               <p class="bold">What type of data we collect?</p>
+               <p class="bold">Personal Data</p>
+               <p>
+                    In the course of using the Service, we may ask you to provide us with certain Personal Data to provide and improve the Service, to contact or identify you, to enable you to access certain parts of the Website, or as otherwise indicated in this Policy. We collect the following Personal Data about you:
+               </p>
+               <p class="bold">Registration information</p>
+               <p>
+                    Your name, your email address, your telephone number, bank account details and credit card number, date of birth, and your country.
+               </p>
+               <p class="bold">When using our Service</p>
+               <p>
+                    Our server will collect your IP-address, and information about your general location (such as city and country).
+               </p>
+               <p class="bold">Information from third parties</p>
+               <p>
+                    In order to provide our Service, we may receive Personal Data from our business partners. This may include Personal Data such as your contact details (name, phone, email) as well as details pertaining to your credit history.
+               </p>
+               <p class="bold">Social networks</p>
+               <p>
+                    When you choose to connect our Services to your social network account (such as your Facebook account), we will have access to basic information from your social network account, such as your name, birthdate, profile picture and friends' list, as well as information you made publicly available on such account. We will use the Personal Information for the purposes set out herein and disclose such information only to third parties as detailed in this Privacy Policy.  
+               </p>
+               <p class="bold">Non-Personal Data</p>
+               <p>
+                    We also collect data about the use of our Service and the characteristics and activities of users, in order to operate it and improve it. We may collect the following non-Personal Data:
+               </p>
+               <p class="bold">Technical information</p>
+               <p>
+                    This category includes data such as website visits, the browser you are using and its display settings, your operating system, device type, session start/stop time, referral URL, time zone, network connection type, and cookie information.<br>
+                    If we combine Personal Data with non-Personal Data, the combined data will be treated as Personal Data.
+               </p>
+               <p class="bold">Tracking technologies</p>
+               <p>
+                    We and our trusted partners use cookies and other technologies in our related services, including when you visit our Website or access our services. A "cookie" is a small piece of information that a Website assign to your device while you are viewing a Website. Cookies are very helpful and can be used for various different purposes. These purposes include allowing you to navigate between pages efficiently, enable automatic activation of certain features, remembering your preferences and making the interaction between you and our Services quicker and easier. Cookies are also used to help ensure that the advertisements you see are relevant to you and your interests and to compile statistical data on your use of our Services.<br>
+                    The Website uses the following types of cookies:
+               </p>
+               <ol>
+                    <li>
+                            'session cookies' which are stored only temporarily during a browsing session in order to allow normal use of the system and are deleted from your device when the browser is closed;
+                    </li>
+                    <li>
+                            'persistent cookies' which are read only by the Website, saved on your computer for a fixed period and are not deleted when the browser is closed. Such cookies are used where we need to know who you are for repeat visits, for example to allow us to store your preferences for the next sign-in;
+                    </li>
+                    <li>
+                            'third party cookies' which are set by other online services who run content on the page you are viewing, for example by third party analytics companies who monitor and analyze our web access.
+
+                    </li>
+
+                </ol>
+                <p>
+                        Cookies do not contain any information that personally identifies you, but Personal Data that we store about you may be linked, by us, to the information stored in and obtained from cookies, in this case we will treat the combined data as Personal Data. 
+                </p>
+                <p class="bold">How to manage your cookie settings?</p>
+                <p>
+                        There are various ways in which you can manage and control your cookie settings. Please remember that, by deleting or blocking cookies, some of the features of the Services may not work properly or as effectively.
+                </p>
+                <p class="bold">Turning off cookies via your web browser</p>
+                <p>
+                        Most web browsers will provide you with some general information about cookies, enable you to see what cookies are stored on your device, allow you to delete them all or on an individual basis, and enable you to block or allow cookies for all websites or individually selected websites. You can also normally turn off third party cookies separately. Please note that the settings offered by a browser or device often only apply to that particular browser or device.
+                </p>
+                <p>
+                        Information about cookies is usually found in the "Help" section of the web browser.  
+                </p>
+                <p class="bold">Turning off third party cookies</p>
+                <p>You can turn off certain third party targeting/advertising cookies.</p>
+                <p class="bold">How do we use the data we collect?</p>
+                <p>
+                        <span class="underline">Provision of service</span> - for the provision and improvement of our Services, including for support and to respond to your queries.
+                </p>
+                <p>
+                        <span class="underline">Service announcements</span> - we will use your Personal Data to communicate with you and to keep you informed of our latest updates to our Services and offer you service offers.
+                </p>
+                <p>
+                        <span class="underline">Marketing purposes</span> - we may use your Personal Data (such as your email address or phone number). For example, by subscribing to our newsletter you will receive tips and announcements straight to your email account. We may also send you promotional material concerning our services or our partners' services (which we believe may interest you), including but not limited to, by building an automated profile based on your Personal Data, for marketing purposes. You may choose not to receive our promotional or marketing emails (all or any part thereof) by clicking on the “unsubscribe” link in the emails that you receive from us. Please note that even if you unsubscribe from our newsletter, we may continue to send you service-related updates and notifications, or reply to your queries and feedback you provide us.  
+                </p>
+                <p>
+                        <span class="underline">Opt-out of receiving marketing materials</span> - If you do not want us to use or share your Personal Data for marketing purposes, you may opt-out in accordance with this "Opt-out" section. Please note that even if you opt-out, we may still use and share your Personal Data with third parties for non-marketing purposes (for example to fulfill your requests, communicate with you and respond to your inquiries, etc.). In such cases, the companies with whom we share your Personal Data are authorized to use your Personal Data only as necessary to provide these non-marketing services.
+                </p>
+                <p>
+                        <span class="underline">Analytics, surveys and research</span> - from time to time, we may conduct surveys or test features, and analyze the data we have to develop, evaluate and improve these features, all in order to improve our Service and think of new and exciting features for our users. 
+                </p>
+                <p>
+                        <span class="underline">Protecting our interests</span> - we may use your Personal Data when we believe it’s necessary in order to take precautions against liabilities, investigate and defend ourselves against any third party claims or allegations, investigate and protect ourselves from fraud and money laundering, protect the security or integrity of our services and protect the rights and property of ORME, its users, affiliates and/or partners.
+  
+                </p>
+                <p>
+                        <span class="underline">Enforcing of policies</span> - we may use your Personal Data in order to enforce our policies, including but not limited to our Terms of Use.
+                </p>
+                <p>
+                        <span class="underline">Compliance with legal and regulatory requirements</span> - we may use your Personal Data to investigate violations, and as required by law, regulation or other governmental authority, or to comply with a subpoena or similar legal process.
+                </p>
+                <p class="bold">With whom do we share your Personal Data?</p>
+                <p>
+                        <span class="underline">Internal concerned parties</span> - we share your information with companies in our group, as well as our employees, in order to provide you with our services.
+                </p>
+                <p>
+                        <span class="underline">Business partners</span> - we share your information with business partners, such as storage and analytics providers who help us provide you with our Service. These third parties may have access to your Personal Data so that they may perform these tasks on our behalf, but they are obligated to comply with this Privacy Policy and may not use your Personal Data for any other purpose.
+                </p>
+                <p>
+                        <span class="underline">Compliance with laws and law enforcement entities</span> - we cooperate with government and law enforcement officials and private parties to enforce and comply with the law. We will disclose any data about you to government or law enforcement officials or private parties as we, in our sole discretion, believe necessary or appropriate to respond to claims and legal process (including but not limited to subpoenas), to protect our or a third party's property and rights, to protect the safety of the public or any person, or to prevent or stop any activity we may consider to be, or to pose a risk of being illegal, unethical, inappropriate or legally actionable. We also may be required to disclose an individual’s Personal Data in response to a lawful request by public authorities, including meeting national security or law enforcement requirements. 
+                </p>
+                <p>
+                        <span class="underline">Merger and acquisitions</span> – we may share your data if we enter into a business transaction such as a merger, acquisition, reorganization, bankruptcy, or sale of some or all of our assets. Any party that acquires our assets as part of such a transaction may continue to use your data in accordance with the terms of this Privacy Policy.
+                </p>
+                <p class="bold">Transfer of data outside the EEA</p>
+                <p>
+                        Please note that some data recipients may be located outside the EEA. In such cases we will transfer your data only to such countries as approved by the European Commission as providing adequate level of data protection, or enter into legal agreements ensuring an adequate level of data protection.  
+                </p>
+                <p class="bold">How we protect your information</p>
+                <p>
+                        We have implemented administrative, technical, and physical safeguards to help prevent unauthorized access, use, or disclosure of your Personal Data. Your data is stored on secure servers and isn’t publicly available. We limit access of your information only to those employees or partners on a “need to know” basis, in order to enable the carrying out of the agreement between us. 
+                </p>
+                <p>
+                        While we seek to protect your information to ensure that it is kept confidential, we cannot absolutely guarantee its security. You need to help us prevent unauthorized access to your account by protecting your password appropriately and limiting access to your account. You will be solely responsible for keeping your password confidential and for all use of your password and your account, including any unauthorized use. You should also be aware that there is always some risk involved in transmitting information over the internet. While we strive to protect your Personal Data, we cannot ensure or warrant the security and privacy of your Personal Data or other content you transmit using the service, and you do so at your own risk.
+                </p>
+                <p class="bold">Retention</p>
+                <p>
+                        We will retain your Personal Data for as long as necessary to provide our services, and as necessary to comply with our legal obligations, resolve disputes, and enforce our policies. Retention periods will be determined taking into account the type of information that is collected and the purpose for which it is collected, bearing in mind the requirements applicable to the situation and the need to destroy outdated, unused information at the earliest reasonable time. Under applicable regulations, we will keep records containing client personal data, trading information, account opening documents, communications and anything else as required by applicable laws and regulations.
+                </p>
+                <p class="bold">User rights</p>
+                <ol>
+                    <li>
+                            Receive confirmation as to whether or not Personal Data concerning you is being processed, and access your stored Personal Data, together with supplementary information.
+                    </li>
+                    <li>
+                            Receive a copy of Personal Data you directly volunteer to us in a structured, commonly used and machine-readable format.
+                    </li>
+                    <li>
+                            Request rectification of your Personal Data that is in our control.
+                    </li>
+                    <li>
+                            Request erasure of your Personal Data.
+                    </li>
+                    <li>
+                            Object to the processing of Personal Data by us.
+                    </li>
+                    <li>
+                            Request to restrict processing of your Personal Data by us. 
+                    </li>
+                    <li>
+                            Lodge a complaint with a supervisory authority.
+                    </li>
+                </ol>
+                <p>
+                        However, please note that these rights pertain to EU residents, and are not absolute. They may also be subject to our own legitimate interests and regulatory requirements. 
+                        Users not residing within the EU are free to contact us using the details provided below and we will make our best efforts to comply with your requests.
+                        
+                </p>
+                <p class="bold">How to contact us?</p>
+                <p>
+                        If you wish to exercise any of the aforementioned rights, ask us a question or receive more information, please contact us via our contact page (<a href="/contact.html">ORME.io/contact.html</a>).
+                </p>
+                <p class="bold">Our Policy toward Children</p>
+                <p>
+                        We understand the importance of protecting children’s privacy, especially in an online environment. The Website and Services are not designed for or directed at children under the age of 18 years old (“Minors”). We do not knowingly collect Personal Data from Minors. If a parent or guardian becomes aware that his or her child has provided us with Personal Data, he or she should contact us using the details provided above.
+                </p>
+                <p class="bold">Updates to this Policy</p>
+                <p>
+                        We may change this Policy from time to time, so it is advisable to review it frequently. Changes to this Privacy Policy will be announced on our website or through similar means for a reasonable length of time prior to and following the change taking effect.  
+                </p>
+            </div>
+        </div>
+    </div>
+    <div ap-widget="Footer"></div>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <!-- GSAP -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script> -->
+    <!-- <script type="text/babel" src="js/script.js"></script> -->
+    <!-- <script src="js/lib/growl.js"></script> -->
+    <!-- Coti -->
+    <script src="js/config.js"></script>
+    <script src="js/library.min.js"></script>
+    <script src="js/widgets.min.js"></script>
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-108807921-6', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <script type="text/javascript">
+        AlphaPoint.config.v2Widgets = true;
+
+        $(document).ready(function () {
+            // $('#footer').load('footer.html');
+            var loadCount = 0;
+            var totalLoadCount = 1; // number of html pieces loaded
+
+            function runRenders() {
+                loadCount++;
+
+                if (loadCount >= totalLoadCount) {
+                    renderWidgetWrapper();
+                    renderWidget();
+                    renderActionWrapper();
+                    renderTranslation();
+                    changeLanguage();
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+$siteBackground: #747474;
+$siteTextColor: #fff; // on pages like about
+
+$headerColor: #f3f3f3;
+$headerTextColor: #d52323;
+
+$footerColor: #444444;
+$footerTextColor: #fff;
+
+$navBarColor: #444444;
+$navBarTextColor: #fff;
+
+$widgetBackground: #fff;
+$widgetBorderColor: #ccc;
+$widgetTextColor: #646464;
+
+$widgetHeaderBackground: #fff;
+$widgetHeaderTextColor: #444444;
+$widgetHeaderBorderColor: $widgetBorderColor;
+
+
+$inputBackground: #eee;
+$inputBorder: darken($inputBackground, 1%);
+$inputTextColor: #4a4a4a;
+
+$inputDisabledBackground: #000000;
+$inputDisabledBorder: $inputDisabledBackground;
+$inputDisabledTextColor: #ffffff;
+
+
+$tabTextColor: #cfcfcf;
+$tabActiveTextColor: #000000;
+$tabActiveColor: #e27964;
+
+
+$radioButtonColor: #eeeeee;
+$radioButtonTextColor: inherit;
+$radioButtonActiveColor: #E15959;
+$radioButtonActiveTextColor:  #ffffff;
+
+
+$submitButtonColor: #428bca;
+$submitButtonTextColor: #fff;
+
+$cancelButtonColor: #E15959;
+$cancelButtonTextColor: #fff;
+
+$errorColor: #E15959;
+$errorTextColor: #fff;
+
+$successColor: #41C653;
+$successTextColor: #fff;
+
+$informationColor: #428BCA;
+$informationTextColor: #fff;
+
+// main accent color (used now for buttons and Product Pair blocks)
+// secondary accent color (now used for orderbook "new" items)

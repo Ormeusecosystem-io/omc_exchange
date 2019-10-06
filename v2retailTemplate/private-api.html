@@ -1,0 +1,814 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Private API</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/favicons/manifest.json">
+    <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+    <!-- stylesheets -->
+    <link rel="stylesheet" type="text/css" href="scss/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="dist/theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/misc.css">
+    <link rel="stylesheet" type="text/css" href="css/api-docs.css">
+    <link rel="stylesheet" type="text/css" href="css/shift-styles.css">
+</head>
+
+<body class="inner-page">
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+    <!--[if lt IE 8]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+    <section class="main-navigation-header">
+        <nav class="navbar navbar-toggleable-md navbar-inverse" role="navigation">
+            <div class="container no-override">
+                <button class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="header-nav" class="col-8 col-sm-3">
+                    <a href="/" class="navbar-brand-logo-link">
+                        <img src="images/company-logo-white.svg" class="img-fluid navbar-brand-logo">
+                    </a>
+                </div>
+                <a href="trade.html" ap-widget="MarketValue" class="navbar-brand market-value"></a>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-collapse">
+                    <div id="main-navigation"></div>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <div id="login" title="Create new user" class="mfp-hide">
+        <div class="ap-form-test" style="padding:22px">
+            <div ap-widget='LoginForm' to='home.html'></div>
+        </div>
+    </div>
+    <div id="dialog-form" title="Create new user" class="mfp-hide">
+        <div class="ap-form-test ">
+            <div ap-widget='RegisterForm' hide-header to='home.html' headerTitle=""></div>
+        </div>
+    </div>
+    <div class="theme-docs-header">
+        <section class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10">
+                    <h1 data-animate="fadeInUp" class="page-title"><span>Coti</span> <span>Private API</span> </h1>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <nav id="nav" class="hidden-sm hidden-xs affix nav">
+                    <div class="list-group"><a data-toggle="" data-target="#account-management-menu" href="#account-management" class="list-group-item heading collapsed">Account Management</a>
+                        <div id="account-management-menu"><a href="#account-management-create-account" style="border-top-left-radius: 0; border-top-right-radius: 0" class="list-group-item"><span class="badge alert-success"><i class="fa fa-plus"></i></span>Create Account</a><a href="#account-management-get-user-information" style="border-top-left-radius: 0; border-top-right-radius: 0" class="list-group-item"><span class="badge alert-success"><i class="fa fa-plus"></i></span>Get user Information</a><a href="#account-management-set-user-information" style="border-top-left-radius: 0; border-top-right-radius: 0" class="list-group-item"><span class="badge alert-success"><i class="fa fa-plus"></i></span>Set user Information</a><a href="#account-management-account-information" style="border-top-left-radius: 0; border-top-right-radius: 0" class="list-group-item"><span class="badge alert-success"><i class="fa fa-plus"></i></span>Account Information</a><a href="#account-management-account-trades" style="border-top-left-radius: 0; border-top-right-radius: 0" class="list-group-item"><span class="badge alert-success"><i class="fa fa-plus"></i></span>Account Trades</a><a href="#account-management-deposit-coins" style="border-top-left-radius: 0; border-top-right-radius: 0" class="list-group-item"><span class="badge alert-success"><i class="fa fa-plus"></i></span>Deposit Coins</a><a href="#account-management-withdraw-coins" style="border-top-left-radius: 0; border-top-right-radius: 0" class="list-group-item"><span class="badge alert-success"><i class="fa fa-plus"></i></span>Withdraw Coins</a></div>
+                    </div>
+                    <div class="list-group"><a data-toggle="" data-target="#order-management-menu" href="#order-management" class="list-group-item heading collapsed">Order Management</a>
+                        <div id="order-management-menu"><a href="#order-management-create-order" style="border-top-left-radius: 0; border-top-right-radius: 0" class="list-group-item"><span class="badge alert-success"><i class="fa fa-plus"></i></span>Create Order</a><a href="#order-management-modify-order" style="border-top-left-radius: 0; border-top-right-radius: 0" class="list-group-item"><span class="badge alert-success"><i class="fa fa-plus"></i></span>Modify Order</a><a href="#order-management-cancel-order" style="border-top-left-radius: 0; border-top-right-radius: 0" class="list-group-item"><span class="badge alert-success"><i class="fa fa-plus"></i></span>Cancel Order</a><a href="#order-management-cancel-all-orders" style="border-top-left-radius: 0; border-top-right-radius: 0" class="list-group-item"><span class="badge alert-success"><i class="fa fa-plus"></i></span>Cancel All Orders</a><a href="#order-management-open-orders" style="border-top-left-radius: 0; border-top-right-radius: 0" class="list-group-item"><span class="badge alert-success"><i class="fa fa-plus"></i></span>Open Orders</a><a href="#order-management-order-fee" style="border-top-left-radius: 0; border-top-right-radius: 0" class="list-group-item"><span class="badge alert-success"><i class="fa fa-plus"></i></span>Order Fee</a></div>
+                    </div>
+                    <div class="list-group"><a data-toggle="" data-target="#websocket-api-menu" href="#websocket-api" class="list-group-item heading collapsed">WebSocket API</a>
+                        <div id="websocket-api-menu"></div>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-md-8">
+                <div>
+                    <header>
+                        <div class="description">
+                            <p>Documentation for the private <span>Coti</span> API.</p>
+                            <h2>Authentication</h2>
+                            <p>All <span>Coti</span> private API requests require the following three parameters for authentication:</p>
+                            <p><strong>apiKey</strong> - your public API key</p>
+                            <p><strong>apiNonce</strong> - integer that increases for each request (ex: unix timestamp)</p>
+                            <p><strong>apiSig</strong> - API signature, which is an HMAC-SHA256 of your (nonce + user_id + public_key)</p>
+                            <p><em>Example of API signature generation in Ruby:</em></p>
+                            <pre>
+                              <code class="language-ruby">public_key = 
+                                <span class="hljs-string">"xxx"</span> private_key = 
+                                <span class="hljs-string">"yyy"</span> user_id = <span class="hljs-string">"foo@test.com"</span> <span class="hljs-comment"># user ID is your registered email</span>
+      nonce = (<span class="hljs-constant">Time</span>.now.to_f * <span class="hljs-number">10000</span>).to_isignature = <span class="hljs-constant">OpenSSL::HMAC</span>.hexdigest(<span class="hljs-string">"sha256"</span>, private_key, <span class="hljs-string">"<span class="hljs-subst">#{nonce}</span><span class="hljs-subst">#{user_id}</span><span class="hljs-subst">#{public_key}</span>"</span>).upcase
+    </code></pre>
+                            <p><strong>API key management:</strong> <a href="coming soon"><span>Coti</span> API ACCESS PAGE - coming soon, use websocket URI</a></p>
+                            <h2>Request structure</h2>
+                            <p>Requests are intiated using POST method. Data is transmitted to the server using UTF-8 charset.</p>
+                            <p>POST data is expected to be sent as a JSON string.</p>
+                            <pre><code class="language-json">JSON.stringify({key:'value'})
+    </code></pre>
+                            <h2>Response structure</h2>
+                            <p>Responses will contain either the key <code>"isAccepted": true,</code> or <code>"isAccepted": false,</code>.</p>
+                            <p>Typically there will be another key <code>"rejectReason"</code> with a textual explanation of the error as shown below.</p>
+                            <pre><code class="language-json">{"<span class="hljs-attribute">isAccepted</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>, "<span class="hljs-attribute">rejectReason</span>": <span class="hljs-value"><span class="hljs-string">"Incorrect usage"</span></span>,}
+    </code></pre>
+                            <h2>Request limits</h2>
+                            <p>More than 500 request per 10 minutes will result in IP ban.</p>
+                            <p><em>For real-time data please refer to the <span>Coti</span> WebSocket API.</em></p>
+                            <h2>WebSocket API</h2>
+                            <p>Our WebSocket API provides real-time order book, trade data, and much more.</p>
+                        </div>
+                    </header>
+                </div>
+                <div id="account-management">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3>Account Management&nbsp;<a href="#account-management"><i class="fa fa-link"></i></a></h3></div>
+                        <div class="panel-body">
+                            <h4 id="account-management-create-account">Create Account&nbsp;<a href="#account-management-create-account"><i class="fa fa-link"></i></a></h4>
+                            <p><strong>Parameters:</strong></p>
+                            <p><code>firstname</code> - First name</p>
+                            <p><code>lastname</code> - Last name</p>
+                            <p><code>email</code> - Email address</p>
+                            <p><code>phone</code> - Phone number (ex: “+12223334444”)</p>
+                            <p><code>password</code> - Minimum 8 characters</p>
+                            <section id="account-management-create-account-post" class="panel panel-success">
+                                <div class="panel-heading">
+                                    <div style="float:right"><span style="text-transform: lowercase">Create a new account</span></div>
+                                    <div style="float:left"><a href="#account-management-create-account-post" class="btn btn-xs btn-success">POST</a></div>
+                                    <div style="overflow:hidden"><code>/ajax/v1/CreateAccount</code></div>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item"><strong>Request</strong><a data-toggle="collapse" data-target="#077ece11e8598a3803ba802202ffb7c5" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="077ece11e8598a3803ba802202ffb7c5" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{
+    "<span class="hljs-attribute">firstname</span>":<span class="hljs-value"><span class="hljs-string">"James"</span></span>,
+    "<span class="hljs-attribute">lastname</span>":<span class="hljs-value"><span class="hljs-string">"Bond"</span></span>,
+    "<span class="hljs-attribute">email</span>":<span class="hljs-value"><span class="hljs-string">"james@bond.com"</span></span>,
+    "<span class="hljs-attribute">phone</span>":<span class="hljs-value"><span class="hljs-string">"8888888007"</span></span>,
+    "<span class="hljs-attribute">password</span>":<span class="hljs-value"><span class="hljs-string">"passwd"</span>
+  </span>}
+  </code></pre></li>
+                                    <li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#53099a741139cffc8c328f1b85712a29" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="53099a741139cffc8c328f1b85712a29" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{"<span class="hljs-attribute">isAccepted</span>":<span class="hljs-value"><span class="hljs-string">"true"</span></span>,"<span class="hljs-attribute">rejectReason</span>":<span class="hljs-value"><span class="hljs-literal">null</span></span>}
+  </code></pre></li>
+                                </ul>
+                            </section>
+                            <h4 id="account-management-get-user-information">Get user Information&nbsp;<a href="#account-management-get-user-information"><i class="fa fa-link"></i></a></h4>
+                            <p>Returns first and last name</p>
+                            <section id="account-management-get-user-information-post" class="panel panel-success">
+                                <div class="panel-heading">
+                                    <div style="float:right"><span style="text-transform: lowercase">Get user Info</span></div>
+                                    <div style="float:left"><a href="#account-management-get-user-information-post" class="btn btn-xs btn-success">POST</a></div>
+                                    <div style="overflow:hidden"><code>/ajax/v1/GetUserInfo</code></div>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item"><strong>Request</strong><a data-toggle="collapse" data-target="#320a30551f00447f4561d51b1f05279c" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="320a30551f00447f4561d51b1f05279c" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{
+    "<span class="hljs-attribute">apiKey</span>": <span class="hljs-value"><span class="hljs-string">"704ef876d150bf0e024d2379d0e29274"</span></span>,
+    "<span class="hljs-attribute">apiNonce</span>": <span class="hljs-value"><span class="hljs-number">14225711230650</span></span>,
+    "<span class="hljs-attribute">apiSig</span>": <span class="hljs-value"><span class="hljs-string">"B8F30FFE8FB577A9A186842661521DAB3E0E3896349C78BCAE38482F4EBDD817"</span>
+  </span>}
+  </code></pre></li>
+                                    <li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#cb4fe12266dcfab11a5209f2d7d0fd66" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="cb4fe12266dcfab11a5209f2d7d0fd66" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{<span class="hljs-string">"userInfoKVP"</span>:[{<span class="hljs-string">"key"</span>:<span class="hljs-string">"FirstName"</span>,<span class="hljs-string">"value"</span>:<span class="hljs-string">"Test"</span>},{<span class="hljs-string">"key"</span>:<span class="hljs-string">"LastName"</span>,<span class="hljs-string">"value"</span>:<span class="hljs-string">"Test],"</span>isAccepted<span class="hljs-string">":true}</span>
+  </code></pre></li>
+                                </ul>
+                            </section>
+                            <h4 id="account-management-set-user-information">Set user Information&nbsp;<a href="#account-management-set-user-information"><i class="fa fa-link"></i></a></h4>
+                            <p>Change user name and/or 2FA settings</p>
+                            <p><strong>Parameters:</strong></p>
+                            <p><code>userInfoKVP</code> - An array of key value pairs</p>
+                            <p><em>Items to set in the array of key value pairs</em></p>
+                            <p><code>FirstName</code> - First name</p>
+                            <p><code>LastName</code> - Last name</p>
+                            <p><code>UseAuthy2FA</code> - “true” or “false” toggle Authy app</p>
+                            <p><code>Cell2FACountryCode</code> - Cell country code (ex: 1), required for Authy</p>
+                            <p><code>Cell2FAValue</code> - Cell phone number, required for Authy</p>
+                            <p><code>Use2FAForWithdraw</code> - “true” or “false” set to true for using 2FA for withdrawals</p>
+                            <section id="account-management-set-user-information-post" class="panel panel-success">
+                                <div class="panel-heading">
+                                    <div style="float:right"><span style="text-transform: lowercase">Set user info</span></div>
+                                    <div style="float:left"><a href="#account-management-set-user-information-post" class="btn btn-xs btn-success">POST</a></div>
+                                    <div style="overflow:hidden"><code>/ajax/v1/SetUserInfo</code></div>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item"><strong>Request</strong><a data-toggle="collapse" data-target="#759331b97164666e29898a5f5f16d8a2" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="759331b97164666e29898a5f5f16d8a2" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{
+    "<span class="hljs-attribute">sessionToken</span>": <span class="hljs-value"><span class="hljs-string">"null"</span></span>,
+    "<span class="hljs-attribute">apiKey</span>": <span class="hljs-value"><span class="hljs-string">"6afca79b51d0dc24751175129beea58a"</span></span>,
+    "<span class="hljs-attribute">apiNonce</span>": <span class="hljs-value"><span class="hljs-number">14235884303596</span></span>,
+    "<span class="hljs-attribute">apiSig</span>": <span class="hljs-value"><span class="hljs-string">"57FE3D25A1E8EC02B8763728FDF0457ADC07DDCF7F623F0D3E2BDE77FD1A2A7E"</span></span>,
+    "<span class="hljs-attribute">userInfoKVP</span>":<span class="hljs-value">[{"<span class="hljs-attribute">key</span>":<span class="hljs-value"><span class="hljs-string">"FirstName"</span></span>,"<span class="hljs-attribute">value</span>":<span class="hljs-value"><span class="hljs-string">"James"</span></span>},{"<span class="hljs-attribute">key</span>":<span class="hljs-value"><span class="hljs-string">"LastName"</span></span>,"<span class="hljs-attribute">value</span>":<span class="hljs-value"><span class="hljs-string">"Bond"</span></span>},{"<span class="hljs-attribute">key</span>":<span class="hljs-value"><span class="hljs-string">"Cell2FACountryCode"</span></span>,"<span class="hljs-attribute">value</span>":<span class="hljs-value"><span class="hljs-string">"1"</span></span>},
+    {"<span class="hljs-attribute">key</span>":<span class="hljs-value"><span class="hljs-string">"Cell2FAValue"</span></span>,"<span class="hljs-attribute">value</span>":<span class="hljs-value"><span class="hljs-string">"2121233210"</span></span>},{"<span class="hljs-attribute">key</span>":<span class="hljs-value"><span class="hljs-string">"UseAuthy2FA"</span></span>,"<span class="hljs-attribute">value</span>":<span class="hljs-value"><span class="hljs-string">"false"</span></span>}]
+  </span>}
+  </code></pre></li>
+                                    <li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#6d6220468d09272519c8f1c4a9f047d5" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="6d6220468d09272519c8f1c4a9f047d5" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{"<span class="hljs-attribute">isAccepted</span>":<span class="hljs-value"><span class="hljs-string">"true"</span></span>,"<span class="hljs-attribute">rejectReason</span>":<span class="hljs-value"><span class="hljs-literal">null</span></span>,"<span class="hljs-attribute">requireAuthy2FA</span>":<span class="hljs-value"><span class="hljs-literal">true</span></span>,"<span class="hljs-attribute">val2FaRequestCode</span>":<span class="hljs-value"><span class="hljs-string">"12354ASD"</span></span>} 
+  </code></pre></li>
+                                </ul>
+                            </section>
+                            <h4 id="account-management-account-information">Account Information&nbsp;<a href="#account-management-account-information"><i class="fa fa-link"></i></a></h4>
+                            <p>Lists balances, trade count, and volume</p>
+                            <section id="account-management-account-information-post" class="panel panel-success">
+                                <div class="panel-heading">
+                                    <div style="float:right"><span style="text-transform: lowercase">Get account info</span></div>
+                                    <div style="float:left"><a href="#account-management-account-information-post" class="btn btn-xs btn-success">POST</a></div>
+                                    <div style="overflow:hidden"><code>/ajax/v1/GetAccountInfo</code></div>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item"><strong>Request</strong><a data-toggle="collapse" data-target="#be0588536b21fc781c26c2745ca17f4a" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="be0588536b21fc781c26c2745ca17f4a" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{
+    "<span class="hljs-attribute">apiKey</span>": <span class="hljs-value"><span class="hljs-string">"6afca79b51d0dc24751175129beea58a"</span></span>,
+    "<span class="hljs-attribute">apiNonce</span>": <span class="hljs-value"><span class="hljs-number">14235887859685</span></span>,
+    "<span class="hljs-attribute">apiSig</span>": <span class="hljs-value"><span class="hljs-string">"4062383A7FB07F0C52C5E190696391591DA9560662CBEFE73E9E20A1325B8473"</span>
+  </span>}
+  </code></pre></li>
+                                    <li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#203de9062acd991964119a216985d383" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="203de9062acd991964119a216985d383" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">currencies</span>": <span class="hljs-value">[
+  {
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"NZD"</span></span>,
+    "<span class="hljs-attribute">balance</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
+    "<span class="hljs-attribute">hold</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+  </span>},
+  {
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"BTC"</span></span>,
+    "<span class="hljs-attribute">balance</span>": <span class="hljs-value"><span class="hljs-number">1000</span></span>,
+    "<span class="hljs-attribute">hold</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+  </span>},
+  {
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"LTC"</span></span>,
+    "<span class="hljs-attribute">balance</span>": <span class="hljs-value"><span class="hljs-number">1000</span></span>,
+    "<span class="hljs-attribute">hold</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+  </span>},
+  {
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"MXN"</span></span>,
+    "<span class="hljs-attribute">balance</span>": <span class="hljs-value"><span class="hljs-number">1000</span></span>,
+    "<span class="hljs-attribute">hold</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+  </span>},
+  {
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"PHP"</span></span>,
+    "<span class="hljs-attribute">balance</span>": <span class="hljs-value"><span class="hljs-number">1000</span></span>,
+    "<span class="hljs-attribute">hold</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+  </span>}
+  ]</span>,
+  "<span class="hljs-attribute">productPairs</span>": <span class="hljs-value">[
+  {
+    "<span class="hljs-attribute">productPairName</span>": <span class="hljs-value"><span class="hljs-string">"BTCPHP"</span></span>,
+    "<span class="hljs-attribute">productPairCode</span>": <span class="hljs-value"><span class="hljs-number">15</span></span>,
+    "<span class="hljs-attribute">tradeCount</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
+    "<span class="hljs-attribute">tradeVolume</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+  </span>},
+  {
+    "<span class="hljs-attribute">productPairName</span>": <span class="hljs-value"><span class="hljs-string">"BTCMXN"</span></span>,
+    "<span class="hljs-attribute">productPairCode</span>": <span class="hljs-value"><span class="hljs-number">16</span></span>,
+    "<span class="hljs-attribute">tradeCount</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
+    "<span class="hljs-attribute">tradeVolume</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+  </span>},
+  {
+    "<span class="hljs-attribute">productPairName</span>": <span class="hljs-value"><span class="hljs-string">"LTCBTC"</span></span>,
+    "<span class="hljs-attribute">productPairCode</span>": <span class="hljs-value"><span class="hljs-number">17</span></span>,
+    "<span class="hljs-attribute">tradeCount</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
+    "<span class="hljs-attribute">tradeVolume</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+  </span>},
+  {
+    "<span class="hljs-attribute">productPairName</span>": <span class="hljs-value"><span class="hljs-string">"LTCNZD"</span></span>,
+    "<span class="hljs-attribute">productPairCode</span>": <span class="hljs-value"><span class="hljs-number">18</span></span>,
+    "<span class="hljs-attribute">tradeCount</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
+    "<span class="hljs-attribute">tradeVolume</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+  </span>},
+  {
+    "<span class="hljs-attribute">productPairName</span>": <span class="hljs-value"><span class="hljs-string">"BTCNZD"</span></span>,
+    "<span class="hljs-attribute">productPairCode</span>": <span class="hljs-value"><span class="hljs-number">19</span></span>,
+    "<span class="hljs-attribute">tradeCount</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
+    "<span class="hljs-attribute">tradeVolume</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+  </span>}
+  ]</span>,
+  "<span class="hljs-attribute">isAccepted</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
+  </span>} 
+  </code></pre></li>
+                                </ul>
+                            </section>
+                            <h4 id="account-management-account-trades">Account Trades&nbsp;<a href="#account-management-account-trades"><i class="fa fa-link"></i></a></h4>
+                            <p><strong>Parameters:</strong></p>
+                            <p><code>ins</code> - Instrument code (ex: “BTCNZD”)</p>
+                            <p><code>startIndex</code> - Starting index, if less than 0 then start from the beginning</p>
+                            <p><code>count</code> - Returns last trade, (Default: 30)</p>
+                            <section id="account-management-account-trades-post" class="panel panel-success">
+                                <div class="panel-heading">
+                                    <div style="float:right"><span style="text-transform: lowercase">Get account trades</span></div>
+                                    <div style="float:left"><a href="#account-management-account-trades-post" class="btn btn-xs btn-success">POST</a></div>
+                                    <div style="overflow:hidden"><code>/ajax/v1/GetAccountTrades</code></div>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item"><strong>Request</strong><a data-toggle="collapse" data-target="#1d73af316644871fa9e98760fe8dff86" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="1d73af316644871fa9e98760fe8dff86" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{
+    "<span class="hljs-attribute">apiKey</span>": <span class="hljs-value"><span class="hljs-string">"6afca79b51d0dc24751175129beea58a"</span></span>,
+    "<span class="hljs-attribute">apiNonce</span>": <span class="hljs-value"><span class="hljs-number">14235890534122</span></span>,
+    "<span class="hljs-attribute">apiSig</span>": <span class="hljs-value"><span class="hljs-string">"5629BD713D5021A30C762FA08888A7CBF5266CBDFEF83989B74CC00C6E482D17"</span>
+    <span class="hljs-string">"ins"</span>:<span class="hljs-string">"BTCNZD"</span></span>, "<span class="hljs-attribute">startIndex</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">count</span>": <span class="hljs-value"><span class="hljs-number">30</span>
+  </span>}
+  </code></pre></li>
+                                    <li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#c66f5ff9805417c05b2834e31369dc2d" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="c66f5ff9805417c05b2834e31369dc2d" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">isAccepted</span>":<span class="hljs-value"><span class="hljs-literal">true</span></span>,
+  "<span class="hljs-attribute">dateTimeUtc</span>":<span class="hljs-value"><span class="hljs-number">635091218411215312</span></span>,
+  "<span class="hljs-attribute">ins</span>":<span class="hljs-value"><span class="hljs-string">"BTCNZD"</span></span>,
+  "<span class="hljs-attribute">startIndex</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,
+  "<span class="hljs-attribute">count</span>":<span class="hljs-value"><span class="hljs-number">40</span></span>,
+  "<span class="hljs-attribute">trades</span>":
+  <span class="hljs-value">[
+    {
+    "<span class="hljs-attribute">tid</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,
+    "<span class="hljs-attribute">px</span>":<span class="hljs-value"><span class="hljs-number">123</span></span>,
+    "<span class="hljs-attribute">qty</span>":<span class="hljs-value"><span class="hljs-number">2</span></span>,
+    "<span class="hljs-attribute">time</span>":<span class="hljs-value"><span class="hljs-number">635087397744993281</span></span>,
+    "<span class="hljs-attribute">incomingOrderSide</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,
+    "<span class="hljs-attribute">incomingServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">2849</span></span>,
+    "<span class="hljs-attribute">bookServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">2804</span>
+  </span>},
+  {
+    "<span class="hljs-attribute">tid</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,
+    "<span class="hljs-attribute">px</span>":<span class="hljs-value"><span class="hljs-number">123</span></span>,
+    "<span class="hljs-attribute">qty</span>":<span class="hljs-value"><span class="hljs-number">2</span></span>,
+    "<span class="hljs-attribute">time</span>":<span class="hljs-value"><span class="hljs-number">635087397744993281</span></span>,
+    "<span class="hljs-attribute">incomingOrderSide</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,
+    "<span class="hljs-attribute">incomingServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">2849</span></span>,
+    "<span class="hljs-attribute">bookServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">2804</span>
+  </span>}
+  ]
+  </span>}
+  </code></pre></li>
+                                </ul>
+                            </section>
+                            <h4 id="account-management-deposit-coins">Deposit Coins&nbsp;<a href="#account-management-deposit-coins"><i class="fa fa-link"></i></a></h4>
+                            <section id="account-management-deposit-coins-post" class="panel panel-success">
+                                <div class="panel-heading">
+                                    <div style="float:right"><span style="text-transform: lowercase">Generate Deposit address</span></div>
+                                    <div style="float:left"><a href="#account-management-deposit-coins-post" class="btn btn-xs btn-success">POST</a></div>
+                                    <div style="overflow:hidden"><code>/ajax/v1/GetDepositAddresses</code></div>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item"><strong>Request</strong><a data-toggle="collapse" data-target="#945a2b36853132213e57e8ecaa699ec8" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="945a2b36853132213e57e8ecaa699ec8" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">apiKey</span>": <span class="hljs-value"><span class="hljs-string">"6afca79b51d0dc24751175129beea58a"</span></span>,
+  "<span class="hljs-attribute">apiNonce</span>": <span class="hljs-value"><span class="hljs-number">14235891086392</span></span>,
+  "<span class="hljs-attribute">apiSig</span>": <span class="hljs-value"><span class="hljs-string">"2BA83E087D81E7979F1ACAA04E7A2E6741F840A84A50E5728926E21EB5399471"</span>
+  </span>}
+  </code></pre></li>
+                                    <li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#51cbd0fcd5bb744521b657bb89b804d0" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="51cbd0fcd5bb744521b657bb89b804d0" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">isAccepted</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+  "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"BTCNZD"</span></span>,
+  "<span class="hljs-attribute">depositAddress</span>": <span class="hljs-value"><span class="hljs-string">"1BTCorgHwCg6u2YSAWKgS17qUad6kHmtQW"</span></span>,
+  }
+  </code></pre></li>
+                                </ul>
+                            </section>
+                            <h4 id="account-management-withdraw-coins">Withdraw Coins&nbsp;<a href="#account-management-withdraw-coins"><i class="fa fa-link"></i></a></h4>
+                            <p><strong>Parameters:</strong></p>
+                            <p><code>ins</code> - Instrument name (ex: “BTCNZD”)</p>
+                            <p><code>product</code> - Currency name (ex: “BTC”)</p>
+                            <p><code>amount</code> - Amount (ex: “.011”)</p>
+                            <p><code>sendToAddress</code> - Withdraw address</p>
+                            <section id="account-management-withdraw-coins-post" class="panel panel-success">
+                                <div class="panel-heading">
+                                    <div style="float:right"><span style="text-transform: lowercase">Withdraw coins</span></div>
+                                    <div style="float:left"><a href="#account-management-withdraw-coins-post" class="btn btn-xs btn-success">POST</a></div>
+                                    <div style="overflow:hidden"><code>/ajax/v1/Withdraw</code></div>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item"><strong>Request</strong><a data-toggle="collapse" data-target="#915d6498f95e8055c572e4c32e1ad537" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="915d6498f95e8055c572e4c32e1ad537" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{
+    "<span class="hljs-attribute">apiKey</span>": <span class="hljs-value"><span class="hljs-string">"6afca79b51d0dc24751175129beea58a"</span></span>,
+    "<span class="hljs-attribute">apiNonce</span>": <span class="hljs-value"><span class="hljs-number">14235891737658</span></span>,
+    "<span class="hljs-attribute">apiSig</span>": <span class="hljs-value"><span class="hljs-string">"0F33B26164A374C692D6EE86D0128C8E41183576F20DD56B9EE72483706687FE"</span>
+    <span class="hljs-string">"ins"</span>: <span class="hljs-string">"BTCNZD"</span></span>,
+    "<span class="hljs-attribute">product</span>": <span class="hljs-value"><span class="hljs-string">"BTC"</span></span>,
+    "<span class="hljs-attribute">amount</span>": <span class="hljs-value"><span class="hljs-string">".011"</span></span>,
+    "<span class="hljs-attribute">sendToAddress</span>": <span class="hljs-value"><span class="hljs-string">"1BTCorgHwCg6u2YSAWKgS17qUad6kHmtQW"</span></span>,
+  }
+  </code></pre></li>
+                                    <li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#191fc0c1362941aa1c2609d08f0d39d4" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="191fc0c1362941aa1c2609d08f0d39d4" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">isAccepted</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+  }
+  </code></pre></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div id="order-management">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3>Order Management&nbsp;<a href="#order-management"><i class="fa fa-link"></i></a></h3></div>
+                        <div class="panel-body">
+                            <h4 id="order-management-create-order">Create Order&nbsp;<a href="#order-management-create-order"><i class="fa fa-link"></i></a></h4>
+                            <p><strong>Parameters</strong></p>
+                            <p><code>ins</code> - Instrument code (ex: “BTCNZD”)</p>
+                            <p><code>side</code> - “buy” or “sell”</p>
+                            <p><code>orderType</code> - “1” for market orders, “0” for limit orders</p>
+                            <p><code>qty</code> - Quantity</p>
+                            <p><code>px</code> - Price in NZD</p>
+                            <section id="order-management-create-order-post" class="panel panel-success">
+                                <div class="panel-heading">
+                                    <div style="float:right"><span style="text-transform: lowercase">Creates a Market or Limit order</span></div>
+                                    <div style="float:left"><a href="#order-management-create-order-post" class="btn btn-xs btn-success">POST</a></div>
+                                    <div style="overflow:hidden"><code>/ajax/v1/CreateOrder</code></div>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item"><strong>Request</strong><a data-toggle="collapse" data-target="#62da298912a4d8eb612ad2575247bd42" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="62da298912a4d8eb612ad2575247bd42" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{
+    "<span class="hljs-attribute">apiKey</span>": <span class="hljs-value"><span class="hljs-string">"6afca79b51d0dc24751175129beea58a"</span></span>,
+    "<span class="hljs-attribute">apiNonce</span>": <span class="hljs-value"><span class="hljs-number">14235892519000</span></span>,
+    "<span class="hljs-attribute">apiSig</span>": <span class="hljs-value"><span class="hljs-string">"21F65F3B02016165194390B6979C29768BBBBD5FA6FDB97B6F10AC435B41FDA3"</span></span>,
+    "<span class="hljs-attribute">ins</span>": <span class="hljs-value"><span class="hljs-string">"BTCNZD"</span></span>,
+    "<span class="hljs-attribute">side</span>": <span class="hljs-value"><span class="hljs-string">"buy"</span></span>,
+    "<span class="hljs-attribute">orderType</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
+    "<span class="hljs-attribute">qty</span>": <span class="hljs-value"><span class="hljs-string">"1.0"</span></span>,
+    "<span class="hljs-attribute">px</span>": <span class="hljs-value"><span class="hljs-string">"342.99"</span>
+  </span>}
+  </code></pre></li>
+                                    <li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#9e27e75b996e55addf04b22057c5c8bb" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="9e27e75b996e55addf04b22057c5c8bb" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">isAccepted</span>": <span class="hljs-value"><span class="hljs-string">"true"</span></span>,
+  "<span class="hljs-attribute">serverOrderId</span>": <span class="hljs-value"><span class="hljs-string">"18"</span></span>,
+  "<span class="hljs-attribute">dateTimeUtc</span>": <span class="hljs-value"><span class="hljs-string">"952132543213543"</span>
+  </span>}    
+  </code></pre></li>
+                                </ul>
+                            </section>
+                            <h4 id="order-management-modify-order">Modify Order&nbsp;<a href="#order-management-modify-order"><i class="fa fa-link"></i></a></h4>
+                            <p><strong>Parameters:</strong></p>
+                            <p><code>serverOrderId</code> - Order Id</p>
+                            <p><code>ins</code> - Instrument code (ex: “BTCNZD”)</p>
+                            <p><code>modifyAction</code> - “0” or “1”</p>
+                            <p><em>“0” means "Move to top", which will modify the order price to the top of the book. A buy order will be modified to the highest bid and a sell order will be modified to the lowest ask price. “1” means "Execute now", which will convert a limit order into a market order.</em></p>
+                            <section id="order-management-modify-order-post" class="panel panel-success">
+                                <div class="panel-heading">
+                                    <div style="float:right"><span style="text-transform: lowercase">Modifies an order</span></div>
+                                    <div style="float:left"><a href="#order-management-modify-order-post" class="btn btn-xs btn-success">POST</a></div>
+                                    <div style="overflow:hidden"><code>/ajax/v1/ModifyOrder</code></div>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item"><strong>Request</strong><a data-toggle="collapse" data-target="#86e8cec846bc22b635f1f97904449f67" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="86e8cec846bc22b635f1f97904449f67" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{
+    "<span class="hljs-attribute">apiKey</span>": <span class="hljs-value"><span class="hljs-string">"6afca79b51d0dc24751175129beea58a"</span></span>,
+    "<span class="hljs-attribute">apiNonce</span>": <span class="hljs-value"><span class="hljs-number">14235893288142</span></span>,
+    "<span class="hljs-attribute">apiSig</span>": <span class="hljs-value"><span class="hljs-string">"2D6571C540A623C3757F3A2EA770E77C9776CAC36F28BF422DD9C498674FF21C"</span></span>,
+    "<span class="hljs-attribute">ins</span>": <span class="hljs-value"><span class="hljs-string">"BTCNZD"</span></span>,
+    "<span class="hljs-attribute">serverOrderId</span>": <span class="hljs-value"><span class="hljs-number">123</span></span>,
+    "<span class="hljs-attribute">modifyAction</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+  </span>}
+  </code></pre></li>
+                                    <li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#744c1bc9d5a8e2141e933b5537f924f6" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="744c1bc9d5a8e2141e933b5537f924f6" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">isAccepted</span>": <span class="hljs-value"><span class="hljs-string">"true"</span></span>,
+  "<span class="hljs-attribute">serverOrderId</span>": <span class="hljs-value"><span class="hljs-string">"18"</span></span>,
+  "<span class="hljs-attribute">dateTimeUtc</span>": <span class="hljs-value"><span class="hljs-string">"952132543213543"</span>
+  </span>}
+  </code></pre></li>
+                                </ul>
+                            </section>
+                            <h4 id="order-management-cancel-order">Cancel Order&nbsp;<a href="#order-management-cancel-order"><i class="fa fa-link"></i></a></h4>
+                            <p><strong>Parameters:</strong></p>
+                            <p><code>ins</code> - Instrument code (ex: “BTCNZD”)</p>
+                            <p><code>serverOrderId</code> - Order id (ex: 1000)</p>
+                            <section id="order-management-cancel-order-post" class="panel panel-success">
+                                <div class="panel-heading">
+                                    <div style="float:right"><span style="text-transform: lowercase">Cancel Order</span></div>
+                                    <div style="float:left"><a href="#order-management-cancel-order-post" class="btn btn-xs btn-success">POST</a></div>
+                                    <div style="overflow:hidden"><code>/ajax/v1/CancelOrder</code></div>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item"><strong>Request</strong><a data-toggle="collapse" data-target="#2203afa23c92f40aad3e089d0ee568fe" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="2203afa23c92f40aad3e089d0ee568fe" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{
+    "<span class="hljs-attribute">apiKey</span>": <span class="hljs-value"><span class="hljs-string">"6afca79b51d0dc24751175129beea58a"</span></span>,
+    "<span class="hljs-attribute">apiNonce</span>": <span class="hljs-value"><span class="hljs-number">14235894208604</span></span>,
+    "<span class="hljs-attribute">apiSig</span>": <span class="hljs-value"><span class="hljs-string">"5530093336BE9EECF6FF5C57C1B05568D7E7C5486477E9F22B3A93C21EFD78A1"</span></span>,
+    "<span class="hljs-attribute">ins</span>": <span class="hljs-value"><span class="hljs-string">"BTCNZD"</span></span>,
+    "<span class="hljs-attribute">serverOrderId</span>": <span class="hljs-value"><span class="hljs-number">123</span>
+  </span>}
+  </code></pre></li>
+                                    <li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#d0ac30de03a7c003c8960688bb6491ba" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="d0ac30de03a7c003c8960688bb6491ba" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">isAccepted</span>": <span class="hljs-value"><span class="hljs-string">"true"</span></span>,
+  "<span class="hljs-attribute">serverOrderId</span>": <span class="hljs-value"><span class="hljs-string">"18"</span></span>,
+  "<span class="hljs-attribute">dateTimeUtc</span>": <span class="hljs-value"><span class="hljs-string">"952132543213543"</span>
+  </span>}
+  </code></pre></li>
+                                </ul>
+                            </section>
+                            <h4 id="order-management-cancel-all-orders">Cancel All Orders&nbsp;<a href="#order-management-cancel-all-orders"><i class="fa fa-link"></i></a></h4>
+                            <p><strong>Parameters:</strong></p>
+                            <p><code>ins</code> - Instrument code (ex: “BTCNZD”)</p>
+                            <section id="order-management-cancel-all-orders-post" class="panel panel-success">
+                                <div class="panel-heading">
+                                    <div style="float:right"><span style="text-transform: lowercase">Cancels all orders for a given currency pair</span></div>
+                                    <div style="float:left"><a href="#order-management-cancel-all-orders-post" class="btn btn-xs btn-success">POST</a></div>
+                                    <div style="overflow:hidden"><code>/ajax/v1/CancelAllOrders</code></div>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item"><strong>Request</strong><a data-toggle="collapse" data-target="#856df4f24fab10c2e25ba5cec13816ad" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="856df4f24fab10c2e25ba5cec13816ad" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{
+    "<span class="hljs-attribute">apiKey</span>": <span class="hljs-value"><span class="hljs-string">"6afca79b51d0dc24751175129beea58a"</span></span>,
+    "<span class="hljs-attribute">apiNonce</span>": <span class="hljs-value"><span class="hljs-number">14235895024539</span></span>,
+    "<span class="hljs-attribute">apiSig</span>": <span class="hljs-value"><span class="hljs-string">"89EFBA6546983F33EDAA6AE9DFF29AE697153FECB4FA0A1499003DF8EED77270"</span></span>,
+    "<span class="hljs-attribute">ins</span>": <span class="hljs-value"><span class="hljs-string">"BTCNZD"</span>
+  </span>}
+  </code></pre></li>
+                                    <li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#adafddce9b9706ad0ea78fb7322db6c4" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="adafddce9b9706ad0ea78fb7322db6c4" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">isAccepted</span>": <span class="hljs-value"><span class="hljs-string">"true"</span>
+  </span>}
+  </code></pre></li>
+                                </ul>
+                            </section>
+                            <h4 id="order-management-open-orders">Open Orders&nbsp;<a href="#order-management-open-orders"><i class="fa fa-link"></i></a></h4>
+                            <section id="order-management-open-orders-post" class="panel panel-success">
+                                <div class="panel-heading">
+                                    <div style="float:right"><span style="text-transform: lowercase">Get open orders</span></div>
+                                    <div style="float:left"><a href="#order-management-open-orders-post" class="btn btn-xs btn-success">POST</a></div>
+                                    <div style="overflow:hidden"><code>/ajax/v1/GetAccountOpenOrders</code></div>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item"><strong>Request</strong><a data-toggle="collapse" data-target="#041a7a81135c67efee05acd05c10af5d" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="041a7a81135c67efee05acd05c10af5d" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">apiKey</span>": <span class="hljs-value"><span class="hljs-string">"6afca79b51d0dc24751175129beea58a"</span></span>,
+  "<span class="hljs-attribute">apiNonce</span>": <span class="hljs-value"><span class="hljs-number">14235895556338</span></span>,
+  "<span class="hljs-attribute">apiSig</span>": <span class="hljs-value"><span class="hljs-string">"7FDE8EE527FE126EFF50FCDE8B502F0DF593043D3E56326892BEC9F5DBF98534"</span>
+  </span>}
+  </code></pre></li>
+                                    <li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#891c15ec0d61a7f9ac26b5201098d870" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="891c15ec0d61a7f9ac26b5201098d870" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">openOrdersInfo</span>": <span class="hljs-value">[
+  {
+    "<span class="hljs-attribute">ins</span>": <span class="hljs-value"><span class="hljs-string">"BTCPHP"</span></span>,
+    "<span class="hljs-attribute">openOrders</span>": <span class="hljs-value">[]
+  </span>},
+  {
+    "<span class="hljs-attribute">ins</span>": <span class="hljs-value"><span class="hljs-string">"BTCMXN"</span></span>,
+    "<span class="hljs-attribute">openOrders</span>": <span class="hljs-value">[]
+  </span>},
+  {
+    "<span class="hljs-attribute">ins</span>": <span class="hljs-value"><span class="hljs-string">"LTCBTC"</span></span>,
+    "<span class="hljs-attribute">openOrders</span>": <span class="hljs-value">[]
+  </span>},
+  {
+    "<span class="hljs-attribute">ins</span>": <span class="hljs-value"><span class="hljs-string">"LTCNZD"</span></span>,
+    "<span class="hljs-attribute">openOrders</span>": <span class="hljs-value">[]
+  </span>},
+  {
+    "<span class="hljs-attribute">ins</span>": <span class="hljs-value"><span class="hljs-string">"BTCNZD"</span></span>,
+    "<span class="hljs-attribute">openOrders</span>": <span class="hljs-value">[
+    {
+    "<span class="hljs-attribute">ServerOrderId</span>": <span class="hljs-value"><span class="hljs-number">190590025</span></span>,
+    "<span class="hljs-attribute">AccountId</span>": <span class="hljs-value"><span class="hljs-number">21</span></span>,
+    "<span class="hljs-attribute">Price</span>": <span class="hljs-value"><span class="hljs-number">800</span></span>,
+    "<span class="hljs-attribute">QtyTotal</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
+    "<span class="hljs-attribute">QtyRemaining</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
+    "<span class="hljs-attribute">ReceiveTime</span>": <span class="hljs-value"><span class="hljs-number">635581759960537500</span></span>,
+    "<span class="hljs-attribute">Side</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+  </span>},
+  {
+    "<span class="hljs-attribute">ServerOrderId</span>": <span class="hljs-value"><span class="hljs-number">190590473</span></span>,
+    "<span class="hljs-attribute">AccountId</span>": <span class="hljs-value"><span class="hljs-number">21</span></span>,
+    "<span class="hljs-attribute">Price</span>": <span class="hljs-value"><span class="hljs-number">800</span></span>,
+    "<span class="hljs-attribute">QtyTotal</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
+    "<span class="hljs-attribute">QtyRemaining</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
+    "<span class="hljs-attribute">ReceiveTime</span>": <span class="hljs-value"><span class="hljs-number">635581759988506200</span></span>,
+    "<span class="hljs-attribute">Side</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+  </span>}
+  ]
+  </span>}
+  ]</span>,
+  "<span class="hljs-attribute">isAccepted</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+  "<span class="hljs-attribute">dateTimeUtc</span>": <span class="hljs-value"><span class="hljs-number">635581761565381200</span>
+  </span>}    
+  </code></pre></li>
+                                </ul>
+                            </section>
+                            <h4 id="order-management-order-fee">Order Fee&nbsp;<a href="#order-management-order-fee"><i class="fa fa-link"></i></a></h4>
+                            <p><strong>Parameters</strong></p>
+                            <p><code>instrument</code> - Instrument code (ex: “BTCNZD”)</p>
+                            <p><code>side</code> - “buy” or “sell”</p>
+                            <p><code>qty</code> - Quantity</p>
+                            <p><code>px</code> - Price in NZD</p>
+                            <section id="order-management-order-fee-post" class="panel panel-success">
+                                <div class="panel-heading">
+                                    <div style="float:right"><span style="text-transform: lowercase">Get order fees</span></div>
+                                    <div style="float:left"><a href="#order-management-order-fee-post" class="btn btn-xs btn-success">POST</a></div>
+                                    <div style="overflow:hidden"><code>/ajax/v1/GetOrderFee</code></div>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item"><strong>Request</strong><a data-toggle="collapse" data-target="#17315e9bf74352a80f84043c2670db8d" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="17315e9bf74352a80f84043c2670db8d" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{
+    "<span class="hljs-attribute">apiKey</span>": <span class="hljs-value"><span class="hljs-string">"6afca79b51d0dc24751175129beea58a"</span></span>,
+    "<span class="hljs-attribute">apiNonce</span>": <span class="hljs-value"><span class="hljs-number">14235896457077</span></span>,
+    "<span class="hljs-attribute">apiSig</span>": <span class="hljs-value"><span class="hljs-string">"0A57ACEBBAB13A55F167CFC261A91CCF4F3E2E114133E1F3A51B73BA5ABBA832"</span></span>,
+    "<span class="hljs-attribute">ins</span>": <span class="hljs-value"><span class="hljs-string">"BTCNZD"</span></span>,
+    "<span class="hljs-attribute">side</span>": <span class="hljs-value"><span class="hljs-string">"buy"</span></span>,
+    "<span class="hljs-attribute">qty</span>": <span class="hljs-value"><span class="hljs-string">"1.0"</span></span>,
+    "<span class="hljs-attribute">px</span>": <span class="hljs-value"><span class="hljs-string">"342.99"</span>
+  </span>}
+  </code></pre></li>
+                                    <li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#af8da89d4c11daa55736a2354bc37d65" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="af8da89d4c11daa55736a2354bc37d65" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">isAccepted</span>":<span class="hljs-value"><span class="hljs-string">"true"</span></span>,
+  "<span class="hljs-attribute">rejectReason</span>":<span class="hljs-value"><span class="hljs-literal">null</span></span>,
+  "<span class="hljs-attribute">fee</span>":<span class="hljs-value"><span class="hljs-string">"0.005"</span></span>,
+  "<span class="hljs-attribute">feeProduct</span>":<span class="hljs-value"><span class="hljs-string">"NZD"</span>
+  </span>}
+  </code></pre></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div id="websocket-api">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3>WebSocket API&nbsp;<a href="#websocket-api"><i class="fa fa-link"></i></a></h3></div>
+                        <div class="panel-body">
+                            <p>The WebSocket protocol provides full-duplex communications channels over a single persistent TCP connection.</p>
+                            <p>For real-time exchange data or high frequency activity we recommend using our WebSockets API.</p>
+                            <p><strong>WebSocket URI:</strong>
+                                <a href="wss://api.cotix.io/WSGateway/">wss://api.cotix.io/WSGateway/</a></p>
+                            <p><em>All WebSocket requests require the trailing “/” in the URI</em></p>
+                            <hr>
+                            <h2>Account Information</h2>
+                            <p><code>/v1/GetAccountInfo</code></p>
+                            <h3>Get Account Info</h3>
+                            <pre><code class="language-javascript"><span class="hljs-keyword">var</span> ws = <span class="hljs-keyword">new</span> WebSocket(<span class="hljs-string">"wss://api.cotix.io/WSGateway//v1/GetAccountInfo/"</span>);
+
+      ws.onopen = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span>
+    </span>{
+    ws.send(<span class="hljs-built_in">JSON</span>.stringify({apiKey: <span class="hljs-string">'704ef876d150bf0e024d2379d0e29274'</span>,apiNonce: <span class="hljs-number">14231058655773</span>,apiSig: <span class="hljs-string">'6A2BB3DF0BFC8757F0AD5A1628BC0FBAAC52CA186139B807B1E8567FDBAD6BE7'</span>}));
+  };
+  ws.onmessage = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(evt)</span>
+  </span>{ 
+  <span class="hljs-built_in">console</span>.log(evt.data);
+  };
+  </code></pre>
+                            <p><strong>Response</strong></p>
+                            <pre><code class="language-json">{"<span class="hljs-attribute">currencies</span>":<span class="hljs-value">[{"<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"NZD"</span></span>,"<span class="hljs-attribute">balance</span>":<span class="hljs-value"><span class="hljs-number">7168</span></span>,"<span class="hljs-attribute">hold</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">unconfirmed</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>},{"<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"BTC"</span></span>,"<span class="hljs-attribute">balance</span>":<span class="hljs-value"><span class="hljs-number">992.995</span></span>,"<span class="hljs-attribute">hold</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">unconfirmed</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>},{"<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"LTC"</span></span>,"<span class="hljs-attribute">balance</span>":<span class="hljs-value"><span class="hljs-number">1000</span></span>,"<span class="hljs-attribute">hold</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">unconfirmed</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>},{"<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"MXN"</span></span>,"<span class="hljs-attribute">balance</span>":<span class="hljs-value"><span class="hljs-number">1000</span></span>,"<span class="hljs-attribute">hold</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">unconfirmed</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>},{"<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"PHP"</span></span>,"<span class="hljs-attribute">balance</span>":<span class="hljs-value"><span class="hljs-number">1000</span></span>,"<span class="hljs-attribute">hold</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">unconfirmed</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>},{"<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"GBP"</span></span>,"<span class="hljs-attribute">balance</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">hold</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">unconfirmed</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>},{"<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"EUR"</span></span>,"<span class="hljs-attribute">balance</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">hold</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">unconfirmed</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>}]</span>}
+  </code></pre>
+                            <h2>Account Actions</h2>
+                            <p><code>/v1/GetAccountActions/</code></p>
+                            <p>The GetAccountActions call provides different data feeds based on the <code>messageType</code> specified.</p>
+                            <p><strong>Message Types:</strong></p>
+                            <p><code>logon</code> - Must be sent in the intial request before subscribing to a data stream</p>
+                            <p><code>GetAllOpenOrders</code> - Subscribe to open orders</p>
+                            <p><code>GetAllAccountActions</code> - Subscribe to account activty (Return limit: 50)</p>
+                            <h3>Get account actions</h3>
+                            <pre><code class="language-javascript"><span class="hljs-keyword">var</span> ws = <span class="hljs-keyword">new</span> WebSocket(<span class="hljs-string">"wss://api.cotix.io/WSGateway/v1/GetAccountActions/"</span>);
+
+    ws.onopen = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span>
+  </span>{
+  ws.send(<span class="hljs-built_in">JSON</span>.stringify({sessionToken: <span class="hljs-string">'null'</span>,apiKey: <span class="hljs-string">'704ef876d150bf0e024d2379d0e29274'</span>,apiNonce: <span class="hljs-number">14231058655773</span>,apiSig: <span class="hljs-string">'6A2BB3DF0BFC8757F0AD5A1628BC0FBAAC52CA186139B807B1E8567FDBAD6BE7'</span>,messageType: <span class="hljs-string">'logon'</span>}));
+  ws.send(<span class="hljs-built_in">JSON</span>.stringify({messageType: <span class="hljs-string">'GetAllOpenOrders'</span>}));
+  };
+  ws.onmessage = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(evt)</span>
+  </span>{ 
+  <span class="hljs-built_in">console</span>.log(evt.data);
+  };
+  </code></pre>
+                            <p><strong>Response</strong></p>
+                            <pre><code class="language-json">{"<span class="hljs-attribute">currencies</span>":<span class="hljs-value">[{"<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"NZD"</span></span>,"<span class="hljs-attribute">balance</span>":<span class="hljs-value"><span class="hljs-number">7168</span></span>,"<span class="hljs-attribute">hold</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">unconfirmed</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>},{"<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"BTC"</span></span>,"<span class="hljs-attribute">balance</span>":<span class="hljs-value"><span class="hljs-number">992.995</span></span>,"<span class="hljs-attribute">hold</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">unconfirmed</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>},{"<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"LTC"</span></span>,"<span class="hljs-attribute">balance</span>":<span class="hljs-value"><span class="hljs-number">1000</span></span>,"<span class="hljs-attribute">hold</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">unconfirmed</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>},{"<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"MXN"</span></span>,"<span class="hljs-attribute">balance</span>":<span class="hljs-value"><span class="hljs-number">1000</span></span>,"<span class="hljs-attribute">hold</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">unconfirmed</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>},{"<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"PHP"</span></span>,"<span class="hljs-attribute">balance</span>":<span class="hljs-value"><span class="hljs-number">1000</span></span>,"<span class="hljs-attribute">hold</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">unconfirmed</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>},{"<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"GBP"</span></span>,"<span class="hljs-attribute">balance</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">hold</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">unconfirmed</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>},{"<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"EUR"</span></span>,"<span class="hljs-attribute">balance</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">hold</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">unconfirmed</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>}]</span>}
+  </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footerId">
+        <div class="container footer"></div>
+    </footer>
+    <!-- javascript -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+   <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+   <!-- <script src="dist/theme.min.js"></script> -->
+
+   <!-- Js Files -->
+   <script type="text/javascript" src="js/lib/jquery-2.1.4.min.js"></script>
+   <script type="text/javascript" src="js/lib/jquery.smooth-scroll.min.js"></script>
+   <script type="text/javascript" src="js/lib/smoothscroll.js"></script>
+   <script type="text/javascript" src="js/lib/slick.min.js"></script>
+   <script type="text/javascript" src="js/lib/jquery.magnific-popup.min.js"></script>
+   <script type="text/javascript" src="js/lib/jquery.waypoints.min.js"></script>
+   <script type="text/javascript" src="js/lib/inview.min.js"></script>
+   <script type="text/javascript" src="js/lib/jquery.countTo.js"></script>
+   <script type="text/javascript" src="js/lib/jquery.ajaxchimp.min.js"></script>
+   <script type="text/javascript" src="js/lib/validator.js"></script>
+   <script type="text/javascript" src="js/lib/custom.js"></script>
+
+   <!-- Third Party -->
+   <!-- <script src="js/lib/jquery-3.2.0.min.js"></script> -->
+   <!-- <script type="text/javascript" src="js/lib/bootstrap.min.js"></script> -->
+   <!-- <script src="js/lib/embed.cryptowatch.js"></script> -->
+   <script src="js/lib/growl.js"></script> 
+
+   <!-- Platform -->
+   <script src="js/config.js"></script>
+   <script src="js/library.min.js"></script>
+   <script src="js/widgets.min.js"></script>
+   <script src='js/tester.js'></script>
+
+
+       <!-- Shift Markets -->
+   <!-- <script src="js/shift-themeing.js"></script> -->
+    <!--AW-FLAG: Adding Scotch Panels JS -->
+    <script type="text/javascript">
+    jQuery(document).ready(function($) {
+        //open the lateral panel
+        $('.cd-btn').on('click', function(event) {
+            event.preventDefault();
+            $('.cd-panel').addClass('is-visible');
+        });
+        //clode the lateral panel
+        $('.cd-panel').on('click', function(event) {
+            if ($(event.target).is('.cd-panel') || $(event.target).is('.cd-panel-close')) {
+                $('.cd-panel').removeClass('is-visible');
+                event.preventDefault();
+            }
+        });
+    });
+    $(document).ready(function() {
+        // $('#footerId').load('footer.html');
+        var loadCount = 0;
+        var totalLoadCount = 1; // number of html pieces loaded
+        $('.footer').load('footer.html',runRenders);
+
+        function runRenders() {
+            loadCount++;
+
+            if (loadCount >= totalLoadCount) {
+                renderWidgetWrapper();
+                renderWidget();
+                renderActionWrapper();
+                renderTranslation();
+                changeLanguage();
+
+            }
+
+        }
+    });
+    </script>
+    <script>
+    (function() {
+        $('table').addClass('table');
+
+    }).call(this);
+    </script>
+</body>
+
+</html>

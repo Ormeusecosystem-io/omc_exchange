@@ -1,0 +1,473 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Public API</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/favicons/manifest.json">
+    <!-- <link rel="stylesheet" type="text/css" href="css/magnific-popup.css"> -->
+    <!-- stylesheets -->
+    <link href="assets/css/retail/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/retail/magnific-popup.css" rel="stylesheet">
+    <link href="assets/css/retail/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/shift-styles.css" rel="stylesheet">
+</head>
+
+<body class="inner-page">
+ <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+    <!--[if lt IE 8]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+    <section class="main-navigation-header">
+        <nav class="navbar navbar-toggleable-md navbar-inverse" role="navigation">
+            <div class="container no-override">
+                <!-- <button class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button> -->
+                <div id="header-nav" class="col-8 col-sm-3">
+                    <a href="/" class="navbar-brand-logo-link">
+                        <img src="images/logos/company-logo-white.svg" class="img-fluid navbar-brand-logo">
+                    </a>
+                </div>
+                <a href="trade.html" ap-widget="MarketValue" class="navbar-brand market-value"></a>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-collapse">
+                    <div id="main-navigation"></div>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <div id="login" title="Create new user" class="mfp-hide">
+        <div class="ap-form-test" style="padding:22px">
+            <div ap-widget='LoginForm' to='home.html'></div>
+        </div>
+    </div>
+    <div id="dialog-form" title="Create new user" class="mfp-hide">
+        <div class="ap-form-test ">
+            <div ap-widget='RegisterForm' hide-header to='home.html' headerTitle=""></div>
+        </div>
+    </div>
+
+    <div class="theme-docs-header">
+        <section class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10">
+                    <h1 data-animate="fadeInUp" class="page-title"><span>Coti</span> <span>Public API</span</h1>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <nav id="nav" class="hidden-sm hidden-xs affix nav">
+                    <div class="list-group"><a data-toggle="" data-target="#public-http-api-menu" href="#public-http-api" class="list-group-item heading collapsed">Public HTTP API</a>
+                        <div id="public-http-api-menu"><a href="#public-http-api-ticker" style="border-top-left-radius: 0; border-top-right-radius: 0" class="list-group-item"><span class="badge alert-success"><i class="fa fa-plus"></i></span>Ticker</a><a href="#public-http-api-trades" style="border-top-left-radius: 0; border-top-right-radius: 0" class="list-group-item"><span class="badge alert-success"><i class="fa fa-plus"></i></span>Trades</a><a href="#public-http-api-trades-by-date" style="border-top-left-radius: 0; border-top-right-radius: 0" class="list-group-item"><span class="badge alert-success"><i class="fa fa-plus"></i></span>Trades by date</a><a href="#public-http-api-order-book" style="border-top-left-radius: 0; border-top-right-radius: 0" class="list-group-item"><span class="badge alert-success"><i class="fa fa-plus"></i></span>Order book</a><a href="#public-http-api-product-pairs" style="border-top-left-radius: 0; border-top-right-radius: 0" class="list-group-item"><span class="badge alert-success"><i class="fa fa-plus"></i></span>Product pairs</a><a href="#public-http-api-products" style="border-top-left-radius: 0; border-top-right-radius: 0" class="list-group-item"><span class="badge alert-success"><i class="fa fa-plus"></i></span>Products</a></div>
+                    </div>
+                    <div class="list-group"><a data-toggle="" data-target="#websocket-api-menu" href="#websocket-api" class="list-group-item heading collapsed">WebSocket API</a>
+                        <div id="websocket-api-menu"></div><a data-toggle="" data-target="#getrequest-api-menu" href="#getrequest-api" class="list-group-item heading collapsed">Get Request API</a>
+                        <div id="getrequest-api-menu"></div>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-md-8">
+                <div>
+                    <header>
+                        <div class="description">
+                            <h2>Request structure</h2>
+                            <p>Requests are intiated using POST method. Data is transmitted to the server using UTF-8 charset.</p>
+                            <p>POST data is expected to be sent as a JSON string.</p>
+                            <pre><code class="language-json">JSON.stringify({key:'value'})</code></pre>
+                            <h2>Response structure</h2>
+                            <p>Responses will contain either the key <code>"isAccepted": true,</code> or <code>"isAccepted": false,</code>.</p>
+                            <p>Typically there will be another key <code>"rejectReason"</code> with a textual explanation of the error as shown below.</p>
+                            <pre><code class="language-json">{"<span class="hljs-attribute">isAccepted</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>, "<span class="hljs-attribute">rejectReason</span>": <span class="hljs-value"><span class="hljs-string">"Incorrect usage"</span></span>,}</code></pre>
+                            <h2>Request limits</h2>
+                            <p>More than 500 request per 10 minutes will result in IP ban.</p>
+                            <p><em>For real-time data please refer to the <span>Coti</span> WebSocket API.</em></p>
+                            <h2>WebSocket API</h2>
+                            <p>Our WebSocket API provides real-time order book, trade data, and much more.</p>
+                        </div>
+                    </header>
+                </div>
+                <div id="public-http-api">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3>Public HTTP API&nbsp;<a href="#public-http-api"><i class="fa fa-link"></i></a></h3></div>
+                        <div class="panel-body">
+                            <h4 id="public-http-api-ticker">Ticker&nbsp;<a href="#public-http-api-ticker"><i class="fa fa-link"></i></a></h4>
+                            <p><strong>Parameters</strong></p>
+                            <p><code>productPair</code> - trade pair (ex: “BTCNZD”)</p>
+                            <section id="public-http-api-ticker-post" class="panel panel-success">
+                                <div class="panel-heading">
+                                    <div style="float:right"><span style="text-transform: lowercase">Gets the current ticker data for a given currency pair</span></div>
+                                    <div style="float:left"><a href="#public-http-api-ticker-post" class="btn btn-xs btn-success">POST</a></div>
+                                    <div style="overflow:hidden"><code>/ajax/v1/GetTicker</code></div>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item"><strong>Request</strong><a data-toggle="collapse" data-target="#b8eb728d4c8f3fc399c09d2e6aa4e2c0" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="b8eb728d4c8f3fc399c09d2e6aa4e2c0" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{"<span class="hljs-attribute">productPair</span>": <span class="hljs-value"><span class="hljs-string">"BTCNZD"</span></span>}
+                                        </code></pre>
+                                    </li>
+                                    <li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#0b992656d17373eef03c74defe188c69" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="0b992656d17373eef03c74defe188c69" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5>
+                                        <pre>
+                                            <code>{"<span class="hljs-attribute">high</span>":<span class="hljs-value"><span class="hljs-number">253.101</span></span>,"<span class="hljs-attribute">last</span>":<span class="hljs-value"><span class="hljs-number">249.76</span></span>,"<span class="hljs-attribute">bid</span>":<span class="hljs-value"><span class="hljs-number">248.8901</span></span>,"<span class="hljs-attribute">volume</span>":<span class="hljs-value"><span class="hljs-number">5.813354</span></span>,"<span class="hljs-attribute">low</span>":<span class="hljs-value"><span class="hljs-number">231.21</span></span>,"<span class="hljs-attribute">ask</span>":<span class="hljs-value"><span class="hljs-number">248.9012</span></span>,"<span class="hljs-attribute">Total24HrQtyTraded</span>":<span class="hljs-value"><span class="hljs-number">52.654968</span></span>,"<span class="hljs-attribute">Total24HrProduct2Traded</span>":<span class="hljs-value"><span class="hljs-number">569.05762</span></span>,"<span class="hljs-attribute">Total24HrNumTrades</span>":<span class="hljs-value"><span class="hljs-number">4</span></span>,"<span class="hljs-attribute">sellOrderCount</span>":<span class="hljs-value"><span class="hljs-number">7</span></span>,"<span class="hljs-attribute">buyOrderCount</span>":<span class="hljs-value"><span class="hljs-number">11</span></span>,"<span class="hljs-attribute">numOfCreateOrders</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">isAccepted</span>":<span class="hljs-value"><span class="hljs-literal">true</span></span>}</code>
+                                        </pre>
+                                    </li>
+                                </ul>
+                            </section>
+                            <h4 id="public-http-api-trades">Trades&nbsp;<a href="#public-http-api-trades"><i class="fa fa-link"></i></a></h4>
+                            <p><strong>Parameters</strong></p>
+                            <p><code>ins</code> - instrument code (ex: “BTCNZD”)</p>
+                            <p><code>startIndex</code> - specifies the index to begin from, -1 being the first trade on <span>Coti</span>. To begin from the most recent trade, set startIndex to 0 (default: 0)</p>
+                            <p><code>Count</code> - specifies the number of trades to return (default: 10)</p>
+                            <section id="public-http-api-trades-post" class="panel panel-success">
+                                <div class="panel-heading">
+                                    <div style="float:right"><span style="text-transform: lowercase">Fetches past trades for the given currency pair</span></div>
+                                    <div style="float:left"><a href="#public-http-api-trades-post" class="btn btn-xs btn-success">POST</a></div>
+                                    <div style="overflow:hidden"><code>/ajax/v1/GetTrades</code></div>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item"><strong>Request</strong><a data-toggle="collapse" data-target="#0a2bc79a5ea8ed7c3d14f597c6916969" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="0a2bc79a5ea8ed7c3d14f597c6916969" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5>
+                                        <pre>
+                                            <code>{"<span class="hljs-attribute">ins</span>": <span class="hljs-value"><span class="hljs-string">"BTCNZD"</span></span>, "<span class="hljs-attribute">startIndex</span>": <span class="hljs-value">-<span class="hljs-number">1</span></span>, "<span class="hljs-attribute">count</span>": <span class="hljs-value"><span class="hljs-number">20</span></span>}
+                                            </code>
+                                        </pre>
+                                    </li>
+                                    <li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#1729bb4a627b0dc24c3faa0cf3f5eca2" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="1729bb4a627b0dc24c3faa0cf3f5eca2" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5>
+                                        <pre>
+                                            <code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code>
+                                        </pre>
+                                        <h5>Body</h5>
+                                        <pre>
+                                            <code>{"<span class="hljs-attribute">isAccepted</span>":<span class="hljs-value"><span class="hljs-literal">true</span></span>,"<span class="hljs-attribute">dateTimeUtc</span>":<span class="hljs-value"><span class="hljs-number">635507981548085938</span></span>,"<span class="hljs-attribute">ins</span>":<span class="hljs-value"><span class="hljs-string">"BTCNZD"</span></span>,"<span class="hljs-attribute">startIndex</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">count</span>":<span class="hljs-value"><span class="hljs-number">10</span></span>,"<span class="hljs-attribute">trades</span>":<span class="hljs-value">[{"<span class="hljs-attribute">tid</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">px</span>":<span class="hljs-value"><span class="hljs-number">231.8379</span></span>,"<span class="hljs-attribute">qty</span>":<span class="hljs-value"><span class="hljs-number">4.913</span></span>,"<span class="hljs-attribute">unixtime</span>":<span class="hljs-value"><span class="hljs-number">1399951989</span></span>,"<span class="hljs-attribute">utcticks</span>":<span class="hljs-value"><span class="hljs-number">635355487898355234</span></span>,"<span class="hljs-attribute">incomingOrderSide</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">incomingServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">2598</span></span>,"<span class="hljs-attribute">bookServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">2588</span></span>},{"<span class="hljs-attribute">tid</span>":<span class="hljs-value"><span class="hljs-number">1</span></span>,"<span class="hljs-attribute">px</span>":<span class="hljs-value"><span class="hljs-number">7895.1487</span></span>,"<span class="hljs-attribute">qty</span>":<span class="hljs-value"><span class="hljs-number">0.25</span></span>,"<span class="hljs-attribute">unixtime</span>":<span class="hljs-value"><span class="hljs-number">1403143708</span></span>,"<span class="hljs-attribute">utcticks</span>":<span class="hljs-value"><span class="hljs-number">635387405087297421</span></span>,"<span class="hljs-attribute">incomingOrderSide</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">incomingServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">284241</span></span>,"<span class="hljs-attribute">bookServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">284235</span></span>},{"<span class="hljs-attribute">tid</span>":<span class="hljs-value"><span class="hljs-number">2</span></span>,"<span class="hljs-attribute">px</span>":<span class="hljs-value"><span class="hljs-number">7935.058</span></span>,"<span class="hljs-attribute">qty</span>":<span class="hljs-value"><span class="hljs-number">0.25</span></span>,"<span class="hljs-attribute">unixtime</span>":<span class="hljs-value"><span class="hljs-number">1403195348</span></span>,"<span class="hljs-attribute">utcticks</span>":<span class="hljs-value"><span class="hljs-number">635387921488684140</span></span>,"<span class="hljs-attribute">incomingOrderSide</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">incomingServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">575845</span></span>,"<span class="hljs-attribute">bookServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">574078</span></span>},{"<span class="hljs-attribute">tid</span>":<span class="hljs-value"><span class="hljs-number">3</span></span>,"<span class="hljs-attribute">px</span>":<span class="hljs-value"><span class="hljs-number">7935.0448</span></span>,"<span class="hljs-attribute">qty</span>":<span class="hljs-value"><span class="hljs-number">0.25</span></span>,"<span class="hljs-attribute">unixtime</span>":<span class="hljs-value"><span class="hljs-number">1403195378</span></span>,"<span class="hljs-attribute">utcticks</span>":<span class="hljs-value"><span class="hljs-number">635387921780090390</span></span>,"<span class="hljs-attribute">incomingOrderSide</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">incomingServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">576028</span></span>,"<span class="hljs-attribute">bookServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">575946</span></span>},{"<span class="hljs-attribute">tid</span>":<span class="hljs-value"><span class="hljs-number">4</span></span>,"<span class="hljs-attribute">px</span>":<span class="hljs-value"><span class="hljs-number">7933.9566</span></span>,"<span class="hljs-attribute">qty</span>":<span class="hljs-value"><span class="hljs-number">0.1168</span></span>,"<span class="hljs-attribute">unixtime</span>":<span class="hljs-value"><span class="hljs-number">1403195510</span></span>,"<span class="hljs-attribute">utcticks</span>":<span class="hljs-value"><span class="hljs-number">635387923108371640</span></span>,"<span class="hljs-attribute">incomingOrderSide</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">incomingServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">576974</span></span>,"<span class="hljs-attribute">bookServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">576947</span></span>},{"<span class="hljs-attribute">tid</span>":<span class="hljs-value"><span class="hljs-number">5</span></span>,"<span class="hljs-attribute">px</span>":<span class="hljs-value"><span class="hljs-number">7961.0856</span></span>,"<span class="hljs-attribute">qty</span>":<span class="hljs-value"><span class="hljs-number">0.25</span></span>,"<span class="hljs-attribute">unixtime</span>":<span class="hljs-value"><span class="hljs-number">1403202307</span></span>,"<span class="hljs-attribute">utcticks</span>":<span class="hljs-value"><span class="hljs-number">635387991073850156</span></span>,"<span class="hljs-attribute">incomingOrderSide</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">incomingServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">600547</span></span>,"<span class="hljs-attribute">bookServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">600338</span></span>},{"<span class="hljs-attribute">tid</span>":<span class="hljs-value"><span class="hljs-number">6</span></span>,"<span class="hljs-attribute">px</span>":<span class="hljs-value"><span class="hljs-number">7961.1388</span></span>,"<span class="hljs-attribute">qty</span>":<span class="hljs-value"><span class="hljs-number">0.011</span></span>,"<span class="hljs-attribute">unixtime</span>":<span class="hljs-value"><span class="hljs-number">1403202307</span></span>,"<span class="hljs-attribute">utcticks</span>":<span class="hljs-value"><span class="hljs-number">635387991073850156</span></span>,"<span class="hljs-attribute">incomingOrderSide</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">incomingServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">600547</span></span>,"<span class="hljs-attribute">bookServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">600418</span></span>},{"<span class="hljs-attribute">tid</span>":<span class="hljs-value"><span class="hljs-number">7</span></span>,"<span class="hljs-attribute">px</span>":<span class="hljs-value"><span class="hljs-number">7961.2451</span></span>,"<span class="hljs-attribute">qty</span>":<span class="hljs-value"><span class="hljs-number">0.02</span></span>,"<span class="hljs-attribute">unixtime</span>":<span class="hljs-value"><span class="hljs-number">1403202307</span></span>,"<span class="hljs-attribute">utcticks</span>":<span class="hljs-value"><span class="hljs-number">635387991073850156</span></span>,"<span class="hljs-attribute">incomingOrderSide</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">incomingServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">600547</span></span>,"<span class="hljs-attribute">bookServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">600428</span></span>},{"<span class="hljs-attribute">tid</span>":<span class="hljs-value"><span class="hljs-number">8</span></span>,"<span class="hljs-attribute">px</span>":<span class="hljs-value"><span class="hljs-number">7947.1437</span></span>,"<span class="hljs-attribute">qty</span>":<span class="hljs-value"><span class="hljs-number">0.09</span></span>,"<span class="hljs-attribute">unixtime</span>":<span class="hljs-value"><span class="hljs-number">1403202749</span></span>,"<span class="hljs-attribute">utcticks</span>":<span class="hljs-value"><span class="hljs-number">635387995498225156</span></span>,"<span class="hljs-attribute">incomingOrderSide</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">incomingServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">602183</span></span>,"<span class="hljs-attribute">bookServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">601745</span></span>},{"<span class="hljs-attribute">tid</span>":<span class="hljs-value"><span class="hljs-number">9</span></span>,"<span class="hljs-attribute">px</span>":<span class="hljs-value"><span class="hljs-number">7818.5073</span></span>,"<span class="hljs-attribute">qty</span>":<span class="hljs-value"><span class="hljs-number">0.25</span></span>,"<span class="hljs-attribute">unixtime</span>":<span class="hljs-value"><span class="hljs-number">1403219720</span></span>,"<span class="hljs-attribute">utcticks</span>":<span class="hljs-value"><span class="hljs-number">635388165206506406</span></span>,"<span class="hljs-attribute">incomingOrderSide</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">incomingServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">661909</span></span>,"<span class="hljs-attribute">bookServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">661620</span></span>}]</span>}    
+                                            </code>
+                                        </pre>
+                                    </li>
+                                </ul>
+                            </section>
+                            <h4 id="public-http-api-trades-by-date">Trades by date&nbsp;<a href="#public-http-api-trades-by-date"><i class="fa fa-link"></i></a></h4>
+                            <p><strong>Parameters</strong></p>
+                            <p><code>ins</code> - instrument code (ex: “BTCNZD”)</p>
+                            <p><code>startDate</code> - specifies the starting time in epoch time, type is long</p>
+                            <p><code>endDate</code> - specifies the end time in epoch time, type is long</p>
+                            <section id="public-http-api-trades-by-date-post" class="panel panel-success">
+                                <div class="panel-heading">
+                                    <div style="float:right"><span style="text-transform: lowercase">Get trades by date</span></div>
+                                    <div style="float:left"><a href="#public-http-api-trades-by-date-post" class="btn btn-xs btn-success">POST</a></div>
+                                    <div style="overflow:hidden"><code>/ajax/v1/GetTradesByDate</code></div>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item"><strong>Request</strong><a data-toggle="collapse" data-target="#a3a4ea3d7d7df580396829327f2f5b34" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="a3a4ea3d7d7df580396829327f2f5b34" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5>
+                                        <pre><code>{"<span class="hljs-attribute">ins</span>":<span class="hljs-value"><span class="hljs-string">"BTCNZD"</span></span>,"<span class="hljs-attribute">startDate</span>":<span class="hljs-value"><span class="hljs-number">1414799400</span></span>,"<span class="hljs-attribute">endDate</span>":<span class="hljs-value"><span class="hljs-number">1414800000</span></span>}
+                                            </code>
+                                        </pre>
+                                    </li>
+                                    <li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#e8fa8bd03216be62617f818f2399a2c2" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="e8fa8bd03216be62617f818f2399a2c2" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{"<span class="hljs-attribute">isAccepted</span>":<span class="hljs-value"><span class="hljs-literal">true</span></span>,"<span class="hljs-attribute">dateTimeUtc</span>":<span class="hljs-value"><span class="hljs-number">635504540880633671</span></span>,"<span class="hljs-attribute">ins</span>":<span class="hljs-value"><span class="hljs-string">"BTCNZD"</span></span>,"<span class="hljs-attribute">startDate</span>":<span class="hljs-value"><span class="hljs-number">1414799400</span></span>,"<span class="hljs-attribute">endDate</span>":<span class="hljs-value"><span class="hljs-number">1414800000</span></span>,"<span class="hljs-attribute">trades</span>":<span class="hljs-value">[
+{"<span class="hljs-attribute">tid</span>":<span class="hljs-value"><span class="hljs-number">11505</span></span>,"<span class="hljs-attribute">px</span>":<span class="hljs-value"><span class="hljs-number">334.669</span></span>,"<span class="hljs-attribute">qty</span>":<span class="hljs-value"><span class="hljs-number">0.1211</span></span>,"<span class="hljs-attribute">unixtime</span>":<span class="hljs-value"><span class="hljs-number">1414799403</span></span>,"<span class="hljs-attribute">utcticks</span>":<span class="hljs-value"><span class="hljs-number">635503962032459843</span></span>,"<span class="hljs-attribute">incomingOrderSide</span>":<span class="hljs-value"><span class="hljs-number">1</span></span>,"<span class="hljs-attribute">incomingServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">5185651</span></span>,"<span class="hljs-attribute">bookServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">5162440</span></span>},
+{"<span class="hljs-attribute">tid</span>":<span class="hljs-value"><span class="hljs-number">11506</span></span>,"<span class="hljs-attribute">px</span>":<span class="hljs-value"><span class="hljs-number">334.669</span></span>,"<span class="hljs-attribute">qty</span>":<span class="hljs-value"><span class="hljs-number">0.1211</span></span>,"<span class="hljs-attribute">unixtime</span>":<span class="hljs-value"><span class="hljs-number">1414799405</span></span>,"<span class="hljs-attribute">utcticks</span>":<span class="hljs-value"><span class="hljs-number">635503962058446171</span></span>,"<span class="hljs-attribute">incomingOrderSide</span>":<span class="hljs-value"><span class="hljs-number">1</span></span>,"<span class="hljs-attribute">incomingServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">5186245</span></span>,"<span class="hljs-attribute">bookServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">5162440</span></span>},
+{"<span class="hljs-attribute">tid</span>":<span class="hljs-value"><span class="hljs-number">11507</span></span>,"<span class="hljs-attribute">px</span>":<span class="hljs-value"><span class="hljs-number">336.498</span></span>,"<span class="hljs-attribute">qty</span>":<span class="hljs-value"><span class="hljs-number">0.011</span></span>,"<span class="hljs-attribute">unixtime</span>":<span class="hljs-value"><span class="hljs-number">1414799407</span></span>,"<span class="hljs-attribute">utcticks</span>":<span class="hljs-value"><span class="hljs-number">635503962072967656</span></span>,"<span class="hljs-attribute">incomingOrderSide</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">incomingServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">5186530</span></span>,"<span class="hljs-attribute">bookServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">5178944</span></span>},
+{"<span class="hljs-attribute">tid</span>":<span class="hljs-value"><span class="hljs-number">11508</span></span>,"<span class="hljs-attribute">px</span>":<span class="hljs-value"><span class="hljs-number">335.948</span></span>,"<span class="hljs-attribute">qty</span>":<span class="hljs-value"><span class="hljs-number">0.011</span></span>,"<span class="hljs-attribute">unixtime</span>":<span class="hljs-value"><span class="hljs-number">1414799410</span></span>,"<span class="hljs-attribute">utcticks</span>":<span class="hljs-value"><span class="hljs-number">635503962108055546</span></span>,"<span class="hljs-attribute">incomingOrderSide</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">incomingServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">5187260</span></span>,"<span class="hljs-attribute">bookServerOrderId</span>":<span class="hljs-value"><span class="hljs-number">5186531</span></span>}]</span>}
+</code></pre>
+                                    </li>
+                                </ul>
+                            </section>
+                            <h4 id="public-http-api-order-book">Order book&nbsp;<a href="#public-http-api-order-book"><i class="fa fa-link"></i></a></h4>
+                            <p>Displays the top 20 asks and bids. For Real-Time data please use the <span>Coti</span> WebSockets API.</p>
+                            <p><strong>Parameters</strong></p>
+                            <p><code>productPair</code> - trade pair (ex: “BTCNZD”)</p>
+                            <section id="public-http-api-order-book-post" class="panel panel-success">
+                                <div class="panel-heading">
+                                    <div style="float:right"><span style="text-transform: lowercase">Fetches the current orderbook for a given currency pair</span></div>
+                                    <div style="float:left"><a href="#public-http-api-order-book-post" class="btn btn-xs btn-success">POST</a></div>
+                                    <div style="overflow:hidden"><code>/ajax/v1/GetOrderBook</code></div>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item"><strong>Request</strong><a data-toggle="collapse" data-target="#035aff165521389f2df31b02233e17e6" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="035aff165521389f2df31b02233e17e6" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{"<span class="hljs-attribute">productPair</span>":<span class="hljs-value"><span class="hljs-string">"BTCNZD"</span></span>}
+</code></pre>
+                                    </li>
+                                    <li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#667447893a21d51acabc9173da374aba" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="667447893a21d51acabc9173da374aba" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{"<span class="hljs-attribute">bids</span>":<span class="hljs-value">[{"<span class="hljs-attribute">qty</span>":<span class="hljs-value"><span class="hljs-number">725</span></span>,"<span class="hljs-attribute">px</span>":<span class="hljs-value"><span class="hljs-number">66</span></span>},{"<span class="hljs-attribute">qty</span>":<span class="hljs-value"><span class="hljs-number">1289</span></span>,"<span class="hljs-attribute">px</span>":<span class="hljs-value"><span class="hljs-number">65</span></span>},{"<span class="hljs-attribute">qty</span>":<span class="hljs-value"><span class="hljs-number">1266</span></span>,"<span class="hljs-attribute">px</span>":<span class="hljs-value"><span class="hljs-number">64</span></span>}]</span>,"<span class="hljs-attribute">asks</span>":<span class="hljs-value">[{"<span class="hljs-attribute">qty</span>":<span class="hljs-value"><span class="hljs-number">1</span></span>,"<span class="hljs-attribute">px</span>":<span class="hljs-value"><span class="hljs-number">67</span></span>},{"<span class="hljs-attribute">qty</span>":<span class="hljs-value"><span class="hljs-number">1</span></span>,"<span class="hljs-attribute">px</span>":<span class="hljs-value"><span class="hljs-number">69</span></span>},{"<span class="hljs-attribute">qty</span>":<span class="hljs-value"><span class="hljs-number">2</span></span>,"<span class="hljs-attribute">px</span>":<span class="hljs-value"><span class="hljs-number">70</span></span>},]</span>,"<span class="hljs-attribute">isAccepted</span>":<span class="hljs-value"><span class="hljs-literal">true</span></span>}
+</code></pre>
+                                    </li>
+                                </ul>
+                            </section>
+                            <h4 id="public-http-api-product-pairs">Product pairs&nbsp;<a href="#public-http-api-product-pairs"><i class="fa fa-link"></i></a></h4>
+                            <section id="public-http-api-product-pairs-post" class="panel panel-success">
+                                <div class="panel-heading">
+                                    <div style="float:right"><span style="text-transform: lowercase">Gets the currency pairs currently traded on <span>Coti</span> </span>
+                                    </div>
+                                    <div style="float:left"><a href="#public-http-api-product-pairs-post" class="btn btn-xs btn-success">POST</a></div>
+                                    <div style="overflow:hidden"><code>/ajax/v1/GetProductPairs</code></div>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item"><strong>Request</strong><a data-toggle="collapse" data-target="#3731381a1176eaa5f7e5b3e860a1551d" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="3731381a1176eaa5f7e5b3e860a1551d" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre></li>
+                                    <li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#a3aeae92376d6f2ba57196abfca19ea1" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="a3aeae92376d6f2ba57196abfca19ea1" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{"<span class="hljs-attribute">productPairs</span>":<span class="hljs-value">[{"<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"LTCUSD"</span></span>,"<span class="hljs-attribute">productPairCode</span>":<span class="hljs-value"><span class="hljs-number">100</span></span>,"<span class="hljs-attribute">product1Label</span>":<span class="hljs-value"><span class="hljs-string">"LTC"</span></span>,"<span class="hljs-attribute">product1DecimalPlaces</span>":<span class="hljs-value"><span class="hljs-number">8</span></span>,"<span class="hljs-attribute">product2Label</span>":<span class="hljs-value"><span class="hljs-string">"USD"</span></span>,"<span class="hljs-attribute">product2DecimalPlaces</span>":<span class="hljs-value"><span class="hljs-number">6</span></span>}, {"<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"BTCNZD"</span></span>,"<span class="hljs-attribute">productPairCode</span>":<span class="hljs-value"><span class="hljs-number">99</span></span>,"<span class="hljs-attribute">product1Label</span>":<span class="hljs-value"><span class="hljs-string">"BTC"</span></span>,"<span class="hljs-attribute">product1DecimalPlaces</span>":<span class="hljs-value"><span class="hljs-number">8</span></span>,"<span class="hljs-attribute">product2Label</span>":<span class="hljs-value"><span class="hljs-string">"USD"</span></span>,"<span class="hljs-attribute">product2DecimalPlaces</span>":<span class="hljs-value"><span class="hljs-number">6</span></span>}]</span>,"<span class="hljs-attribute">isAccepted</span>":<span class="hljs-value"><span class="hljs-literal">true</span></span>}         
+</code></pre>
+                                    </li>
+                                </ul>
+                            </section>
+                            <h4 id="public-http-api-products">Products&nbsp;<a href="#public-http-api-products"><i class="fa fa-link"></i></a></h4>
+                            <section id="public-http-api-products-post" class="panel panel-success">
+                                <div class="panel-heading">
+                                    <div style="float:right"><span style="text-transform: lowercase">Gets the currency products currently supported on <span>Coti</span></span>
+                                    </div>
+                                    <div style="float:left"><a href="#public-http-api-products-post" class="btn btn-xs btn-success">POST</a></div>
+                                    <div style="overflow:hidden"><code>/ajax/v1/GetProducts</code></div>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item"><strong>Request</strong><a data-toggle="collapse" data-target="#58c102d2e69b6261fdd7e127e7e2dc8a" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="58c102d2e69b6261fdd7e127e7e2dc8a" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre></li>
+                                    <li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#eb3b7fc2f8a1a50f185ed12cbbaad9e8" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                    <li id="eb3b7fc2f8a1a50f185ed12cbbaad9e8" class="list-group-item panel-collapse collapse">
+                                        <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                        <h5>Body</h5><pre><code>{"<span class="hljs-attribute">products</span>": <span class="hljs-value">[{"<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"USD"</span></span>,"<span class="hljs-attribute">isDigital</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,"<span class="hljs-attribute">productCode</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">decimalPlaces</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,"<span class="hljs-attribute">fullName</span>": <span class="hljs-value"><span class="hljs-string">"US Dollar"</span></span>},{"<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"BTC"</span></span>,"<span class="hljs-attribute">isDigital</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,"<span class="hljs-attribute">productCode</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,"<span class="hljs-attribute">decimalPlaces</span>": <span class="hljs-value"><span class="hljs-number">6</span></span>,"<span class="hljs-attribute">fullName</span>": <span class="hljs-value"><span class="hljs-string">"Bitcoin"</span></span>}]</span>,"<span class="hljs-attribute">isAccepted</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>}
+</code></pre>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div id="websocket-api">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3>WebSocket API&nbsp;<a href="#websocket-api"><i class="fa fa-link"></i></a></h3></div>
+                        <div class="panel-body">
+                            <p>The WebSocket protocol provides full-duplex communications channels over a single persistent TCP connection.</p>
+                            <p>For real-time exchange data or high frequency activity we recommend using our WebSockets API.</p>
+                            <p>
+                                <strong>WebSocket URI:</strong>
+                                <a href="wss://api.cotix.io/WSGateway/">wss://api.cotix.io/WSGateway/</a>
+                            </p>
+                            <p><em>All WebSocket requests require the trailing “/” in the URI</em></p>
+                            <hr>
+                            <h2>Get Ticker</h2>
+                            <p><code>/v1/GetTicker/</code></p>
+                            <p><strong>Parameters</strong></p>
+                            <p><code>messageType</code> - logon</p>
+                            <h3>Get Ticker</h3>
+                            <pre><code class="language-javascript"><span class="hljs-keyword">var</span> ws = <span class="hljs-keyword">new</span> WebSocket(<span class="hljs-string">"wss://api.cotix.io/WSGateway/v1/GetTicker/"</span>);
+ws.onopen = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span>
+</span>{
+ws.send(<span class="hljs-built_in">JSON</span>.stringify({messageType: <span class="hljs-string">'logon'</span>}));
+};
+ws.onmessage = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(evt)</span>
+</span>{ 
+<span class="hljs-built_in">console</span>.log(evt.data);
+}
+</code></pre>
+                            <p><strong>Response</strong></p>
+                            <p><em>Example shows only a subset of the typical response.</em></p>
+                            <pre><code class="language-json">{"<span class="hljs-attribute">messageType</span>":<span class="hljs-value"><span class="hljs-string">"Ticker"</span></span>,"<span class="hljs-attribute">prodPair</span>":<span class="hljs-value"><span class="hljs-string">"BTCGBP"</span></span>,"<span class="hljs-attribute">high</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">low</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">last</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">volume</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">Total24HrQtyTraded</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">Total24HrProduct2Traded</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">Total24HrNumTrades</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">bid</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">ask</span>":<span class="hljs-value"><span class="hljs-number">9223372036.85478</span></span>,"<span class="hljs-attribute">buyOrderCount</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">sellOrderCount</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>}
+</code></pre>
+                            <h2>Get Trades and Orderbook</h2>
+                            <p><code>/v1/GetL2AndTrades/</code></p>
+                            <p><strong>Parameters:</strong></p>
+                            <p><code>ins</code> - instrument code (ex: “BTCNZD”)</p>
+                            <p><code>ModifyL2Order</code> - 0 for orderbook, 1 for new trades (default: 0)</p>
+                            <h3>Get trades</h3>
+                            <pre><code class="language-javascript"><span class="hljs-keyword">var</span> ws = <span class="hljs-keyword">new</span> WebSocket(<span class="hljs-string">"wss://api.cotix.io/WSGateway/v1/GetL2AndTrades/"</span>);
+ws.onopen = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span>
+</span>{
+ws.send(<span class="hljs-built_in">JSON</span>.stringify({ins:<span class="hljs-string">'BTCNZD'</span>,ModifyL2Order:<span class="hljs-string">'0'</span>}));
+};
+ws.onmessage = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(evt)</span>
+</span>{ 
+<span class="hljs-built_in">console</span>.log(evt.data);
+}
+</code></pre>
+                            <p><strong>Response</strong></p>
+                            <p><em>Example shows only a subset of the typical response.</em></p>
+                            <pre><code class="language-json">[[<span class="hljs-number">78433227</span>,<span class="hljs-number">635586774471555007</span>,<span class="hljs-number">225.58</span>,<span class="hljs-number">0.7045</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">78433226</span>,<span class="hljs-number">635586774471555006</span>,<span class="hljs-number">225.6</span>,<span class="hljs-number">33</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">78431613</span>,<span class="hljs-number">635586774176867505</span>,<span class="hljs-number">225.62</span>,<span class="hljs-number">37.1979</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>]]
+</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div id="getrequest-api">
+                        <div class="panel-heading">
+                            <h3>Get Requests&nbsp;<a href="#getrequest-api"><i class="fa fa-link"></i></a></h3></div>
+                        <div class="panel-body"></div>
+                        <h4 id="public-http-api-product-pairs2">Product pairs&nbsp;<a href="#public-http-api-product-pairs2"><i class="fa fa-link"></i></a></h4>
+                        <section id="public-http-api-product-pairs-post2" class="panel panel-success">
+                            <div class="panel-heading">
+                                <div style="float:right"><span style="text-transform: lowercase">Gets the currency pairs currently traded on <span>Coti</span></span>
+                                </div>
+                                <div style="float:left"><a href="#public-http-api-product-pairs-post2" class="btn btn-xs btn-success">GET</a></div>
+                                <div style="overflow:hidden"><code>/ajax/v1/GetProductPairs</code></div>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>Request</strong><a data-toggle="collapse" data-target="#3731381a1176eaa5f7e5b3e860a1551e" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                <li id="3731381a1176eaa5f7e5b3e860a1551e" class="list-group-item panel-collapse collapse">
+                                    <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre></li>
+                                <li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#a3aeae92376d6f2ba57196abfca19ea2" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                <li id="a3aeae92376d6f2ba57196abfca19ea2" class="list-group-item panel-collapse collapse">
+                                    <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                    <h5>Body</h5><pre><code>{"<span class="hljs-attribute">productPairs</span>":<span class="hljs-value">[{"<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"LTCUSD"</span></span>,"<span class="hljs-attribute">productPairCode</span>":<span class="hljs-value"><span class="hljs-number">100</span></span>,"<span class="hljs-attribute">product1Label</span>":<span class="hljs-value"><span class="hljs-string">"LTC"</span></span>,"<span class="hljs-attribute">product1DecimalPlaces</span>":<span class="hljs-value"><span class="hljs-number">8</span></span>,"<span class="hljs-attribute">product2Label</span>":<span class="hljs-value"><span class="hljs-string">"USD"</span></span>,"<span class="hljs-attribute">product2DecimalPlaces</span>":<span class="hljs-value"><span class="hljs-number">6</span></span>}, {"<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"BTCNZD"</span></span>,"<span class="hljs-attribute">productPairCode</span>":<span class="hljs-value"><span class="hljs-number">99</span></span>,"<span class="hljs-attribute">product1Label</span>":<span class="hljs-value"><span class="hljs-string">"BTC"</span></span>,"<span class="hljs-attribute">product1DecimalPlaces</span>":<span class="hljs-value"><span class="hljs-number">8</span></span>,"<span class="hljs-attribute">product2Label</span>":<span class="hljs-value"><span class="hljs-string">"USD"</span></span>,"<span class="hljs-attribute">product2DecimalPlaces</span>":<span class="hljs-value"><span class="hljs-number">6</span></span>}]</span>,"<span class="hljs-attribute">isAccepted</span>":<span class="hljs-value"><span class="hljs-literal">true</span></span>}         </code></pre>
+                                </li>
+                            </ul>
+                        </section>
+                        <h4 id="public-http-api-trades">Trades <a href="#public-http-api-trades"><i class="fa fa-link"></i></a></h4>
+                        <p><strong>Parameters</strong></p>
+                        <p><code>ins</code> - instrument code (ex: “BTCNZD”)</p>
+                        <p><code>Since</code> - specifies the starting Trade ID (TID)</p>
+                        <section id="public-http-api-trades" class="panel panel-success">
+                            <div class="panel-heading">
+                                <div style="float:right"><span style="text-transform: lowercase">Get trades</span></div>
+                                <div style="float:left"><a href="#public-http-api-trades" class="btn btn-xs btn-success">GET</a></div>
+                                <div style="overflow:hidden"><code>/ajax/v1/Trades</code></div>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>Request</strong><a data-toggle="collapse" data-target="#a3a4ea3d7d7df580396829327f2f5b341" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                <li id="a3a4ea3d7d7df580396829327f2f5b341" class="list-group-item panel-collapse collapse">
+                                    <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                    <h5><span>Coti</span> AJAX REQUEST URL/Trades/BTCNZD/?Since=0</h5>
+                                </li>
+                                <li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#e8fa8bd03216be62617f818f2399a2c21" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                <li id="e8fa8bd03216be62617f818f2399a2c21" class="list-group-item panel-collapse collapse">
+                                    <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>"<span class="hljs-attribute">trades</span>":<span class="hljs-value">
+                                        [
+                                        {"<span class="hljs-attribute">tid</span>":<span class="hljs-value"><span class="hljs-number">11505</span></span>,"<span class="hljs-attribute">price</span>":<span class="hljs-value"><span class="hljs-number">334.669</span></span>,"<span class="hljs-attribute">amount</span>":<span class="hljs-value"><span class="hljs-number">0.1211</span></span>,"<span class="hljs-attribute">date</span>":<span class="hljs-value"><span class="hljs-number">1414799403</span></span>}, {"
+                                    <span class="hljs-attribute">tid</span>":<span class="hljs-value"><span class="hljs-number">11506</span></span>,"<span class="hljs-attribute">price</span>":<span class="hljs-value"><span class="hljs-number">334.669</span></span>,"<span class="hljs-attribute">amount</span>":<span class="hljs-value"><span class="hljs-number">0.1211</span></span>,"<span class="hljs-attribute">date</span>":<span class="hljs-value"><span class="hljs-number">1414799405</span></span>}, {"
+                                    <span class="hljs-attribute">tid</span>":<span class="hljs-value"><span class="hljs-number">11507</span></span>,"<span class="hljs-attribute">price</span>":<span class="hljs-value"><span class="hljs-number">336.498</span></span>,"<span class="hljs-attribute">amount</span>":<span class="hljs-value"><span class="hljs-number">0.011</span></span>,"<span class="hljs-attribute">date</span>":<span class="hljs-value"><span class="hljs-number">1414799407</span></span>}, {"
+                                    <span class="hljs-attribute">tid</span>":<span class="hljs-value"><span class="hljs-number">11508</span></span>,"<span class="hljs-attribute">price</span>":<span class="hljs-value"><span class="hljs-number">335.948</span></span>,"<span class="hljs-attribute">amount</span>":<span class="hljs-value"><span class="hljs-number">0.011</span></span>,"<span class="hljs-attribute">date</span>":<span class="hljs-value"><span class="hljs-number">1414799410</span></span>}
+                                    </span>
+                                </li>
+                            </ul>
+                        </section>
+                        <h4 id="public-http-api-getorderbook">GetOrderBook&nbsp;<a href="#public-http-api-getorderbook"><i class="fa fa-link"></i></a></h4>
+                        <p><strong>Parameters</strong></p>
+                        <p><code>ins</code> - instrument code (ex: “BTCNZD”)</p>
+                        <section id="public-http-api-getorderbook" class="panel panel-success">
+                            <div class="panel-heading">
+                                <div style="float:right"><span style="text-transform: lowercase">Get trades</span></div>
+                                <div style="float:left"><a href="#public-http-api-getorderbook" class="btn btn-xs btn-success">GET</a></div>
+                                <div style="overflow:hidden"><code>/ajax/v1/GetOrderBook</code></div>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>Request</strong><a data-toggle="collapse" data-target="#a3a4ea3d7d7df580396829327f2f5b342" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                <li id="a3a4ea3d7d7df580396829327f2f5b342" class="list-group-item panel-collapse collapse">
+                                    <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>
+                                    <h5><span>Coti</span> AJAX REQUEST URL/GetOrderBook/BTCNZD/</h5>
+                                </li>
+                                <li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#e8fa8bd03216be62617f818f2399a2c22" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li>
+                                <li id="e8fa8bd03216be62617f818f2399a2c22" class="list-group-item panel-collapse collapse">
+                                    <h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre>"<span class="hljs-attribute">bids</span>":<span class="hljs-value">
+                                        [[226.04,24.6696],[226.03,20]], "asks":[[226.85,1.406],[226.86,2.9806]],"isAccepted":true}
+
+                                </span></li>
+                            </ul>
+                        </section>
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footerId">
+        <div class="container footer"></div>
+    </footer>
+
+    <div id="resetPassword" ap-wrapper="ResetPassword"></div>
+    <div id="verifyEmail" ap-wrapper="VerifyEmail"></div>
+    <!-- javascript -->
+    <!-- <script src="js/lib/jquery-ajax-3-1-0.min.js"></script> -->
+    <!-- <script src="js/lib/tether.min.js"></script> -->
+    <!-- <script src="dist/theme.min.js"></script> -->
+    <!-- Js Files -->
+    <script type="text/javascript" src="js/lib/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.smooth-scroll.min.js"></script>
+    <script type="text/javascript" src="js/lib/slick.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.waypoints.min.js"></script>
+    <script type="text/javascript" src="js/lib/inview.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.ajaxchimp.min.js"></script>
+
+    <!-- Platform -->
+    <script src="js/config.js"></script>
+    <script src="js/library.min.js"></script>
+    <script src="js/widgets.min.js"></script>
+    <!-- <script src="dist/shift-bundle.min.js"></script> -->
+
+
+       <!-- Shift Markets -->
+   <!-- <script src="js/shift-themeing.js"></script> -->
+    <!--AW-FLAG: Adding Scotch Panels JS -->
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            //open the lateral panel
+            $('.cd-btn').on('click', function(event) {
+                event.preventDefault();
+                $('.cd-panel').addClass('is-visible');
+            });
+            //clode the lateral panel
+            $('.cd-panel').on('click', function(event) {
+                if ($(event.target).is('.cd-panel') || $(event.target).is('.cd-panel-close')) {
+                    $('.cd-panel').removeClass('is-visible');
+                    event.preventDefault();
+                }
+            });
+        });
+        (function() {
+            $('table').addClass('table');
+
+        }).call(this);
+        $(document).ready(function() {
+        // $('#footerId').load('footer.html');
+        var loadCount = 0;
+        var totalLoadCount = 1; // number of html pieces loaded
+        $('.footer').load('footer.html',runRenders);
+
+        function runRenders() {
+            loadCount++;
+
+            if (loadCount >= totalLoadCount) {
+                renderWidgetWrapper();
+                renderWidget();
+                renderActionWrapper();
+                renderTranslation();
+                changeLanguage();
+
+            }
+
+        }
+    });
+    </script>    
+</body>
+
+</html>

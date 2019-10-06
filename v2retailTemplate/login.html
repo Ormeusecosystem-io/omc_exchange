@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <title>Welcome | ORME</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+
+    <link rel="icon" href="./images/logos/orme-fav.png">
+    <!--[if IE]><link rel="shortcut icon" href="images/favicons/otc_icon.ico"><![endif]-->
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <meta name="autor" content="ShiftMarket">
+    <!-- Stylesheets -->
+    <!-- Bootstrap v4.0.0-beta.6 -->
+    <!-- <link href="assets/css/bootstrap-reboot.min.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/bootstrap-grid.min.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
+    <link href="assets/css/shift-styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+    <!-- Font Awesomes -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Maven+Pro|Didact+Gothic|Roboto" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <!-- jQuery -->
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+    async defer>
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <!-- Animate On Scroll (AOS) Library -->
+    <!-- <link href="assets/css/aos.css" rel="stylesheet"> -->
+    <!-- <script src="js/aos.js"></script> -->
+    <!-- Javascript Smooth Scroll Library -->
+    <!-- <script src="js/smooth-scroll.min.js"></script> -->
+
+</head>
+<style>
+    body{
+        background: #3d4267;
+    }
+    #loginForm>h1>img {
+        width: 160px;
+        margin-left: 20px;
+    }
+    .input--custom {
+        position: relative;
+    }
+    .input--custom:first-child>img {
+        width: 27px;
+        position: absolute;
+        z-index: 10;
+        top: 23px;
+        left: 20px;
+    }
+    .reset-password-holder {
+        text-align: center;
+    }
+    .reset-password-button {
+        cursor: pointer;
+        margin: 0 auto;
+        font-family: book;
+        text-decoration: underline;
+        font-size: 16px;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .re-captcha-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 24px auto 14px;
+        width: 304px;
+    }
+    .switchToLogin{
+        font-family: book;
+        font-size: 16px;
+        margin: 30px 0;
+    }
+    .input--custom:nth-child(2)>img, .input--custom>img#lock {
+        width: 22px;
+        position: absolute;
+        z-index: 10;
+        top: 17px;
+        left: 20px;
+    }
+    .input-error-icon {
+        background-image: url(../../images/icons/fieldIcon_error_30X30.svg);
+        width: 30px;
+        height: 27px;
+        right: 5px;
+        position: absolute;
+        background-repeat: no-repeat;
+        top: 18px;
+    }
+    #ap-widget-login-form{
+        position: relative;
+    }
+    #TooltipContainer{
+        position: fixed;
+        top: 140px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        z-index: 9999999;
+        justify-content: center;
+        pointer-events: none;
+    }
+    #TooltipInner{
+        position: relative;
+        max-width: 360px;
+        margin: 20px 10px 0;
+        width: 100%;
+        padding: 10px 20px;
+        background-color: #fff;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        border-radius: 6px;
+        box-shadow: 0 6px 10px 0 rgba(0,0,0,.2);
+        pointer-events: auto;
+        color: #38d5ab;
+        font-size: 13px;
+        word-wrap: break-word;
+        font-family: news;
+    }
+    #TooltipInner > span{
+        position: absolute;
+        top: 5px;
+        right: 7px;
+        font-size: 12px;
+        cursor:pointer;
+    }
+    #ap-widget-login-form .information-block{
+        position: absolute;
+        top: 190px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-family: book;
+    }
+    @media(max-width: 768px){
+        #ap-widget-login-form .information-block{
+            top: 130px;
+        }
+    }
+</style>
+<body>
+    
+       
+    <div ap-widget="Navbar"></div>
+    <div class="login-body">
+        <div class="login-container">
+            <div class="close-button-login"></div>
+            <div ap-widget="LoginForm" id="ap-widget-login-form" to="/my-wallet.html"></div>
+        </div>
+    </div>
+    <div ap-widget="Footer"></div>
+    <!-- Scripts -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108807921-10"></script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-108807921-10', 'auto');
+        ga('send', 'pageview');
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    
+    
+    <!-- <script type="text/babel" src="js/script.js"></script> -->
+    
+    <script src="js/config.js"></script>
+    <script src="js/library.min.js"></script>
+    <script src="js/widgets.min.js"></script>
+
+    <script type="text/javascript">
+        AlphaPoint.config.v2Widgets = true;
+
+        $(document).ready(function () {
+            // $('#footer').load('footer.html');
+            var loadCount = 0;
+            var totalLoadCount = 1; // number of html pieces loaded
+
+            function runRenders() {
+                loadCount++;
+
+                if (loadCount >= totalLoadCount) {
+                    renderWidgetWrapper();
+                    renderWidget();
+                    renderActionWrapper();
+                    renderTranslation();
+                    changeLanguage();
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

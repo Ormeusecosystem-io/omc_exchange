@@ -1,0 +1,121 @@
+body { background: inherit; }
+
+a { cursor: pointer; }
+
+.btn,
+button { border-radius: 0; }
+
+input,
+.form-control {
+  background-color: $inputBackground;
+  color: $inputTextColor;
+  border: 1px solid $inputBorder;
+  box-shadow: none;
+}
+
+input::placeholder,
+.form-control::placeholder {
+  color: lighten($inputTextColor, 5%);
+}
+
+input:focus,
+.form-control:focus {
+  border-color: darken($inputBorder, 20%);
+  box-shadow: none;
+}
+
+.input-group-addon {
+  border-color: $inputBorder;
+  background-color: $inputBackground;
+}
+
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+  background-color: $inputDisabledBackground;
+  border-color: $inputDisabledBorder;
+  color: $inputDisabledTextColor;
+}
+
+.btn-action {
+  background-color: $submitButtonColor;
+  color: $submitButtonTextColor;
+  &:hover,
+  &:focus{ color: $submitButtonTextColor }
+}
+
+.btn-radio {
+  background-color: $radioButtonColor;
+  border-radius: 30px;
+}
+
+.btn-radio.active {
+  background-color: $radioButtonActiveColor;
+  color: $radioButtonActiveTextColor;
+}
+
+.btn-radio.active:focus,
+.btn-radio:focus { outline: none; }
+
+.tab {
+  padding: 3px 5px;
+  margin: 0 6px;
+  color: $tabTextColor;
+  cursor: pointer;
+  &.active {
+    border-bottom: 4px solid $tabActiveColor;
+    color: $tabActiveTextColor;
+  }
+}
+
+.pad {
+  padding: 16px;
+  &-y {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  &-x {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.form-control { border-radius: 0; }
+
+.error-block {
+  background-color: $errorColor;
+  color: $errorTextColor;
+}
+.success-block {
+  background-color: $successColor;
+  color: $successTextColor;
+}
+.information-block {
+  background-color: $informationColor;
+  color: $informationTextColor;
+}
+
+label {
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.table { margin-bottom: 0px; }
+
+
+.loggedin {
+  .hide-loggedin { display: none !important; }
+}
+
+.loggedout {
+  .show-loggedin { display: none !important; }
+}
+.alert { position:fixed !important; }
+.sells-color { color:red !important; }
+.buys-color { color:green !important;}
+.p-tb-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}

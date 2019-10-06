@@ -1,0 +1,597 @@
+//colors
+$white: rgba(255, 255, 255, 1);
+$color_bright_gray_approx: rgba(59, 66, 81, 1);
+$black: rgba(0, 0, 0, 1);
+$color_azure_radiance_approx: rgba(0, 123, 255, 1);
+$color_science_blue_approx: rgba(0, 105, 217, 1);
+$color_sunset_orange_approx: rgba(249, 76, 59, 1);
+$color_red_orange_50_approx: rgba(249, 59, 42, 0.5);
+$color_red_orange_approx: rgba(249, 59, 42, 1);
+$color_red_orange_85_approx: rgba(249, 59, 42, 0.85);
+$color_shift_red: #FD5959;
+$white_35: rgba(255, 255, 255, 0.35);
+$white_80: rgba(255, 255, 255, 0.8);
+$white_70: rgba(255, 255, 255, 0.7);
+$color_vulcan_approx: rgba(13, 20, 29, 1);
+$color_gunsmoke_approx: rgba(133, 133, 133, 1);
+$black_88: rgba(0, 0, 0, .88);
+$wild_sand: rgba(244, 244, 244, 1);
+$color_bon_jour_approx: rgba(224, 224, 224, 1);
+$gray: rgba(128, 128, 128, 1);
+$color_vulcan_80_approx: rgba(13, 20, 29, 0.8);
+$color_blue_charcoal_95_approx: rgba(1, 12, 23, .95);
+$color_blue_charcoal_approx: rgba(1, 12, 23, 1);
+$color_careys_pink_approx: rgba(218, 163, 163, 1);
+$red_30: rgba(255, 0, 0, 0.3);
+$white_60: rgba(255, 255, 255, 0.6);
+$color_chateau_green_approx: rgba(38, 177, 79, 1);
+$color_shift_green: #7ACD45;
+$white_40: rgba(255, 255, 255, 0.4);
+$shift_green: #7ACD45;
+$shift_green_subdued: #669656;
+$shift_red: #FD5959;
+$shift_red_subdued: #964c4e;
+
+// THEME COLOR ORGANIZER
+// use these to set and use frequently used colors
+$color_1: #212427;
+$color_2: #FFFFFF;
+$color_3: #c8c8c8;
+$color_4: $color_shift_green;
+$color_5: $color_shift_red;
+$color_6: #979797;
+$color_7: #1d2023;
+$color_8: #737576;
+
+//fonts
+$font_0: 'Maven Pro';
+$font_1: 'sans-serif';
+$font_2: 'Roboto';
+$font_3: 'Didact Gothic';
+$font_4: 'Maven Pro';
+$font_5: 'sans-serif';
+$font_6: 'Didact Gothic';
+$font_7: 'Maven Pro';
+$font_8: 'sans-serif';
+$font_9: 'Didact Gothic';
+$font_10: 'Maven Pro';
+$font_11: 'sans-serif';
+$font_12: 'Didact Gothic';
+$font_13: 'Maven Pro';
+$font_14: 'sans-serif';
+$font_15: 'Didact Gothic';
+$font_16: 'Maven Pro';
+$font_17: 'sans-serif';
+$font_18: 'Didact Gothic';
+$font_19: 'Maven Pro';
+$font_20: 'sans-serif';
+$font_21: 'Roboto';
+$font_22: 'Maven Pro';
+$font_23: 'sans-serif';
+$defaultFonts: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+//urls
+$url_0: url('../images/wires-lighter.png');
+$url_1: url('../images/gif/giphy.gif');
+$url_2: url('../images/lap-top.jpg');
+$url_3: url('../images/glass-code.jpg');
+
+
+
+//fonts
+$font_0: 'Maven Pro';
+$font_1: 'sans-serif';
+$font_2: 'Roboto';
+$font_3: 'Didact Gothic';
+$font_4: 'Maven Pro';
+$font_5: 'sans-serif';
+$font_6: 'Didact Gothic';
+$font_7: 'Maven Pro';
+$font_8: 'sans-serif';
+$font_9: 'Didact Gothic';
+$font_10: 'Maven Pro';
+$font_11: 'sans-serif';
+$font_12: 'Didact Gothic';
+$font_13: 'Maven Pro';
+$font_14: 'sans-serif';
+$font_15: 'Didact Gothic';
+$font_16: 'Maven Pro';
+$font_17: 'sans-serif';
+$font_18: 'Didact Gothic';
+$font_19: 'Maven Pro';
+$font_20: 'sans-serif';
+$font_21: 'Roboto';
+$font_22: 'Maven Pro';
+$font_23: 'sans-serif';
+
+$ease-in-quad: cubic-bezier(.55, .085, .68, .53);
+$ease-in-cubic: cubic-bezier(.550, .055, .675, .19);
+$ease-in-quart: cubic-bezier(.895, .03, .685, .22);
+$ease-in-quint: cubic-bezier(.755, .05, .855, .06);
+$ease-in-expo: cubic-bezier(.95, .05, .795, .035);
+$ease-in-circ: cubic-bezier(.6, .04, .98, .335);
+
+$ease-out-quad: cubic-bezier(.25, .46, .45, .94);
+$ease-out-cubic: cubic-bezier(.215, .61, .355, 1);
+$ease-out-quart: cubic-bezier(.165, .84, .44, 1);
+$ease-out-quint: cubic-bezier(.23, 1, .32, 1);
+$ease-out-expo: cubic-bezier(.19, 1, .22, 1);
+$ease-out-circ: cubic-bezier(.075, .82, .165, 1);
+
+$ease-in-out-quad: cubic-bezier(.455, .03, .515, .955);
+$ease-in-out-cubic: cubic-bezier(.645, .045, .355, 1);
+$ease-in-out-quart: cubic-bezier(.77, 0, .175, 1);
+$ease-in-out-quint: cubic-bezier(.86, 0, .07, 1);
+$ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
+$ease-in-out-circ: cubic-bezier(.785, .135, .15, .86);
+
+// Icons for Price table
+$verification-icons-color: #34495E;
+$verification-font-size: 90px;
+$verification-font-size-smaller: 70px;
+
+
+$btn-underline-color: #fff;
+// Logo
+$logo-home-section-color: #fff;
+$logo-feature-section-color: #fff;
+$logo-about-section-color: #fff;
+$logo-security-section-color: #fff;
+$logo-platform-section-color: #fff;
+$logo-contact-section-color: #3b4251;
+
+$logo-home-section-img: '../../images/logos/company-logo-white.svg';
+$logo-feature-section-img: '../../images/logos/company-logo-white.svg';
+$logo-about-section-img: '../../images/logos/company-logo-white.svg';
+$logo-security-section-img: '../../images/logos/company-logo-white.svg';
+$logo-platform-section-img: '../../images/logos/company-logo-white.svg';
+$logo-contact-section-img: '../../images/logos/company-logo-white.svg';
+
+// need to find proper home for variable
+$active-hover-text: #fff;
+
+// Header menu
+$header-menu-item-bg: transparent;
+$header-menu-item-color: #fff;
+$header-menu-item-color-hover: #fff;
+$header-menu-item-border: transparent;
+$header-menu-item-border-hover: transparent;
+$header-menu-item-font-size: 15px;
+$header-menu-item-font-family: 'NimbusReg', 'Didact Gothic', 'Maven Pro', sans-serif;
+
+$header-nav-home-bg: transparent;
+$header-nav-features-bg: #194AAD;
+$header-nav-about-bg: #194AAD;
+$header-nav-platform-bg: #194AAD;
+$header-nav-security-bg: #194AAD;
+$header-nav-contact-bg: #194AAD;
+
+// Hamburger button
+$hamburger-bg: #fff;
+$hamburger-bg-hover: #fff;
+
+// Side menu
+$side-menu-bg: #0d141d;
+$side-menu-color: #fff;
+$side-menu-color-hover: #fff;
+$side-menu-font-size: 29px;
+$side-menu-font-family: 'Didact Gothic', 'Maven Pro', sans-serif;
+
+$logo-color-second-part: #fff;
+
+
+// Side dot nav
+$side-dot-nav-home-section-color: #fff;
+$side-dot-nav-home-section-border: #fff;
+$side-dot-nav-home-section-bg: transparent;
+
+$side-dot-nav-feature-section-color: #194AAD;
+$side-dot-nav-feature-section-border: #194AAD;
+$side-dot-nav-feature-section-bg: transparent;
+
+$side-dot-nav-about-section-color: #194AAD;
+$side-dot-nav-about-section-border: #194AAD;
+$side-dot-nav-about-section-bg: transparent;
+
+$side-dot-nav-platform-section-color: #194AAD;
+$side-dot-nav-platform-section-border: #194AAD;
+$side-dot-nav-platform-section-bg: transparent;
+
+$side-dot-nav-security-section-color: #194AAD;
+$side-dot-nav-security-section-border: #194AAD;
+$side-dot-nav-security-section-bg: transparent;
+
+$side-dot-nav-contact-section-color: #194AAD;
+$side-dot-nav-contact-section-border: #194AAD;
+$side-dot-nav-contact-section-bg: #fff;
+
+$side-dot-nav-active-home: #fff;
+$side-dot-nav-active-feature: #194AAD;
+$side-dot-nav-active-about: #194AAD;
+$side-dot-nav-active-platform: #194AAD;
+$side-dot-nav-active-security: #194AAD;
+$side-dot-nav-active-contact: #194AAD;
+
+// Scrolling Ticker
+$ticker-container-bg: transparent;
+$ticker-container-symbol-color: #fff;
+$ticker-container-last-trade-color: #fff;
+$ticker-container-last-trade-currency-color: #fff;
+$ticker-container-high-color: #fff;
+$ticker-container-high-high-color: #fff;
+
+// First homepage section
+$first-section-h1-color: #fff;
+$first-section-h1-font-size: 4em;
+$first-section-h1-font-family: 'Didact Gothic', 'Maven Pro', sans-serif;
+$first-section-link-color: #fff;
+$first-section-link-btn: none;
+$first-section-link-font-size: 1.8em;
+$first-section-link-font-family: 'Maven Pro', sans-serif;
+$first-section-link-border: none;
+$first-section-link-border-hover: #fff;
+$first-section-image-overlay: rgba(0, 0, 0, .1);
+$first-section-blurb: #fff;
+$first-section-member: #fff;
+$first-section-singup-color: #fff;
+$first-section-singup-bg: #37bfdd;
+$first-section-singup-border: #37bfdd;
+$first-section-singup-color-hover: #fff;
+$first-section-singup-bg-hover: #37bfdd;
+$first-section-singup-border-hover: #37bfdd;
+$first-section-singin-color: #55def7;
+
+
+// Section Feature
+$home-section-feature-bg: #fff;
+$home-section-feature-title-color: #000;
+$home-section-feature-title-underline: #fff;
+$home-section-feature-block-bg-hover: rgba(13,20,29,0.8);
+$home-section-feature-block-text-color: #000;
+$home-section-feature-block-text-font-size: 1em;
+$home-section-feature-icon-color: #000;
+$home-section-feature-image-overlay: rgba(0, 0, 0, 0);
+$home-section-feature-block-bg-hover: rgba(255, 255, 255, 1);
+
+// Spacial Features CTA Component
+$spacial-features-container-bg: transparent;
+
+$spacial-features-cta-header-font-family: $defaultFonts;
+$spacial-features-cta-header-font-size: 26px;
+$spacial-features-cta-header-color: #292b2c;
+$spacial-features-cta-header-bg: inherit;
+
+$spacial-features-cta-blurb-font-family: $defaultFonts;
+$spacial-features-cta-blurb-font-size: 16px;
+$spacial-features-cta-blurb: #5a6c90;
+$spacial-features-cta-blurb-bg: inherit;
+
+$spacial-feature-header-font-family: $defaultFonts;
+$spacial-feature-header-font-size: 18px;
+$spacial-feature-header: #2f4166;
+$spacial-feature-header-bg: inherit;
+
+$spacial-feature-blurb-font-family: $defaultFonts;
+$spacial-feature-blurb-font-size: 15px;
+$spacial-feature-blurb: #7080a2;
+$spacial-feature-blurb-bg: inherit;
+
+
+// Section About
+$home-section-about-title-color: #000;
+$home-section-about-title-underline: #000;
+$home-section-about-bg: #fafafa;
+$home-section-about-block-text-color: #000;
+$home-section-about-block-text-font-size: 1em;
+$home-section-about-icon-color: #000;
+$home-section-about-image-overlay: rgba(0, 0, 0, .0);
+$home-section-about-block-bg-hover: rgba(255, 255, 255, 1);
+
+// Full Width Homepage Selling Point Component
+$homepage-fullwidth-features-row-bg: #fafafa;
+$homepage-fullwidth-features-row-border: #e2e1e1;
+
+$homepage-fullwidth-features-header-font-family: $defaultFonts;
+$homepage-fullwidth-features-header-font-size: 26px;
+
+$homepage-fullwidth-features-header-color: #555;
+$homepage-fullwidth-features-header-bg: inherit;
+
+$homepage-fullwidth-features-blurb-font-family: $defaultFonts;
+$homepage-fullwidth-features-blurb-font-size: 15px;
+$homepage-fullwidth-features-blurb: #666;
+$homepage-fullwidth-features-blurb-bg: inherit;
+
+
+	// $homepage-feature-icon
+	// $homepage-feature-font-size
+
+$homepage-feature-header-font-family: $defaultFonts;
+$homepage-feature-header-font-size: 17px;
+$homepage-feature-header: #53575f;
+$homepage-feature-header-bg: inherit;
+
+$homepage-feature-blurb-font-family: $defaultFonts;
+$homepage-feature-blurb-font-size: 15px;
+$homepage-feature-blurb: #666;
+$homepage-feature-blurb-bg: inherit;
+
+// Section Platform
+$home-section-platform-title-color: #fff;
+$home-section-platform-title-underline: #fff;
+$home-section-platform-block-text-color: #f4f4f4;
+$home-section-platform-block-text-font-size: 1em;
+$home-section-platform-icon-color: #fff;
+$home-section-platform-image-overlay: rgba(0, 0, 0, .7);
+
+// Section Security
+$home-section-security-title-color: #fff;
+$home-section-security-title-underline: #fff;
+$home-section-security-block-text-color: #f4f4f4;
+$home-section-security-block-text-font-size: 1em;
+$home-section-security-icon-color: #fff;
+$home-section-security-image-overlay: rgba(0, 0, 0, .7);
+
+// Section Contact
+$home-section-contact-bg: #fff;
+$home-section-contact-menu-title-color: #3b4251;
+$home-section-contact-menu-title-font-family: 'Didact Gothic', 'Maven Pro', sans-serif;
+$home-section-contact-menu-text-color: #3b4251;
+$home-section-contact-menu-text-color-hover: #141414;
+$home-section-contact-register-bg: #0d141d;
+
+// Modal
+$modal-bg: #fff;
+$modal-button-bg: transition;
+$modal-button-border: #141414;
+$modal-button-color: #141414;
+$modal-button-close-color: #141414;
+$modal-text-accept: #000;
+$modal-text-accept-link: #141414;
+$modal-complated-field-color: #26b14f;
+
+// Sign IN/UP pages
+$sign-in-up-bg: #181c2a;
+$sign-in-up-header-title: #fff;
+$sign-in-up-primary-cta-text: #181c2a;
+$sign-in-up-primary-cta-bg: #fff;
+$sign-in-up-primary-cta-border: #fff;
+$sign-in-up-secondary-cta-text: #fff;
+$sign-in-up-secondary-cta-bg: #181c2a;
+
+
+// Inner Page Header Banner Components
+$page-title-banner-header-font-family: $defaultFonts;
+$page-title-banner-header-font-size: 30px;
+$page-title-banner-header: #fff;
+$page-title-banner-header-bg: inherit;
+
+$page-title-banner-bg-alpha:#17212e;
+$page-title-banner-bg-mu: #444444;
+$page-title-banner-bg-omega: #454545;
+$page-title-banner-deg-gradient: 310deg;
+$page-title-banner-percent: 133%;
+
+
+// Inner Page Content Components
+$inner-page-bg: #fff;
+
+$inner-page-blurb-header-font-family: $defaultFonts;
+$inner-page-blurb-header-font-size:	2rem;
+$inner-page-blurb-header: #fff;
+$inner-page-blurb-header-bg: inherit;
+
+$inner-page-lead-in-blurb-font-family: $defaultFonts;
+$inner-page-lead-in-blurb-font-size: 16px;
+$inner-page-lead-in-blurb: #000;
+$inner-page-lead-in-blurb-bg: inherit;
+
+$inner-page-lead-in-blurb-highlight-font-family: $defaultFonts;
+$inner-page-lead-in-blurb-highlight-font-size: 18px;
+$inner-page-lead-in-blurb-highlight: #000;
+$inner-page-lead-in-blurb-highlight-bg: inherit;
+
+
+$inner-page-list-item-font-family: $defaultFonts;
+$inner-page-list-item-font-size: 17px;
+$inner-page-list-item: #292b2c;
+$inner-page-list-item-bg: inherit;
+
+$inner-page-list-item-icon-size: 20px;
+$inner-page-list-item-icon-bg: inherit;
+$inner-page-list-item-icon: #202832;
+
+$inner-page-label-font-family: $defaultFonts;
+$inner-page-label-font-size: 18px;
+$inner-page-label: #000;
+$inner-page-label-bg: inherit;
+
+$inner-page-default-header-font-family: $defaultFonts;
+$inner-page-default-header-font-size: 24px;
+$inner-page-default-header: #fff;
+$inner-page-default-header-bg: inherit;
+
+$inner-page-default-text-font-family: $defaultFonts;
+// $inner-page-default-text-font-size: 1.2rem;
+$inner-page-default-text-font-size: 14px;
+$inner-page-default-text: #454545;
+$inner-page-default-text-bg: inherit;
+
+
+$inner-page-default-link-font-family: $defaultFonts;
+// $inner-page-default-link-font-size: .9rem;
+$inner-page-default-link-font-size: 14px;
+
+// $inner-page-default-link: #454545;
+$inner-page-default-link: $color_shift_green;
+$inner-page-default-link-bg: inherit;
+// $inner-page-default-link-hover: #454545;
+$inner-page-default-link-hover: $color_shift_red;
+$inner-page-default-link-bg-hover: inherit;
+
+$inner-page-footer-bg: #000;
+$inner-page-footer-color: #fff;
+
+$inner-page-btn-color: #454545;
+
+
+
+// Inner Page Table Components
+/*
+$table-bg:
+$table-row-border:
+$table-row-label-font-family:
+$table-row-label-font-size:
+$table-row-label:
+$table-row-label-bg:
+$table-cell-bg:
+$table-cell-primary-text-font-family:
+$table-cell-primary-text-font-size:
+$table-cell-primary-text:
+$table-cell-secondary-text-font-family:
+$table-cell-secondary-text-font-size:
+$table-cell-secondary-text:
+*/
+
+// header
+$wallet-header-title: #194AAD;
+$wallet-header-bg: #000;
+$wallet-header-help-link: #fff;
+$wallet-header-help-link-hover: #194AAD;
+$wallet-header-dropdown: #fff;
+$wallet-header-dropdown-hover: #194AAD;
+
+// wallet side nav
+$wallet-side-nav-item: #000;
+$wallet-side-nav-item-bg: #fff;
+$wallet-side-nav-item-hover: #194AAD;
+$wallet-side-nav-item-bg-hover: #f5f5f5;
+
+$wallet-side-nav-item-active: #194AAD;
+$wallet-side-nav-item-active-bg: #fff;
+$wallet-side-nav-item-active-hover: #194AAD;
+$wallet-side-nav-item-active-bg-hover: #f5f5f5;
+
+// wallet page content
+$wallet-content-bg: #fff;
+$wallet-content-secondary-header: #000;
+$wallet-blurb-title-bg: #194AAD;
+$wallet-blurb-title: #fff;
+$wallet-blurb: #989898;
+$wallet-checked-icon--active: #194AAD;
+$wallet-checked-icon--default: #e2e2e2;
+
+// wallet balance tables
+$wallet-balance-tables-title: #fff;
+$wallet-balance-tables-title-bg: #194AAD;
+
+// modal
+$wallet-modal-title: #000;
+$wallet-modal-thumb-header: #194AAD;
+
+$wallet-modal-btn: #fff;
+$wallet-modal-btn-bg: #194AAD;
+$wallet-modal-btn-shadow: #194AAD;
+$wallet-modal-btn-hover: #fff;
+$wallet-modal-btn-bg-hover: #000;
+$wallet-modal-btn-shadow-hover: #000;
+
+// Wallet buy/sell component
+$wallet-toggle-buy-sell-tab: #c8c8c8;
+$wallet-toggle-buy-sell-tab-line: #c8c8c8;
+$wallet-toggle-buy-sell-tab-active: #000;
+$wallet-toggle-buy-sell-tab-line-active: #000;
+
+$wallet-slider-bg--default: #f7f7f7;
+$wallet-slider-bg--active: #194AAD;
+
+$wallet-buy-sell-option-block-bg: #fff;
+$wallet-buy-sell-option-title-bg: #194AAD;
+$wallet-buy-sell-option-title: #fff;
+$wallet-buy-sell-option-for: #000;
+$wallet-buy-sell-option-price: #000;
+$wallet-buy-sell-btn: #000;
+$wallet-buy-sell-btn-bg: #c8c8c8;
+$wallet-buy-sell-btn-shadow: #c8c8c8;
+$wallet-buy-sell-btn-hover: #fff;
+$wallet-buy-sell-btn-bg-hover: #194AAD;
+$wallet-buy-sell-btn-shadow-hover: #194AAD;
+
+$wallet-buy-sell-popular-table-title: #000;
+$wallet-buy-sell-price-bg-slider: #000;
+$wallet-buy-sell-price-highlight-slider: #c8c8c8;
+$wallet-buy-sell-custom-amount-link: #000;
+$wallet-buy-sell-custom-amount-link-hover: #000;
+
+//walltet table titles
+$wallet-balance-tables-title: #fff;
+$wallet-balance-tables-title-bg: #194AAD;
+
+// wallet table deposit + withdraw btns
+$wallet-balance-deposit-btn: #000;
+$wallet-balance-deposit-btn-bg: #c8c8c8;
+$wallet-balance-deposit-btn-box-shadow: #c8c8c8;
+$wallet-balance-deposit-btn-hover: #fff;
+$wallet-balance-deposit-btn-bg-hover: #000;
+$wallet-balance-deposit-btn-box-shadow-hover: #000;
+$wallet-balance-withdraw-btn: #fff;
+$wallet-balance-withdraw-btn-bg: #cecece;
+$wallet-balance-withdraw-btn-box-shadow: #cecece;
+$wallet-balance-withdraw-btn-hover: #fff;
+$wallet-balance-withdraw-btn-bg-hover: #000;
+$wallet-balance-withdraw-btn-box-shadow-hover: #000;
+
+$wallet-settings-tables-title: #fff;
+$wallet-settings-tables-title-bg: #194AAD;
+
+$wallet-settings-reset-password-link: #000;
+$wallet-settings-reset-password-link-hover: #000;
+
+$wallet-settings-tables-btn: #000;
+$wallet-settings-tables-btn-bg: #cecece;
+$wallet-settings-tables-btn-box-shadow: #cecece;
+$wallet-settings-tables-btn-hover: #fff;
+$wallet-settings-tables-btn-bg-hover: #194AAD; 
+$wallet-settings-tables-btn-box-shadow-hover: #194AAD;
+
+$pricing-table-icon-color: #34495E;
+$pricing-table-font-size: 50px;
+
+// Advanced Trade UI Colors:
+
+// Header colors
+$trade-header-bg: $color_1;
+$header-border: $color_6;
+
+// Ticker colors
+$trade-header-ticker-buy: $shift_green;
+$trade-header-ticker-sell: $shift_red;
+
+// Widget colors:
+$trade-widget-header-bg: $color_1;
+$trade-widget-header-bottom-border: $color_8;
+$trade-widget-container-bg: $color_1;
+$trade-widget-border: $color_7;
+$trade-widget-inactive-tab: $color_3;
+$trade-widget-active-tab: $color_2;
+$trade-widget-responsive-tab-menu-bg: $color_2;
+$trade-widget-responsive-tab-menu-item: $color_1;
+$trade-widget-responsive-tab-menu-hover-bg: $color_3;
+
+$trade-widget-header-font-size: 14px;
+$trade-widget-header-font-color-active: $color_2;
+$trade-widget-header-font-color-subdued: $color_3;
+
+$trade-bids-color: $color_4;
+$trade-asks-color: $color_5;
+$trade-font-family: 'Roboto', sans-serif;
+
+$trade-widget-bg-color: $color_1;
+
+$trade-price-chart-button-bg: transparent;
+$trade-price-chart-button: #FFF;
+$trade-price-chart-sidebar-button: $trade-widget-header-font-color-subdued;
+$trade-price-chart-sidebar-button-selected: $trade-widget-bg-color;
+
+// Depth chart colors
+$depth-chart-colors: $color_4 $color_5;

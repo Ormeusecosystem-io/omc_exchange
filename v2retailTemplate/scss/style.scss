@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  @font-face {
+    font-family: "bold";
+    src: url("/fonts/CLAN-OT-BOLD.OTF") format("truetype");
+  }
+
+  @font-face {
+    font-family: "news";
+    src: url("/fonts/ClanOT-News.woff") format("truetype");
+  }
+
+  @font-face {
+    font-family: "medium";
+    src: url("/fonts/ClanOT-Medium.woff") format("truetype");
+  }
+
+  @font-face {
+    font-family: "book";
+    src: url("/fonts/ClanOT-Book.woff") format("truetype");
+  }
+  

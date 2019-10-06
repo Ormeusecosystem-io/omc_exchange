@@ -1,0 +1,1495 @@
+{
+
+    "WALLET":
+    {
+        "HOME":
+        {
+            "TITLE": "Welcome"
+        }
+    },
+    "ACCOUNT_ACTIONS":
+    {
+        "TITLE_TEXT": "Accounts Actions",
+        "DATE_TEXT": "Date",
+        "ACTION_TEXT": "Action",
+        "ID_TEXT": "#",
+        "TYPE": "Type",
+        "PRICE": "Price",
+        "QUANTITY": "Quantity",
+        "VALUE": "Value",
+        "STATUS": "Status",
+        "FEE": "Fee",
+        "DETAILS_TEXT": "Details",
+        "NEW_TRADE": "New Trade",
+        "EXECUTED": "Trade Executed",
+        "ORDER_ADDED": "Order Added",
+        "ORDER_REJECTED": "Order Rejected",
+        "ORDER_MODIFIED": "Order Modified",
+        "ORDER_REMOVED": "Order Modified",
+        "ORDER_CHANGED": "Order Changed",
+        "BUY": "Buy",
+        "SELL": "Sell",
+        "WITHDRAW": "Withdraw",
+        "DEPOSIT": "Deposit",
+        "AMOUNT": "Amount:",
+        "REMAINING": "Remaining:",
+        "HIDE_DETAILS": "Hide Details",
+        "SHOW_DETAILS": "Show Details"
+    },
+    "ACCOUNT_BALANCES":
+    {
+        "TITLE_TEXT": "Account Overview",
+        "PRODUCT": "Product",
+        "AVAIL_BALANCE_TEXT": "Available Balance",
+        "TOTAL_BALANCE_TEXT": "Total Balance"
+    },
+    "ACCOUNT_SELECT":
+    {
+        "TITLE_TEXT": "Account",
+        "SIGNOUT": "Sign Out"
+    },
+    "ACCOUNT_TRANSACTIONS":
+    {
+        "TITLE_TEXT": "Deposits and Withdraws",
+        "ACCOUNTID_TEXT": "Account ID",
+        "ID_TEXT": "ID",
+        "TYPE": "Type",
+        "PRODUCT": "Product",
+        "TOTAL": "Total",
+        "TIME": "Time",
+        "STATUS": "Status",
+        "WITHDRAW": "Withdraw",
+        "DEPOSIT": "Deposit",
+        "REFRESH": "Refresh"
+    },
+    "AFFILIATE":
+    {
+        "TITLE_TEXT": "Affiliate Details",
+        "NO_PROGRAM_LINE1": "There are currently no affiliate tags. Please",
+        "NO_PROGRAM_LINE2": "create one",
+        "ACTIVE_TEXT": "Current active tag:",
+        "ACTIVE_TITLE_TEXT": "Number of active affiliates: ",
+        "CREATE": "Create affiliate tag",
+        "UPDATE": "Update affiliate tag",
+        "EDIT": "Edit affiliate tag",
+        "COPY": "Copy affiliate tag",
+        "CANCEL": "Cancel"
+    },
+
+    "APIKEY":
+    {
+        "PAGE_TITLE_TEXT": "API Access",
+        "KEY_SUMMARY": "Your Keys",
+        "KEY_DOCUMENTATION": "API Key Documentation",
+        "KEY_PERMISSIONS": "Key Permissions",
+        "TABLE_KEY": "Key",
+        "TABLE_SECRET": "Secret",
+        "TABLE_ORDER": "Allow Orders",
+        "TABLE_WITHDRAW": "Allow Withdraws",
+        "BUTTON_CREATE": "Create New Key",
+        "BUTTON_GET_NEW_KEY": "Get New Key",
+        "BUTTON_GENERATE": "Generate Key",
+        "BUTTON_DELETE": "Delete",
+        "ALLOW_ORDERS": "Allow Orders",
+        "ALLOW_WITHDRAW": "Allow Withdraws"
+    },
+    "BALANCES":
+    {
+        "TITLE_TEXT": "Balances",
+        "CURRENCY": "Currency",
+        "BALANCE": "Balance",
+        "HOLD": "Hold",
+        "TAB_ALL": "All",
+        "TAB_CRYPTO": "Crypto",
+        "TAB_FIAT": "Fiat",
+        "PENDING_WITHDRAWS": "Pending withdraws",
+        "PENDING_DEPOSITS": "Pending Deposits",
+        "ACCOUNT_ACTIONS": "Account Actions"
+    },
+    "USERNAME":
+    {
+        "ACCOUNT_ID": "Account ID",
+        "ACCOUNT": "Account",
+        "SETTINGS": "Settings",
+        "SIGNOUT": "Sign Out"
+    },
+    "USER_SETTINGS":
+    {
+        "TITLE_TEXT": "Settings",
+        "UPDATE_TITLE": "Update Account Information",
+        "UPDATE_MESSAGE": "By keeping your account information up to date you allow us to provide the prompt and high quality service you deserve. Your changes will be effective immediately.",
+        "ACCOUNT_INFORMATION": "Account Information",
+        "UPDATE_TEXT": "Update",
+        "SECURITY_TEXT": "Security Settings",
+        "2FA_AUTH": "2-Factor Authentication",
+        "GOOGLE_AUTH": "Google Authenticator",
+        "ON": "ON",
+        "OFF": "OFF",
+        "RESET_PASS": "Password Reset",
+        "RESET_PASS_SENT": "Check your email for password reset link",
+        "LEVEL": "Level",
+        "VERIFY_LEVEL": "Verification Level",
+        "DAILY_LIMIT": "Daily Limit",
+        "MONTHLY_LIMIT": "Monthly Limit",
+        "UPDATE_2FA": "Update 2FA",
+        "VERIFY_MESSAGE": "For your security, some of our services require for you to provide basic or additional levels of verification. To verify your account or to check what your current verification level is, please click below.",
+        "VERIFY_ACCT": "Verify Account",
+        "VERIFY_ID": "Verify ID",
+        "ACCT_VERIFIED": "Account Verified",
+        "VERIFICATION_STATUS": "Check Verification Status",
+        "CLICK_HERE": "Click here",
+        "INPUT_MESSAGE": "to reset your password"
+    },
+    "INSTRUMENTS":
+    {
+        "TITLE_TEXT": "Instruments"
+    },
+    "BUY_SELL_ADV":
+    {
+        "TITLE_TEXT": "Order Entry",
+        "BUY_AMOUNT": "Buy Amount",
+        "SELL_AMOUNT": "Sell Amount",
+        "VALUE": "Value",
+        "PRICE_PER": "Price per",
+        "APPROXIMATE": "Approximate",
+        "DISPLAY_QUANTITY": "Display Quantity",
+        "STOP_PRICE": "Stop Price",
+        "TRAILING_AMOUNT": "Trailing Amount",
+        "LIMIT_OFFSET": "Limit Offset",
+        "PEG_PRICE": "Peg Price",
+        "MARKET_PRICE": "Market Price",
+        "FEES": "Fees",
+        "ORDER_TOTAL": "Order Total",
+        "PLACE_ORDER": "Place Order"
+    },
+    "BUY_SELL_MODAL":
+    {
+        "TITLE_TEXT": "Buy / Sell",
+        "VALID_NUMBER": "Please enter a valid number",
+        "MAX_AMOUNT": "Exceeds max amount",
+        "MAX_PRICE": "Exceeds max price",
+        "MAX_DECIMAL": "Max decimal places allowed is",
+        "NO_MARKET": "No Market",
+        "INSUFFICIENT_FUNDS": "Insufficient Funds",
+        "BUY": "Buy",
+        "SELL": "Sell",
+        "BUY_AMNT": "Buy Amount",
+        "SELL_AMNT": "Sell Amount",
+        "FOR": "for",
+        "DISPLAY_QUANTITY": "Display Quantity",
+        "STOP_PRICE": "Stop Price",
+        "TRAILING_AMOUNT": "Trailing Amount",
+        "LIMIT_OFFSET": "Limit Offset",
+        "PEG_PRICE": "Peg Price",
+        "APPROX_MESSAGE": "The price shown here is an approximation.",
+        "SUM": "Sum",
+        "RECEIVED": "Received",
+        "BALANCE": "balance",
+        "MARKET": "Market",
+        "LIMIT": "Limit",
+        "PRICE_PER": "Price Per",
+        "VALUE": "Value",
+        "TOTAL": "Total:",
+        "APPROXIMATE": "Approximate",
+        "EACH": "each",
+        "FEE_AMNT": "Fee Amount:",
+        "FEE": "Fee:",
+        "PLACE_ORDER": "Place Order",
+        "PLACED_ORDER": "Placed Order",
+        "CANCEL": "Cancel",
+        "PLACING ORDER": "Placing Order",
+        "ADVANCED_ORDER": "Advanced Orders",
+        "MARKET_ORDER": "Market Order",
+        "LIMIT_ORDER": "Limit Order",
+        "STOP": "Stop",
+        "STOP_MARKET": "Stop Market",
+        "STOP_LIMIT": "Stop Limit",
+        "TRAILING_STOP_MARKET": "Trailing Stop Market",
+        "TRAILING_STOP_LIMIT": "Trailing Stop Limit",
+        "FILL_OR_KILL": "Fill Or Kill",
+        "IOC": "IOC",
+        "REPORT_BLOCK_TRADE": "Report Block Trade",
+        "RESERVE_ORDER": "Reserve Order"
+    },
+    "BUY_SELL_CUSTOM_LIMIT":
+    {
+        "TITLE_TEXT": "Buy/Sell",
+        "INSUFFICIENT_FUNDS": "Insufficient Funds",
+        "BUY": "Buy",
+        "SELL": "Sell",
+        "MARKET_ORDER": "Market Order",
+        "LIMIT_ORDER": "Limit Order",
+        "LIMIT_PRICE_LABEL": "Set a Limit Price",
+        "CURRENT_MESSAGE": "Current Price Per",
+        "SUMMARY_TITLE": "Transaction Summary",
+        "TOTAL_COST": "Total Cost",
+        "TOTAL_SOLD": "Total Sold",
+        "TOTAL_RECEIVED": "Total Received",
+        "TRANSACTION_FEE": "Transaction Fee",
+        "NET_AMOUNT": "Net Amount Received",
+        "OR": "Or",
+        "CLICK_HERE": "click here",
+        "FIXED_LINK_MSG": "to buy or sell a fixed value amount of "
+    },
+    "BUY_SELL_CUSTOM":
+    {
+        "TITLE_TEXT": "Buy / Sell a Custom Amount",
+        "INSUFFICIENT_FUNDS": "Insufficient Funds",
+        "MAX_DECIMAL": "Max decimal places allowed is ",
+        "VALID_NUMBER": "Please enter a valid number",
+        "GREATER_THAN_FEE_BUY": "The amount you're buying must be greater than the transaction fee",
+        "GREATER_THAN_FEE_SELL": "The price at which you're selling must be greater than the transaction fee",
+        "MAX_AMOUNT": "Exceed Max Amount",
+        "MAX_PRICE": "Exceed max price",
+        "BUY": "Buy Now",
+        "SELL": "Sell Now",
+        "SELECT_BUY": "Select Amount to Buy",
+        "SELECT_SELL": "Select Amount to Sell",
+        "OR": "Or",
+        "CLICK_HERE": "click here",
+        "FIXED_LINK_MSG": "to buy or sell a fixed value amount of ",
+        "CURRENT_MESSAGE": "Current Price Per",
+        "SUMMARY_TITLE": "Transaction Summary",
+        "TOTAL_AMOUNT_TEXT": "Total Amount",
+        "TRANSACTION_FEE": "Transaction Fee",
+        "NET_AMOUNT": "Net Amount Received",
+        "NO_QUANTITY_MARKET_BUY": "There is no market for the quantity you wish to buy, please try a lower quantity.",
+        "NO_QUANTITY_MARKET_SELL": "There is no market for the quantity you wish to sell, please try a lower quantity.",
+        "NO_PRICE_MARKET_BUY": "There is no market for the price you wish to offer, please try a lower price.",
+        "NO_PRICE_MARKET_SELL": "There is no market for the price you wish to bid, please try a lower price.",
+        "CHANGED_MARKET": "The market has changed and your order could not be filled. Please review the new market values and resubmit your order.",
+        "INPUT_MESSAGE": "Enter the amount of {Product1Symbol} you wish to {action}. You may enter the amount either directly in {Product1Symbol} units, or in the equivalent amount of {Product2Symbol}."
+    },
+    "BUY_SELL_FIXED":
+    {
+        "BUY_NOW": "Buy Now",
+        "SELL_NOW": "Sell Now",
+        "GET":"GET",
+        "TITLE_TEXT": "Buy / Sell a Fixed Amount",
+        "HEADER": "BUY/SELL",
+        "INSUFFICIENT_FUNDS": "Insufficient Funds",
+        "BUY": "Buy",
+        "SELL": "Sell",
+        "TOTAL_RECEIVED": "Total Received",
+        "NET_AMOUNT": "Net Amount Received",
+        "CONFIRM_MSG_A": "You are about to",
+        "CONFIRM_MSG_B": "at the price below",
+        "PLACE_ORDER_A": "Place",
+        "PLACE_ORDER_B": "Order",
+        "POPULAR": "Popular",
+        "FOR": "For",
+        "SELECT": "Select",
+        "TRANSACTION_FEE": "Transaction Fee",
+        "SUBMIT_SUCCESS": "Order submitted and executed successfully",
+        "CLICK_HERE": "Click here",
+        "INPUT_MESSAGE": " to input a custom amount of digital currency.",
+        "CHANGED_MARKET": "The market has changed and your order could not be filled. Please review the new market values and resubmit your order.",
+        "CONFIRMATION": "Confirm Buy",
+        "CONFIRMATION_SELL": "Confirm Sell",
+        "AS_EASY_AS": "As easy as 1-2-3",
+        "INSTRUCTION": "Just select the amount you want to buy or sell, or if you wish to use a different amount, click the custom amount link right after"
+    },
+    "BUY_NARROW":
+    {
+        "INSUFFICIENT_FUNDS": "Insufficient Funds",
+        "BUY_AMNT": "Buy Amount",
+        "SELL_AMNT": "Sell Amount",
+        "PRICE_PER": "Price Per",
+        "PLACE_ORDER": "Place Order",
+        "PURCHASE_MSG_A": "you are about to purchase bitcoin at the price below.",
+        "PURCHASE_MSG_B": "They will arrive in your account...",
+        "TOTAL": "Total"
+    },
+    "CONFIRM_BUY":
+    {
+        "BTC_PURCHASED": "BTC Purchased",
+        "TRANSACTION_FEE": "Transaction Fees",
+        "TOTAL_AMOUNT": "Total Amount",
+        "FEE_AMNT": "Fee",
+        "PLACE_ORDER_A": "Place",
+        "PLACE_ORDER_B": "Order"
+    },
+    "PUBLIC_TRADES":
+    {
+        "TITLE_TEXT": "Trades",
+        "NO_CHANGE": "No Change",
+        "UP_TICK": "Up Tick",
+        "DOWN_TICK": "Down Tick",
+        "BUY": "BUY",
+        "SELL": "Sell",
+        "ID_TEXT": "ID",
+        "INSTRUMENT_TEXT": "Instrument",
+        "PRICE_TEXT": "Price",
+        "QUANTITY_TEXT": "Quantity",
+        "TOTAL_TEXT": "Total",
+        "TIME_TEXT": "Time",
+        "DIRECTION": "Direction",
+        "TAKER_SIDE": "Taker Side",
+        "SIZE": "Size"
+    },
+    "CONFIRM_REJECT":
+    {
+        "TITLE_TEXT": "Transactions Status",
+        "SENT_TRANSFERS": "Sent Transfers",
+        "RECEIVED_TRANSFERS": "Received Transfers",
+        "SENT_REQUESTS": "Sent Requests",
+        "RECEIVED_REQUESTS": "Received Requests",
+        "SENDER": "Senders",
+        "RECIPIENT": "Receipient",
+        "AMOUNT": "Amount",
+        "PRODUCT": "Product",
+        "NOTE": "Note",
+        "SENTBY": "Sent By",
+        "TIME": "Time",
+        "STATUS": "Status",
+        "ACTION": "Action",
+        "SEND": "Send",
+        "IGNORE": "Ignore"
+    },
+    "CONFIRM_WITHDRAW":
+    {
+        "TITLE": "Confirm Withdraw",
+        "TITLE_TEXT": "Confirm Withdraw",
+        "PENDING": "Hang on, we are confirming your withdraw.",
+        "SUCCESS": "Withdraw Confirmation Successful",
+        "ERROR": "There was an error in confirming your withdraw:"
+    },
+    "CONFIRM_WITHDRAW_V2":
+    {
+        "TITLE_TEXT": "Confirm Withdraw",
+        "SUCCESS": "Withdraw Confirmation Successful",
+        "ERROR": "There was an error in confirming your withdraw:",
+        "PENDING": "Hang on, we are confirming your withdraw.",
+        "ENCODED_URL_ERROR": "Required parameter d1 was not found in url",
+        "VERIFY_CODE_ERROR": "Required parameter verifycode was not found in url",
+        "USER_ID_ERROR": "Required parameter UserId was not found in url"
+    },
+    "USER_TABLE":
+    {
+        "TOTAL": "Est. Total",
+        "COIN": "Coin",
+        "AMOUNT": "Amount"
+    },
+    "SIDEBAR":
+    {
+        "MENU_HOME": "Home",
+        "MENU_OPTIONS": "Options",
+        "MENU_DASHBOARD": "Dashboard",
+        "MENU_TRADE": "Trade",
+        "MENU_BUY_SELL": "Buy/Sell",
+        "MENU_SEND_REQUEST": "Send/Request",
+        "MENU_DEPOSIT_WITHDRAW": "Deposit/Withdraw",
+        "MENU_DEPOSIT": "Deposit",
+        "MENU_WITHDRAW": "Withdraw",
+        "MENU_PROFILE": "Profile",
+        "MENU_REPORTS": "Reports",
+        "MENU_APIKEY": "API Access",
+        "MENU_VERIFY_ACCOUNT": "Verify Account",
+        "MENU_CUSTOM_CSS": "Custom Css",
+        "MENU_RESEARCH": "Research",
+        "MENU_AFFILIATE": "Affiliate Program",
+        "MENU_MY_ACCOUNTS": "My Accounts",
+        "MENU_PRO_TRADE": "Pro Trade",
+        "MENU_SETTINGS": "Settings",
+        "MENU_HELP": "Help",
+        "MENU_PRIMARY_WALLET": "Primary Wallet",
+        "MENU_ADVANCED": "Advanced",
+        "MENU_LOGOUT": "Sign Out"
+    },
+    "HEADER":
+    {
+        "BUTTON_TEXT_EN": "English",
+        "BUTTON_TEXT_PT": "Portuguese",
+        "BUTTON_TEXT_CH": "Chinese",
+        "TITLE": "Coti Standard Template",
+        "MENU_TEXT_HOME": "Home",
+        "MENU_TEXT_WHAT": "What is This?",
+        "MENU_TEXT_ABOUT": "About Us",
+        "MENU_TEXT_CONTACT": "Contact Us",
+        "HELP": "Help",
+        "REGISTER": "Register",
+        "LOGIN": "Log In"
+    },
+    "INDEX":
+    {
+        "MENU_TEXT_JMA": "JMA",
+        "MENU_TEXT_WHAT_IS_THIS": "What is This?",
+        "MENU_TEXT_MY_ACCOUNT": "My AccountER",
+        "MENU_TEXT_CONTACT_US": "Contact Us",
+        "PAGE_TITLE_TEXT": "Get started today",
+        "BUTTON_BUY": "Buy",
+        "BUTTON_SELL": "Sell",
+        "TITLE_BUY_BOOK": "Buy Orders",
+        "TITLE_SELL_BOOK": "Sell Orders",
+        "TITLE_TRADE_BOOK": "Trades",
+        "QUANTITY": "Quantity",
+        "PRICE": "Price",
+        "TOTAL": "Total",
+        "PROMO_TEXT_1": "Test content",
+        "24HR_HEADLINE": "Last 24 Hour Performance",
+        "TRADES": "Trades",
+        "HIGH": "High",
+        "LOW": "Low",
+        "LAST": "Last",
+        "VOLUME": "Volume"
+    },
+    "BUTTONS":
+    {
+        "TEXT_SIGNUP": "Sign Up",
+        "TEXT_SIGNIN": "Sign In",
+        "TEXT_BUY": "Buy",
+        "TEXT_SELL": "Sell",
+        "TEXT_BUYS": "Buys",
+        "TEXT_SELLS": "Sells",
+        "TEXT_ALL": "All",
+        "TEXT_CANCEL": "Cancel",
+        "TEXT_UPDATE": "Update",
+        "TEXT_VALIDATE": "Validate",
+        "TEXT_NEXT": "Next",
+        "TEXT_SUBMIT": "Submit",
+        "TEXT_DEPOSIT": "Deposit",
+        "TEXT_WITHDRAW": "Withdraw",
+        "TEXT_CLOSE": "Close",
+        "TEXT_PROCESS_WITHDRAW": "Process Withdraw",
+        "TEXT_SUBMIT_UPLOAD_DOCS": "Upload Your Documents",
+        "PAY": "Pay"        
+    },
+    "SIGNUP_MODAL":
+    {
+        "TITLE_TEXT": "Create An Account",
+        "SUBHEADER_TEXT": "Make your account here:",
+        "SIGNUP": "Sign Up",
+        "FIRSTNAME": "Tell us your first name:",
+        "LASTNAME": "Tell us your last name:",
+        "USERNAME": "Username",
+        "EMAIL": "Your email is:",
+        "VERIFYEMAIL": "Type it again:",
+        "TITLE_PASSWORD": "Now, protect your account with a password:",
+        "PASSWORD": "Create a password:",
+        "VERIFYPASSWORD": "Type it again:",
+        "ASSURANCE": "By proceeding you agree to our <a target='new' style='margin:0;' href='#/terms'>Terms of Service</a>",
+        "FINISH": "I'm All Done",
+        "ACCEPT_TERMS_MSG": "Do you accept the terms and conditions?",
+        "PASSWORD_SENT": "Check email for password reset link",
+        "PASSWORD_ENOUGH_REGEX_MSG": "Password must contain at least 8 characters",
+        "PASSWORD_MEDIUM_REGEX_MSG": "Password must contain at least 8 characters, one number, and at least one capital letter",
+        "PASSWORD_BLANK_MSG": "Please Enter a Password",
+        "PASSWORDS_DONT_MATCH_MSG": "Passwords do not match.",
+        "USERNAME_BLANK_MSG": "Please Enter a User Name",
+        "USERNAME_NO_SPACES_MSG": "Username cannot include spaces",
+        "EMAIL_BLANK_MSG": "Please enter an email address",
+        "EMAIL_NO_SPACES_MSG": "Email address cannot include spaces.",
+        "EMAIL_INVALID_MSG": "Please enter a valid email address",
+        "QNT_ADDRESS": "Enter QNT Address",
+        "ENTER_QNT_ADDRESS": "Please Enter a QNT Address",
+        "AUTH_QUES": "2FA Verification Code",
+        "I_ACCEPT": "I accept the ",
+        "AND": "and",
+        "OF": "of",
+        "BY_CLICKING": "By Clicking",
+        "YOU_ACCEPT_OUR": "you accept our",
+        "REGISTERED": "Account Created. Check your email for Activation Link.",
+        "REGISTER_CLEF": "Register with Clef",
+        "TERMS": "Terms and Conditions",
+        "TERMS_N_CONDITIONS": "I have read &amp; agree with",
+        "TERMS_LINK": "terms.html",
+        "PRIVACY": "Privacy Policy",
+        "PRIVACY_LINK": "privacy.html",
+        "NOT_RESIDENT": "I am not a resident of E.U.",
+        "EU_RESIDENT_RESTRICTION_MSG": "This exchange restricts users that are EU residents",
+        "RISK_ASSOCIATED": "I understand there are risks associated with crypto-currency trading activities.",
+        "RISK_ACCEPT_MSG": "Please acknowledge the risks associated with crypto-currency trading activities",
+        "TERMS_ACCEPT_MSG": "Please read and agree to the terms and conditions",
+        "EMAIL_EXISTS": "Email address already exists.",
+        "ROBOT_CAPTCHA": "Are You a Robot?",
+        "READ_AND_AGREE": "I have read &amp; agree with Terms &amp; Conditions and Privacy Policy of ${AlphaPoint.config.siteTitle}."
+    },
+    "SIGNIN_MODAL":
+    {
+        "TITLE_TEXT": "Sign In",
+        "REQUEST_USERNAME": "Enter a User name",
+        "REQUEST_PASSWORD": "Enter a Password",
+        "USERNAME_QUES": "Username",
+        "USERNAME": "Username",
+        "EMAIL_PLACEHOLDER": "Email",     
+        "EMAIL_QUES": "What is your account name?",
+        "EMAIL": "My account name is:",
+        "PASSWORD_QUES": "What is your password?",
+        "PASSWORD": "My password is:",
+        "RECAPTCHA_CONFIRM_TEXT": "Confirm if you are not a robot",
+        "AUTH_QUES": "Google Authenticator Code",
+        "SMS_CODE": "SMS code",
+        "AUTHY_CODE": "Authy code",
+        "FORGOT_PASSWORD": "Forgot Password?",
+        "PASSWORD_SENT": "Check your email for password reset link",
+        "REGISTERED": "Account Created. Check your email for Activation Link.",
+        "SELECT_SERVER": "Select server",
+        "SERVER_ADDRESS": "Enter server address"
+    },
+    "LOGIN":
+    {
+        "ERROR_MSG": "Login Error"
+    },    
+    "PASSWORD_MODAL":
+    {
+        "TITLE_TEXT": "Reset Password",
+        "SUBHEADER_TEXT": "Enter a new password",
+        "PASSWORD": "Type a new password:",
+        "VERIFYPASSWORD": "Type it again:",
+        "FINISH": "Reset",
+        "PROCESSING": "Processing..."
+    },
+    "ACTIVATE_EMAIL":
+    {
+        "ACTIVATED": "Success: Your account is activated. Please click Sign In to get started.",
+        "ERROR": "Error: {{value}}"
+    },
+    "RESET_PASSWORD":
+    {
+        "ERROR": "An error occurred. Please try again later.",
+        "URL_ERROR": "URL parameters not found",
+        "2FA": "Enter your 2FA code."
+    },
+    "REQUEST_RESET_PASSWORD":
+    {
+        "ENTER_YOUR_EMAIL_USERNAME": "Enter your username"
+    },    
+    "DASHBOARD":
+    {
+        "PAGE_TITLE_TEXT": "My Account",
+        "TITLE_TEXT_SUMMARY": "Your Summary",
+        "TITLE_TEXT_OPEN_ORDERS": "Open Orders",
+        "TITLE_TEXT_AFFILIATE": "Affiliate Info",
+        "ORDERS_TAB_EXECUTE_NOW": "Execute Now",
+        "ORDERS_TAB_MOVE_TO_TOP": "Move To Top",
+        "ORDERS_TAB_CANCEL": "Cancel",
+        "ORDERS_TAB_INSTRUMENT": "Instrument",
+        "ORDERS_TAB_SIDE": "Side",
+        "ORDERS_TAB_QTY_TOTAL": "Qty Total",
+        "ORDERS_TAB_QTY_REMAINING": "Qty Remaining",
+        "ORDERS_TAB_PRICE": "Price",
+        "ORDERS_TAB_TIME": "Time",
+        "ORDERS_TAB_ORDER_ID": "Order Id",
+        "TITLE_TEXT_RECENT_ACTIVITY": "Recent Activity",
+        "BUTTON_EXECUTE_NOW": "Execute Now",
+        "BUTTON_MOVE_TO_TOP": "Move To Top",
+        "BUTTON_CANCEL": "Cancel",
+        "ACTIVITY_BUY": "buy",
+        "ACTIVITY_SELL": "sell"
+    },
+    "TRADE":
+    {
+        "PAGE_TITLE_TEXT": "Trade",
+        "TITLE_TEXT_YOUR_BALANCE": "Your Balance",
+        "TITLE_TEXT_BUY_ORDERS": "Your Balance",
+        "TITLE_TEXT_SELL_ORDERS": "Sell Balance",
+        "TITLE_TEXT_TRADES": "Trades"
+    },
+    "PRO_TRADE":
+    {
+        "PRICE_CHART": "Price Chart",
+        "OPEN_ORDERS": "Open Orders"
+    },    
+    "ORDERBOOK":
+    {
+        "TITLE_TEXT": "Order Book",
+        "BUY_ORDER_TEXT": "Buy Orders",
+        "SELL_ORDER_TEXT": "Sell Orders",
+        "QUANTITY_TEXT": "Quantity",
+        "PRICE_TEXT": "Price",
+        "TOTAL_TEXT": "Total",
+        "TIME_TEXT": "Time",
+        "TRADES_TEXT": "Trades",
+        "ORDER_REMOVED_TEXT": "Order Removed - Order Id: ",
+        "UNKNOWN_TEXT": "Unknown message",
+        "WITHDRAW_1_TEXT": "Withdraw - Account: ",
+        "WITHDRAW_2_TEXT": ", Withdraw: ",
+        "INPUT_ITEM_TEXT": ", InputId: ",
+        "DEPOSIT_1_TEXT": "Deposit - Account: ",
+        "DEPOSIT_2_TEXT": "Deposit: ",
+        "TRADE_TEXT": "Trade - ",
+        "ORDER_TEXT": ", Order #: ",
+        "ORDER_CHANGED_TEXT": "Order Changed - Order: #",
+        "QUANTITY_TOTAL_TEXT": " QtyTot: ",
+        "QUANTITY_REMAINING_TEXT": ", QtyRem: ",
+        "PRODUCT_PAIR_TEXT": ", ProdPair: ",
+        "ORDER_ADDED_TEXT": "Order Added - Order: #",
+        "ORDER_REJECTED_TEXT": "Order Rejected - Order Id: ",
+        "ORDER_REJECTED_REASON_TEXT": " Rejected. Reason Code: ",
+        "ORDER_CANCEL_REASON_TEXT": "Cancel Order Sent: Order ID: ",
+        "ORDER_CANCEL_ID": ", Cancel ID: ",
+        "ORDER_MOVED_TEXT": "Order Moved to Top of Book: Order ID: ",
+        "ORDER_EXECUTED_TEXT": "Order Executed: Order ID: ",
+        "MODIFY_ORDER_TEXT": "Modify Order Rejected - Modify Order Id: ",
+        "MODIFY_ORDER_REASON_TEXT": " Rejected. Reason Code: "
+    },
+
+    "PROFILE":
+    {
+        "TITLE_TEXT": "Update Profile Info",
+        "FIRSTNAME": "First Name",
+        "LASTNAME": "Last Name",
+        "SMS": "Use SMS authentication",
+        "AUTHY": "Use Authy authentication",
+        "NOAUTH": "Don't use Two Factor Authentication",
+        "GOOGLE": "Use Google authentication",
+        "PHONE": "Phone Number",
+        "PHONE_CODE": "Phone# Country Code",
+        "LANGUAGE": "Language",
+        "INFO_UPDATED": "Your information was updated",
+        "INFO_UPDATE_FAIL": "There was a problem with your request.",
+        "RESET_PASS_CONFIRM": "Password reset link sent. Click the activation link in your email to reset your password.",
+        "RESET_PASSWORD": "Click Here to Reset Your Password",
+        "SAVED": "Saved!"
+    },
+    "2FA":
+    {
+        "TITLE_TEXT": "2FA Validation",
+        "AUTHY_CODE": "Authy Code",
+        "NO_AUTH_CODE": "",
+        "GOOGLE_CODE": "Google",
+        "VERIFICATION_CODE": "Google Verification Code for COTI",
+        "ERROR": "An error occurred. Please try again later.",
+        "NONE": "None",
+        "SMS_CODE": "SMS",
+        "SHOW_QR": "Show QRCode",
+        "SCAN_GOOGLE": "Scan with Google Authenticator"
+    },
+    "DEPOSIT":
+    {
+        "TITLE_TEXT": "Deposit Money",
+        "DEPOSIT": "Deposit",
+        "SELECT": "Select the currency to deposit",
+        "FORM_TITLE": "International Wire Transfer Deposit Form",
+        "FIAT_STEP1": "Step 1: Create the deposit ticket.",
+        "FIAT_STEP2": "Step 2: Wire funds",
+        "FIAT_STEP3": "Step 3: UPDATE ME",
+        "BANK_USD": "DEPOSIT.BANK_USD",
+        "ACCOUNT_NAME": "DEPOSIT.ACCOUNT_NAME",
+        "ACCOUNT_#": "DEPOSIT.ACCOUNT_#",
+        "SWIFT": "DEPOSIT.SWIFT",
+        "BANK_CNY": "Bank Name (General Fiat)",
+        "ACCOUNT_CNY": "Account Name (General Fiat)",
+        "ACCOUNT_NUMBER_CNY": "Account Number (General Fiat)",
+        "BANK_NAME": "Bank Name (PHDeposit Template)",
+        "AMOUNT": "Enter Amount",
+        "REFERENCE_NUMBER": "Reference Number (PHDeposit Template)",
+        "FULLNAME": "Full Name",
+        "FIRSTNAME": "First Name",
+        "LASTNAME": "Last Name",
+        "RECEIPT": "Receipt",
+        "CONFIRM": "Deposit request has been successfully sent",
+        "SUCCESS": "Success",
+        "SEND_FUNDS": " ",
+        "SENDING_REQUEST": "Sending Request...",
+        "WITHDRAW_FAILED": "Deposit failed: ",
+        "COMMENT": "Memo",
+        "COMMENT_LABEL": "Please tell us which account you want this deposit to be debited to",
+        "NOTE": "Note: An email will be sent to the Administrator.",
+        "DEPOSIT_BTC": "Deposit cryptocurrency",
+        "NB": "Please read the instructions below",
+        "VIA_PERFECT": "Deposit via Perfect Money",
+        "INSTRUCTION1": "Depositing cryptocurrency into the exchange is safe and easy.",
+        "INSTRUCTION2": "The address below can always be used to deposit cryptocurrency into your account.",
+        "INSTRUCTION3": "Use your cryptocurrency  client or wallet service to send the cryptocurrency to the address below. ",
+        "NEXT": "Next",
+        "CURRENCY": "Currency",
+        "ADDRESS": "Deposit Address",
+        "INSTRUCTION4": "Your account will automatically update after the cryptocurrency network confirms your transaction. The confirmation may take up to 1 hour.",
+        "INSTRUCTION5": "You are not able to perform deposits, please contact an administrator.",
+        "CRYPT_STEP1": "1) Send cryptocurrency to this address.",
+        "CRYPT_STEP2": "2) Your deposit will automatically be processed.",
+        "REQUEST_TIMEDOUT": "The server is taking too long to find an address. Please try again.",
+        "AMOUNT_GREATER_THAN_ZERO": "Amount needs to be greater than zero",
+        "FIAT_INSTRUCTION1": "Fiat instructions 1",
+        "FIAT_INSTRUCTION2": "Fiat instructions 2",
+        "FIAT_INSTRUCTION3": "Fiat instructions 3",
+        "ADDRESS_LIST": "Please select an address",
+        "FIAT_QUICKTELLER_INSTRUCTIONS": "FIAT_QUICKTELLER_INSTRUCTIONS",
+        "FIAT_WITH_ADDRESS_INSTRUCTION4": "FIAT_WITH_ADDRESS_INSTRUCTION4",
+        "FIAT_WITH_ADDRESS_STEP1": "FIAT_WITH_ADDRESS_STEP1",
+        "FIAT_WITH_ADDRESS_STEP2": "FIAT_WITH_ADDRESS_STEP2",
+        "XRP_WARNING": "Be sure to include your destination tag to ensure proper routing.",
+        "DESTINATION_TAG": "Destination Tag",
+        "PAYMENTIDS": "Payment ID",
+        "DEPOSIT_INFO": "Deposit Information:",
+        "BSB": "BSB:",
+        "REFERENCE": "Reference:",
+        "FILL_REQUIRED_FIELDS": "Please fill these required fields:",
+        "COPIED_TO_CLIPBOARD": "Address Copied to Clipboard",
+        "FIELD_EXCHANGE_ACCOUNT": "Exchange Address",
+        "FIELD_YOUR_DAS_ACCOUNT": "Destination ID",
+        "DAS_EXCHANGE_ACCOUNT_WARNING": "- Be sure to send to the exchange address indicated here",
+        "DAS_YOUR_ACCOUNT_WARNING": "- Be sure to include the ID indicated here in your withdraw memo to ensure proper routing",
+        "BOTTOM_NOTE": "Once the deposit has been processed, please complete and submit the form below."        
+    },
+    "VERIFY_EMAIL_MODAL":
+    {
+        "TITLE_TEXT": "Verify email address",
+        "VERIFYING": "Verifying email address...",
+        "ERROR_D1": "Required parameter d1 was not found in url",
+        "ERROR_VERIFY_CODE": "Required parameter verifycode was not found in url",
+        "ERROR_USER_ID": "Required parameter UserId was not found in url",
+        "SUCCESS": "Email Verification Successful. You may now login to your account.",
+        "ERROR": "There was an error in verifying your email",
+        "PENDING": "Hang on, we are verifying your email."
+    },
+    "VERIFY_EMAIL_V2":
+    {
+        "TITLE_TEXT": "Verify email address",
+        "SUCCESS": "Email Verification Successful. You may now login to your account",
+        "ERROR": "There was an error in verifying your email:",
+        "PENDING": "Hang on, we are verifying your email."
+    },
+    "HOME_DIRECT":
+    {
+        "WELCOME": "Welcome to Coti",
+        "HEADER": "Getting Started with Coti",
+        "MISSION": "Our mission is to provide you and the whole world with a simple, reliable and low-cost service to use, buy, sell, and trade bitcoin, the must popular crypto-currency that allows you to actually purchase and sell goods.",
+        "MISSION2": "Please complete these three easy steps to fully enable your member platform.",
+        "STEP1": "Step 1 - Verify Your Account",
+        "STEP1_CONTENT": "In order to start making transactions, we need to run a security check to verify your identity. This is for your security and the safety of your funds. We have implemented the latest technology in this process, which minimize the waiting time, so that you can have your account up and running very fast.",
+        "STEP2": "Step 2 - Add Funds",
+        "STEP2_CONTENT": "To add funds to your account just click on the My Account option in the left menu. There you will be presented your account which you can fund using wire transfer or your existing wallet. The procedure is very simple.",
+        "STEP3": "Trade",
+        "STEP3_CONTENT": "Buying, selling, and trading cryptocurrency in CoinTrader is extremely simple, and after just a few steps you will complete each transaction quickly and securely. Just click the Buy/Sell buttons on the left menu and you will be well on your way. Clarity and simplicity are our main goals, but if you have any questions, just let us know and we will assist you.",
+        "NEXT_STEPS": "One more step to fully activate your bitcoin platform.",
+        "BUY_BITCOIN": "Buy",
+        "SELL_BITCOIN": "Sell",
+        "RECENT_TRANSACTIONS": "Recent Transactions",
+        "VERIFY_MODAL_TAG1": "Your one stop place to receive, send, and trade digital currency.",
+        "VERIFY_MODAL_TAG2": "Your one stop place to receive, send, and trade cryptocurrency.",
+        "VERIFY_ACCOUNT": "Verify Your Account",
+        "VERIFY_NOW": "Verify Account",
+        "VERIFY_ACCT_BTN": "Verify Account",
+        "ADD_FUNDS": "Add Funds",
+        "BEGIN_TRADING": "Begin Trading",
+        "MODAL_TEXT": "Let us know a little more about you, so we can provide you with the initial verification level before you fund your account. This is a very easy and quick step."
+    },
+    "KYC_LAUNCH":
+    {
+        "VERIFY_ACCOUNT": "Verify Your Account",
+        "ADD_FUNDS": "Add Funds",
+        "BEGIN_TRADING": "Begin Trading",
+        "VERIFY_NOW_BTN": "Verify Account",
+        "REDIRECTING": "Redirecting to Verification..."
+    },
+    "WITHDRAW":
+    {
+        "TITLE_NOT_VERIFY": "Withdrawing fiat currency requires verification.",
+        "SUBTITLE_NOT_VERIFY": "Click Verify Account to verify.",
+        "TITLE_TEXT": "Withdraw Money",
+        "SELECT": "Select the currency to withdraw.",
+        "SELECT_TEMPLATE": "Select template",
+        "CURRENCY": "Currency",
+        "WITHDRAW": "Withdraw",
+        "FORM_TITLE": "Create a Withdraw ticket",
+        "FULLNAME": "Full name",
+        "NAME": "Account Holder Name",
+        "FULLNAME_REQUIRED": "Full name is required",
+        "BANK_NAME": "Bank name",
+        "ACCOUNT_ADDRESS": "Account Holder Address",
+        "BANK_ADDRESS": "Bank address",
+        "BANK_PROVINCE": "Bank Province",
+        "BANK_CITY": "Bank City",
+        "SORT": "Sort Code",
+        "ABA": "ABA",
+        "SWIFT": "SWIFT",
+        "CONFIRM": "Withdraw Request Sent with Success",
+        "FIAT_CONFIRM": "Your withdrawal ticket was created successfully.",
+        "SUCCESS": "Success",
+        "CANCEL": "Withdraw request canceled.",
+        "SENDING_REQUEST": "Sending Request...",
+        "WITHDRAW_FAILED": "Withdraw failed: ",
+        "ACCOUNT_ID": "Bank Account #",
+        "AMOUNT": "Amount",
+        "FEE_MESSAGE": "Your withdraw fee: ",
+        "PROCESS_WITHDRAW": "Process withdraw",
+        "ENTER_ADDRESS": "Please enter the external address you would like to withdraw to",
+        "VALID_AMOUNT": "Please enter a valid amount to withdraw",
+        "CODE_REJECTED": "Code Rejected",
+        "COMMENT": "Add your user id and account number",
+        "COMMENT_LABEL": "Withdraw memo",
+        "NB": "Please read the instructions below",
+        "VIA_PERFECT": "Withdraw PERFECT MONEY",
+        "INSTRUCTION1": "Withdrawing Perfect Money can take up to 48 hours to process.",
+        "INSTRUCTION2": "Perfect Money Account ID <br>(i.e. U1234567)",
+        "INSTRUCTION3": "Please read the instructions below.",
+        "INSTRUCTION4": "Your transaction will be processed immediately. Network confirmations may take up to 1 hour.",
+        "INSTRUCTION5": "A small transaction fee may be charged by the network.",
+        "INSTRUCTION6": "",
+        "INSTRUCTION7": "",
+        "DOUBLE_CHECK": "Please double check the address before starting the withdraw process.",        
+        "CRYPTO_ADDRESS": "Withdraw Address",
+        "CRYPTO_RECEIVED": "Request Received",
+        "CRYPTO_CONFIRM": "Please check your email",        
+        "CLOSE": "Close",
+        "NO_SIM_MODE": "Not available in sim mode.",
+        "TOTAL_AVAILABLE_NOTE": "Note: The total available to withdraw is the result of Balance minus Fee",
+        "NO_WITHDRAWS": "You are not able to perform withdrawals, please contact an administrator.",
+        "YOU_HAVE": "You have",
+        "AVAILABLE_WITHDRAW": "available for withdraw",
+        "PAYMENT_ID": "Payment ID",
+        "REVIEW": "Your request is under review",
+        "STEP_1": "Please write form in English",
+        "FIAT_TEMP_CONFIRM": "Request Received",
+        "FIAT_TEMP_CONFIRM2": "Please Check your email"
+    },
+    "VERIFY":
+    {
+        "TITLE_TEXT": "Verify Account",
+        "SUB_TEXT": "Complete these verification steps to raise your limits and enable instant buys.",
+        "EXPLANATION": "Please complete the following steps to enable deposits, withdrawals and trading to occur.",
+        "REQUIRED_TEXT": "This field is required",
+        "STEP1": "Verify your billing info.",
+        "STEP1_VERIFIED": "You have been verified.",
+        "STEP2": "Verify your identity.",
+        "STEP3": "Verify your organization.",
+        "FIRSTNAME": "First Name",
+        "MIDDLENAME": "Middle Name",
+        "LASTNAME": "Last Name",
+        "DATE": "Date of Birth",
+        "COUNTRY_CODE": "Country Code",
+        "PHONE": "Billing Phone",
+        "TELEPHONE": "Telephone",
+        "STREET_NUMBER": "Street Number",
+        "STREET_TYPE": "Street Type(Ave.,St.)",
+        "ADDRESS": "Street Name",
+        "FLAT_NUMBER": "Flat Number",
+        "COUNTRY": "Billing Country",
+        "CITY": "City",
+        "SUBURB": "Suburb",
+        "STATE": "Billing State (use abbreviation only)",
+        "ZIP": "Billing Zip",
+        "DRIVER_LICENSE_NUMBER": "DL Number",
+        "DRIVER_LICENSE_VERSION": "DL Version",
+        "PASSPORT_NUMBER": "Passport Number",
+        "PASSPORT_EXPIRATION": "Passport Expiration",
+        "FORM_INVALID_MESSAGE": "Please check that each field is filled in correctly.",        
+        "VERIFIED": "Level Verified",
+        "FULLY_VERIFIED": "Fully Verified.",
+        "IDENTITY_VERIFIED": "Identity Verified",
+        "UNVERIFIED": "Unverified",
+        "ACCOUNT_VERIFIED": "Account Verified",
+        "VERIFIED_NOW_EMAIL_DOCS": "Congratulations! Your account information has been verified. To verify your identity, please email us",
+        "UPLOAD_DOCS2": "You will be redirected.",
+        "IM_ZERO_FAIL": "Account verification failed. Please contact the exchange for help or questions concerning your account verification.",
+        "UNDER_REVIEW": "Your information has been submitted and is under review.",
+        "DOCS_UNDER_REVIEW": "Documents are submitted and are under review.",
+        "DOCS_REJECTED": "Your documents were rejected. You can try to upload your docs again.",
+        "BUY_LIMIT": "Daily Deposit Limit",
+        "SELL_LIMIT": "Daily Withdraw Limit",
+        "LIMIT_TITLE_TEXT": "Verifying your information will grant access to the following:",
+        "LIMIT_HEAD_0": "Level 1 - Verify Your Information",
+        "LIMIT_HEAD_1": "Level 2 - Verify Your Identity",
+        "DIGITAL_LIMIT_BUY_0": "Bitcoin: 5",
+        "DIGITAL_LIMIT_BUY_1": "Bitcoin: unlimited",
+        "DIGITAL_LIMIT_SELL_0": "Bitcoin: 5",
+        "DIGITAL_LIMIT_SELL_1": "Bitcoin: unlimited",
+        "FIAT_LIMIT_BUY_0": "Fiat Currency: $0 USD or equivalent",
+        "FIAT_LIMIT_BUY_1": "Fiat Currency: $2,000 USD or equivalent",
+        "FIAT_LIMIT_SELL_0": "Fiat Currency: $0 USD or equivalent",
+        "FIAT_LIMIT_SELL_1": "Fiat Currency: $2,000 USD or equivalent",
+        "NEXT": "Next Level:",
+        "CURRENT": "Current Level:",
+        "EMAIL_DOCS": "Your account information has been submitted and is under review. In the mean time, you can also verify your identity. Please email us",
+        "PLEASE_ATTACH": "Please attach a copy of your:",
+        "EMAIL_DOCS1": "Driver's License (front and back), Passport, or State Identification Card",
+        "EMAIL_DOCS2": "and a copy of a document with proof of address (e.g. government issued mail, bank statement)",        
+        "EMAIL_SUBJECT": "CoinTrader: Please Help Us Verify Your Account",
+        "EMAIL_BODY": "Attached is a copy of my 1. drivers license (includes front and back) or 2. my passport or 3. another form of state identification. Also attached is a document providing proof of address.",
+        "EMAIL_US_HERE": "here",
+        "CUSTOM_EMAIL_DOCS1": "Your account information has been submitted and is under review.(Level 0)",
+        "CUSTOM_EMAIL_DOCS2": "To verify your account information for Level1, please state \"Level1\" and email us",
+        "CUSTOM_EMAIL_DOCS3": "with specify your email address and username.",
+        "CUSTOM_EMAIL_DOCS4": "(It usually takes 1~5 days until the Account reivew is completed since you send the email)",
+        "CUSTOM_EMAIL_DOCS5": "Next, Level 2",
+        "CUSTOM_EMAIL_DOCS6": "Please provide your ID proof as an email attachment.",
+        "CUSTOM_EMAIL_DOCS7": "Accept ID proof: Passport, Driver's license, National Identity card.",
+        "CUSTOM_EMAIL_DOCS8": "(It usually takes 1~7 days until the ID validation completed since you send the email)",
+        "CUSTOM_EMAIL_DOCS9": "Congratulations! Your account information has been verified.(Level1)",
+        "CUSTOM_EMAIL_DOCS10": "To verify your identity for Level 2, please state \"Level2\" and email us",
+        "CUSTOM_EMAIL_DOCS11": "attached the below document(s)",
+        "CUSTOM_EMAIL_DOCS12": "(It usually takes 7~10 days until the ID validation completed since you send the email)",
+        "CUSTOM_EMAIL_DOCS13": "Congratulations! Your identity has been verified. (Level 2)",
+        "CUSTOM_EMAIL_DOCS14": "To verify your identity for Level 3, please state \"Level 3\" and email us'} <a href={`mailto:${AlphaPoint.config.sendDocsToEmail}?subject=${AlphaPoint.translation('VERIFY.EMAIL_SUBJECT') || AlphaPoint.accountInfo.value.AccountName}'s Docs&body=Hi ${AlphaPoint.config.siteTitle}, ${encodeURIComponent('\r\n\r\n')} ${AlphaPoint.translation('VERIFY.EMAIL_BODY') || 'Attached is a copy of my 1. drivers license (includes front and back) or 2. my passport or 3. another form of state identification. Also attached is a document providing proof of address.'}`}>{AlphaPoint.translation('VERIFY.EMAIL_US_HERE') || 'here'}.</a> {AlphaPoint.translation('VERIFY.CUSTOM_EMAIL_DOCS11') || 'attached the below document(s)'} {AlphaPoint.translation('VERIFY.CUSTOM_EMAIL_DOCS3') || 'with specify your email address and username.'",
+        "CUSTOM_EMAIL_DOCS15": "Next, Level 3",
+        "CUSTOM_EMAIL_DOCS16": "You need to order a letter of Purpose of Trade in advance, please contact us",
+        "CUSTOM_EMAIL_DOCS17": "Please provide your ID selfie, residence address proof and the purpose trade confirmation.",
+        "PHONE_INVALID_CODE": "Incorrect code entered. Please try again.",
+        "PHONE_CODE_HEADLINE": "Please enter the code that was sent to your phone.",
+        "PHONE_VERIFICATION_CODE": "Enter Code",
+        "PHONE_CONFIRMED": "Your phone number has been confirmed.",
+        "PHONE_HEADLINE1": "Verify your phone number.",
+        "PHONE_HEADLINE2": "Enter your phone number below and we will text you a code.",
+        "PHONE_ENTER": "Please enter your phone number"        
+    },
+    "VERIFICATION_REQUIRED":
+    {
+        "UNDER_REVIEW": "Your account is currently under review. We will notify you by email when you are verified. At that time, you will then be able to use this feature.",
+        "UNDER_REVIEW_MESSAGE": "Your account is currently under review. We will notify you by email when you are verified. At that time, you will then be able to use this feature.",
+        "COMPLETE_VERIFICATION_MESSAGE": "Please complete your account verification to use this feature."
+    },    
+    "ACCOUNT":
+    {
+        "SUCCESS": "Success",
+        "ACTIVATION_EMAIL": "An activation email was sent. Please click the link included to activate your account."
+    },
+    "MY_ACCOUNTS":
+    {
+        "TITLE_TEXT": "My Accounts",
+        "VIEW_BAL_ACT": "View Balances & Recent Activity",
+        "DESCRIPTION": "Following is a listing of all your accounts. Select \"Deposit\" to add funds or \"Withdraw\" to retrieve funds. Right below, you will find your recent activity report.",
+        "CURR_BAL": "Current Balances",
+        "REC_TRANS": "Recent Transactions"
+    },    
+    "FOOTER":
+    {
+        "TERMS_TEXT": "Terms of Use",
+        "PRIVACY_TEXT": "Privacy Policy",
+        "PRICING_TEXT": "Price List",
+        "OUR_FOCUS_TEXT": "Our Focus",
+        "CONTACT_TEXT": "Contact Us",
+        "FEES_TEXT": "Fees",
+        "NEWS_TEXT": "News",
+        "ABOUT_TEXT": "About Us",
+        "FAQS_TEXT": "FAQ's",
+        "SECURITY_TEXT": "Security"
+    },
+    "HEADER_TICKER":
+    {
+        "TITLE_TEXT": "Tickers",
+        "LAST_PRICE": "Last Price",
+        "T24_HOUR_CHANGE": "24 Hour Change",
+        "T24_HOUR_VOLUME": "24 Hour Volume",
+        "T24_HOUR_LOW": "24 Hour Low",
+        "T24_HOUR_HIGH": "24 Hour High",
+        "BID": "Bid",
+        "ASK": "Ask"
+    },
+    "TICKER":
+    {
+        "TITLE_TEXT": "Tickers",
+        "LAST_PRICE": "Last Price",
+        "T24_HOUR_CHANGE": "24 Hour Change",
+        "T24_HOUR_VOLUME": "24 Hour Volume",
+        "T24_HOUR_LOW": "24 Hour Low",
+        "T24_HOUR_HIGH": "24 Hour High",
+        "BID": "Bid",
+        "ASK": "Ask"
+    },
+
+    "TICKERS":
+    {
+        "TITLE_TEXT": "Tickers",
+        "LAST_PRICE": "Last Price",
+        "T24_HOUR_CHANGE": "24 Hour Change",
+        "T24_HOUR_VOLUME": "24 Hour Volume",
+        "T24_HOUR_LOW": "24 Hour Low",
+        "T24_HOUR_HIGH": "24 Hour High",        
+        "PAIR": "Pair",
+        "BID": "Bid",
+        "ASK": "Ask",
+        "TRADES": "Trades",
+        "HIGH": "High",
+        "LOW": "Low",
+        "LAST": "Last",
+        "VOLUME": "Volume"
+    },
+    "CHART":
+    {
+        "TITLE_TEXT": "Chart",
+        "JQUERY_ERROR": "jQuery needed for this widget."
+    },
+    "PRODUCTS":
+    {
+        "TITLE_TEXT": "Products"
+    },
+    "PRODUCT_PAIRS":
+    {
+        "TITLE_TEXT": "Product Pairs"
+    },
+    "TRADES":
+    {
+        "TITLE_TEXT": " Account Trades",
+        "ACCOUNT": "Account",
+        "ID_TEXT": "#",
+        "INSTRUMENT_TEXT": "Pair",
+        "SIDE_TEXT": "Side",
+        "QUANTITY_TEXT": "Size",
+        "PRICE_TEXT": "Price",
+        "TOTAL_TEXT": "Total",                
+        "FEE_TEXT": "Fee",
+        "TYPE_TEXT": "Type",
+        "STATUS_TEXT": "Status",
+        "EXECUTION_ID_TEXT": "Execution ID",
+        "TIME_TEXT": "Time",
+        "AMOUNT_TEXT": "Amount",                 
+        "STATUS": "Status",        
+        "BUY": "Buy",
+        "SELL": "Sell",
+        "EXECUTED": "Fully Executed",
+        "PRODUCT": "Product",
+        "CREATED": "Created"        
+    },
+    "PRICE_CHART":
+    {
+        "TITLE_TEXT": "Price Chart"
+    },
+    "DEPTH_CHART":
+    {
+        "TITLE_TEXT": "Depth Chart",
+        "BIDS": "Bids",
+        "ASKS": "Asks"
+    },
+    "WIDGET_WRAPPER": {
+        "TAB": {
+            "ACCOUNT_OVERVIEW": "Account Overview",
+            "PRICE_CHART": "Price Chart",
+            "DEPTH_CHART": "Depth Chart",
+            "ORDER_BOOK": "Order Book",
+            "RECENT_TRADES": "Recent Trades",
+            "ORDER_ENTRY": "Order Entry",
+            "OPEN_ORDERS": "Open Orders",
+            "FILLED_ORDERS": "Filled Orders",
+            "INACTIVE_ORDERS": "Inactive Orders",
+            "TRADE_REPORTS": "Trade Reports",
+            "WITHDRAW_STATUS": "Withdraw Status"
+        }
+    },
+    "OPEN_ORDERS":
+    {
+        "TITLE_TEXT": "Open Orders",
+        "ID_TEXT": "#",
+        "INSTRUMENT_TEXT": "Instrument",
+        "PAIR_TEXT": "Instrument",
+        "ORDER_TYPE_TEXT": "Order Type",
+        "TYPE_TEXT": "Type",
+        "TOTAL_TEXT": "Total",
+        "SIDE_TEXT": "Side",
+        "SIZE_TEXT": "Size",
+        "FEE_TEXT": "Fee",
+        "STATUS_TEXT": "Status",
+        "ACTIONS_TEXT": "Actions",
+        "REMAINING_TEXT": "Remaining",
+        "QUANTITY_TEXT": "Quantity",
+        "PRICE_TEXT": "Price",
+        "TIME_TEXT": "Time",        
+        "BUY": "Buy",
+        "SELL": "Sell",
+        "EXECUTE": "Execute",
+        "TOP": "Top",
+        "CANCEL": "Cancel",
+        "ACCOUNT": "Account",
+        "CANCEL_ALL": "Are you sure you want to cancel all orders?",
+        "CANCEL_SUCCESS": "All orders canceled successfully",
+        "CANCEL_ALL_SIDE": "`Are you sure you want to cancel all ${side} side orders?`"
+    },
+    "FILLED_ORDERS":
+    {
+        "TITLE_TEXT": "Filled Orders"
+    },
+    "INACTIVE_ORDERS":
+    {
+        "TITLE_TEXT": "Inactive Orders"
+    },
+    "TRADE_REPORTS":
+    {
+        "TITLE_TEXT": "Trade Reports"
+    },
+    "TRADER_REPORT":
+    {
+        "TITLE_TEXT": "Trade Report"
+    },
+    "WITHDRAW_STATUS":
+    {
+        "TITLE_TEXT": "Withdraw Status"
+    },
+    "RECENT_TRADES":
+    {
+        "TITLE_TEXT": "Recent Trades"
+    },    
+    "ORDER_HISTORY":
+    {
+        "TITLE_TEXT": "Order History",
+        "ID_TEXT": "#",
+        "INSTRUMENT_TEXT": "Instrument",
+        "TYPE_TEXT": "Type",
+        "ORDER_TYPE_TEXT": "Order Type",
+        "PRICE_TEXT": "Price",
+        "QUANTITY": "Quantity",
+        "EXECUTED": "Executed",
+        "REMAINING_TEXT": "Remaining",
+        "TOTAL_TEXT": "Total",
+        "TIME_TEXT": "Time",
+        "STATUS": "Status",
+        "BUY": "Buy",
+        "SELL": "Sell"
+    },
+    "COMMON":
+    {
+        "OKAY": "Okay",
+        "MOBILE_WARNING": "This site is not optimized for mobile devices. Please switch to a computer for the best possible experience.",
+        "PLEASE_WAIT": "Please wait"
+    },
+    "SEND_REQUEST":
+    {
+        "BLUE_TITLE_SEND": "Select Amount to Send",
+        "BLUE_TITLE_REQUEST": "Select Amount to Request",
+        "SEND_WHO": "Recipient's Email Address",
+        "REQUEST_WHO": "From",
+        "NOTE": "Add a Note (Optional)",
+        "TRANSACTION_SUMMARY": "Transaction Summary",
+        "TOTAL_AMOUNT": "Total Amount"
+    },
+    "REPORTS":
+    {
+        "TITLE_TEXT": "Reports"
+    },
+    "MODAL_WELCOME":
+    {
+        "TEXT": "CoinTrader Coming Soon!"
+    },
+    "BLOCK_TRADE_MODAL":
+    {
+        "BOUGHT": "Bought",
+        "SOLD": "Sold",
+        "SUBMIT_TRADE_REPORT": "Submit Trade Report",
+        "CONFIRM": "Trade report submitted.",
+        "TOTAL": "Total",
+        "SUBMIT_REPORT": "Submit Report"
+    },
+    "ERRORS":
+    {
+        "DEPOSIT":
+        {
+            "FIAT":
+            {
+                "GENERAL_ERROR": "There was an error.",
+                "EXCEEDS_DAILY_LIMIT": "Deposit Failed. Amount exceeds your daily deposit limit.",
+                "EXCEEDS_Monthly_LIMIT": "Deposit Failed. Amount exceeds your monthly deposit limit.",
+                "EXCEEDS_Yearly_LIMIT": "Deposit Failed. Amount exceeds your yearly deposit limit.",
+                "AMOUNT_RANGE": "must be greater than zero and less than"
+            }
+        },
+        "REQUEST_FAILED": "Request Failed",
+        "NOT_ENOUGH_FUNDS": "Insufficient Balance",
+        "INVALID_AMOUNT": "Invalid Amount",
+        "BANK_MISMATCH": "Bank Account Mismatch",
+        "VERIFY_FAILED1": "Not allowed. Verification level failed.",
+        "VERIFY_FAILED2": "Not allowed. Verification level failed."
+    },
+    "HELP":
+    {
+        "TITLE_TEXT": "Help Center",
+        "FAQ": "Frequently Asked Questions",
+        "FAQ_DISCLAIMER": "If the following does not provide you with the answer to your inquiry, don't hesitate to contact us, we will be glad to help you.",
+        "HOW_BUY_BTC":
+        {
+            "QUES_TEXT": "How do I buy Bitcoin?",
+            "ANS_TEXT1": "Go to \"Buy/Sell\"",
+            "ANS_TEXT2": "Select the amount you wish to buy",
+            "ANS_TEXT3": "Choose the wallet you want to fund",
+            "ANS_TEXT4": "Choose your funding method",
+            "ANS_TEXT5": "Confirm your order and click \"Buy\""
+        },
+        "HOW_SELL_BTC":
+        {
+            "QUES_TEXT": "How do I sell Bitcoin?",
+            "ANS_TEXT1": "Go the \"Buy/Sell\"",
+            "ANS_TEXT2": "Select the \"Sell Bitcoin\" tab",
+            "ANS_TEXT3": "Choose the amount you want to sell",
+            "ANS_TEXT4": "Choose the wallet to sell from",
+            "ANS_TEXT5": "Choose the account to fund",
+            "ANS_TEXT6": "Confirm your order and click \"Sell\""
+        },
+        "HOW_DEPOSIT_FIAT":
+        {
+            "QUES_TEXT": "How do I deposit money into my account?",
+            "ANS_TEXT1": "Click on \"Deposit/Withdraw\" link",
+            "ANS_TEXT2": "Click on the \"Deposit\" button for the account you wish to deposit funds to",
+            "ANS_TEXT3": "Fill up the short form",
+            "ANS_TEXT4": "Click \"Submit\""
+        },
+        "HOW_DEPOSIT_BTC":
+        {
+            "QUES_TEXT": "How do I deposit Bitcoin into my account?",
+            "ANS_TEXT1": "Click on \"Deposit/Withdraw\" link",
+            "ANS_TEXT2": "Click on the \"Deposit\" button for the Bitcoin account you wish to deposit funds to",
+            "ANS_TEXT3": "Select the Bitcoin address to send Bitcoin to",
+            "ANS_TEXT4": "Enter or Scan the Bitcoin address into your wallet and submit"
+        },
+        "FUTURE_BTC":
+        {
+            "QUES_TEXT": "What is the future of Bitcoin",
+            "ANS_TEXT1": "Bitcoin is a ground-breaking protocol, capable of changing how we buy and sell goods and even more, including the way we vote, identify ourselves, support causes, and have a huge impact on the world economy. We are at the bringe if incredible innovations."
+        },
+        "ANONYMOUS_BTC":
+        {
+            "QUES_TEXT": "Can I use Bitcoin anonymously?",
+            "ANS_TEXT1": "It is not completely anonymous, but offers a great level of privacy together with transparency. It's not as anonymous as hard-cash, but its significantly more than credit card or bank transactions. Also, there are tools available and under development that promote privacy through Bitcoin, as well as technologies to protect against financial corruption and voting systems."
+        },
+        "BUY_USING_BTC":
+        {
+            "QUES_TEXT": "Can I walk into a store and buy using Bitcoin?",
+            "ANS_TEXT1": "Yes. Real stores are starting to accept Bitcoin as a payment currency, and its number increases by the day. Many online services offer convenient applications for both the consumer and the store to buy and sell very easily using Bitcoin. Now you can find many ATMs selling Bitcoin, but the number of 2-way ATMs (the ones that sell and buy) is increasing."
+        },
+        "BTC_MINING":
+        {
+            "QUES_TEXT": "What is Bitcoin Mining?",
+            "ANS_TEXT1": "Similar to gold mining, Bitcoin mining is the process by which you digitally dig for Bitcoin, by running special scripts with algorithmic equations and hash functions that verify transactions on the blockchain. This process allows the confirmation of transactions, and adds new Bitcoin to the blockchain, and as a reward the miner receives Bitcoin."
+        }
+    },    
+    "MARKETING":
+    {
+        "MENU" : {
+            "EXCHANGE": "Exchange",
+            "FEES": "Fees",
+            "SUPPORT": "Support",
+            "LOGIN": "Login",
+            "REGISTER": "Register"
+        },
+        "FOOTER":
+        {
+            "MENU":
+            {
+                "ABOUT": "ABOUT",
+                "ABOUT_US": "About Us",
+                "FEATURES": "Features",
+                "CURRENCIES": "Tradable Currencies",
+                "FUNDING": "Funding Methods",
+                "SECURITY": "Security",
+                "RESOURCES": "RESOURCES",
+                "FAQ": "FAQ",
+                "FEES": "Fees",
+                "CONTACT": "CONTACT",
+                "SOCIAL": "SOCIAL",
+                "POLICIES": "POLICIES",
+                "PRIVACY": "Privacy Policy",
+                "AML": "AML Policy",
+                "TERMS": "Terms & Conditions",
+                "IMPORTANT_INFORMATION": "Important Information"
+            }
+        },
+        "HOME":
+        {
+            "BANNER_TEXT": "LEADERS IN DIGITAL ASSET TRADING",
+            "SIGN_IN": "Sign In",
+            "SIGN_UP": "Sign Up"
+        },
+        "SPECIAL_FEATURES":
+        {
+            "TITLE": "The easiest way to purchase digital currencies",
+            "SUB_TITLE": "Effortlessly connect with the global digital economy with our user-friendly interface.",
+            "BUTTON_GET_STARTED": "Get Started",
+            "SIMPLICITY_TITLE": "Simplicity",
+            "SIMPLICITY_CONTENT": "We make it as easy as possible to buy digital currency. Sign up. Send funds. Buy or sell Bitcoin and Ethereum.",
+            "INSTANT_EXCHANGE_TITLE": "Instant Exchange",
+            "INSTANT_EXCHANGE_CONTENT": "Send and receive digital currency that is immediately exchanged to dollars.",
+            "RELIABILITY_TITLE": "Reliability",
+            "RELIABILITY_CONTENT": "Supports round-the-clock 24/7/365 trading and legally compliant.",
+            "YOUR_FUNDS_TITLE": "Your funds are yours",
+            "YOUR_FUNDS_CONTENT": "Ability to customize color and style of bars, borders, wicks, price lines, backgrounds and grid"
+        },
+        "INDEX_FEATURES":
+        {
+            "TITLE": "The Best Digital Currency Exchange",
+            "SUB_TITLE": "Our institutional-grade technology allows for blazing speeds of over one million transactions per second for high-performance cryptocurrency trading.",
+            "SECURITY_TITLE": "Security",
+            "SECURITY_CONTENT": "Vetted by independent third-party security audits.",
+            "ADVANCED_ORDER_TITLE": "Advanced Order Types",
+            "ADVANCED_ORDER_CONTENT": "Customisable charts, stop-loss orders Automate your trading.",
+            "LIQUIDITY_TITLE": "Liquidity",
+            "LIQUIDITY_CONTENT": "Fast funding, fully liquid.",
+            "TRANSPARENT_FEES_TITLE": "Transparent Fees",
+            "TRANSPARENT_FEES_CONTENT": "Transparent low fees that are easy to understand with no hidden costs."
+        },
+        "INNER_PAGES":
+        {
+            "ABOUT":
+            {
+                "TITLE": "About <span>CoinTrader</span>",
+                "CONTENT": " <p>\n<span>CoinTrader<\/span> is a premier trading and financial technology company. We\u2019ve built the best digital asset exchange by focusing on the needs of professional traders and digital currency experts. We are dedicated to making digital currency trading accessible, fast and totally secure.\n                        <\/p>\n                        <p>\n                            Our vision is to build the next generation digital asset exchange for traders of every skill level with the aim of making digital currency trading accessible to everyone. We are devoted to enhancing our customers\u2019 trading experiences with quick trade execution, fair pricing, world-class customer service, endless improvement and limitless creativity.\n                        <\/p>",
+                "SIDE_BAR":
+                {
+                    "OFFICES": "OFFICES"
+                }
+            },
+            "FEATURES":
+            {
+                "TITLE": "Features",
+                "SUB_TITLE": "Platform Features",
+                "HEADER_CONTENT": "<p class=\"lead-in-blurb\">We offer the <b>most customizable and powerful<\/b> user interface giving you the ability to control and\n                        edit dozens of flexible features and tools including:<\/p>",
+                "CONTENT": "Our platform allows for in-depth and custom market analytics of all the major digital to fiat and digital to digital currency pairs. ",
+                "LIST": "<ul class=\"feature-list\">\n <div class=\"row align-items-center\">\n                            <div class=\"col-md-6\">\n                                <li class=\"blt-item\">Multiple views including price chart, depth chart, order book and recent trades ticker<\/li>\n                            <\/div>\n                            <div class=\"col-md-6\">\n                                <li class=\"blt-item\">58 available indicators including linear regression curves, moving averages and oscillators<\/li>\n                            <\/div>\n                        <\/div>\n                        <div class=\"row align-items-center\">\n                            <div class=\"col-md-6\">\n                                <li class=\"blt-item\">Six chart styles including line, bar, area and candles<\/li>\n                            <\/div>\n                            <div class=\"col-md-6\">\n                                <li class=\"blt-item\">Ability to draw custom trendlines, pitchforks and more that scale and move with chart<\/li>\n                            <\/div>\n                        <\/div>\n                        <div class=\"row align-items-center\">\n                            <div class=\"col-md-6\">\n                                <li class=\"blt-item\">11 available trendline styles including rays, angles and arrows<\/li>\n                            <\/div>\n                            <div class=\"col-md-6\">\n                                <li class=\"blt-item\">18 available pitchfork styles including pitchforks, Gann Boxes, and fibonaccis<\/li>\n                            <\/div>\n                        <\/div>\n                        <div class=\"row align-items-center\">\n                            <div class=\"col-md-6\">\n                                <li class=\"blt-item\">9 available brushes including ellipses, triangles and rectangles<\/li>\n                            <\/div>\n                            <div class=\"col-md-6\">\n                                <li class=\"blt-item\">12 available text box styles including flag marks, arrows and price labels<\/li>\n\n                            <\/div>\n                        <\/div>\n                        <div class=\"row align-items-center\">\n                            <div class=\"col-md-6\">\n                                <li class=\"blt-item\">14 available pattern descriptors including cypher, ABCD and Elliott formations<\/li>\n\n                            <\/div>\n                            <div class=\"col-md-6\">\n                                <li class=\"blt-item\">9 available forecasting markers including bars, ghosts, spreads and areas<\/li>\n                            <\/div>\n                        <\/div>\n                        <div class=\"row align-items-center\">\n                            <div class=\"col-md-6\">\n                                <li class=\"blt-item\">300+ available icons to mark up charts<\/li>\n                            <\/div>\n                            <div class=\"col-md-6\">\n                                <li class=\"blt-item\">Ability to customize color and style of bars, borders, wicks, price lines, backgrounds and\n                                    grid\n                                <\/li>\n                            <\/div>\n                        <\/div>\n                        <div class=\"row align-items-top\">\n                            <div class=\"col-md-6\">\n                                <li class=\"blt-item\">Multiple scale styles including auto, percentage and logarithmic<\/li>\n                            <\/div>\n                        <\/div>\n                    <\/ul>",
+                "ORDER_BOOK_TITLE": "Order Book",
+                "ORDER_BOOK_CONTENT": "Our powerful live order book updates in real-time and displays buy and sell orders with live spread calculation\n                        so you can always lock in the lowest spreads and get the best deal. Our order system also automatically\n                        calculates fees and includes them in the order price so you always know that what you see is what\n                        you\u2019ll pay. For larger orders, we offer the ability to report block trades to guarantee that the\n                        market won\u2019t move against you before your order gets filled. Available order types for both regular\n                        and block trades include market, limit, stop, and six others.",
+                "TRADE_TRACKING_TITLE": "Trade Tracking",
+                "TRADE_TRACKING_CONTENT": "To help you track your trades and technical history, our platform includes the integrated ability to\n                        save the current chart view to jpeg. We also offer a custom area measurement tool to find duration,\n                        percentage change and price change soyou don\u2019t have to do it by hand. Finally, we offer users the\n                        ability to generate multiple customreports including trade activity, transaction activity and treasury\n                        activity and save these reports as CSVs to facilitate return tracking. Exchange Platform The exchange\n                        platform has been built fromthe ground up by senior coders and cryptocurrency experts to emphasize\n                        redundancy, accuracy, and speed. Our platform is built on a custom-embedded StreamDB database and\n                        incorporates error-checking and targets multiple volumes. We also replicate and backup all exchange\n                        data in real-time so your trades and user data are always secure."
+
+            },
+            "CURRENCIES":
+            {
+                "TITLE": "Tradable Currencies",
+                "CONTENT": "We are dedicated to always offering the most competitive spread of cryptocurrencies and pairs and continuously update our platform to incorporate new coins and currencies."
+            },
+            "FUNDING":
+            {
+                "TITLE": "Funding Methods",
+                "CONTENT": "<p class=\"lead-in-blurb mt-4\">We accept deposits and withdrawals through Visa and Mastercard, wire transfers, and fiat and cryptocurrency\n                        transactions.\n                    <\/p>\n                    <hr>\n                    <p><b>Wire transfers:<\/b> You can easily deposit to your account via bank transfer. We let you choose from\n                        accounts in 3 major currencies (US Dollars, Euros &amp; Great British Pounds) so that you always\n                        get the best terms possible. Bank transfers are particularly useful for deposits of $1000 or more.\n                    <\/p>\n\n                    <p><b>Credit cards:<\/b> We accept major credit cards including Visa, Visa Debit &amp; Mastercard. Quickly\n                        and securely fund your account with no fees or commissions.<\/p>\n\n                    <p><b>Cryptocurrency deposit:<\/b> Deposit your bitcoin, ethereum and litecoin directly into your trading\n                        account with zero conversion charges and fees!<\/p>"
+            },
+            "SECURITY":
+            {
+                "TITLE": "Security",
+                "TRADING_TITLE": "Trading Platform",
+                "TRADING_CONTENT": "Our trading platform has been vetted by multiple third-party security audit firms and penetration test consultants with stringent testing methods. Moreover, every aspect of our platform has gone through the strict scrutiny of the open-source CryptoCurrency Security Standard (CCSS).",
+                "ENCRYPTION_TITLE": "Encryption",
+                "ENCRYPTION_CONTENT": "Our commitment to user security includes encrypting all sensitive user information in real time. Additionally, all website data is transmitted via encrypted Transport Layer Security (TLS) connections and internal service interactions utilize separate authentication contexts which are never exposed to the internet. We’ve built protections against brute force Denial of Service (DoS) and Distributed Denial of Service (DDos) attacks through robust rate-limiting, concurrent connection limits, and active whitelists and blacklists.",
+                "HARDWARE_TITLE": "Hardware Security",
+                "HARDWARE_CONTENT": "Our hardware and hosting conform to the highest security standards in the industry. We run our software across multiple Tier 3 data centers on wholly-owned hardware that is securely stored with biometric access control. We even host our database and exchange directly on in-house hardware to minimize the number of people who have access to our systems.",
+                "ACCOUNT_TITLE": "Account Security",
+                "ACCOUNT_CONTENT": "To ensure wallet security, our global setting protections prevent unauthorized account activity including unusual withdrawal requests so your money is always safe on our platform. The trading interface also supports two-factor authentication (2FA) backed by Google to ensure you’re the only one with access to your funds."
+            },
+            "FAQ":
+            {
+                "TITLE": "Frequently Asked Questions (FAQ)",
+                "MENU":
+                {
+                    "WHAT_IS": "What is bitcoin?",
+                    "COMPANY": "Who is&nbsp;<span>CoinTrader</span>?",
+                    "BUY_HOW": "How do I buy bitcoin?",
+                    "VERIFICATION": "What is the verification process?",
+                    "DEPOSIT": "How do I deposit funds?",
+                    "WITHDRAW": "How do I withdraw funds?",
+                    "FEES": "What are your fees?",
+                    "ORDER_TYPES": "What are your advanced order types?",
+                    "PRIVACY": "What is your Privacy Policy?",
+                    "AML": "What is your AML Policy?",
+                    "CONTACT": "How do I contact you?"
+                },
+                "ANSWER":
+                {
+                    "WHAT_IS": "Bitcoin is not a company. Bitcoin is a technology that facilitates the digital transfer of value. Bitcoin uses a global digital ledger that proves who owns what bitcoin at any given time. Bitcoin allows you to send any amount of value to anyone in the world, instantly, without the need of a trusted third party such as a bank or company.",
+                    "COMPANY": "<span>CoinTrader</span> is the leading bitcoin and digital currency exchange in the world for those looking for a safe and secure way to buy, sell, and trade digital currency. Whether you are a first time buyer looking for an easy buying experience or a professional cryptocurrency trader, <span>CoinTrader</span> will meet your needs.",
+                    "BUY_HOW": "You can buy bitcoin on <span>CoinTrader</span> in a few simple steps. After you sign up for an account, complete the identity verification process to activate your account. You can fund your account with a fiat currency from your linked bank account once your account has been activated. After you have funded your account you can buy or sell any quantity of bitcoin.",
+                    "VERIFICATION": "We need to verify your identity to prevent fraud and money laundering. By doing so we create a safe environment for our customers to trade with each other. The law requires that we verify your account by asking who you are and where you live. To open an account and start trading, we require your full name, date of birth, address, phone number, and passport details. We will verify your passport and other identity documents before approving your account. We securely encrypt and store the information you provide us.",
+                    "DEPOSIT": "After you have verified your account, visit your <span>CoinTrader</span> Wallet to view your legal tender and digital currency balances. From there you can create a deposit ticket for each deposit. You will receive an email with the deposit instructions so that you can submit a deposit from your bank account. If you are depositing digital currencies, such as bitcoin, you will be presented with a public address and QR Code to send the funds to. You will see the funds in your <span>CoinTrader</span> Account Balance once the funds are confirmed on the blockchain.",
+                    "WITHDRAW": "Withdrawing funds is easy. Visit your <span>CoinTrader</span> Wallet to see your balance. From there select withdraw and enter your bank information for legal tender withdrawals, or your digital currency public address for digital currency withdrawals.",
+                    "FEES": "Our fees vary between 0.25 - 1.00% depending on your volume and the type of trade you are conducting. Please visit our <a class=\"line\" href=\"/fees.html\">Fees Page</a> for the full breakdown of our fees. We charge no fees for legal tender or digital currency deposits. There are no fees for legal tender withdrawals. There may be a small transaction fee for digital currency withdrawals so that the transaction is confirmed on the network. The transaction fee will be displayed before you make a withdrawal, we do not keep those miner fees.",
+                    "ORDER_TYPES": "1We offer a number of advanced order types for professional traders. In addition to traditional market and limit orders, we offer:",
+                    "WE_OFFER": "<li>Stop Market</li><li>Stop Limit</li><li>Trailing Stop Market</li><li>Trailing Stop Limit</li><li>Fill or Kill</li>",
+                    "PRIVACY": "Your privacy matters! We value our customer's privacy. We will never sell your data. Your data is only given to employees on a need-to-know basis, and is securely stored. Please visit our <a class=\"line\" href=\"/privacy.html\">Privacy Policy</a> page for more information.",
+                    "AML": "We have a robust AML/CFT policy in place to protect our users and prevent financial crime. All customer identities are verified before they can activate an account.",
+                    "CONTACT": "Please contact us via email at <a href=\"mailto:support@latinblockchain.com\" class=\"support-email\">support@latinblockchain.com</a>. We love comments and feedback so that we can constantly improve our services for our customers."
+                }
+            },
+            "FEES":
+            {
+                "TITLE": "Fee Schedule",
+                "CONTENT": "The fee schedules are tier-based: the more total volume you trade in your account, the lower your fee on subsequent trades (once the next volume tier for the currency pair is reached). Other fee considerations:",
+                "LIST": "<li>Fees are charged on a per-trade basis.</li><li>Fees are calculated as a percentage of the trade's quote currency volume.</li><li>User fee volume levels are measured using the equivalent market value of the listed \"Fee Volume Currency\" at the time of the trade. Note that this currency may be different from the pair's base or quote currency.</li><li>User fee volume levels are measured and applicable for trades occurring in the last 30 days only.</li>",
+                "MARKER": "Maker",
+                "TIKER": "Taker",
+                "VOLUME": "Volume"
+            },
+            "PRIVACY":
+            {
+                "TITLE": "Privacy Policy",
+                "CONTENT_3": "<h2>1. Collection of personal information<\/h2>\r\nh4>1.1 What personal information do we collect?<\/h4>\r\n<p>In order to access the Services, you must be an <strong>Approved User<\/strong>. This means that you will need to provide us with:<\/p>\r\n<ul>\r\n\t<li>the personal information set out in clause 2.1 of the Terms and Conditions to open and activate a User Account \u2013 accessible here; and<\/li>\r\n\t<li>any other information that we need to collect from time to time in accordance with applicable laws and regulations (including anti-money laundering or taxation laws, including FATCA) and our internal compliance policies.<\/li>\r\n<\/ul>\r\n<p>In addition, once you begun using the Services, we will also collect the following personal information about you:<\/p>\r\n<ul>\r\n\t<li>Your User Account login credentials (password and email address);<\/li>\r\n\t<li>Your Legal Tender Account and Digital Currency Wallet numbers and details;<\/li>\r\n\t<li>The number of the bank account that you use to transfer funds to the <span>CoinTrader<\/span> Custodial Account;<\/li>\r\n<li>Information about the Transactions you complete using the Services, including the value, timing and number of transactions;<\/li>\r\n<li>Information about the devices you use to access the Site and the Services, including device identifiers, mobile network information, the type of operating system, and the type of browser used; and<\/li>\r\n\t\t\t\t<li>Your geo-location.<\/li>\r\n<\/ul>\r\n<p>It is very important that any personal information you provide is accurate and complete and relates to you only. We will never ask you to provide us with information about someone else. <\/p>\r\n<strong>This Privacy Policy applies to all of the personal information that you provide to us.<\/strong>\r\n<p>In addition, we may collect, use, store and disclose information on an anonymous basis relating to any User\u2019s use of our Site (whether or not that person is an Approved User). For example, we may record information such as the areas of our Site that you visit, and the time, date and URL of the pages you access, your IP address and \/ or the previous website that you visited before linking to the Site. We provide more information about this below in the sections headed \u201cUse of Cookies and data analytics\u201d below.<\/p>\r\n\r\n<h4>1.2 What if you do not want to provide your personal information?<\/h4>\r\n<p>We need to collect personal information about you in order to provide you with the Services and to meet our legal obligations, as well as for the other purposes set out above. <\/p>\r\n<p>You may opt out of having your personal information disclosed to or shared with third parties, or for it to be used or disclosed for any purpose other than those for which we originally collected it. <\/p>\r\n<p>However, if you do not provide all of the personal information we request, or elect to limit the personal information we may use or disclose, certain Services or Site content may not be available to you.<\/p>\r\n\r\n<h4>1.3 How we collect your personal information<\/h4>\r\n<p>We will collect information from:<\/p>\r\n<ul>\r\n\t<li>you directly<\/li>\r\n\t<li>third parties, such as independent identification companies<\/li>\r\n\t<li>any individuals or companies that you authorise to provide personal information about you to us<\/li>\r\n<\/ul>\r\n\r\n<h4>1.4 Please update us if your personal information changes<\/h4>\r\n<p>If you know or suspect that any information we hold about you is (or has become) incorrect or incomplete, please contact us immediately and ask us to update the information. We will not charge you any amount for updating your personal information.<\/p>\r\n\r\n<h2>2. Why do we collect your personal information?<\/h2>\r\n<h4>2.1 Purposes for which we collect your personal information <\/h4>\r\n<p>We collect, store, use and disclose your personal information for the following purposes:<\/p>\r\n<ul>\r\n\t<li>To identify you and verify your identity, including by using third party verification service providers and databases;<\/li>\r\n\t<li>To provide the Services, including to provide customer support, to send transaction notifications, to resolve disputes, and to collect fees;<\/li>\r\n\t<li>To undertake research, analytics and\/or benchmarking on our Site and our Services, and to customise and improve our Site, its content, and our Services;<\/li>\r\n\t<li>To communicate with you, including by sending you promotional offers and targeted marketing and information about our existing or new Services in accordance with clause 5 below;<\/li>\r\n\t<li>To meet our compliance obligations under applicable laws and regulations in New Zealand and other jurisdictions. (<span>CoinTrader<\/span> may need to retain your personal information and transaction records after you cease your relationship with <span>CoinTrader<\/span> to meet these obligations);<\/li>\r\n\t<li>To improve our business operations; and<\/li>\r\n\t<li>For any other purpose you have consented to or which is permitted under the Privacy Act or other applicable law.<\/li>\r\n<\/ul>\r\n<p>We will not collect, use or disclose your personal information for any other purpose. In particular, we will never sell your personal information to third parties.<\/p>\r\n\r\n<h2>3. Storage of and access to your personal information<\/h2>\r\n<h4>3.1 How we store your personal information<\/h4>\r\n<p>We will store your personal information on external servers and transmit it over networks.<\/p>\r\n<h4>3.2 Access to your personal information<\/h4>\r\n<p>You can request access to any of the personal information we hold about you at any time.<\/p>\r\n<p>You can make a request by contacting us at support@latinblockchain.com.<\/p>\r\n<p>Please be aware that we will pass on any third party costs we incur in retrieving and supplying the information to you.<\/p>\r\n<p>In the rare circumstances where we deny you access to any personal information that we hold about you, we will give you an explanation unless we are prevented from doing so by law.<\/p>\r\n\r\n<h2>4. Disclosure of your personal information<\/h2>\r\n<h4>4.1 When we will disclose your personal information<\/h4>\r\n<p>You consent to your personal information being disclosed for the above purposes to any of the following persons:<\/p>\r\n<ul>\r\n\t<li>To our employees, contractors, service providers (such as providers of marketing, bill collection and technology services, and legal, accounting and business advisers), to the extent reasonably necessary to fulfil our obligations to you;<\/li>\r\n\t<li>To our related companies and businesses, to the extent reasonably necessary for the purposes set out in the section above;<\/li>\r\n\t<li>To any financial institution that provides us with funding or transactional services;<\/li>\r\n\t<li>To any network or server we use to store your information;<\/li>\r\n\t<li>To any third party to identify or verify your identity and\/or to undertake anti-fraud or money-laundering and terrorism financing checks;<\/li>\r\n\t<li>To any law enforcement, legal, government or regulatory agency in any jurisdiction, where such disclosure is required or authorised by any law that applies to us;<\/li>\r\n\t<li>To any business or person that is considering buying an interest in our business or assets, or to any person we are considering merging with; and <\/li>\r\n\t<li>To any person that you authorise us to share your personal information with.<\/li>\r\n<\/ul>\r\n<p>These entities may be located in New Zealand or overseas.<\/p>\r\n<p>We will take reasonable steps to get any third party to whom we disclose your personal information to agree to comply with the requirements of this Privacy Policy.<\/p>\r\n\r\n<h2>5. Communications with you<\/h2>\r\n<h4>5.1 Direct communications<\/h4>\r\n<p>From time to time we may use your personal information to send you information about or offers relating to:<\/p>\r\n<ul>\r\n\t<li>our current Services;<\/li>\r\n\t<li>new Services or promotions; and<\/li>\r\n\t<li>other information relevant to our business.<\/li>\r\n<\/ul>\r\n<p>By providing us with your personal information, you consent to us using your information to contact you on an on-going basis for these purposes, including by mail, email, SMS, social media and telephone. <\/p>\r\n\r\n<h4>5.2 \u201cUnsubscribe\u201d function<\/h4>\r\n<p>However, if we send you any communications which are not specifically related to your User Account, your <span>CoinTrader<\/span> Wallets, or the Services you are currently using, we will provide you with an \u201cunsubscribe\u201d mechanism through which you can opt out of receiving similar communications in the future.<\/p>\r\n<p>You can also \u201cunsubscribe\u201d from non-essential communications at any time by updating your settings in your User Account. We will take all reasonable steps to respond to your request as soon as we can.<\/p>\r\n\r\n<h2>6. Use of Cookies and data analytics<\/h2>\r\n<h4>6.1 Cookies<\/h4>\r\n<p>When you access our Site or use any Services, we or any other company we engage with may place small data files called \u201ccookies\u201d, pixel tags, web beacons or other tracking technologies (collectively, <strong>Cookies<\/strong>) in your computer or other device.<\/p>\r\n<p>We may use these tracking technologies to:<\/p>\r\n<ul>\r\n\t<li>understand how you came to visit the Site (that is, which websites you visited prior);<\/li>\r\n\t<li>recognise you as an Approved User;<\/li>\r\n\t<li>tailor our Services, Site content, communications or advertising;<\/li>\r\n\t<li>measure the effectiveness of any promotions or advertising; and\/or<\/li>\r\n\t<li>collect information about your computer or other device to mitigate risk, help prevent fraud, and promote trust and security.<\/li>\r\n<\/ul>\r\n<p>Other companies may use cookies on our Site to advertise their products and services to you on other sites.<\/p>\r\n\r\n<h4>6.2 How to switch off Cookies<\/h4>\r\n            <p>You can switch off Cookies by adjusting the settings on your device. If you disable the use of Cookies on your web browser or remove or reject specific Cookies from our Site then you may not be able to gain access to all of the content on our Site, or to all of the Services.<\/p>\r\n            \r\n            <h4>6.3 Data analytics<\/h4>\r\n            <p>At any time, we may engage a third party to analyse the activities of our Users and Approved Users. That third party will have access to information about our Users \u2013 including our Approved Users - by using Cookies and other tracking technologies.<\/p>\r\n            \r\n            <h2>7. Changes to this Privacy Policy<\/h2>\r\n            <p><span>CoinTrader<\/span> may amend this Privacy Policy at any time in order to meet our legal obligations, the reasonable requirements of our service providers or business partners, or to reflect changes to our Services. If we make amend this Privacy Policy, we will publish the updated Privacy Policy on our Site. Any subsequent access to or use by you of the Site will constitute an acceptance of the amended Privacy Policy.<\/p>\r\n            <p>Where it is possible to do so, we will notify you of any changes to this Privacy Policy by sending an email to the email address linked to your User Account.<\/p>\r\n            \r\n            <h2>8. Complaints and disputes<\/h2>\r\n            <p><span>CoinTrader<\/span> is committed to providing its Approved Users with a very high level of customer service, and your satisfaction is very important to us.<\/p>\r\n            <p>If you would like to make a complaint, we encourage you to contact us in the first instance by email at support@latinblockchain.com<\/p>\r\n            <p>We will acknowledge your complaint within 5 business days and make sure your complaint is investigated properly.<\/p>\r\n            ",
+                "CONTENT_2": "<p>Please read this Privacy Policy carefully.<\/p>\r\n\t\t\t\t\t<p>By accessing&nbsp;our Site, clicking the \u201cSign Up\u201d button or using our Services, you agree to be legally bound by this Privacy Policy and the&nbsp;<a href=\"terms.html\">Terms and Conditions<\/a><\/p>\r\n          \t\t",
+                "CONTENT_1": "This Privacy Policy sets out how <span>CoinTrader</span> may collect, use, store and disclose your personal information."
+            },
+            "AML":
+            {
+                "TITLE": "Anti-Money Laundering (AML) Policy",
+                "CONTENT": "<p>Money laundering is defined as the process where the identity of the proceeds of crime are so disguised that it gives the appearance of legitimate income. Criminals specifically target financial services firms through which they attempt to launder criminal proceeds without the firm's knowledge or suspicions.<\/p>\r\n<p>The <span>CoinTrader<\/span> AML Policy is designed to prevent money laundering by having adequate systems and controls in place to mitigate the risk of <span>CoinTrader<\/span> being used to facilitate financial crime. <span>CoinTrader<\/span> is bound by New Zealand law to take steps to ensure that it is not involved in the facilitation of money laundering or terrorism financing.<\/p>\r\n<p>Various AML measures are in place to articulate our commitment to detecting, preventing, and reporting attempts to use our financial services platform to illegally launder money, to finance illegal activities, such as terrorism and drug trafficking, or to commit fraud.<\/p>\r\n<p>The following is a list of some of these measures:<\/p>\r\n<ul>\r\n<li>The appointment of an Anti-Money Laundering Compliance Officer who has sufficient level of seniority and independence and who has responsibility for oversight of compliance with relevant legislation, regulations, rules, and industry guidance;<\/li>\r\n<li>All clients must undergo a verification check to confirm identity before being allowed to trade;<\/li>\r\n<li>Legal tender withdrawals can only be made to a bank account held in the same name as the <span>CoinTrader<\/span> account;<\/li>\r\n<li>Legal tender deposits can only be accepted from a bank account held in the same name as the <span>CoinTrader<\/span> account;<\/li>\r\n<li><span>CoinTrader<\/span> reports any suspicious activity to the relevant authorities.<\/li>\r\n<\/ul>"
+            },
+            "IMPORTANT_INFO":
+            {
+                "TITLE": "Important Information",
+                "ISSUER": "<h4><span>CoinTrader<\/span> is not an issuer<\/h4>\r\n<p><span>CoinTrader<\/span> does not issue any Digital Currencies to its Approved Users. It solely provides an exchange which enables Approved Users to buy, sell, exchange or trade Digital Currencies.<\/p>",
+                "MARKET_MAKER": "<h4><span>CoinTrader<\/span> may act as market maker<\/h4>\r\n<p><span>CoinTrader<\/span> may act as a market maker in relation to Digital Currencies on the <span>CoinTrader<\/span> Exchange from time to time. This means <span>CoinTrader<\/span> may buy and sell Digital Currencies that it owns to create market liquidity. <span>CoinTrader<\/span> may make a profit on the difference between the sell price and the buy price. (This difference is called a bid-offer spread).<\/p>",
+                "YOUR_OWN_RISK": "<h4>You access the Services at your own risk<\/h4>\r\n<p>Buying, selling and trading Digital Currencies is a very risky activity. Digital Currencies may experience extreme price volatility. You should carefully consider whether using the Services is suitable and affordable for you in view of your personal circumstances and financial resources. You should also take independent financial advice. Once a Transaction involving the transfer of Digital Currencies has completed, it is impossible to reverse it. See the \u201cRisks of Use\u201d section here. <span>CoinTrader<\/span> does not make any warranty or representation in relation to any Digital Currencies or any network or software which underlies or supports any Digital assets.<\/p>\r\n",
+                "PRIVATE_KEY_RISK": "<h4>Private key risk<\/h4><p>Extreme caution must be taken whenever selecting, storing or transmitting private keys. If another person learns your private key, they can steal your funds. Also, if you forget or lose your private key or password details, <span>CoinTrader<\/span> cannot provide a back-up and this can result in the loss of your Digital Currencies. We strongly recommend you use secure cold storage.<\/p>",
+                "NO_GUARANTEE": "<h4>No guarantee<\/h4>\r\n<p>Neither Dasset, nor any other person, guarantees or underwrites any transaction entered into via the Services, nor assumes any responsibility or liability for any loss you incur in using the Services or accessing the Site.<\/p>\r\n",
+                "NO_SOLICITATION": "<h4>No solicitation<\/h4>\r\n<p>Nothing on this Site, including this document or the Terms and Conditions, is a solicitation of investment nor relates in any way to an offering of securities in any jurisdiction.<\/p>",
+                "NO_OFFER_DOCUMENT": "<h4>No offer document<\/h4>\r\n<p><span>CoinTrader<\/span> does not issue securities and no offer document has been or will be prepared or registered in relation to the Services, any Digital Currencies, or the Site under any securities legislation in any jurisdiction.<\/p>",
+                "TERMS": "<h4>Terms of use may change<\/h4><p><span>CoinTrader<\/span> has the right to change the Terms and Conditions and to change or withdraw Services in certain circumstances, including to comply with law or regulator guidance. You should check the Terms and Conditions and the Privacy Policy regularly. By continuing to access the Site and to use the Services you will be bound by any amendments to them. Please see <a href=\"\/terms.html\">here<\/a> for copies of the latest versions of those documents.<\/p>"
+            },
+            "TERMS":
+            {
+                "TITLE": "Terms and Conditions",
+                "CONTENT_1": "These Terms and Conditions are a legal contract and govern access to our Site and Services.",
+                "CONTENT_2": "<p>Please read these  Terms and Conditions carefully.<\/p><p>By accessing our Site and using our Services, you agree to be legally bound by this <a href=\"\/privacy.html\">Privacy Policy<\/a> and the Terms and Conditions, as they may be updated from time to time. If any term in these Terms and Conditions or in our Privacy Policy is not acceptable to you, please do not visit the Site or use the Services.<\/p> <p>The <a href=\"\/important-information.html\">Important Information<\/a> section and the Risks of Use section are deemed to form part of these Terms and Conditions. You can access them <a href=\"\/important-information.html\">here<\/a>. Please read them carefully. <\/p>",
+                "CONTENT_3": "<h2>1. General Use<\/h2>\r\n<h3>1.1 Eligibility<\/h3>\r\n<p>You are only permitted to access the Services if you are an Approved User. This means you must meet all of the following criteria:<\/p>\r\n<ul>\r\n<li>If you are an individual, you must be aged 18 years or older.<\/li>\r\n<li>You must have the capacity and, in the case of an entity, be authorised, to enter into and to be bound by the Terms and Conditions and the <a href=\"\/privacy.html\">Privacy Policy<\/a>.<\/li>\r\n<li>You must provide all of the information required to set up a User Account under clause 2.1.<\/li>\r\n<li><span>CoinTrader<\/span> must be satisfied with the outcome of the identity, fraud, background checks, and other money-laundering and terrorist financing checks it (or any third party) conducts in relation to you at any time.<\/li>\r\n<\/ul>\r\n<h3>1.2 Your general agreements and promises<\/h3>\r\n<p>By accessing the Services, you:<\/p>\r\n<ul>\r\n<li>promise that, if you are an individual, you are aged 18 years or older with the capacity to enter into and be bound by the Terms and Conditions and the <a href=\"\/privacy.html\"> Privacy Policy<\/a>;<\/li>\r\n<li>promise that, if you are an entity, you have capacity, and are authorised, to enter into and be bound by the Terms and Conditions and the Privacy Policy; and the person acting on your behalf is authorised to do so;<\/li>\r\n<li>authorise <span>CoinTrader<\/span> to make any inquiries it considers necessary, from time to time, to verify your identity, undertake fraud checks, and to meet its anti-money laundering and other legal obligations;<\/li>\r\n<li>confirm that you have read the <a href=\"\/important-information.html\">Important Information<\/a> section, these Terms and Conditions and the Privacy Policy;<\/li>\r\n<li>agree to being bound by the Terms and Conditions and our Privacy Policy, which is deemed to occur when you access our Site and\/or use our Services, and promise to comply with them;<\/li>\r\n<li>promise to pay all fees associated with the Transactions and the Services which are set out in the Fee Schedule, accessible <a href=\"\/fees.html\">here<\/a>, and any additional miner fees.<\/li>\r\n<li>promise to ensure that any personal information you provide to <span>CoinTrader<\/span> is accurate, current and complete and relates solely to you, and to update us if it changes;<\/li>\r\n<li>promise to provide us with any additional information which we request to comply with our legal responsibilities as soon as is reasonably practicable; <\/li>\r\n<li>confirm that you have sufficient knowledge of Digital Currencies to enter into Transactions, and understand that you are solely responsible for determining the nature, potential value, suitability, and appropriateness of the Services;<\/li>\r\n<li>confirm that you accept the risks of using the Services and accessing the Site, and have read and understand the \u201cRisks of Use\u201d set out here;<\/li>\r\n<li>agree to arbitration on the terms set out in clause 16.2 (Arbitration) of these Terms and Conditions; and<\/li>\r\n<li>acknowledge that <span>CoinTrader<\/span> has not advised you to, nor recommended to you that you should, use the Services or deal in Digital Currencies.<\/li>\r\n<\/ul>\r\n<p><\/p>\r\n<h2>2. Your User Account<\/h2>\r\n<p><\/p>\r\n<h3>2.1 Creating a User Account<\/h3>\r\n<p>To use the Services, you must first create your registered User Account and have it activated. <\/p>\r\n<ul>\r\n<li>To set up your User Account you must provide your name, an e-mail address, set a password and affirm your acceptance of these Terms and Conditions and the <a href=\"\/privacy.html\">Privacy Policy<\/a> by clicking the \u201cSign Up\u201d button. We also strongly recommend that you enable the \u201c2-factor authentication\u201d option in the \u2018Security Settings\u2019. <\/li>\r\n<li>To have your User Account activated, we must receive the following verified information:\r\n<ul>\r\n<li>for an individual, your full name, gender, date of birth and occupation, and driver\u2019s licence or passport number<\/li>\r\n<li>for an entity, your legal registration number and GST registration number (if applicable)<\/li>\r\n<li>your phone number<\/li>\r\n<li>your residential or business address and previous addresses<\/li>\r\n<li>confirmation as to whether you are the beneficial owner of the account (that is, confirmation that are you the sole person who exercises effective control over the account and owns the account) and, if not, the equivalent information for each other beneficial owner of the account<\/li>\r\n<li>any additional information, such as photo identification, needed to comply with laws (such as enhanced due diligence requirements under the anti-money laundering laws, or source of funds information).<\/li>\r\n<\/ul>\r\n<\/li>\r\n<\/ul>\r\n<h3>2.2 Purpose of your User Account<\/h3>\r\n<p>Once established, you can access the Services through your User Account. Specifically, your User Account:<\/p>\r\n<ul>\r\n<li>is linked to your Legal Tender Account and your Digital Currency Wallet (see clauses 3 and 4 below); and<\/li>\r\n<li>contains a record of your Transactions. <\/li>\r\n<\/ul>\r\n<p>We recommend that you only log into your User Account directly through the <span>CoinTrader<\/span> Site and only access the <span>CoinTrader<\/span> Exchange through the trading site. This will minimise the risk of you inadvertently exposing your User Account or <span>CoinTrader<\/span> Wallets to unauthorised access or attacks.<\/p>\r\n<h3>2.3 Your promises in relation to your User Account<\/h3>\r\n<p>You promise:<\/p>\r\n<ul>\r\n<li>to create a strong password for your User Account. This means you must select a password which is different from any other password you use for any other website or online service, and which cannot be easily guessed. You must change your password at regular intervals, and immediately if you suspect your password has been compromised;<\/li>\r\n<li>to keep your User Account login and password and any forms of multi-factor authentication confidential and separate from each other, as well as separate from any other information or documents relating to your User Account or <span>CoinTrader<\/span> Wallets (and your private key(s)); <\/li>\r\n<li>not to let any person access your User Account or your <span>CoinTrader<\/span> Wallets at any time without our prior written permission; <\/li>\r\n<li>not to leave your computer, phone or other device unattended while you remain logged in to your User Account or your <span>CoinTrader<\/span> Wallets;<\/li>\r\n<li>not to open more than one User Account without our prior written permission; and<\/li>\r\n<li>to notify us immediately if you identify or suspect any unauthorised access of your User Account or your <span>CoinTrader<\/span> Wallets. <\/li>\r\n<\/ul>\r\n<h3>2.4 Your confirmations in relation to your User Account<\/h3>\r\n<p>You confirm that:<\/p>\r\n<ul>\r\n<li><span>CoinTrader<\/span> may make inquiries directly or through third parties which we consider necessary to verify your identity and\/or to protect against fraud, terrorism financing or money-laundering;<\/li>\r\n<li>you understand that you are responsible for maintaining the security of your User Account login and password, any forms of multi-factor authentication and your private key(s); <\/li>\r\n<li>you understand that anyone accessing your User Account will be able to enter into Transactions using your <span>CoinTrader<\/span> Wallets, and <span>CoinTrader<\/span> has no obligation to verify or take any steps to verify any instruction received from you or appearing to be sent by you; and<\/li>\r\n<li>you understand that, by using the Services, you are fully responsible for and accept all risks of unauthorised access to your User Account or to your <span>CoinTrader<\/span> Wallets which is caused by your negligence or breach of these Terms and Conditions. <\/li>\r\n<\/ul>\r\n<p><\/p>\r\n<h2>3. Your Legal Tender Account<\/h2>\r\n<p><\/p>\r\n<h3>3.1 Purpose of your Legal Tender Account<\/h3>\r\n<p>You can use your Legal Tender Account to fund the purchase of Digital Currencies, and to receive the proceeds of sale of your Digital Currencies, using the Services.<\/p>\r\n<h3>3.2 Activating your Legal Tender Account<\/h3>\r\n<p>To activate your Legal Tender Account, you must:<\/p>\r\n<ul>\r\n<li>link it to a registered bank account in your name; and<\/li>\r\n<li>transfer funds from that bank account to the <span>CoinTrader<\/span> Custodial Bank Account which will then be reflected by an update to the balance of your Legal Tender Account.<\/li>\r\n<\/ul>\r\n<h3>3.3 Currency<\/h3>\r\n<p>The only Legal Tender which can currently be held in your Legal Tender Account is South African Rand.<\/p>\r\n<h3>3.4 Fees<\/h3>\r\n<p><span>CoinTrader<\/span> will not charge any fees in relation to deposits into or withdrawals from the <span>CoinTrader<\/span> Custodial Bank Account.<\/p>\r\n<h3>3.5 Operation of your Legal Tender Account<\/h3>\r\n<ul>\r\n<li><span>CoinTrader<\/span> will maintain a separate bank account in the name of NZGT with ANZ (the <span>CoinTrader<\/span> Custodial Bank Account). <\/li>\r\n<li>The funds you transfer to the <span>CoinTrader<\/span> Custodial Bank Account will be pooled with funds transferred into it by other Approved Users.<\/li>\r\n<li>We undertake to you that the credit balance of the <span>CoinTrader<\/span> Custodial Bank Account will at all times be an amount equal to the aggregate value of the amount of Legal Tender transferred to and received in clear funds to that account by all Approved Users at that time, less the amount of any fees at that time.<\/li>\r\n<li>You will have no right to earn interest on the amount of Legal Tender reflected in your Legal Tender Account. <span>CoinTrader<\/span> will retain the amount of any interest earned on the balance of the <span>CoinTrader<\/span> Custodial Bank Account to cover costs incurred in operating the account and providing the Services.<\/li>\r\n<li>Once <span>CoinTrader<\/span> confirms receipt of Legal Tender from you in cleared funds into the <span>CoinTrader<\/span> Custodial Bank Account, the value of the transferred Legal Tender less any applicable fees will be credited to your Legal Tender Account as soon as is practicable.<\/li>\r\n<li><span>CoinTrader<\/span> will not use, nor permit the use, of any of the funds held in the <span>CoinTrader<\/span> Custodial Bank Account for any corporate purpose, nor charge or encumber it in any manner. We will require the account bank to waive its set-off rights in respect of the <span>CoinTrader<\/span> Custodial Bank Account.<\/li>\r\n<li>Please note that Legal Tender held in the <span>CoinTrader<\/span> Custodial Bank Account is not money deposited with or lent to or owing by <span>CoinTrader<\/span> to you. Upon transferring any Legal Tender into the <span>CoinTrader<\/span> Custodial Bank Account, the legal rights to those funds will be vested in the account holder, as account holder. You will have a beneficial right to funds in the <span>CoinTrader<\/span> Custodial Bank Account equal to the face value of the credit balance of your Legal Tender Account, less any fees you owe to <span>CoinTrader<\/span>. The funds in the <span>CoinTrader<\/span> Custodial Bank Account are owed to the account holder by the account bank.<\/li>\r\n<li>When you authorise a withdrawal from your Legal Tender Account, <span>CoinTrader<\/span> will immediately debit your Legal Tender Account for the withdrawn amount. Funds will be received into your nominated bank account within three (3) business days, net of any applicable bank fees and <span>CoinTrader<\/span> fees.<\/li>\r\n<li>We will send you an email confirmation of all deposits into or withdrawals from your Legal Tender Account.<\/li>\r\n<li>Certain deposit or withdrawal requests may not be processed outside of normal banking hours. We will typically process deposits and withdrawals within one (1) business day.<\/li>\r\n<li>You are not permitted to charge or to use your entitlement to funds in the <span>CoinTrader<\/span> Custodial Asset, or your rights to your Legal Tender Account, as security for any purpose.<\/li>\r\n<\/ul>\r\n<h3>3.6 Your confirmations in relation to your Legal Tender Account<\/h3>\r\n<p>You confirm you understand that:<\/p>\r\n<ul>\r\n<li>you alone are permitted to access your Legal Tender Account, and to transfer funds to it and to withdraw funds from it;<\/li>\r\n<li>if you have initiated a Transaction which will involve the application of funds from your Legal Tender Account, those funds will be held and unavailable for other use from the time you initiate the Transaction until the time it has settled or been cancelled; and<\/li>\r\n<li>the credit balance of your Legal Tender Account is not guaranteed by <span>CoinTrader<\/span> nor any other person (including, for the avoidance of doubt, any South African government-backed deposit insurance scheme or any bank or insurer).<\/li>\r\n<\/ul>\r\n<p><\/p>\r\n<h2>4. Your Digital Currency Wallet<\/h2>\r\n<p><\/p>\r\n<h3>4.1 Purpose of your Digital Currency Wallet<\/h3>\r\n<p>Your Digital Currency Wallet allows you to send supported Digital Currencies to, and to receive and store supported Digital Currencies from, third parties on your instructions, using the Services.<\/p>\r\n<h3>4.2 Supported Digital Currencies<\/h3>\r\n<ul>\r\n<li><span>CoinTrader<\/span> currently supports the list of Digital Currencies reflected on our exchange site, accessible <a href=\"\/fees.html\">here<\/a>. However, the nature of the Digital Currencies that <span>CoinTrader<\/span> supports is subject to change, and could change without notice to you if this is required as a result of law, any order of a court of governmental agency, any change to the operating rules in the underlying Digital Currency \u2019s network, or any technological issue outside of our reasonable control.<\/li>\r\n<li><span>CoinTrader<\/span> supports only the \u201cadvanced protocols\u201d reflected on our exchange site, accessible <a href=\"\/trade.html\">here<\/a>. It does not support any other protocols such as metacoins, coloured coins, side chains, or other derivative, enhanced or forked protocols, tokens or coins which supplement or interact with a Digital Currency supported by <span>CoinTrader<\/span>.<\/li>\r\n<\/ul>\r\n<h3>4.3 Fees<\/h3>\r\n<p><span>CoinTrader<\/span> will charge the Transaction fees set out in the Fee Schedule, accessible <a href=\"\/fees.html\">here<\/a>.<\/p>\r\n<p>In addition, all Transactions need to be confirmed by \u2018miners\u2019 which group transactions into \u2018blocks\u2019 and add those blocks to the relevant network underlying the specific Digital Currency. When making a Digital Currency Deposit, you may need to pay the applicable \u2018miner fee\u2019 (i.e. network fee) to confirm the transaction on the network. To do this, you need to make sure your transaction includes a sufficient miner fee to be confirmed. Insufficient fees will delay the processing of a Transaction. <span>CoinTrader<\/span> may charge miner fees to process a Digital Currency withdrawal on your behalf. If we do so, <span>CoinTrader<\/span> will calculate the miner fee in our discretion and notify you of the amount of the fee at or before the time you authorise the Transaction.<\/p>\r\n<h3>4.4 Operation of your Digital Currency Wallet<\/h3>\r\n<ul>\r\n<li>We will send you an email confirmation of all transactions relating to your Digital Currency Wallet. <\/li>\r\n<li><span>CoinTrader<\/span> securely stores all Digital Currency private keys in our control in a combination of online and offline storage. As a result, it may be necessary for <span>CoinTrader<\/span> to retrieve certain information from offline storage in order to facilitate a Digital Currency Transaction in accordance with your instructions. This may delay the initiation or crediting of the relevant Digital Currency Transaction for up to 48 hours, or longer in some circumstances. <\/li>\r\n<\/ul>\r\n<h3>4.5 Your confirmations in relation to your Digital Currency Wallet<\/h3>\r\n<p>You confirm that you understand and accept the following:<\/p>\r\n<ul>\r\n<li><span>CoinTrader<\/span> will process your Transactions in accordance with your instructions, and you should carefully verify all instructions before placing any Orders. If there is an error in those instructions, then that is your risk and <span>CoinTrader<\/span> does not accept any responsibility or liability.<\/li>\r\n<li>When you transact with another Approved User through the Site (a <strong>Counterparty<\/strong>), there is a risk that the Counterparty may cancel the Transaction before the order is executed. You understand that <span>CoinTrader<\/span> cannot require a Counterparty to complete any Transaction and is not responsible for liable for any such Counterparty default. If you believe a Counterparty has behaved in a misleading or fraudulent manner, or otherwise in breach of these Terms and Conditions, please notify us immediately at <a class=\"support-email\">support@latinblockchain.com<\/a> so that we can determine what action, if any, to take.<\/li>\r\n<li>Your Digital Currency Wallet is available only in connection with the Digital Currencies that <span>CoinTrader<\/span> supports at any time, in its discretion. As set out in clause 4.3 above, these supported Digital Currencies are subject to change. <span>CoinTrader<\/span> assumes no responsibility or liability for any attempt to use your Digital Currency Wallet for Digital Currencies that <span>CoinTrader<\/span> does not support at that time.<\/li>\r\n<li><span>CoinTrader<\/span> does not control or own any of the underlying networks or software protocols that govern the operation of the Digital Currencies supported by <span>CoinTrader<\/span>.<\/li>\r\n<li><span>CoinTrader<\/span> does not stand behind or underwrite any Transaction you enter into using the <span>CoinTrader<\/span> exchange.<\/li>\r\n<li>A Digital Currency Withdrawal may be delayed as a result of <span>CoinTrader<\/span> retrieving information from offline storage.<\/li>\r\n<li><span>CoinTrader<\/span> has the right to refuse to process or to cancel any pending Order or Transaction at any time if it is required to do so at law or in response to a court or government order, or to enforce transaction limits, or if any Suspension Event occurs.<\/li>\r\n<li>Digital Currencies are a risky asset class and trading in Digital Currencies increases those risks. You confirm that you have read the Risks of Use set out <a href=\"\/important-information.html\">here<\/a> and agree to accept those risks.<\/li>\r\n<li>The amount or value of the Digital Currencies in your Digital Currency Wallet is not guaranteed or underwritten by <span>CoinTrader<\/span> nor by any other person, and you could lose the Digital Currencies, or the value of the Digital Currencies, stored in your Digital Currency Wallet in a short period of time. In that case, you will have no recourse to <span>CoinTrader<\/span> or to any other person for your loss (including loss of profit), or any liability or inconvenience that results.<\/li>\r\n<\/ul>\r\n<h2>5. <span>CoinTrader<\/span> Ledger <\/h2>\r\n<p><span>CoinTrader<\/span> maintains a private exchange ledger (the <strong><span>CoinTrader<\/span> Ledger<\/strong>) to track each Approved User\u2019s Legal Tender Account balance and the Digital Currencies reflected in his or her Digital Currency Wallet. <\/p>\r\n<p>Entries in the <span>CoinTrader<\/span> Ledger are not recorded on a blockchain or otherwise published. Only transfers of Digital Currencies into, or transfers of Digital Currencies out of, your Digital Currency Wallet will be confirmed and visible on a blockchain.<\/p>\r\n<h2>6. <span>CoinTrader<\/span> Transactions<\/h2>\r\n<h3>6.1 Transaction Services<\/h3>\r\n<p><span>CoinTrader<\/span> offers Approved Users the ability to enter into the following Transactions in accordance with these Terms and Conditions:<\/p>\r\n<ul>\r\n<li>Buy Transactions<\/li>\r\n<li>Sell Transactions; and<\/li>\r\n<li>Exchange Transactions.<\/li>\r\n<\/ul>\r\n<p><span>CoinTrader<\/span> does not currently offer any margin trading, options trading, or shorting.<\/p>\r\n<p><span>CoinTrader<\/span> does not make any warranty or representation in relation to any Counterparty and cannot confirm that a Counterparty will perform its Transaction obligations.<\/p>\r\n<p><strong>Please note:<\/strong> A Transaction is not complete while it is in a pending state. Funds associated with Transactions that are in a pending state will be designated as such and will not be available to conduct other Transactions (including withdrawals).<\/p>\r\n<h3>6.2 Access to Transaction Services<\/h3>\r\n<p>We can impose any conditions or restrictions on your access to the Transaction Services at any time without prior notice. These may include limits on the number or value of Transactions.<\/p>\r\n<h3>6.3 Transaction Limits<\/h3>\r\n<p>We may impose Transaction limits from time to time. In particular, we reserve the right to review any withdrawals and to request further information before releasing funds for regulatory and fraud prevention purposes.<\/p>\r\n<h3>6.4 Cancellation of Transactions<\/h3>\r\n<p>You cannot revoke or cancel an Order once you have placed it. However, you can submit a request to cancel the Transaction to which that Order relates by clicking on the \u2018Cancel Sells\u2019 or \u2018Cancel Buys\u2019 or \u2018Cancel All\u2019 button (as appropriate) on the <span>CoinTrader<\/span> Exchange dashboard (a <strong>Cancellation Request<\/strong>).<\/p>\r\n<p>The Cancellation Request will only be effective if you submit it before the Order is filled.<\/p>\r\n<p>However, <span>CoinTrader<\/span> can unilaterally cancel any Transaction if:<\/p>\r\n<ul>\r\n<li>it considers this necessary or prudent due to a suspicion that the Transaction involves money laundering, terrorist financing or another illegal activity;<\/li>\r\n<li>it relates to a Prohibited Use; or<\/li>\r\n<li>it is required to do so by a court order or government agency.<\/li>\r\n<\/ul>\r\n<h3>6.5 Transaction Records<\/h3>\r\n<p><span>CoinTrader<\/span> maintains the records of these offers in our Order Book. When <span>CoinTrader<\/span>'s trading engine matches buy and sell offers in our order book, we record the trade on our <span>CoinTrader<\/span> Ledger. This transfers ownership of the seller\u2019s traded Digital Currencies to the relevant buyer.<\/p>\r\n<p><\/p>\r\n<h2>7. Buy Transactions<\/h2>\r\n<p><\/p>\r\n<h3>7.1 Nature of a Buy Transaction<\/h3>\r\n<p>All Buy Transactions:<\/p>\r\n<ul>\r\n<li>involve the purchase of supported Digital Currencies with Currency from your Currency Account at the Market Rate; and<\/li>\r\n<li>settle immediately, provided a sufficient amount of Currency has been pre-loaded to your Legal Tender Account; and<\/li>\r\n<li>are recorded on our <span>CoinTrader<\/span> Ledger.<\/li>\r\n<\/ul>\r\n<h3>7.2 Buy Transaction process<\/h3>\r\n<ul>\r\n<li>You can place an order to buy Digital Currency (a <strong>Buy Order<\/strong>) on the <span>CoinTrader<\/span> Exchange. By doing so, you authorise <span>CoinTrader<\/span> to initiate debits from the applicable <span>CoinTrader<\/span> Wallet and initiate a transfer to your Digital Currency Wallet.<\/li>\r\n<li>When you place a Buy Order, the full amount of purchase price and associated fees in Currency will be placed on hold or marked as pending in your Legal Tender Account. This means you cannot withdraw or use those funds for any other purpose until the Buy Transaction settles, expires or is cancelled.<\/li>\r\n<li>After your Buy Order has been placed, we will send you an email when it has completed, or if it has only been partially filled, as applicable.<\/li>\r\n<li>We will use all reasonable efforts to fulfil any Buy Order. However, if we cannot fulfil your Buy Order, we may notify you by email and seek your order to fulfil the Buy Order at the Market Price.<\/li>\r\n<li><span>CoinTrader<\/span> reserves the right to unilaterally cancel any unfilled portion of any Buy Order that changes the best bid or best offer by more than twenty percent (20%) in either direction, or is otherwise clearly erroneous.<\/li>\r\n<\/ul>\r\n<h3>7.3  Buy Limits<\/h3>\r\n<p>You can enter a Stop Limit or an Order Limit for your Buy Transaction on the <span>CoinTrader<\/span> Exchange dashboard.<\/p>\r\n<h3>7.4 Partial completion<\/h3>\r\n<p>If a Buy Transaction order only partially fills, the amount of Currency required to settle the balance (including fees) will remain on hold until the remaining Buy Order is filled, expires, or is cancelled.<\/p>\r\n<h3>7.5 Your confirmations in relation to Buy Transactions<\/h3>\r\n<p>In placing any Buy Order or entering into any Buy Transaction, you confirm your understanding of, and your agreement to, the following:<\/p>\r\n<ul>\r\n<li>It is your responsibility to confirm the Buy Transaction details are accurate, including the number of Digital Currencies you intend to buy, the amount of any fees, the gross purchase price for your Buy Order, and the amount and nature of the Digital Currencies to be transferred into your Digital Currency Wallet after completion<\/li>\r\n<li>Once placed, a Buy Order cannot be revoked; it can only be cancelled by submitting a separate cancellation request<\/li>\r\n<li>It is solely your responsibility to cancel any Buy Order (or part of Buy Order) that you do not want filled<\/li>\r\n<li>If you place a Buy Order, there is a risk that it will be filled (in whole or part) if you have a positive balance in your Legal Tender Account before any cancellation request is received<\/li>\r\n<li><span>CoinTrader<\/span> has no liability or responsibility to you in the above circumstances. (This does not limit the other terms in these Terms and Conditions)<\/li>\r\n<\/ul>\r\n<p><\/p>\r\n<h2>8. Sell Transactions<\/h2>\r\n<p><\/p>\r\n<h3>8.1 Nature of a Sell Transaction<\/h3>\r\n<p>All Market Sell Transactions:<\/p>\r\n<ul>\r\n<li>involve the sale of supported Digital Currencies for Currency at the Market Price;<\/li>\r\n<li>settle immediately from a pre-funded Digital Currency Wallet; and<\/li>\r\n<li>are recorded on our <span>CoinTrader<\/span> Ledger.<\/li>\r\n<\/ul>\r\n<h3>8.2 Sell Transaction process<\/h3>\r\n<ul>\r\n<li>You can place an order to sell Digital Currency (a <strong>Sell Order<\/strong>) on the <span>CoinTrader<\/span> Exchange. By doing so, you authorise <span>CoinTrader<\/span> to initiate debits from your applicable Digital Currency Wallet and initiate a transfer to the applicable <span>CoinTrader<\/span> Wallet.<\/li>\r\n<li>When you place a Sell Order, the full amount of Digital Currencies offered for sale are placed on hold in your Digital Currency Wallet. This means you cannot deal with those Digital Currencies for any other purpose until the Sell Transaction settles, expires or is cancelled. Any fees associated with the Sell Transaction will be deducted by <span>CoinTrader<\/span> from the sale proceeds before they appear in your Legal Tender Account.<\/li>\r\n<li>After you have placed your Sell Order, we will send you an email when it has completed, or if it has only been partially filled, as applicable.<\/li>\r\n<li><span>CoinTrader<\/span> reserves the right to unilaterally cancel any unfilled portion of any Sell Order that changes the best bid or best offer by more than twenty percent (20%) in either direction, or is otherwise clearly erroneous.<\/li>\r\n<\/ul>\r\n<h3>8.3 Sell Limits<\/h3>\r\n<p>You can enter a Stop Limit or an Order Limit for your Sell Transaction on the <span>CoinTrader<\/span> Exchange dashboard.<\/p>\r\n<h3>8.4 Partial completion<\/h3>\r\n<p>Until the Sell Order fills, expires or is cancelled, the value of the Digital Currencies being offered for sale will not be available to be used for any other purpose, including other sell orders or withdrawals. For partially filled sell orders, the unfilled portion of Digital Currencies offered for sale will remain on hold until the remaining sell order is filled, expires, or is cancelled.<\/p>\r\n<h3>8.5 Your confirmations in relation to Sell Transactions<\/h3>\r\n<p>In placing any Sell Order or entering into any Buy Transaction, you confirm your understanding of, and agreement to, the following:<\/p>\r\n<ul>\r\n<li>It is your responsibility to confirm the Sell Transaction details are accurate, including the number of Digital Currencies you intend to sell, the amount of any fees, the gross sale price, and the net sale proceeds to be transferred to your Legal Tender Account<\/li>\r\n<li>Once placed, a sell order cannot be revoked and is only able to be cancelled by submitting a separate cancellation request<\/li>\r\n<li>It is solely your responsibility to cancel any Sell Order (or part of any Sell Order) that you do not want filled<\/li>\r\n<li>If you place a Sell Order, then there is a risk that it will be filled (in whole or part) if you have Digital Currencies in your Digital Currency Wallet before any cancellation request is received<\/li>\r\n<li><span>CoinTrader<\/span> has no liability or responsibility to you in the above circumstances. (This does not limit the other terms in these Terms and Conditions)<\/li>\r\n<\/ul>\r\n<p><\/p>\r\n<h2>9. <span>CoinTrader<\/span> Exchange <\/h2>\r\n<p><\/p>\r\n<ul>\r\n<li>The <span>CoinTrader<\/span> Exchange operates order matching engines for each trading pair. <span>CoinTrader<\/span> currently supports the trading pairs listed <a href=\"\/fees.html\">here<\/a>. Our marketplace operates 24 hours a day, seven days a week (except for brief maintenance periods).<\/li>\r\n<li>We require that all trades be pre-funded (that is, you must have sufficient funds in your applicable <span>CoinTrader<\/span> Wallet before you can trade).<\/li>\r\n<li>Trading fees apply. They are set out in the Fee Schedule, accessible <a href=\"\/fees.html\">here<\/a>.<\/li>\r\n<\/ul>\r\n<p><\/p>\r\n<h2>10. Suspension<\/h2>\r\n<p><\/p>\r\n<h3>10.1 Suspension Events<\/h3>\r\n<p><span>CoinTrader<\/span> may suspend the Services in any of the following cases without prior notice for any period it determines in its discretion (each a Suspension Event) if it considers it necessary or desirable to do so:<\/p>\r\n<ul>\r\n<li>as a result of any Prohibited Use;<\/li>\r\n<li>following a \u201chard fork\u201d or other sudden change in operating rules in any underlying digital asset network<\/li>\r\n<li>following a force majeure event or a market disruption event<\/li>\r\n<li>to comply with law, whether or not following a change in applicable law or regulator guidance<\/li>\r\n<\/ul>\r\n<h3>10.2 Consequences of a Suspension Event<\/h3>\r\n<ul>\r\n<li>If a Suspension Event occurs, <span>CoinTrader<\/span> can suspend one or more Services to one or more (or all) Approved Users for so long as <span>CoinTrader<\/span> determines, in good faith, as is required or prudent in view of the interests of <span>CoinTrader<\/span> and its Approved Users (or affected Approved Users).<\/li>\r\n<li><span>CoinTrader<\/span> will not be liable to any Approved User or other person for any loss (including any loss of profit), liability or inconvenience arising as a result of any Suspension Event, or the suspension of any Services or access to the Site arising from action taken following a Suspension Event.<\/li>\r\n<li>If <span>CoinTrader<\/span> considers that it is practicable and prudent for it to do so in the circumstances of the Suspension Event, and in view of the interests of <span>CoinTrader<\/span> and its Approved Users (or the affected Approved Users), it will give you the opportunity to withdraw your Digital Currencies from your Digital Currency Wallet and transfer them to another service (that is, a service which is not provided by <span>CoinTrader<\/span>).<\/li>\r\n<\/ul>\r\n<p><\/p>\r\n<h2>11. No Prohibited Use<\/h2>\r\n<p><\/p>\r\n<h3>11.1 Prohibited Use<\/h3>\r\n<p>It is prohibited to use the Site or to access any Service for any of the following purposes or uses (each a <strong>Prohibited Use<\/strong>):<\/p>\r\n<ul>\r\n<li>To conduct or engage in any illegal activity;<\/li>\r\n<li>To hide or disguise the proceeds of any illegal activity;<\/li>\r\n<li>To infringe our proprietary intellectual property, or the proprietary intellectual property of any other person;<\/li>\r\n<li>To engage in gambling;<\/li>\r\n<li>In relation to any Digital Currency that <span>CoinTrader<\/span> does not support at the relevant time;<\/li>\r\n<li>To engage in any deceptive, fraudulent or malicious activity, including by launching malware or viruses, or seeking to hack into any Wallets or steal any Digital Currencies or funds held by any other Approved User;<\/li>\r\n<li>To reverse-engineer, decompile, disable, or disassemble any software running on the Site;<\/li>\r\n<li>To promote any securities;<\/li>\r\n<li>To harm <span>CoinTrader<\/span>, any person associated with <span>CoinTrader<\/span>, or any third party;<\/li>\r\n<li>If you are not an Approved User;<\/li>\r\n<li>To offer, or to purport to offer, any Service to any person who is not an Approved User; or<\/li>\r\n<li>To engage in any other use or activity which breaches these Terms and Conditions.<\/li>\r\n<\/ul>\r\n<h3>11.2 Consequences of engaging in any Prohibited Use<\/h3>\r\n<p><span>CoinTrader<\/span> may block or refuse any person (including any Approve User) from accessing the Site and\/or any Services or any Transaction if it believes in good faith that such person, Service or Transaction is connected with any Prohibited Use. <span>CoinTrader<\/span> does not need to provide any prior notice or explanation if it invokes this right.<\/p>\r\n<p><\/p>\r\n<h2>12. Our Rights and Remedies<\/h2>\r\n<p><\/p>\r\n<h3>12.1 Additional rights<\/h3>\r\n<p>In addition to exercising our rights under clause 10 (Suspension) and\/or clause 11 (No Prohibited Use), in the event we believe you have breached or are breaching any of these Terms and Conditions or any applicable law, we may do any of the following:<\/p>\r\n<ul>\r\n<li>limit your access to or activities on the Site;<\/li>\r\n<li>warn any Users or Approved Users of your actions;<\/li>\r\n<li>issue a warning to you;<\/li>\r\n<li>suspend or cancel your access to the Sites;<\/li>\r\n<li>advise any regulators and co-operate fully with any law enforcement authorities which may include disclosing information we hold about you about you.<\/li>\r\n<\/ul>\r\n<h3>12.2 Additional rights<\/h3>\r\n<p>This clause 12 does not limit any of our other rights and remedies at law.<\/p>\r\n<p><\/p>\r\n<h2>13. Our fees<\/h2>\r\n<p><\/p>\r\n<h3>13.1 You agree to pay fees<\/h3>\r\n<p>You agree to pay all fees associated with or incurred by you in connection with the Orders you place, the Transactions you complete and the other Services we provide you.<\/p>\r\n<h3>13.2 Our Fee Schedule may change<\/h3>\r\n<p>Our current Fee Schedule can be found <a href=\"\/fees.html\">here<\/a> and is deemed to form part of these Terms and Conditions.<\/p>\r\n<p>We reserve the right to change, modify or increase our Fee Schedule at any time.<\/p>\r\n<p>We will update our Fee Schedule no later than fourteen (14) calendar days before changes are to take effect. Your use of the Services following any update to our Fee Schedule is considered to be your acceptance of any such changes.<\/p>\r\n<p><\/p>\r\n<h2>14. Taxes<\/h2>\r\n<p><\/p>\r\n<h3>14.1 You are responsible for paying all applicable taxes<\/h3>\r\n<p>It is your responsibility to determine what, if any, taxes you must pay in relation to the Transactions and on any of the Digital Currencies you hold in your Digital Currency Wallet, or otherwise. <\/p>\r\n<h3>14.2 <span>CoinTrader<\/span> makes no representations in relation to tax liabilities<\/h3>\r\n<p><span>CoinTrader<\/span> makes no representation as to your tax liabilities, or the tax liabilities of any other Approved User.<\/p>\r\n<h3>14.3 <span>CoinTrader<\/span> assumes no tax liability to any Approved User<\/h3>\r\n<p><span>CoinTrader<\/span> assumes no responsibility for the tax liability of you or any other Approved User, not for collecting, reporting, withholding or remitting any taxes arising from any Transactions that you may enter into.<\/p>\r\n<p><\/p>\r\n<h2>15. Liability and Indemnity<\/h2>\r\n<p><\/p>\r\n<h3>15.1 Exclusion of liability<\/h3>\r\n<p>To the extent permitted by law, <span>CoinTrader<\/span> and its related companies exclude all liability and responsibility for any loss, damages, costs or expense, whether in tort (including negligence), contract or otherwise and whether direct, indirect, or consequential (including in connection with business interruption), which you or any other person may suffer or incur in connection with the Services the use or inability to use the Site, and in respect of any Digital Currency or otherwise.<\/p>\r\n<p>Where and to the extent liability for breach or any implied warranty or condition, or otherwise, cannot be excluded, <span>CoinTrader<\/span>'s liability to you is limited (at your option) to:<\/p>\r\n<ul>\r\n<li>the total amount of the fees we have earned from you as a result of supplying the Services to you; or<\/li>\r\n<li>the supply of the Services to you again.<\/li>\r\n<\/ul>\r\n<p><span>CoinTrader<\/span> is not liable in any way whatsoever to you or anyone else for any financial decision or action taken by you or anyone else using the Services.<\/p>\r\n<p><strong>Important: <\/strong>In providing the Services, <span>CoinTrader<\/span> is required to provide certain guarantees that cannot be excluded under consumer law, if you are using the Services for personal use, including guarantees as to the acceptable quality and fitness of purpose of the Services. Nothing in these Terms will be read or applied so as to exclude, restrict or modify or have the effect of excluding, restricting or modifying any condition, warranty, guarantee, right or remedy implied by the law and which by law cannot be excluded, restricted or modified, even if any other provision of these Terms and Conditions would otherwise suggest that this might be the case.<\/p>\r\n<h3>15.2 No warranty<\/h3>\r\n<p>To the extent permitted by law we do not warrant the reliability, availability, accuracy, completeness or timeliness of information on the Site. All information is provided \u201cas is\u201d without warranty of any kind, express or implied. This includes (but is not limited to) implied warranties of merchantability, fitness for a particular purpose, title or non-infringement.<\/p>\r\n<h3>15.3 <span>CoinTrader<\/span>'s liability is limited<\/h3>\r\n<p>Without limiting the other terms in these Terms and Conditions, you acknowledge that <span>CoinTrader<\/span> bears no liability for any damage, loss (including loss of profit), delay or inconvenience, or failure in performance or interruption of Service or Transaction, in each case caused by or resulting from (directly or indirectly):<\/p>\r\n<ul>\r\n<li>any computer virus, spyware, scareware, Trojan horse, worms or other malware or cyber, phishing or spoofing attack that may affect your computer or other device, or the data held by <span>CoinTrader<\/span>span> (including in respect of your <span>CoinTrader<\/span> Wallet);<\/li>\r\n<li>any cause or condition beyond our reasonable control, including but not limited to, any delay or failure due to any act of God, act of civil or military authority, act of terrorism, civil disturbances, war, strike or other labour dispute, fire, interruption in telecommunications or internet services or network provider services, failure of equipment or software, cyber-attack, or other occurrence or catastrophe;<\/li>\r\n<li>any \u201chard fork\u201d, \u201csoft fork\u201d, or other change in the operating rules of an underlying Digital Currency network;<\/li>\r\n<li>our good faith election not to support an unsupported branch of a forked protocol, or to configure or reconfigure our systems as a result of the forked protocol or other change to the operating rules;<\/li>\r\n<li>any suspension of Services following a Suspension Event or as otherwise permitted under these Terms and Conditions;<\/li>\r\n<li>inaccurate Orders being placed; and\/or<\/li>\r\n<li>you not meeting your legal obligations, including your tax obligations.<\/li>\r\n<\/ul>\r\n<h3>15.4 Indemnity<\/h3>\r\n<p>Each User and Approved User indemnifies <span>CoinTrader<\/span> and holds <span>CoinTrader<\/span> harmless for any loss, cost, liability or expense sustained or incurred by it as a result of the relevant User or Approved User breaching these Terms and Conditions, including by:<\/p>\r\n<ul>\r\n<li>engaging in any Prohibited Use;<\/li>\r\n<li>any other breach by you of the Terms and Conditions or of the Privacy Policy; and\/or<\/li>\r\n<li>any reliance by you on any information obtained through the Site.<\/li>\r\n<\/ul>\r\n<p><\/p>\r\n<h2>16. Complaints and Disputes<\/h2>\r\n<p><\/p>\r\n<p><span>CoinTrader<\/span> is committed to providing its Approved Users with a very high level of customer service, and your satisfaction is very important to us.<\/p>\r\n<p>If you would like to make a complaint, we encourage you to contact us in the first instance by email to complaints@latinblockchain.com.<\/p>\r\n<p>We will acknowledge your complaint within 5 business days and make sure your complaint is investigated properly.<\/p>\r\n\r\n<\/table>\r\n<h2>17. Amendments to these Terms and Conditions<\/h2>\r\n<p>We may amend these Terms and Conditions (including the Fee Schedule which is incorporated by reference) at any time in the following circumstances:<\/p>\r\n<ul>\r\n<li>to meet our legal obligations;<\/li>\r\n<li>to accommodate the reasonable requirements of our service providers or business partners;<\/li>\r\n<li>to reflect changes to our Services, the Digital Currencies, the networks underlying the Digital Currencies, or the risks presented by them; and<\/li>\r\n<li>in the case of the Fee Schedule, our costs of business.<\/li>\r\n<\/ul>\r\n<p>If we amend these Terms and Conditions, we will publish the updated Privacy Policy on our Site. Any subsequent access to or use by you of the Site will constitute an acceptance of the amended Privacy Policy.<\/p>\r\n<p>Where it is possible to do so, we will notify you of any changes to this Privacy Policy by sending an email to the email address linked to your User Account.<\/p>"
+            }
+        },
+        "***OLD_MARKETING_ENTRIES_BELOW***": "",
+        "HEADER":
+        {
+            "SIGNIN": "Login",
+            "SIGNUP": "Sign Up",
+            "DASHBOARD": "Dashboard",
+            "SIGNOUT": "Sign Out"
+        },
+        "HOME": {
+            "BANNER_TEXT": "LEADERS IN DIGITAL ASSET TRADING",
+            "SIGN_UP": "Sign Up",
+            "SIGN_IN": "Sign In",
+            "MEMBER": "Already a member?"
+        },
+        "FEATURES":
+        {
+            "TITLE": "Features",
+            "FIRST_BLOCK_TITLE": "Multiple Trade Views",
+            "FIRST_BLOCK_CONTENT": "Multiple views including price chart, depth chart, order book and recent trades ticker",
+            "SECOND_BLOCK_TITLE": "Plenty of Indicators",
+            "SECOND_BLOCK_CONTENT": "58 available indicators including linear regression curves, moving averages and oscillators",
+            "THIRD_BLOCK_TITLE": "Custom Trendlines",
+            "THIRD_BLOCK_CONTENT": "Ability to draw custom trendlines, pitchforks and more that scale and move with chart",
+            "FOURTH_BLOCK_TITLE": "Interactive UI",
+            "FOURTH_BLOCK_CONTENT": "Ability to customize color and style of bars, borders, wicks, price lines, backgrounds and grid"
+        },
+        "ABOUT":
+        {
+            "TITLE": "About Coti",
+            "SUB_TITLE": "Our vision is to build the next generation digital asset exchange for traders of every skill level with the aim of making digital currency trading accessible to everyone. We are devoted to enhancing our customers’ trading experiences with quick trade execution, fair pricing, world-class customer service, endless improvement and limitless creativity.",
+            "FIRST_BLOCK_TITLE": "Top of Line Trading UI",
+            "FIRST_BLOCK_CONTENT": "Coti is a premier trading and financial technology company. We’ve built the best digital asset exchange by focusing on the needs of professional traders and digital currency experts. We are dedicated to making digital currency trading accessible, fast and totally secure.",
+            "SECOND_BLOCK_TITLE": "Trade Major Digital or Fiat Currency",
+            "SECOND_BLOCK_CONTENT": "We offer all the major digital and fiat currency pairs that you love to trade.",
+            "THIRD_BLOCK_TITLE": "Order Book",
+            "THIRD_BLOCK_CONTENT": "Our powerful live order book updates in real-time and displays buy and sell orders with live spread calculation so you can always lock in the lowest spreads and get the best deal. Our order system also automatically calculates fees and includes them in the order price so you always know that what you see is what you’ll pay. For larger orders, we offer the ability to report block trades to guarantee that the market won’t move against you before your order gets filled. Available order types for both regular and block trades include market, limit, stop, and six others.",
+            "FOURTH_BLOCK_TITLE": "Trade Tracking",
+            "FOURTH_BLOCK_CONTENT": "To help you track your trades and technical history, our platform includes the integrated ability to save the current chart view to jpeg. We also offer a custom area measurement tool to find duration, percentage change and price change soyou don’t have to do it by hand. Finally, we offer users the ability to generate multiple custom reports including trade activity, transaction activity and treasury activity and save these reports as CSVs to facilitate return tracking. The exchange platform has been built from the ground up by senior coders and cryptocurrency experts to emphasize redundancy, accuracy, and speed. Our platform is built on a custom-embedded StreamDB database and incorporates error-checking and targets multiple volumes. We also replicate and backup all exchange data in real-time so your trades and user data are always secure."
+        },
+        "PLATFORM":
+        {
+            "TITLE": "LEADERS IN DIGITAL ASSET TRADING",
+            "STARTED": "Get Started",
+            "SUB_TITLE": "Customize, Analyze and Execute",
+            "BLOCK_CONTENT": "Our platform allows for in-depth and custom market analytics of all the major digital to fiat and digital to digital currency pairs. "
+        },
+        "SECURITY":
+        {
+            "TITLE": "Security",
+            "SUB_TITLE": "CryptoCurrency Security Standard Compliant",
+            "BLOCK_CONTENT": "Our trading platform has been vetted by multiple third-party security audit firms and penetration test consultants with stringent testing methods. Moreover, every aspect of our platform has gone through the strict scrutiny of the open-source CryptoCurrency Security Standard (CCSS)."
+        },
+        "CONTACT":
+        {
+            "ADDRESS_TITLE": "Address",
+            "CONTACT_TITLE": "Contact",
+            "SITEMAP_TITLE": "Sitemap",
+            "LANGUAGES_TITLE": "Languages",
+            "ADDRESS_1": "335 Madison Ave, 24th Floor",
+            "ADDRESS_2": "New York, NY  10017",
+            "SITEMAP_TERMS": "Terms",
+            "SITEMAP_PRIVACY": "Privacy policy",
+            "SITEMAP_FEES": "Fees",
+            "SITEMAP_API": "API",
+            "SIGNUP": "Sign Up"
+        },
+        "***END_OLD_MARKETING_ENTRIES***": ""
+    }
+}

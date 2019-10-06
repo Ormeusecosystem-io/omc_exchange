@@ -1,0 +1,201 @@
+From ad92fac70d6ebedbd662a3ca0af600d1c7e8abe8 Mon Sep 17 00:00:00 2001
+From: AlphaPoint BrianMcLendon <ap_bmclendon@AlphaPoints-MacBook-Pro.local>
+Date: Wed, 16 May 2018 15:20:31 -0400
+Subject: [PATCH] AFE-1473: Updated dot-nav, scrolling, & page hash (V2) for
+ modularity
+
+---
+ js/script.js | 168 ++++++++++++++++++++++++++++++-----------------------------
+ 1 file changed, 85 insertions(+), 83 deletions(-)
+
+diff --git a/js/script.js b/js/script.js
+index 47e3a01..e7608b3 100644
+--- a/js/script.js
++++ b/js/script.js
+@@ -1,11 +1,5 @@
+-var dot_nav = $('.dot-nav'),
+-    sections = $('.section'),
+-    chapters = $('.chapter'),
+-    targetOffset = $(".contact").offset().top,
+-    ref;
+-
+ // =============================================
+-// dot nav
++// smooth scroll
+ // =============================================
+ $(function () {
+     AOS.init({
+@@ -18,89 +12,97 @@ $(function () {
+     var scroll = new SmoothScroll('a[href="#features"]', {easing: 'linear'});
+     var scroll = new SmoothScroll('a[href="#about"]', {easing: 'linear'});
+     var scroll = new SmoothScroll('a[href="#contact"]', {easing: 'linear'});
+-
+-    var currentHash = "#home";
+-    var Debug_HashLog = false;
+-    $(document).scroll(function () {
+-        $('.chapter').each(function () {
+-
+-            var hash = $(this).attr('id'),
+-                currentScrollPosition = window.pageYOffset,
+-                currentElementStart_Y = $(this).offset().top,
+-                currentElementHeight = $(this).height(),
+-                currentElementEnd_Y = (currentElementStart_Y + currentElementHeight),
+-                windowHeight = $(window).height();
+-
+-            if(Debug_HashLog == true){
+-                console.log(
+-                    "El " + hash + "\n" +
+-                    "currentScrollPosition " + currentScrollPosition + "\n" +
+-                    "currentElementStart_Y " +  currentElementStart_Y  + "\n" +
+-                    "currentElementHeight " +  currentElementHeight  + "\n" +
+-                    "currentElementEnd_Y " +  currentElementEnd_Y  + "\n"
+-                );
+-            }
+-
+-            if ((currentScrollPosition + (windowHeight/2)) > currentElementStart_Y
+-                && (currentScrollPosition + (windowHeight/2)) < currentElementEnd_Y
+-                && currentHash != hash) {                
+-
+-                //if executed, this sets the hash, depending on browser compatibility
+-                if(history.pushState) { history.pushState(null, null, ("#"+hash) );}
+-                else { window.location.hash = (hash); }
+-                currentHash = hash;
+-            }
+-
+-        });
+-    });
+ });
+ 
+ // =============================================
+-// onScroll eventListener for dotNav
++// page hash
+ // =============================================
++$(document).ready(function() { PageHashCheck(); });
++$(document).scroll(function() { PageHashCheck(); });
++var currentHash = "home",
++    Debug_HashLog = false;
++function PageHashCheck() {
++    $('.chapter').each(function () {
++        var hash = $(this).attr('id'),
++            currentScrollPosition = window.pageYOffset,
++            currentElementStart_Y = $(this).offset().top,
++            currentElementHeight = $(this).height(),
++            currentElementEnd_Y = (currentElementStart_Y + currentElementHeight),
++            windowHeight = $(window).height();
++
++        if(Debug_HashLog == true){ console.log( "El " + hash + "\n" + "currentScrollPosition " + currentScrollPosition + "\n" + "currentElementStart_Y " +  currentElementStart_Y  + "\n" + "currentElementHeight " +  currentElementHeight  + "\n" + "currentElementEnd_Y " +  currentElementEnd_Y  + "\n" );}
++
++        if ((currentScrollPosition + (windowHeight/2)) > currentElementStart_Y
++        && (currentScrollPosition + (windowHeight/2)) < currentElementEnd_Y
++        && currentHash != hash) {
++            //if executed, this sets the hash, depending on browser compatibility
++            if(history.pushState) { history.pushState(null, null, ("#"+hash) );
++            }else { window.location.hash = (hash); }
++            currentHash = hash;
++        }
++    });
++}
+ 
+-$(window).scroll(function() {DotNavCheck();});
+-$( document ).ready(function() {DotNavCheck();});
++// =============================================
++// dot nav
++// =============================================
++$(document).ready(function() { if($(".dot-nav li").length >0){DotNavCheck();}});
++$(window).scroll(function() { if($(".dot-nav li").length >0){DotNavCheck();}});
+ function DotNavCheck() {
++    var chapters = $('body').find('.chapter'),
++        windowHeight = $(window).height(),
++        currentScrollPosition = $(document).scrollTop(),
++        offset = ($(".dot-nav").height() /  $(".dot-nav li").length  ), //offset helps us change dot-nav stlye Rights as it passes into contact chapter
++        styles = {
++            //additional styles can be added here
++            //and called by setting data-dot-nav-style="STYLENAME" in the index.html
++            light: { color_border:"white", color_hoverText:"white", nav_background:"transparent", nav_borderBottom:"0", color_h1:"white" },
++            dark: { color_border:"#3b4251", color_hoverText:"#3b4251", nav_background:"#0d141d", nav_borderBottom:"1px solid rgba(0, 0, 0, 0.15)", color_h1:"white" },
++        };
++
++    chapters.each(function(index) {
++        var el_id = $(this).attr('id'),
++            currentElementStart_Y = $('#'+el_id).offset().top,
++            currentElementEnd_Y,
++            styleChoice;
++        
++        //current element end is either going to be..1 less than the Next...or the height of the current element (if not next sibling found)
++        if(index !== chapters.length - 1) { currentElementEnd_Y = (chapters.eq(index + 1).offset().top)-1;
++        }else{ currentElementEnd_Y = ($(document).height())-1; }
++
++        if (currentScrollPosition + ((windowHeight/2)+ offset ) >= currentElementStart_Y
++        && currentScrollPosition + ((windowHeight/2)+ offset ) <= currentElementEnd_Y ){
++
++            //which style? if no "data-dot-nav-style" attribute is found use the default
++            if($( this ).data( "dot-nav-style" ) != undefined){ 
++                styleChoice = $( this ).data( "dot-nav-style" ); //comes in as string, conver to obj!
++                var errorCheck = true;
++                for (var key in styles) { 
++                    if (styles.hasOwnProperty(styleChoice)) { 
++                        styleChoice = styles[styleChoice];
++                        errorCheck = false;
++                    }
++                }
++
++                if(errorCheck == true){ 
++                    console.warn("Dot-Nav Error: could not find (("+ styleChoice + ")) style override for ((" + el_id + ")) chapter"); 
++                    styleChoice = Object.keys(styles)[0];
++                }
++            }else{ //use default == any non-bottom section is light, bottom is dark
++                if(index !== chapters.length - 1) { styleChoice = styles.light; }else{ styleChoice = styles.dark; }
++            }
+ 
+-    var position_C = $('#contact').offset().top,
+-    position_A = $('#about').offset().top,
+-    position_F = $('#features').offset().top,
+-    position_H = $('#home').offset().top,
+-    windowHeight = $(window).height(),
+-    scrollDistance = $(document).scrollTop(),
+-    offset = 58,
+-    canChange = true,
+-    changeThis,
+-    color_border = "white",
+-    color_hoverText = "white",
+-    nav_background = "transparent",
+-    nav_borderBottom = "0",
+-    color_h1 = true;
+-
+-    if( scrollDistance > (position_C - ( (windowHeight/2)+ offset )) ){
+-        changeThis = "contact";
+-        color_border = "#3b4251";
+-        color_hoverText = "#3b4251";
+-        nav_background = "#0d141d";
+-        nav_borderBottom = "1px solid rgba(0, 0, 0, 0.15)";
+-        color_h1 = false;
+-    }else if( scrollDistance > (position_A - ( (windowHeight/2)+ offset )) ){ changeThis = "about";
+-    }else if( scrollDistance > (position_F - ( (windowHeight/2)+ offset )) ){ changeThis = "features";
+-    }else if( scrollDistance > (position_H - ( (windowHeight/2)+ offset )) ){ changeThis = "home";
+-    }else{ canChange = false; } 
+-
+-    if(canChange == true){
+-        // console.log(changeThis+ " is in view!");
+-        $(".dot-nav .active-dot").removeClass("active-dot");
+-        $(".dot-nav li a .hover-text.active-hover-text").removeClass("active-hover-text");
+-        $(".dot-nav li a[href='#"+changeThis+"']").parent().addClass("active-dot");
+-        $(".dot-nav li a[href='#"+changeThis+"'] > .hover-text").addClass("active-hover-text");
+-        $('.dot-nav li').css({'border-color': color_border });
+-        $('.dot-nav a .hover-text').css({'color': color_hoverText });
+-        $('.nav').css({ 'background': nav_background, 'border-bottom': nav_borderBottom });
+-        if(color_h1 == true){ $('.logo h1').css({ 'color': 'white' }); }
+-    }
++            //execute style changes!
++            $(".dot-nav .active-dot").removeClass("active-dot");
++            $(".dot-nav li a .hover-text.active-hover-text").removeClass("active-hover-text");
++            $(".dot-nav li a[href='#"+el_id+"']").parent().addClass("active-dot");
++            $(".dot-nav li a[href='#"+el_id+"'] > .hover-text").addClass("active-hover-text");
++            $('.dot-nav li').css({'border-color': styleChoice.color_border });
++            $('.dot-nav a .hover-text').css({'color': styleChoice.color_hoverText });
++            $('.nav').css({ 'background': styleChoice.nav_background, 'border-bottom': styleChoice.nav_borderBottom });
++            $('.logo h1').css({ 'color': styleChoice.color_h1 });
++        }
++    });
+ }
+       
+ 

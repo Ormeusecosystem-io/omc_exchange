@@ -1,0 +1,120 @@
+<nav id="mobile">
+
+        <div class="top">
+            <div class="menu-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="logo">
+                <img src="./images/logos/orme-dark.png" alt="">
+            </div>
+
+        </div>
+        <div class="menu">
+        
+            <ul>
+                    <a class="">
+                        <li >
+                            <div ap-widget="VerifyAccount" class="VerifyAccountWidget"></div>
+                        </li>
+                    </a>
+                    <a class="" href="my-accounts.html">
+                        <li>
+                            <img class="sidebar-icon" src="images/icons/menuIcons_01_myaccount_40X40.svg" />
+                            <span ap-translate="SIDEBAR.MENU_MY_ACCOUNTS">My Accounts</span>
+                            <div class="menu_crescent"></div>
+                        </li>
+                    </a>
+                    <a class="" href="buy-sell.html">
+                        <li>
+                            <img class="sidebar-icon" src="images/icons/menuIcons_02_buysell_40X40.svg" />
+                            <span ap-translate="SIDEBAR.MENU_BUY_SELL">Buy / Sell</span>
+                            <div class="menu_crescent"></div>
+                        </li>
+                    </a>
+                    <!-- <a class="" href="otc.html">
+                        <li>
+                            <img class="sidebar-icon" src="images/icons/menuIcons_03_protrade_40X40.svg" />
+                            <span>OTC</span>
+                            <div class="menu_crescent"></div>
+                        </li>
+                    </a> -->
+                    <!-- <a class="" href="trade.html">
+                        <img class="sidebar-icon" src="images/icons/menuIcons_03_protrade_40X40.svg" />
+                        <span ap-translate="SIDEBAR.MENU_PRO_TRADE">Pro Trade</span>
+                        <div class="menu_crescent"></div>
+                    </a> -->
+                    <a class="" href="settings.html">
+                        <li>        
+                            <img class="sidebar-icon" src="images/icons/menuIcons_04_settings_40X40.svg" />
+                            <span ap-translate="SIDEBAR.MENU_SETTINGS">Settings</span>
+                            <div class="menu_crescent"></div>
+                        </li>
+                    </a>
+                    
+                    <a class="" href="help.html">
+                        <li>
+                            <img class="sidebar-icon" src="images/icons/menuIcons_05_faq_40X40.svg" />
+                            <span ap-translate="SIDEBAR.MENU_HELP">Help</span>
+                            <div class="menu_crescent"></div>
+                        </li>
+                    </a>
+                    <a class="" ap-action="Logout" to="/" href="/">
+                        <li>
+                            <img class="sidebar-icon" src="images/icons/menuIcons_06_signout_40X40.svg" />
+                            <span ap-translate="SIDEBAR.MENU_LOGOUT">Sign Out</span>
+                            <div class="menu_crescent"></div>
+                        </li>
+                    </a>
+                
+            </ul>
+
+        </div>
+    </nav>
+    <style>
+    li {
+        justify-content: center;
+        display: flex;
+        align-items: flex-end;  
+        padding-left: 10px !important;
+    }
+    
+    </style>
+    <script type="text/javascript">
+        function navigate(){
+            window.location = '/';
+        }
+        
+        function toggleMobileMenu(){
+            $('.menu, .menu-hamburger, .menu-hamburger span').toggleClass('open');
+        }
+        
+        function getDistanceDownPage() {
+            return window.pageYOffset !== undefined ?
+                    window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop
+        }
+
+        function navtop(){
+            var navBar = document.getElementById("menu");
+            var scrollTop = getDistanceDownPage()
+            if (scrollTop > 74 ){
+                navBar.classList.add('nav-up')
+                // $('.loginAndRegister button').addClass('nav-up')
+            } else {
+                navBar.classList.remove('nav-up')
+                // $('.loginAndRegister button').removeClass('nav-up')
+            }
+        }
+        
+        $('.menu-hamburger').on('click', toggleMobileMenu);
+        $('.VerifyAccountWidget').click(()=>{
+            toggleMobileMenu();
+        })    
+
+        // $('#login, .toggle-login').on('click', function(e){
+        //     toggleLogin()
+        // })
+
+    </script>

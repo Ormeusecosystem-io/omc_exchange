@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <title>Welcome | ORME</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+
+    <link rel="icon" href="./images/logos/orme-fav.png">
+    <!--[if IE]><link rel="shortcut icon" href="./images/logos/orme-fav.png"><![endif]-->
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <meta name="autor" content="ShiftMarket">
+    <!-- Stylesheets -->
+    <!-- Bootstrap v4.0.0-beta.6 -->
+    <!-- <link href="assets/css/bootstrap-reboot.min.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/bootstrap-grid.min.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
+    <link href="assets/css/shift-styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+    <!-- Font Awesomes -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Maven+Pro|Didact+Gothic|Roboto" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <!-- jQuery -->
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <!-- Animate On Scroll (AOS) Library -->
+    <!-- <link href="assets/css/aos.css" rel="stylesheet"> -->
+    <!-- <script src="js/aos.js"></script> -->
+    <!-- Javascript Smooth Scroll Library -->
+    <!-- <script src="js/smooth-scroll.min.js"></script> -->
+
+</head>
+
+<body>
+   
+    <!-- NAVBAR -->
+    <!-- CSS: NAVBAR -->
+    <style>
+        .login-container > #login-footer{
+            position: absolute;
+            bottom: -20px;
+            display: flex;
+            flex-direction: row;
+            max-width: 100%;
+            font-size: 10px;
+            font-family: book;
+        }
+        #disclaimer{
+            max-width: 100%;
+            font-size: 9px;
+            font-family: book;
+            text-align: center;
+            padding: 0 30px;
+            margin-top: 30px;
+        }
+        #disclaimer-mobile{
+            display: none;
+            max-width: 100%;
+            font-size: 9px;
+            font-family: book;
+            text-align: center;
+            padding: 0 10px;
+            margin-top: 30px;
+            height: 100%;
+            margin-bottom: 30px;
+        }
+        .ap-modal{
+            flex-direction: column;
+        }
+        .login-container > #login-footer > a{
+            color: inherit;
+            text-decoration: none;
+        }
+        .login-container > #login-footer > a:first-child{
+            margin-right: auto;
+        }
+        .login-container > #login-footer > a:not(:first-child){
+            margin-left: 10px;
+        }
+        #risk-note{
+                font-size: 8px;
+                margin-bottom: 10px;
+                line-height: 1.5;
+                padding: 0 30px;
+            }
+        .contact {
+            background-image: url(/img/bg-2.png);
+            background-repeat: no-repeat;
+            background-position-x: right;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            width: auto;
+            max-width: 1397px;
+            padding-top: 135px;
+            padding-bottom: 90px;
+            margin-top: 75px;
+        }
+        #contact-container{
+            width: 93%;
+            padding: 200px 50px 20px;
+            font-family:book;
+            display: flex;
+            flex-direction: column;
+            min-height: 300px;
+        }
+        .section-title{
+            font-family: 'Work Sans', sans-serif;
+            font-size: 38px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #323756;
+            margin-bottom: 77px;
+        }
+       
+        .copyright{
+            background-color:transparent;
+            background-color:#daecf0;
+            text-align:center;
+            padding:10px;
+            font-family:book;
+            font-size:12px;
+        }
+        h4{
+            margin-bottom: 8px;
+        }
+        .section{
+            margin-bottom: 50px;
+        }
+        .section a{
+            text-decoration: none;
+            color: inherit;
+        }
+        #footer-wrapper{
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        #mobileImg{
+            display: none;
+        }
+        #desktopImg{
+            width:350px;
+        }
+        #mobileImg, #desktopImg{
+            max-width: 50%;
+        }
+
+        #wrapper{
+            max-width: 100%;
+            margin: 0 auto;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #323756;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        #wrapper > div{
+            width: 400px;
+        }
+        
+        @media(max-width: 768px){
+            #disclaimer-mobile{
+                display: initial;
+                margin-top: 0;
+            }
+            #disclaimer{
+                display: none;
+            }
+            .login-container{
+                overflow-y: scroll;
+            }
+            #ap-widget-login-form{
+                display: initial;
+            }
+            .login-container > #login-footer{
+                bottom: 0;
+                top: 600px;
+                height: 30px;
+                padding: 0 10px;
+                box-sizing: border-box;
+            }
+            #mobileImg{
+                display: initial;
+            }
+            #desktopImg{
+                display: none;
+            }
+            #wrapper > div{
+                width: 100%;
+            }
+        }
+    </style>
+    <div ap-widget="Navbar"></div>
+    <div class="contact">
+        <div class="main-container" style="display: initial;padding: 0 8%;">
+            <div>
+                <h1 class="section-title">Contact Details</h1>
+            </div>
+            <div id="wrapper">
+                <div>
+                    <div class="section">
+                        <h4>Address</h4>
+                        <span></span><br>
+                        <span> </span>
+                    </div>
+                    <div class="section">
+                        <h4>Email</h4>
+                        <span>
+                            <a href="mailto:support@orme.io">support@orme.io</a>
+                        </span>
+                    </div>
+                    <div class="section">
+                        <h4>Support phone</h4>
+                        <span>
+                            <a href=""></a>
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div ap-widget="Footer"></div>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <!-- GSAP -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script> -->
+    <!-- <script type="text/babel" src="js/script.js"></script> -->
+    <!-- <script src="js/lib/growl.js"></script> -->
+    <!-- Coti -->
+    <script src="js/config.js"></script>
+    <script src="js/library.min.js"></script>
+    <script src="js/widgets.min.js"></script>
+
+    <script type="text/javascript">
+        AlphaPoint.config.v2Widgets = true;
+
+        $(document).ready(function () {
+            // $('#footer').load('footer.html');
+            var loadCount = 0;
+            var totalLoadCount = 1; // number of html pieces loaded
+
+            function runRenders() {
+                loadCount++;
+
+                if (loadCount >= totalLoadCount) {
+                    renderWidgetWrapper();
+                    renderWidget();
+                    renderActionWrapper();
+                    renderTranslation();
+                    changeLanguage();
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

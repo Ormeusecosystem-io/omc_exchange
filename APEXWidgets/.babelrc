@@ -1,0 +1,13 @@
+{
+  "presets": ["react", "env"],
+  "env": {
+    "production": {
+      "presets": ["babili"]
+    }
+  },
+  "plugins": [
+    "transform-runtime",
+    "transform-class-properties",
+    ["transform-object-rest-spread", { "useBuiltIns": true }]
+  ]
+}

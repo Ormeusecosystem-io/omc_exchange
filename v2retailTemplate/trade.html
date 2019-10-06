@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ORME | Trade</title>
+    <!-- Favicon -->
+    <link rel="icon" href="./images/logos/orme-fav.png">
+    <!--[if IE]><link rel="shortcut icon" href="./images/logos/orme-fav.png"><![endif]-->
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="assets/css/retail/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/advanced/tradeStyles.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/shift-trade.css">
+    <link href="assets/css/shift-styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body class="trade-page">
+    <div ap-widget="TradePlatfrom"></div>
+
+    <!-- /.wrapper-->
+    <div id="resetPassword" ap-wrapper="ResetPassword"></div>
+    <div id="verifyEmail" ap-wrapper="VerifyEmail"></div>
+    <div id="merchantDepositConfirmation" ap-wrapper="MerchantDepositConfirmation"></div>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108807921-7"></script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-108807921-7', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- Third Party -->
+    <script src="js/lib/jquery-3.2.1.min.js"></script>
+    <script src="js/lib/embed.cryptowatch.js"></script>
+    <script src="js/lib/growl.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+    <!-- Charting Library -->
+    <script type="text/javascript" src="libs/charting_library_new/charting_library.min.js"></script>
+    <script type="text/javascript" src="libs/charting_library_new/datafeed/udf/datafeed.js"></script>
+    <script type="text/javascript" src="libs/charting_library_new/datafeed/ChartAPI.js"></script>
+    <!-- Coti -->
+    <script src="js/config.js"></script>
+    <script src="js/library.min.js"></script>
+    <script>
+    AlphaPoint.config.templateStyle = 'exchange';
+    AlphaPoint.config.advancedUIKYC = true;
+    </script>
+    <script src="js/widgets.min.js"></script>
+    <script src='js/tester.js'></script>
+    <script>
+    // document.getElementById('releaseVersion').innerHTML = APConfig.releaseVersion;
+    </script>
+</body>
+
+</html>

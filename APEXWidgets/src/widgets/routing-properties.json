@@ -1,0 +1,17 @@
+{
+    "my-wallet":{
+        "balances":{"view":"balances","section":"Wallet","productId":1},
+        "deposit" : {"view":"deposit","section":"Wallet","productId":1},
+        "withdrawal" : {"view":"withdrawal","section":"Wallet","productId":1},
+        "buy-crypto" : {"view":"buy-crypto","section":"Wallet","productId":1},
+        "history" : {"view":"history","section":"Wallet","productId":1}
+    },
+    "orders" : {
+        "open-orders" : {"view":"open-orders","section":"Orders"},
+        "filled-orders" : {"view":"filled-orders","section":"Orders"}
+    },
+    "settings" : {
+        "account-verification" : {"view":"account-verification", "section":"Account settings"},
+        "security-settings" : {"view":"security-settings","section":"Account settings"}
+    }
+}

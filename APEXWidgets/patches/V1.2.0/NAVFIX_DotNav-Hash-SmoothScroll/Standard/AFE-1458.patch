@@ -1,0 +1,60 @@
+From bb7724b3a04b39f7e3f37232cae9dd42e8a47237 Mon Sep 17 00:00:00 2001
+From: AlphaPoint BrianMcLendon <ap_bmclendon@AlphaPoints-MacBook-Pro.local>
+Date: Mon, 14 May 2018 15:06:07 -0400
+Subject: [PATCH] AFE-1458: SmoothScroll & Window Hash js refactor
+
+---
+ js/script.js | 36 ++++++++++++++++++++++++++++--------
+ 1 file changed, 28 insertions(+), 8 deletions(-)
+
+diff --git a/js/script.js b/js/script.js
+index 263d194..6efa7fa 100644
+--- a/js/script.js
++++ b/js/script.js
+@@ -19,18 +19,38 @@ $(function () {
+     var scroll = new SmoothScroll('a[href="#about"]', {easing: 'linear'});
+     var scroll = new SmoothScroll('a[href="#contact"]', {easing: 'linear'});
+ 
+-    var currentHash = "#home"
++    var currentHash = "#home";
++    var Debug_HashLog = false;
+     $(document).scroll(function () {
+         $('.chapter').each(function () {
+-            var top = window.pageYOffset;
+-            var distance = top - $(this).offset().top;
+-            var hash = $(this).attr('id');
+-            // 30 is an arbitrary padding choice, 
+-            // if you want a precise check then use distance===0
+-            if (distance < 140 && distance > -140 && currentHash != hash) {
+-                window.location.hash = (hash);
++
++            var hash = $(this).attr('id'),
++                currentScrollPosition = window.pageYOffset,
++                currentElementStart_Y = $(this).offset().top,
++                currentElementHeight = $(this).height(),
++                currentElementEnd_Y = (currentElementStart_Y + currentElementHeight),
++                windowHeight = $(window).height();
++
++            if(Debug_HashLog == true){
++                console.log(
++                    "El " + hash + "\n" +
++                    "currentScrollPosition " + currentScrollPosition + "\n" +
++                    "currentElementStart_Y " +  currentElementStart_Y  + "\n" +
++                    "currentElementHeight " +  currentElementHeight  + "\n" +
++                    "currentElementEnd_Y " +  currentElementEnd_Y  + "\n"
++                );
++            }
++
++            if ((currentScrollPosition + (windowHeight/2)) > currentElementStart_Y
++                && (currentScrollPosition + (windowHeight/2)) < currentElementEnd_Y
++                && currentHash != hash) {                
++
++                //if executed, this sets the hash, depending on browser compatibility
++                if(history.pushState) { history.pushState(null, null, ("#"+hash) );}
++                else { window.location.hash = (hash); }
+                 currentHash = hash;
+             }
++
+         });
+     });
+ });

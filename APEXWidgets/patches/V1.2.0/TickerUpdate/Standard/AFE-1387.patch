@@ -1,0 +1,568 @@
+From 33166a2e21b17604741ea94ea1dbb698ba556bd1 Mon Sep 17 00:00:00 2001
+From: brian mclendon <brianmclendon@brians-MacBook-Pro.local>
+Date: Wed, 9 May 2018 13:28:12 -0400
+Subject: [PATCH] AFE:1387 - Refactored and updated landing page ticket
+
+---
+ assets/css/style.css | 235 +++++++++++++++++++++++++++++++++------------------
+ index.html           |   9 +-
+ js/config.js         |   1 +
+ js/script.js         | 183 +++++++++++++++++++++++++++++++++++++--
+ 4 files changed, 336 insertions(+), 92 deletions(-)
+
+diff --git a/assets/css/style.css b/assets/css/style.css
+index 0050cdf..53a41e1 100644
+--- a/assets/css/style.css
++++ b/assets/css/style.css
+@@ -717,89 +717,150 @@ section {
+ /* =========== TICKER =========== */
+ 
+ #ticker-container {
+-    position: relative;
+-    display: block;
+-    height: 15vh;
+     background: #0d141d;
+     overflow: hidden;
+-    width: 100%;
+-}
+-
+-.ticker-container:before {
+-    content: '';
+-    left: 0;
+-    background: linear-gradient(90deg, #0d141d, transparent);
+-}
+-
+-.ticker-scrolling {
+-    width: 100%;
++    width:100%;
+     height: 100%;
+-    position: absolute;
+-    top: 0;
+-    left: 0;
+-    overflow: hidden;
++    position: relative;
++    -webkit-animation: tickerLoad 5s normal forwards ease-in-out; 
++    -moz-animation:    tickerLoad 5s normal forwards ease-in-out;
++    -o-animation:      tickerLoad 5s normal forwards ease-in-out;
++    -webkit-user-select: none;  /* Chrome all / Safari all */
++    -moz-user-select: none;     /* Firefox all */
++    -ms-user-select: none;      /* IE 10+ */
++    user-select: none;          /* Likely future */   
++ }
++ 
++ #ticker-container .ticker-scrolling{
++    -moz-transition: none;
++    -webkit-transition: none;
++    -o-transition: none;
++    transition: none;
++    list-style: none;
++    padding:0;
++    display: flex;
++    will-change: transform;
++    -webkit-font-smoothing: antialiased;
++    -moz-osx-font-smoothing:grayscale;
++ }
++ 
++ #ticker-container .falloff{
++    width:100%;
++    height:100%;
++    position:absolute;
++    left:0;
++    top:0;
++    pointer-events: none;
++    z-index: 1;
++ }
++ #ticker-container .falloff div{
++    height:100%;
++    width:150px;
++    pointer-events: none;
++ }
++ 
++ #ticker-container .falloff .falloffRight{
++    float:left;
++    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0d141d+0,000000+100&1+0,0+100 */
++    background: -moz-linear-gradient(left, rgba(13,20,29,1) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
++    background: -webkit-linear-gradient(left, rgba(13,20,29,1) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
++    background: linear-gradient(to right, rgba(13,20,29,1) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
++    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d141d', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
++}
++ #ticker-container .falloff .falloffLeft{
++    float:right;
++    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,0d141d+100&0+0,1+100 */
++    background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(13,20,29,1) 100%); /* FF3.6-15 */
++    background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(13,20,29,1) 100%); /* Chrome10-25,Safari5.1-6 */
++    background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(13,20,29,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
++    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#0d141d',GradientType=1 ); /* IE6-9 */
++}
++ 
++ .ticker{
++    display: -webkit-flex;
++    -webkit-flex-flow: row;
++    -moz-transition: none;
++    -webkit-transition: none;
++    -o-transition: none;
++    transition: none;
++    list-style: none;
+ }
+ 
+-.ticker {
+-    display: -ms-flexbox;
+-    display: -webkit-flex;
+-    display: -ms-flexbox;
++ .ticker-block {
++    cursor: default;
++    font-family: 'Roboto', sans-serif;
++    color: white;
+     display: flex;
+-    -webkit-flex-direction: row;
+-    -ms-flex-direction: row;
+-    flex-direction: row;
+-    white-space: nowrap;
+-    /* align-items: stretch; */
+-    -ms-flex-pack: space-between;
+-    -webkit-justify-content: space-between;
+-    justify-content: space-between;
+-    width: 100%;
+-    height: 100%;
+-    padding-top: 1%;
++    flex-direction: column;
++    padding:10px 35px;
++    padding-bottom: 15px;
++    -moz-transition: opacity .5s linear, -moz-transform .3s ease-out;
++    -webkit-transition: opacity .5s linear, -webkit-transform .3s ease-out; 
++    -o-transition: opacity .5s linear, -o-transform .3s ease-out; 
++    transition: opacity .5s linear, transform .3s ease-out; 
+ }
+ 
+-.ticker::before,
+-.ticker::after {
+-  content: '';
+-}
+ 
+-.animate-ticker {
+-    margin-left: 100%;
+-    -webkit-animation-iteration-count: infinite;
+-    animation-iteration-count: infinite;
+-    -webkit-animation-timing-function: linear;
+-    animation-timing-function: linear;
+-    -webkit-animation-name: ticker;
+-    animation-name: ticker;
+-    -webkit-animation-duration: 20s;
+-    animation-duration: 20s;
+-}
++/* TEMPORARY DEBUG COLORS
++.ticker-block:nth-of-type(odd) {background: rgba(176, 196, 222, 0.1);}*/
++/* .ticker-block:first-of-type {background: red;}  */
+ 
+-.ticker-block {
+-    font-family: 'Roboto', sans-serif;
+-    color: #3b4251;
+-    color: white;
+-    padding-right: 35px;
+-}
+ 
+ .ticker-block p {
+     margin-bottom: 6px;
+ }
++.ticker-block span{
++    display: flex;
++}
+ 
+ .ticker-block .ticker-session-high,
+ .ticker-block .ticker-symbol {
+     font-size: 12px;
+     font-weight: bold;
++}
++
++
++.ticker-block .ticker-symbol {
++    margin-top: 20px;
+     margin-bottom: 10px;
++    color:rgb(170, 170, 170);
++    display: flex;
++    align-items: center;
++}
++.ticker-block:hover .ticker-symbol {
++    color:rgb(200, 200, 200);
+ }
+ 
++.ticker-block .ticker-rolling{
++    font-size: 50%;
++    position: absolute;
++    top:50px;
++    z-index: 100;
++    width: 200%;
++    /* display: none; */
++    color: rgb(170, 170, 170);
++    display: flex;
++    flex-wrap: wrap;
++    opacity: 0;
++    -moz-transition: opacity .1s ease-in;
++    -webkit-transition: opacity .1s ease-in; 
++    -o-transition: opacity .1s ease-in; 
++    transition: opacity .1s ease-in;
++}
++
++
+ .ticker-last-trade {
+     font-size: 18px;
++    display: flex;
++    align-items: center;
++}
++.ticker-last-trade span{
++    margin-left: 5px;
+ }
+ 
+ .high {
+     color: white;
+-}
++} 
+ 
+ .ticker-block .ticker-session-high,
+ .currency {
+@@ -809,33 +870,31 @@ section {
+ .ticker-block .ticker-session-high {
+     font-size: 12px;
+     font-weight: normal;
++    display: flex;
+ }
+ 
+-@-webkit-keyframes ticker {
++@-webkit-keyframes tickerLoad {
+     0% {
+-        -webkit-transform: translate3d(0, 0, 0);
+-        transform: translate3d(0, 0, 0);
+-        visibility: visible;
++        max-height:0;
++        pointer-events: none;
+     }
+     100% {
+-        -webkit-transform: translate3d(-200%, 0, 0);
+-        transform: translate3d(-200%, 0, 0);
++        max-height:300px;
++        pointer-events: all;
+     }
+ }
+ 
+-@keyframes ticker {
++@keyframes tickerLoad {
+     0% {
+-        -webkit-transform: translate3d(0, 0, 0);
+-        transform: translate3d(0, 0, 0);
+-        visibility: visible;
++        max-height:0;
++        pointer-events: none;
+     }
+     100% {
+-        -webkit-transform: translate3d(-200%, 0, 0);
+-        transform: translate3d(-200%, 0, 0);
++        max-height:300px;
++        pointer-events: all;
+     }
+ }
+ 
+-
+ /* =========== Features and About Sections =========== */
+ 
+ .features .headline {
+@@ -1470,6 +1529,30 @@ input:-webkit-autofill:active {
+     #home .headline {
+         font-size: 4em;
+     }
++
++    .ticker-block:hover {
++        transform: scale(1.65) translateY(-15px);
++        z-index: 10000;
++    }
++    #ticker-container:hover{
++        overflow: visible;
++    }
++    .ticker-scrolling:hover .ticker-block {
++        opacity: 0.25;
++    }
++    .ticker-scrolling:hover .ticker-block:hover{
++        opacity: 1;
++    }
++    .ticker-block:hover .ticker-symbol{
++        margin-bottom: 15px;
++    }
++    .ticker-block:hover .ticker-last-trade,
++    .ticker-block:hover .ticker-session-high{
++        margin-bottom: 1px;
++    }
++    .ticker-scrolling:hover .ticker-block:hover .ticker-rolling{
++        opacity:1;        
++    }
+ }
+ 
+ @media (max-width:768px) {
+@@ -1509,17 +1592,6 @@ input:-webkit-autofill:active {
+     .nav-container {
+         margin: initial;
+     }
+-    .ticker {
+-        margin-left: 50%;
+-        -webkit-animation-iteration-count: infinite;
+-        animation-iteration-count: infinite;
+-        -webkit-animation-timing-function: linear;
+-        animation-timing-function: linear;
+-        -webkit-animation-name: ticker;
+-        animation-name: ticker;
+-        -webkit-animation-duration: 15s;
+-        animation-duration: 15s;
+-    }
+ }
+ 
+ @media (max-width:414px) {
+@@ -1557,9 +1629,6 @@ input:-webkit-autofill:active {
+     #home {
+         height: 78vh;
+     }
+-    #ticker-container {
+-        height: 22vh;
+-    }
+ }
+ 
+ @media (max-width:375px) {
+@@ -1604,4 +1673,4 @@ input:-webkit-autofill:active {
+ 
+ .bootstrap-growl.alert.alert-danger {
+     display: none !important;
+-}
+\ No newline at end of file
++}
+diff --git a/index.html b/index.html
+index da6bffc..68d09f6 100644
+--- a/index.html
++++ b/index.html
+@@ -22,7 +22,7 @@
+     <link href="assets/css/bootstrap-reboot.min.css" rel="stylesheet">
+     <link href="assets/css/bootstrap-grid.min.css" rel="stylesheet">
+     <link href="assets/css/style.css" rel="stylesheet">
+-
++    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!-- Font Awesomes -->
+     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+         crossorigin="anonymous">
+@@ -234,9 +234,14 @@ <h1 data-aos-once="true" data-aos="fade-down" class="headline">Best In Breed Ass
+         <!-- End Hero -->
+ 
+         <!-- Ticker Widget -->
+-        <div id="ticker-container" class="container-fluid">
++        <div id="ticker-container">
++            <div class="falloff">
++                <div class="falloffLeft"></div>
++                <div class="falloffRight"></div>
++            </div>
+             <div ap-widget="TickerScrolling" class="ticker-scrolling"></div>
+         </div>
++        
+         <!-- End Ticker Widget -->
+ 
+         <!-- Features -->
+diff --git a/js/config.js b/js/config.js
+index 610d1f2..bb2f0ea 100644
+--- a/js/config.js
++++ b/js/config.js
+@@ -11,6 +11,7 @@ var APConfig = {
+   },
+   registerFormModal: true,
+   onlyShowFirstTitleTickerAdvanced: true,
++  tickerBlock: "TickerBlockPxChange",
+   allowCryptoPairs: true,
+   showBlockTradeUI: false,
+   siteName: 'alphapoint',
+diff --git a/js/script.js b/js/script.js
+index 49c6141..a934af1 100644
+--- a/js/script.js
++++ b/js/script.js
+@@ -363,11 +363,180 @@ function GetIEVersion() {
+         return 0; //It is not IE
+ }
+ // Adjust ticker style for IE compatability
+-$(document).ready(function () {
+-    if (GetIEVersion() > 0) {
+-        let ticker = document.querySelector('.ticker-scrolling');
+-        ticker.setAttribute("style", "transform:translateX(25px)")
+-    } else {
+-        //  console.log("This is not IE.");
++// $(document).ready(function () {
++//     if (GetIEVersion() > 0) {
++//         let ticker = document.querySelector('.ticker-scrolling');
++//         ticker.setAttribute("style", "transform:translateX(25px)")
++//     } else {
++//         //  console.log("This is not IE.");
++//     }
++// })
++
++// =============================================
++// landing TICKER controls 5/8/18
++// =============================================
++
++var ticker_DebugLog = false; //turns on console logs
++var ticker_TickerColumns_running = false;
++var ticker_TickerColumns_initialized = false;
++var ticker_TickerScroll_running = false;
++var scrollSpeed = (1000/60);//framerate, 20 was decent;
++var timer_tickerScroll;
++
++$( document ).ready(function() {
++    try_TickerColumns("startup");
++    try_TickerScroll("startup");
++});
++$(window).resize(function() {
++    try_TickerColumns();
++    try_TickerScroll();
++});
++
++function try_TickerColumns(detail) {
++    if(ticker_DebugLog==true){console.log("TICKER COLUMNS: " + $('.ticker-scrolling .ticker:first-child').children().length +" of "+ parseInt( $('.ticker-scrolling .ticker:first-child').attr('id') ) +" ticker parts");}
++    
++    if( $('.ticker-scrolling .ticker:first-child').children().length == parseInt( $('.ticker-scrolling .ticker:first-child').attr('id') )
++    && $('.ticker-scrolling .ticker:first-child').children().length != 0
++    && ticker_TickerColumns_running == false){
++        Ticker_Columns();
++    }else{
++        if(detail == "startup" && ticker_TickerColumns_initialized == false){
++            setTimeout(function(){ try_TickerColumns("startup"); }, 1000);
++        }
+     }
+-})
+\ No newline at end of file
++}
++
++function Ticker_Columns() {
++   //this function creatues and removes...
++   //...ticker "columns" that are used in the loop animation
++
++   ticker_TickerColumns_running = true;
++
++   if(ticker_DebugLog==true){console.log("Checking ticker columns");}
++
++   //whats the width of 1 ticker?
++   var tickers = document.getElementsByClassName("ticker");
++   var base_ticker_width = $(tickers[0]).width();
++   if(base_ticker_width < 0){base_ticker_width = 0;}
++
++   // how many tickers can fit inside the page width?
++   var total_windowWidth = $(window).width();
++   var countNeeded_tickers = 0;
++   var current_ticker_Count = 0;
++
++   countNeeded_tickers = Math.ceil(total_windowWidth / base_ticker_width) + 1;
++   if(countNeeded_tickers < 0 || countNeeded_tickers == NaN || countNeeded_tickers == null){ countNeeded_tickers = 0;}
++   
++   //how many tickers do we currently have?
++   current_ticker_Count = tickers.length;
++   if(current_ticker_Count < 0 || current_ticker_Count == NaN || current_ticker_Count == null){ current_ticker_Count = 0;}
++   
++    if(ticker_DebugLog==true){console.log(countNeeded_tickers +" total would fit. We have " + current_ticker_Count + " currently");}
++
++    //account for object pooling!
++    $('.ticker-scrolling').children().each(function() {
++        if( $( this ).css('display').toLowerCase() == "none" ){
++            console.log("subtracted 1 hidden ticker from COUNT!");
++            current_ticker_Count -= 1;
++        }
++    });
++
++
++   //do we need to add or subtract tickers to equal countNeeded?
++   if(current_ticker_Count < countNeeded_tickers){ 
++
++        //how many more do we need?
++       countNeeded_tickers -= current_ticker_Count;
++
++       if(countNeeded_tickers > 10){countNeeded_tickers = 10;}//in case something goes horribly wrong, clamp this
++
++       if(ticker_DebugLog==true){console.log(countNeeded_tickers+" more block(s) needed");}
++
++        //loop through amount and add...
++        //...keeping track of how many are needed (for pool calculations)
++        var needed = countNeeded_tickers;
++
++        //account for object pooling!
++        $('.ticker-scrolling').children().each(function() {
++            if( $( this ).css('display').toLowerCase() == "none" && needed >=1){
++                if(ticker_DebugLog==true){console.log("Used pool to Create a ticker");}
++                $( this ).css({display: ''});
++                needed -=1;
++            }
++        });
++        //after the pool has been checked...
++        //...loop through remaining and create fresh
++        for (var i = 0; i < needed; i++) {
++            if(ticker_DebugLog==true){console.log("Created # "+ (i+1));}
++
++            var clone  = tickers[0].cloneNode(true);
++            tickers[0].parentNode.appendChild(clone);
++        }
++        
++   }else if(current_ticker_Count > countNeeded_tickers){ 
++       //how many less do we need?
++       current_ticker_Count -=countNeeded_tickers;
++
++       if(ticker_DebugLog==true){console.log(current_ticker_Count+" less block(s) needed");}
++
++        for (var j = 0; j < current_ticker_Count; j++) {
++            if(ticker_DebugLog==true){console.log("Removed # "+ (j+1));}
++            //move to object pool!
++            $('.ticker-scrolling').children('div.ticker').last().css({display: 'none'});
++        } 
++   }else{}
++
++   ticker_TickerColumns_running = false;
++   ticker_TickerColumns_initialized = true;
++}
++
++function try_TickerScroll(detail) {
++    if(ticker_DebugLog==true){console.log("TICKER SCROLL: " + $('.ticker-scrolling .ticker:first-child').children().length +" of "+ parseInt( $('.ticker-scrolling .ticker:first-child').attr('id') ) +" ticker parts");}
++    
++    if( $('.ticker-scrolling .ticker:first-child').children().length == parseInt( $('.ticker-scrolling .ticker:first-child').attr('id') )
++    && $('.ticker-scrolling .ticker:first-child').children().length != 0
++    && ticker_TickerScroll_running == false 
++    && ticker_TickerColumns_initialized == true){
++        Ticker_Scroll();
++    }else{
++        if(detail == "startup"){
++            setTimeout(function(){ try_TickerScroll("startup"); }, 1000);
++        }
++    }
++}
++function Ticker_Scroll() {
++    //we only need to scroll through one full ticker (plus offset into the next one)
++   
++    if(ticker_DebugLog==true){console.log("Attempting ticker scroll");}
++
++    ticker_TickerScroll_running = true;
++
++    clearInterval(timer_tickerScroll);
++
++    let tickersInner = document.getElementsByClassName("ticker-scrolling")[0],
++    ticker_base = document.getElementsByClassName("ticker")[0],
++    tickersInner_AMT = $(ticker_base).width();
++
++    if(ticker_DebugLog==true){console.log("moving backwards -"+ tickersInner_AMT + " px (one ticker block width)");}
++
++   var matrix = $(tickersInner).css('-webkit-transform');
++   var translate_val = matrix.match(/-?[\d\.]+/g);
++   var scroll_translateX = 0;
++   if(translate_val != null){ scroll_translateX = translate_val[4]; }
++   
++   timer_tickerScroll = setInterval(scroll, scrollSpeed);
++   function scroll() {
++        // console.log( (scroll_translateX * -1) + "----" + tickersInner_AMT);
++        if ((scroll_translateX * -1) >= tickersInner_AMT) {
++           $(tickersInner).css({transform: 'translateX('+ (0) +"px" +')'});
++           clearInterval(timer_tickerScroll);
++
++           Ticker_Scroll();
++       } else {
++           scroll_translateX--; 
++           $(tickersInner).css({transform: 'translateX('+ (scroll_translateX) +"px" +')'});
++       }
++   }
++
++    ticker_TickerScroll_running = false;
++}
+\ No newline at end of file

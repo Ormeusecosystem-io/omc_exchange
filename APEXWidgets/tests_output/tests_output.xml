@@ -1,0 +1,10 @@
+<testsuites name="jest tests">
+  <testsuite name="Account balances widget" tests="3" errors="0" failures="0" skipped="0" timestamp="2017-11-15T14:27:33" time="1.251">
+    <testcase classname="Account balances widget should have an h2 tag with the title Account Overview" name="Account balances widget should have an h2 tag with the title Account Overview" time="0.01">
+    </testcase>
+    <testcase classname="Account balances widget on initial state it should show default BTC and USD product total and available balances as 0.00" name="Account balances widget on initial state it should show default BTC and USD product total and available balances as 0.00" time="0.002">
+    </testcase>
+    <testcase classname="Account balances widget if state already updated should show correct available and total balances for both products" name="Account balances widget if state already updated should show correct available and total balances for both products" time="0.005">
+    </testcase>
+  </testsuite>
+</testsuites>

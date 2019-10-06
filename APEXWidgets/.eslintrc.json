@@ -1,0 +1,25 @@
+{
+  "parser": "babel-eslint",
+  "extends": "",
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "max-len": ["error", { "code": 220, "ignoreComments": true, "ignoreTrailingComments": true, "ignoreStrings": true }],
+    "global-require": 0,
+    "no-console": 0,
+    "no-bitwise": 0,
+    "camelcase": 0,
+    "no-unused-vars": 1,
+    "func-names": 0,
+    "linebreak-style": 0,
+    "no-underscore-dangle": 0,
+    "arrow-parens": 0,
+    "no-plusplus": 0,
+    "react/no-did-mount-set-state": 0,
+    "react/no-string-refs": 0,
+    "react/jsx-filename-extension": 0,
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "jsx-a11y/no-static-element-interactions": 0
+  }
+}

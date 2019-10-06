@@ -1,0 +1,50 @@
+{
+  "name": "v2retailTemplate",
+  "version": "1.0.0",
+  "description": "V2 Front End for Retail Template",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf build && mkdir build",
+    "styles": "node-sass --output-style compressed scss/yourstyle.scss build/css/styles.css",
+    "shiftstyles": "node-sass --output-style compressed scss/shift/styles.scss assets/css/shift-styles.css",
+    "shiftwallet": "node-sass --output-style compressed scss/shift/wallet.scss assets/css/shift-wallet.css",
+    "shifttrade": "node-sass --output-style compressed scss/shift/trade.scss assets/css/shift-trade.css",
+    "serve": "npm run shiftstyles && npm run shiftwallet && npm run shifttrade && npm run build && live-server build",
+    "library": "cd ../APEXLibrary && npm i && npm run build && cp -R build/. ../v2retailTemplate/js && cd ../v2retailTemplate",
+    "library-dev": "cd ../APEXLibrary && npm i && npm run build-dev && cp -R build/. ../v2retailTemplate/js && cd ../v2retailTemplate",
+    "widgets": "cd ../APEXWidgets && npm run build && cp -R build/. ../v2retailTemplate/js && cd ../v2retailTemplate",
+    "widgetsWithI": "cd ../APEXWidgets && npm i && npm run build-dev && cp -R build/. ../v2retailTemplate/js && cd ../v2retailTemplate",
+    "widgets-dev": "cd ../APEXWidgets && npm run build-watch",
+    "widgets-dev-localserver": "cd ../APEXWidgets && npm run build-watch-local-server",
+    "dev": "parallelshell \"npm run dev:sass\" \"npm run dev:server\" \"npm run widgets\"",
+    "dev-watch": "parallelshell \"npm run dev:sass\" \"npm run dev:server\" \"npm run widgets-dev\"",
+    "dev:sass": "node-sass --watch --output-style compressed scss/yourstyle.scss css/styles.css",
+    "dev:server": "live-server",
+    "webpack-build": "webpack --config webpack.config.js",
+    "start": "npm run watch-shiftstyles | npm run watch-shiftwallet | npm run watch-shifttrade",
+    "watch-shiftstyles": "node-sass --watch --output-style compressed scss/shift/styles.scss assets/css/shift-styles.css",
+    "watch-shiftwallet": "node-sass --watch --output-style compressed scss/shift/wallet.scss assets/css/shift-wallet.css",
+    "watch-shifttrade": "node-sass --watch --output-style compressed scss/shift/trade.scss assets/css/shift-trade.css"
+  },
+  "author": "ShiftMarkets",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.4.0",
+    "babel-preset-es2015": "^6.22.0",
+    "css-loader": "^0.28.9",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "live-server": "^1.2.0",
+    "node-sass": "^4.8.3",
+    "nodemon": "^1.14.11",
+    "parallelshell": "^3.0.2",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.11.0"
+  },
+  "dependencies": {
+    "ajv": "^6.4.0",
+    "cryptofont": "^0.1.1",
+    "translate-json-object": "^2.3.0"
+  }
+}

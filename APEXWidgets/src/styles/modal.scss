@@ -1,0 +1,23 @@
+.ap-modal {
+  position: fixed;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  z-index: 999 ;
+  background-color: rgba(0,0,0,0.5);
+  &_inner {
+    height: auto;
+    margin: 0px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 96%;
+    max-height: 100%;
+    overflow: auto;
+    position: absolute;
+  }
+  .confirm-withdraw-inner {
+    padding: 50px;
+  }
+}

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <title>ORME | Fees</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+
+    <link rel="icon" href="./images/logos/orme-fav.png">
+    <!--[if IE]><link rel="shortcut icon" href="./images/logos/orme-fav.png"><![endif]-->
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <meta name="autor" content="ShiftMarket">
+    <!-- Stylesheets -->
+    <!-- Bootstrap v4.0.0-beta.6 -->
+    <!-- <link href="assets/css/bootstrap-reboot.min.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/bootstrap-grid.min.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
+    <link href="assets/css/shift-styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+    <!-- Font Awesomes -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Maven+Pro|Didact+Gothic|Roboto" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <!-- jQuery -->
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <!-- Animate On Scroll (AOS) Library -->
+    <!-- <link href="assets/css/aos.css" rel="stylesheet"> -->
+    <!-- <script src="js/aos.js"></script> -->
+    <!-- Javascript Smooth Scroll Library -->
+    <!-- <script src="js/smooth-scroll.min.js"></script> -->
+
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <!-- CSS: NAVBAR -->
+    <div ap-widget="Navbar"></div>
+    <style>
+        .main-container{
+            width: 100%;
+            max-width: 994px;
+            padding: 100px 10px 0;
+            box-sizing: border-box;
+            margin: 75px auto 114px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Work Sans', sans-serif;
+        }
+        h1{
+            font-size: 38px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #323756;
+            margin-bottom: 80px;
+        }
+        #content-holder{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+        h4{
+            font-size: 16px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #323756;
+            margin-bottom: 30px;
+        }
+        p{
+            font-size: 16px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #323756;
+            margin-bottom: 30px;
+        }
+        .fees-content-left{
+            width: 100%;
+            max-width: 460px;
+        }
+        #example{
+            color: #888ca8;
+        }
+        .fees{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            max-width: 400px;
+        }
+        .fees > span:first-child{
+            font-size: 16px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #323756;
+            display: flex;
+            align-items: center;
+        }
+        .fees > span:last-child{
+            font-size: 16px;
+            font-weight: 600;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: right;
+            color: #323756;
+            
+        }
+        .fees > span:first-child > img{
+            margin-right: 10px;
+        }
+        .fees.withdraw{
+            padding:  20px 0 15px;
+            border-bottom: 1px solid #888ca8;
+            margin-bottom: 0;
+        }
+        table{
+            padding: 10px;
+            width: 100%;
+            height: 440px;
+            background-color: #f6f7fa;
+            max-width: 460px;
+        }
+        th{
+            font-size: 13px;
+            font-weight: 600;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #333758;
+            padding: 13px 0 14px;
+        }
+        td{
+            text-align: center;
+            font-size: 13px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #343859;
+            padding: 13px 0 14px;
+        }
+        tbody tr:nth-child(odd){
+            background-color: #fcfcfd;
+        }
+        .fees-content-right > div{
+            position: relative;
+        }
+
+        .fees-content-right > div > #shadow{
+            position: absolute;
+            width: 100%;
+            height: 440px;
+            opacity: 0.3;
+            background-image: linear-gradient(134deg, #741a44, #153b6e);
+            z-index: -1;
+            right: -10px;
+            bottom: -10px;
+        }
+       .fees-content{
+           background-image: url("/img/fees-img.svg");
+           background-repeat: no-repeat;
+            background-position-x: 25%;
+       }
+       .fees-content-right{
+            width: 460px;
+       }
+       @media(max-width: 1044px){
+            #content-holder{
+                flex-direction: column;
+                align-items: center;
+            }
+            .fees-content-right{
+                max-width: 100%;
+                margin-top: 50px;
+            }
+        }
+        @media(max-width: 520px){
+            #shadow{
+                display: none;
+            }
+            .fees-content{
+                background-position: unset;
+            }
+            h1{
+                font-size: 24px;
+                margin-bottom: 54px;
+            }
+        }
+    </style>
+    <div class="fees-content">
+        
+        <div class="main-container">
+            <h1 class="fees-title">Fees</h1>
+            <div id="content-holder">
+                <div class="fees-content-left">
+                    <h4>Trading Fee Tier:</h4>
+                    <p>ORME utilizes a trading fee tier system, rewarding community members for high volume trading. To put it simply, the more the user trades the lower their trade fees will be. Each users volume will be calculated according to the total amount traded equivalent to BTC at the time of the trade.</p>
+                    <p>The users fee tier is determined by their total trading volume over a 30-day period. At 00:00 UTC each day, the users trading volume will be evaluated and their fees will automatically be updated within the hour.</p>
+                    <p id="example">Example: <br/>The user buys 15 EOS for 1 LTC and at the time of the trade 1 EOS is equivalent to 0.001 BTC. This means 0.015 BTC will then be added to their 30-day trade volume total.</p>
+                    <h4>Deposit fees:</h4>
+                    <div class="fees">
+                        <span>Deposit Fee:</span>
+                        <span>Free</span>
+                    </div>
+                    <h4 style="margin-bottom:0;">WIthdrawal fees:</h4>
+                    <div class="fees withdraw">
+                        <span><img src="img/btc.png"/>Bitcoin</span>
+                        <span>0.1%</span>
+                    </div>
+                    <div class="fees withdraw">
+                        <span><img src="img/eth.png"/>Ethereum</span>
+                        <span>0.1%</span>
+                    </div>
+                </div>
+                <div class="fees-content-right">
+                    <div>
+                        <div id="shadow"></div>
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <thead>
+                                <tr>
+                                    <th>Tier</th>
+                                    <th>Volume (BTC)</th>
+                                    <th>Maker Fee</th>
+                                    <th>Taker Fee</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>0</td>
+                                    <td>≥ 0 BTC</td>
+                                    <td>0.1%</td>
+                                    <td>0.1%</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>≥ 100 BTC</td>
+                                    <td>0.09%</td>
+                                    <td>0.1%</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>≥ 200 BTC</td>
+                                    <td>0.08%</td>
+                                    <td>0.1%</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>≥ 500 BTC</td>
+                                    <td>0.07%</td>
+                                    <td>0.09%</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>≥ 1000 BTC</td>
+                                    <td>0.06%</td>
+                                    <td>0.08%</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>≥ 1500 BTC</td>
+                                    <td>0.05%</td>
+                                    <td>0.07%</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>≥ 2000 BTC</td>
+                                    <td>0.04%</td>
+                                    <td>0.06%</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>≥ 3000 BTC</td>
+                                    <td>0.03%</td>
+                                    <td>0.05%</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>≥ 4000 BTC</td>
+                                    <td>0.02%</td>
+                                    <td>0.04%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div ap-widget="Footer"></div>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <!-- GSAP -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script> -->
+    <!-- <script type="text/babel" src="js/script.js"></script> -->
+    <!-- <script src="js/lib/growl.js"></script> -->
+    <!-- Coti -->
+    <script src="js/config.js"></script>
+    <script src="js/library.min.js"></script>
+    <script src="js/widgets.min.js"></script>
+
+    <script type="text/javascript">
+        AlphaPoint.config.v2Widgets = true;
+
+        $(document).ready(function () {
+            // $('#footer').load('footer.html');
+            var loadCount = 0;
+            var totalLoadCount = 1; // number of html pieces loaded
+
+            function runRenders() {
+                loadCount++;
+
+                if (loadCount >= totalLoadCount) {
+                    renderWidgetWrapper();
+                    renderWidget();
+                    renderActionWrapper();
+                    renderTranslation();
+                    changeLanguage();
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

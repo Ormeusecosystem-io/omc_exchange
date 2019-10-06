@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <title>ORME | AML</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+
+    <link rel="icon" href="./images/logos/orme-fav.png">
+    <!--[if IE]><link rel="shortcut icon" href="./images/logos/orme-fav.png"><![endif]-->
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <meta name="autor" content="ShiftMarket">
+    <!-- Stylesheets -->
+    <!-- Bootstrap v4.0.0-beta.6 -->
+    <!-- <link href="assets/css/bootstrap-reboot.min.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/bootstrap-grid.min.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
+    <link href="assets/css/shift-styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+    <!-- Font Awesomes -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Maven+Pro|Didact+Gothic|Roboto" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <!-- jQuery -->
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <!-- Animate On Scroll (AOS) Library -->
+    <!-- <link href="assets/css/aos.css" rel="stylesheet"> -->
+    <!-- <script src="js/aos.js"></script> -->
+    <!-- Javascript Smooth Scroll Library -->
+    <!-- <script src="js/smooth-scroll.min.js"></script> -->
+
+</head>
+
+<body>
+   
+    <!-- NAVBAR -->
+    <!-- CSS: NAVBAR -->
+    <div ap-widget="Navbar"></div>
+    <style>
+        .login-container > #login-footer{
+            position: absolute;
+            bottom: -20px;
+            display: flex;
+            flex-direction: row;
+            max-width: 100%;
+            font-size: 10px;
+            font-family: book;
+        }
+        .main-container{
+            width: 100%;
+            max-width: 620px;
+            margin: 0 auto;
+        }
+        #disclaimer{
+            max-width: 100%;
+            font-size: 9px;
+            font-family: book;
+            text-align: center;
+            padding: 0 30px;
+            margin-top: 30px;
+        }
+        #disclaimer-mobile{
+            display: none;
+            max-width: 100%;
+            font-size: 9px;
+            font-family: book;
+            text-align: center;
+            padding: 0 10px;
+            margin-top: 30px;
+            height: 100%;
+            margin-bottom: 30px;
+        }
+        .ap-modal{
+            flex-direction: column;
+        }
+        .login-container > #login-footer > a{
+            color: inherit;
+            text-decoration: none;
+        }
+        .login-container > #login-footer > a:first-child{
+            margin-right: auto;
+        }
+        .login-container > #login-footer > a:not(:first-child){
+            margin-left: 10px;
+        }
+        /* footer {
+            position:relative;
+        } */
+       
+        body{
+            overflow-x: hidden;
+        }
+        .aml {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            width: auto;
+            max-width: 1397px;
+            font-family: 'Work Sans', sans-serif;
+            margin-top:200px;
+            margin-bottom: 100px;
+        }
+
+        .aml-title {
+            font-size: 38px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #323756;
+            margin-bottom: 77px;
+        }
+
+        #aml-content .subtitle{
+            text-decoration: underline;
+            margin: 30px 0 12px;
+        }
+
+        #aml-content p{
+            margin: 16px 0;
+            line-height: 1.5;
+        }
+        #aml-content > ul, #aml-content > ol{
+            margin: 16px 0;
+            padding-left: 40px;
+            line-height: 2;
+        }
+
+        #aml-content  ol{
+            padding-left: 40px;
+            line-height: 2;
+        }
+
+        #mobileImg{
+            display: none;
+        }
+
+        #desktopImg{
+            width:350px;
+        }
+
+        #mobileImg, #desktopImg{
+            max-width: 50%;
+        }
+
+        .copyright{
+            background-color:transparent;
+            background-color:#daecf0;
+            text-align:center;
+            padding:10px;
+            font-family:book;
+            font-size:12px;
+        }
+
+        @media (max-width: 768px) {
+            #disclaimer-mobile{
+                display: initial;
+                margin-top: 0;
+            }
+            #disclaimer{
+                display: none;
+            }
+            .login-container{
+                overflow-y: scroll;
+            }
+            #ap-widget-login-form{
+                display: initial;
+            }
+            .login-container > #login-footer{
+                bottom: 0;
+                top: 600px;
+                height: 30px;
+                padding: 0 10px;
+                box-sizing: border-box;
+            }
+            .aml {
+                padding:0 10px;
+            }
+            #aml-content{
+                font-size:13px;
+            }
+
+            .aml-title{
+                font-size: 25px;
+            }
+
+            #mobileImg{
+                display: initial;
+            }
+            #desktopImg{
+                display: none;
+            }
+            
+        }
+        #risk-note {
+      font-size: 8px;
+      margin-bottom: 10px;
+      line-height: 1.5;
+      padding: 0 30px;
+    }
+    </style>
+    <div class="aml">
+        <div class="main-container">
+            <div>
+                <h1 class="aml-title">ORME exchange anti money laundering and counter terrorist financing policy</h1>
+            </div>
+            <div id="aml-content">
+                <div class="subtitle" >1. INTRODUCTION</div>
+                <p>
+                    Money laundering and the financing of terrorism have been identified as risks by ORME (“the Company”).
+                </p>
+                <p>
+                    Legislation derives from the European Union Anti Money Laundering Directives. Individual guidance is provided by each jurisdiction where the Company operates, hence we are obliged to adhere to this guidance. Estonia (‘Est’), as well as many other countries around the world, have passed legislation designed to prevent money laundering and to combat terrorism. This legislation, together with regulations, rules and industry guidance/codes, forms the cornerstone of AML/CFT obligations for license holders and outlines the offences and penalties for failing to comply.
+                </p>
+                <p>
+                    The purpose of this AML Policy is designed to articulate our commitment to detecting, preventing and reporting attempts to use the Exchange to illegally launder money, to finance illegal activities such as terrorism and drug trafficking, or to commit fraud (all activities being "Prohibited Activities").
+                </p>
+                <p>
+                    Any questions relating to this policy should be directed to MLRO@ORME.io.
+                <div class="subtitle">2. Policy Statement</div>
+                <p>
+                    The Company and its board of directors is committed to full compliance with all applicable laws and regulations regarding money laundering and the financing of terrorism.
+                </p>
+                <p>
+                    Every officer, director, employee and associated person of the Company is responsible for assisting in the Company's efforts to detect, deter and prevent money laundering and other activities intended to facilitate the funding of terrorism or criminal activities through its services 
+                </p>
+                <div class="subtitle">3. Legal & Regulatory Framework</div>
+                <p>
+                    The principal requirements, obligations and penalties, on which the Company’s Systems and Controls are based, are contained in:
+                </p>
+                <ul>
+                    <li>The Fourth Anti Money Laundering Directive;</li>
+                    <li>Estonia Proceeds of Crime Act 2017;</li>
+                    <li>Estonia Counter Terrorism Act 2010;</li>
+                    <li>Estonia Terrorism Act 2005; and</li>
+                    <li>Estonia Crimes Act 2011;</li>
+                </ul>
+                <div class="subtitle">4. Money Laundering Offences & Penalties</div>
+                <ol style="list-style-type: lower-roman;">
+                    <li>Arrangements</li>
+                    <p>
+                        A person commits an offence if he enters into or becomes concerned in an arrangement which he knows or suspects facilitates (by whatever means) the acquisition, retention, use or control of criminal property by or on behalf of another person.
+                    </p>
+                    <p>The maximum penalty for this offence on conviction on indictment is fourteen years in prison or a fine or both.</p>
+                    <li>
+                        Acquisition, possession or use of criminal property
+                    </li>
+                    <p>
+                        A person commits an offence if he-
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>acquires criminal property;</li>
+                            <li>uses criminal property; or</li>
+                            <li>has possession of criminal property.</li>
+                        </ol>
+                    </p>
+                    <p>
+                        The maximum penalty for this offence on conviction on indictment is fourteen years in prison or a fine or both.
+                    </p>
+                    <li>Concealing, transferring etc. proceeds of criminal conduct.</li>
+                    <p>
+                        A person commits an offence if he-
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>conceals criminal property;</li>
+                            <li>disguises criminal property;</li>
+                            <li>converts criminal property;</li>
+                            <li>transfers criminal property; or</li>
+                            <li>removes criminal property from Estonia.</li>
+                        </ol>
+                    </p>
+                    <p>The maximum penalty for this offence on conviction on indictment is fourteen years in prison or a fine or both. </p>
+                    <li>Tipping-off</li>
+                    <p>
+                        A person is guilty of an offence if–
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>he discloses that a money laundering suspicion report has been made or is being contemplated or is being carried out; and</li>
+                            <li>
+                                he information on which the disclosure is based came to him in the course of a business or activity in the regulated sector
+                            </li>
+                        </ol>
+                    </p>
+                    <p>The maximum penalty for this offence on conviction on indictment is five years in prison or a fine or both.</p>
+                    <li>
+                        Failure to disclose: relevant financial business
+                    </li>
+                    <p>
+                        A person is guilty of an offence if–
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>he knows, suspects or has reasonable grounds to suspect that another person is engaged in money laundering, or is attempting to launder money;
+                            </li>
+                            <li>
+                                the information or other matter, on which that knowledge or suspicion is based came to his attention in the course of his trade, profession, business or employment; and
+                            </li>
+                            <li>
+                                he does not disclose the information or other matter to the Estonia Financial Intelligence Unit (‘GFIU’) as soon as is reasonably practicable after it comes to his attention.
+                            </li>
+                        </ol>
+                    </p>
+                </ol>
+                <p>
+                    The maximum penalty for this offence on conviction on indictment is fourteen years in prison or a fine or both. In addition to the criminal offences and consequences described above, there are also regulatory consequences the Company can face. Potential regulatory action which the Company could face includes:
+                </p>
+                <ul>
+                    <li>Warning;</li>
+                    <li>Licence suspension and/or revocation;</li>
+                    <li>Personal management license review and/or suspension/revocation; and</li>
+                    <li>Financial penalties i.e.: fines.</li>
+                </ul>
+                <div class="title">5. Terrorism Financing Offences & Penalties</div>
+                <p>A person commits an offence if he-</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        Raises funds for terrorism
+                    </li>
+                    <li>
+                        Uses and possess money or other property for terrorism
+                    </li>
+                    <li>
+                        Arranges funds for terrorism
+                    </li>
+                    <li>
+                        Arranges the retention or control of terrorism property
+                    </li>
+                </ol>
+                <p>The penalty for these offence is fourteen years in prison or a fine or both.</p>
+                <div class="subtitle">6. Money Laundering Reporting Officer (MLRO)</div>
+                <p>
+                    It is a requirement for all license holders to appoint an MLRO. The holder of this position, in the Company, is a member of the Compliance & Regulatory Team.
+                </p>
+                <div class="subtitle">The MLRO is responsible for:</div>
+                <ul>
+                    <li>
+                        Developing, implementing and overseeing all AML matters within the business;
+                    </li>
+                    <li>
+                        Undertaking a risk assessment for the business;  
+                    </li>
+                    <li>
+                        Creating relevant policies, processes and procedures to prevent the Company from being mis-use for criminal activity;
+                    </li>
+                    <li>
+                        Providing training to staff in order for them to be able to identify red flags;
+                    </li>
+                    <li>
+                         Receiving and considering any internal suspicious activity reports; 
+                    </li>
+                    <li>
+                        Liaising with the relevant regulatory bodies, the appropriate Financial Intelligence Unit (‘FIU’) and any other relevant government authority;
+                    </li>
+                    <li>
+                        Submitting regulatory reports; and
+                    </li>
+                    <li>
+                        Presenting an MLRO report to the Board, at least, annually whereby the operation and effectiveness of the Company's systems and controls is evaluated.
+                    </li>
+                </ul>
+                <div class="subtitle">7. Reporting: SUSPICIOUS ACTIVITY REPORTS (SAR)</div>
+                <p>
+                    The Company is required to report all circumstances where it has knowledge, suspicion or reasonable grounds to suspect that money laundering or the financing of terrorism is being or has taken place or attempted through its facilities.
+                </p>
+                <p>
+                    Employees are trained in order to recognize suspicious activities and therefore submit SARs where relevant. The MLRO will also make the SARs form available to any employee upon request. 
+                </p>
+                <p>
+                    The MLRO is responsible for investigating any internal SAR received and/or any suspicion of ML/TF. The MLRO will acknowledge receipt of any internal SAR received.
+                </p>
+                <p>
+                    When considering a SAR, the MLRO will determine whether or not it needs to be disclosed to the authorities. This includes events in Estonia that may also be reported to other regulators and agencies.
+                </p>
+                <p>
+                    In making a decision, the MLRO will consider, amongst others:
+                </p>
+                <ul>
+                    <li>
+                        the information available regarding the case, i.e.: customer information, documentation, media news; 
+                    </li>
+                    <li>
+                        transactions involved;
+                    </li>
+                    <li>
+                        account activity inconsistent with the customer’s risk profile; 
+                    </li>
+                    <li>
+                            correspondence with the customer;
+                    </li>
+                    <li>
+                            the reasons for suspicion, etc.
+                    </li>
+                </ul>
+                <p>
+                        Based on the above consideration, if the MLRO knows or suspect or has reasonable grounds to know or suspect that money laundering or terrorist financing has taken place, then a disclosure will be made accordingly. In the case the MLRO decides not to make a disclosure, this will be thoroughly documented with the reasons why.
+                </p>
+                <p>
+                        The MLRO will record all internal SARs received by employees in the SAR’s Log. This Log will be kept up to date with any new information that might arise on any given case. 
+                </p>
+                <div class="subtitle">8. AML/CFT Risk Assessment – Customer Identification (KYC) and Customer Due Diligence</div>
+                <p>
+                        The Company will perform a risk assessment, at least, on an annual basis. There will be triggers and thresholds in place as part of the assessment.
+                </p>
+                <p>
+                        The risk assessment will be conducted on all customers. If and when necessary, the Company will implement remediation projects in order to deal with any deficiencies which might be identified as part of the Know Your Customer/Customer Due Diligence process.
+                </p>
+                <p>
+                        Customer Due Diligence (“CDD”) is required by law since you can better identify suspicious transactions if you know your customer and understand the reasoning behind their dealings with you. CDD involves a combination of Basic Customer Due Diligence and Enhanced Customer Due Diligence as further explained below.
+                </p>
+                <p>
+                        Know Your Customer (“KYC”) is the process used by the Company to verify the identity of our customers. 
+                </p>
+                <p>
+                        As part of our AML Policy, all customers must agree to use the Company’s services that they are prepared to provide any documentation which we find relevant in order to serve our KYC and AML policies, including (but not limited to): 
+                </p>
+                <ol style="list-style-type: lower-roman;">
+                    <li>
+                            Copy of valid official proof of identity of any individual associated with the activity;
+                    </li>
+                    <li>
+                            Copy of proof of residence not older than 2 months old of any individual associated with the activity;
+
+                    </li>
+                    <li>
+                            Reference regarding the source of wealth and/or funds of any individual associated with the activity;
+                    </li>
+                    <li>
+                            Certificate of incorporation of any legal person associated with the activity;
+
+                    </li>
+                    <li>
+                            Memorandum & Articles of Association of any company associated with the activity; 
+                    </li>
+                    <li>
+                            List of Shareholders (including ownership structure) and Directors and Signatories of any legal entity associated with your activity;
+                    </li>
+                    <li>
+                            Certificate of Good Standing stating the registered address, share capital, shareholder(s) and the person/s authorized to represent the legal entity, notarised and apostilled.
+
+                    </li>
+                    <li>
+                            Any additional information we may find valid for assessing the risk of offering our services to a particular customer.
+                    </li>
+                </ol>
+                <p>
+                        If you acting on behalf of a legal entity, the individual will be required to send us the aforementioned KYC documents with a company stamp and certified as a true copy of the original by a lawyer, certifying officer or a Notary public.
+ 
+                </p>
+                <p>
+                        The Company also requires that KYC documents to be sent in high quality color format and reserves the right to reject any documents, which do not comply with the above. In addition, the Company reserves the right to require additional information at any time to verify identification or manage risk.
+
+                </p>
+                <p>
+                        The Company may also disclose any and/or all of the KYC documents to any relevant authority and/or institution in order to examine, inter alia, the customer’s status concerning bankruptcy, reputation checks and criminal records and/or in order to comply with AML laws, regulations, rules or anything related thereto. 
+                </p>
+                <p>
+                        The company also restricts access from certain jurisdictions, type of businesses and certain individuals from becoming our clients and/or consume our services. The AML Policy does not a substitute the customer’s need to comply, in full, with the applicable laws and regulations in connection with their business conduct, personal characteristics and legal status.
+ 
+                </p>
+                <p>
+                    The company will review and may change this policy, at their discretion, from time to time in compliance with the applicable laws and regulation framework without notice to customers.
+ 
+                </p>
+                <div class="subtitle">9. Record Keeping</div>
+                <p>
+                        The Company keeps records of the procedures applied to establish the identity of its customers, and records of the value of their transactions, for at least 5 years after the relationship ends. This is consistent with data protection legislation and AML/CFT requirements.
+                </p>
+                <div class="subtitle">10. Sanctions Lists</div>
+                <p>
+                        All new customers are screened against sanction lists. If a potential or current customer is identified as being in a sanction list, the relationship will be terminated immediately.
+
+                </p>
+                <p>
+                        Under no circumstances the Company will, knowingly, engage in a relationship with a person and/or organization appearing in a Sanctions List.
+                </p>
+                <p>
+                        Screening of customers against PEPs databases and Sanctions Lists is performed on a daily basis.
+
+                </p>
+                <div class="subtitle">11. Cooperation with Government Bodies</div>
+                <p>
+                        The Company is committed to the fight against money laundering and the financing of terrorism. As such, the Company will cooperate with any law enforcement request and/or investigation as well as with the GFSC, the GFIU, the Estonia Royal Police and any other relevant government authority.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div ap-widget="Footer"></div>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <!-- GSAP -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script> -->
+    <!-- <script type="text/babel" src="js/script.js"></script> -->
+    <!-- <script src="js/lib/growl.js"></script> -->
+    <!-- Coti -->
+    <script src="js/config.js"></script>
+    <script src="js/library.min.js"></script>
+    <script src="js/widgets.min.js"></script>
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-108807921-6', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script type="text/javascript">
+        AlphaPoint.config.v2Widgets = true;
+
+        $(document).ready(function () {
+            // $('#footer').load('footer.html');
+            var loadCount = 0;
+            var totalLoadCount = 1; // number of html pieces loaded
+
+            function runRenders() {
+                loadCount++;
+
+                if (loadCount >= totalLoadCount) {
+                    renderWidgetWrapper();
+                    renderWidget();
+                    renderActionWrapper();
+                    renderTranslation();
+                    changeLanguage();
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

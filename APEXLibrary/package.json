@@ -1,0 +1,50 @@
+{
+  "name": "apex-library",
+  "version": "1.1.3",
+  "description": "Exchange Platform Library",
+  "main": "build/library.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --env.NODE_ENV=production --env.WATCH=false --progress",
+    "build-dev": "webpack --env.NODE_ENV=development --env.WATCH=false --progress",
+    "dev": "webpack-dev-server --hot",
+    "build-watch": "webpack --env.NODE_ENV=development --env.WATCH=true --progress --watch"
+  },
+  "keywords": [
+    "ShiftMarkets",
+    "Library"
+  ],
+  "author": "ShiftMarkets",
+  "license": "ISC",
+  "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "babel-runtime": "^6.23.0",
+    "node-localstorage": "^1.3.0",
+    "query-string": "^4.3.2",
+    "rx-lite": "^4.0.8",
+    "sails.io.js": "^1.2.1",
+    "socket.io-client": "^2.2.0",
+    "superagent": "^3.5.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.4.1",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-loader": "https://registry.npmjs.org/eslint-loader/-/eslint-loader-1.9.0.tgz",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-prettier": "^2.1.2",
+    "prettier": "^1.5.3",
+    "script-loader": "^0.7.0",
+    "uglifyjs-webpack-plugin": "^1.3.0",
+    "webpack": "^2.3.2",
+    "webpack-dev-server": "^2.11.2"
+  },
+  "publishConfig": {}
+}

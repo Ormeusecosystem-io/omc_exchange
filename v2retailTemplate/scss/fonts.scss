@@ -1,0 +1,30 @@
+@mixin font-styling($family, $size, $color) {
+    font-family: $family;
+    font-size: $size;
+    color: $color;
+  }
+  
+  @font-face {
+      font-family: "TITILLIUM";
+      src: url("/fonts/Titillium_Web/TitilliumWeb-Bold.ttf") format("truetype");
+  }
+  
+  @font-face {
+      font-family: "bold";
+      src: url("/fonts/CLAN-OT-BOLD.OTF") format("truetype");
+  }
+  
+  @font-face {
+      font-family: "news";
+      src: url("/fonts/ClanOT-News.woff") format("truetype");
+  }
+  
+  @font-face {
+      font-family: "medium";
+      src: url("/fonts/ClanOT-Medium.woff") format("truetype");
+  }
+  
+  @font-face {
+      font-family: "book";
+      src: url("/fonts/ClanOT-Book.woff") format("truetype");
+  }

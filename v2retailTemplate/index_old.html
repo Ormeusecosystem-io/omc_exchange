@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <title>Welcome | Coti</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="icon" href="./images/logos/orme-fav.png">
+    <!--[if IE]><link rel="shortcut icon" href="./images/logos/orme-fav.png"><![endif]-->
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <meta name="autor" content="ShiftMarket">
+    <!-- Stylesheets -->
+    <!-- Bootstrap v4.0.0-beta.6 -->
+    <link href="assets/css/bootstrap-reboot.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-grid.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/shift-styles.css" rel="stylesheet">
+    <!-- Font Awesomes -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro|Didact+Gothic|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Animate On Scroll (AOS) Library -->
+    <link href="assets/css/aos.css" rel="stylesheet">
+    <script src="js/aos.js"></script>
+    <!-- Javascript Smooth Scroll Library -->
+    <script src="js/smooth-scroll.min.js"></script>
+</head>
+
+<body id="top">
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div id="login" class="login-modal">
+        <span class="close-m close-login"></span>
+        <div class="login-container">
+            <div ap-widget="LoginForm" to='my-accounts.html' hide-header hideCancelBtn="true">
+                <div class="ap-form-test">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div id="register" class="register-modal">
+        <span class="close-m close-register"></span>
+        <div class="register-container">
+            <div ap-widget="RegisterForm" hide-header hideCancelBtn="true">
+                <div class="ap-form-test">
+
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Header -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-inner-container">
+                <a class="logo" href="#home">
+                    <img src="images/logos/logo.svg" width="122">
+                </a>
+                <!-- Elements for loggedin/loggedout toggle -->
+                <div class="hide">
+                    <a ap-action='Logout' href='index.html' name="logout" ap-translate="MARKETING.HEADER.SIGNOUT">Log Out</a>
+                    <a href='my-accounts.html' ap-translate="MARKETING.HEADER.DASHBOARD">Dashboard</a>
+                </div>
+                <div class="nav-items-container-left only-show-on-desktop">
+                        <ul class="nav-items">
+                            <li id="">
+                                <a href="/trade.html" class="" ap-translate="MARKETING.HEADER.EXCHANGE">Exchange</a>
+                            </li>
+                            <li id="">
+                                <a href="/fees.html" class="" ap-translate="MARKETING.HEADER.BUY_SEL">Fees</a>
+                            </li>
+                            <li id="">
+                                <a href="/help.html" class="" ap-translate="MARKETING.HEADER.HELP">Support</a>
+                            </li>
+                        </ul>
+                    </div>
+                <div class="nav-items-container only-show-on-desktop">
+                    <ul class="nav-items">
+                        <li id="login">
+                            <a href="#login" class="modal-btn login-btn" ap-translate="MARKETING.HEADER.SIGNIN">Login</a>
+                        </li>
+                        <li id="signup">
+                            <a href="#signup" class="modal-btn register-btn" ap-translate="MARKETING.HEADER.SIGNUP">Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+                <span>
+                    <div id="hamburger">
+                        <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+            <!-- SideBar Slideout Menu -->
+            <div class="menu-wrapper">
+                <div class="menu-container">
+                    <ul class="menu">
+                        <li class="menu-item">
+                            <a href="#home">
+                                        <span ap-translate="MARKETING.MENU.HOME">Home</span>
+                                        <span class="clip-wrap" >
+                                            <span ap-translate="MARKETING.MENU.HOME">Home</span>
+                                        </span>
+                                    </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#features">
+                                        <span ap-translate="MARKETING.MENU.FEATURES">Features</span>
+                                        <span class="clip-wrap">
+                                            <span ap-translate="MARKETING.MENU.FEATURES">Features</span>
+                                        </span>
+                                    </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#about">
+                                        <span ap-translate="MARKETING.MENU.ABOUT">About</span>
+                                        <span class="clip-wrap" >
+                                            <span ap-translate="MARKETING.MENU.ABOUT">About</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#contact">
+                                        <span ap-translate="MARKETING.MENU.CONTACT">Contact</span>
+                                        <span class="clip-wrap">
+                                            <span ap-translate="MARKETING.MENU.CONTACT">Contact</span>
+                                        </span>
+                                    </a>
+                        </li>
+                        <li class="menu-item only-show-on-mobile">
+                            <a href="#login" class="modal-btn login-btn">
+                                        <span ap-translate="MARKETING.MENU.SIGNIN">Login</span>
+                                        <span class="clip-wrap">
+                                            <span ap-translate="MARKETING.MENU.SIGNIN">Login</span>
+                                        </span>
+                                    </a>
+                        </li>
+                        <li class="menu-item only-show-on-mobile">
+                            <a href="#signup" class="modal-btn register-btn">
+                                        <span ap-translate="MARKETING.MENU.SIGNUP">Sign Up</span>
+                                        <span class="clip-wrap">
+                                            <span ap-translate="MARKETING.MENU.SIGNUP">Sign Up</span>
+                                        </span>
+                                    </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- End SideBar Slideout Menu -->
+            </span>
+        </div>
+        </div>
+    </nav>
+    <!-- End Header -->
+    <!-- Main Content -->
+    <div class="main" role="main">
+        <!-- Hero -->
+            <section id="home" class="container-fluid chapter home">
+                <div style="    background: url(images/download-1.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 100vh;
+                margin-top: 120px;
+                width: 100%;
+                z-index: 1;
+            ">
+                <div class="row align-items-center t-center w-95-center">
+                    <!-- <div class="" > -->
+                    <div class="col-5 text-left home--left">
+                        <p 
+                            class="col-12 home-hero-blurb home--left--blurb" 
+                            ap-translate="MARKETING.HOME.BANNER_TEXT">
+                                LEADERS IN DIGITAL ASSET TRADING
+                            </p>
+                        <p>
+                            <a 
+                                href="#signup" 
+                                class="home-btn modal-btn register-btn home--left--signup" 
+                                ap-translate="MARKETING.HOME.SIGN_UP">Sign In</a>
+                        </p>
+                        <p class="home--left-signin-row">
+                            <span 
+                                class="home--left--signin-row--member"
+                                ap-translate="MARKETING.HOME.MEMBER">
+                                Already a member?
+                            </span> 
+                            <a 
+                                href="#login" 
+                                class="modal-btn login-btn home--left--signin-row--signin" 
+                                ap-translate="MARKETING.HOME.SIGN_IN">Sign In</a>
+                        </p>
+                    </div>
+                    <div class="col-5">
+                        <h1 data-aos-once="true" data-aos="fade-down" class="headline">
+                            <img class="section-home-img" src="images/logos/company-logo-white.svg" />
+                        </h1>
+                    </div>
+                    <!-- </div> -->
+                    <!-- Ticker Widget -->
+                    <div id="ticker-container" class="container-fluid">
+                        <div ap-widget="TickerScrolling" class="ticker-scrolling"></div>
+                    </div>
+                </div>
+                    <ul class="dot-nav">
+                        <li class="active-dot">
+                            <a href="#home">
+                                <span class="hover-text active-hover-text" ap-translate="MARKETING.MENU.HOME">Home</span>
+                            </a>
+                    </li>
+                    <li class="">
+                        <a href="#features">
+                                <span data-goto="features" class="hover-text" ap-translate="MARKETING.MENU.FEATURES">Features</span>
+                            </a>
+                    </li>
+                    <li class="">
+                        <a href="#about">
+                                <span data-goto="about" class="hover-text" ap-translate="MARKETING.MENU.ABOUT">About</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#contact">
+                                <span data-goto="contact" class="hover-text" ap-translate="MARKETING.MENU.CONTACT">Contact</span>
+                            </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- End Hero -->
+        <!-- End Ticker Widget -->
+        <!-- Features -->
+        <section id="features" class="section container-fluid chapter features">
+            <!-- <div class="image--overlay"> -->
+                <section class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="header">
+                                <h2 class="spacial-features-cta-header" ap-translate="MARKETING.SPECIAL_FEATURES.TITLE">The easiest way to purchase digital currencies</h2>
+                                <p class="spacial-features-cta-blurb" ap-translate="MARKETING.SPECIAL_FEATURES.SUB_TITLE">Effortlessly connect with the global digital economy with our user-friendly interface.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="feature">
+                                <i class="icon fa fa-4x fa-clock-o"></i>
+                                <h3 class="spacial-feature-header" ap-translate="MARKETING.SPECIAL_FEATURES.SIMPLICITY_TITLE">Simplicity</h3>
+                                <p class="spacial-feature-blurb" ap-translate="MARKETING.SPECIAL_FEATURES.SIMPLICITY_CONTENT">We make it as easy as possible to buy digital currency. Sign up. Send funds. Buy or sell Bitcoin and Ethereum.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature">
+                                <i class="icon fa fa-4x fa-exchange"></i>
+                                <h3 class="spacial-feature-header" ap-translate="MARKETING.SPECIAL_FEATURES.INSTANT_EXCHANGE_TITLE">Instant Exchange</h3>
+                                <p class="spacial-feature-blurb" ap-translate="MARKETING.SPECIAL_FEATURES.INSTANT_EXCHANGE_CONTENT">Send and receive digital currency that is immediately exchanged to dollars.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="feature">
+                                <i class="icon fa fa-4x fa-handshake-o"></i>
+                                <h3 class="spacial-feature-header" ap-translate="MARKETING.SPECIAL_FEATURES.RELIABILITY_TITLE">Reliability</h3>
+                                <p class="spacial-feature-blurb" ap-translate="MARKETING.SPECIAL_FEATURES.RELIABILITY_CONTENT">Supports round-the-clock 24/7/365 trading and legally compliant.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature">
+                                <i class="icon fa fa-4x fa-university"></i>
+                                <h3 class="spacial-feature-header" ap-translate="MARKETING.SPECIAL_FEATURES.YOUR_FUNDS_TITLE">Your funds are yours</h3>
+                                <p class="spacial-feature-blurb" ap-translate="MARKETING.SPECIAL_FEATURES.YOUR_FUNDS_CONTENT">Ability to customize color and style of bars, borders, wicks, price lines, backgrounds and grid</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            <!-- </div> -->
+        </section>
+        <!-- End Features -->
+        <!-- About -->
+        <section id="about" class="section container-fluid chapter about">
+            <div class="image--overlay">
+                <div class="container">
+                    <header>
+                        <h3 class="homepage-fullwidth-features-header" ap-translate="MARKETING.INDEX_FEATURES.TITLE">The Best Digital Currency Exchange</h3>
+                        <p class="homepage-fullwidth-features-blurb" ap-translate="MARKETING.INDEX_FEATURES.SUB_TITLE">Our institutional-grade technology allows for blazing speeds of over one million transactions per second for high-performance cryptocurrency trading.</p>
+                    </header>
+                    <section class="features">
+                        <div class="row">
+                            <div class="col-md-6 feature">
+                                <i class="icon fa fa-4x fa-lock"></i>
+                                <section>
+                                    <h4 class="homepage-feature-header" ap-translate="MARKETING.INDEX_FEATURES.SECURITY_TITLE">Security</h4>
+                                    <p class="homepage-feature-blurb" ap-translate="MARKETING.INDEX_FEATURES.SECURITY_CONTENT">Vetted by independent third-party security audits.</p>
+                                </section>
+                            </div>
+                            <div class="col-md-6 feature">
+                                <i class="icon fa fa-4x fa-sliders"></i>
+                                <section>
+                                    <h4 class="homepage-feature-header" ap-translate="MARKETING.INDEX_FEATURES.ADVANCED_ORDER_TITLE">Advanced Order Types</h4>
+                                    <p class="homepage-feature-blurb" ap-translate="MARKETING.INDEX_FEATURES.ADVANCED_ORDER_CONTENT">Customisable charts, stop-loss orders Automate your trading.</p>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 feature">
+                                <i class="icon fa fa-4x fa-bolt"></i>
+                                <section>
+                                    <h4 class="homepage-feature-header" ap-translate="MARKETING.INDEX_FEATURES.LIQUIDITY_TITLE">Liquidity</h4>
+                                    <p class="homepage-feature-blurb" ap-translate="MARKETING.INDEX_FEATURES.LIQUIDITY_CONTENT">Fast funding, fully liquid.</p>
+                                </section>
+                            </div>
+                            <div class="col-md-6 feature">
+                                <i class="icon fa fa-4x fa-folder-o"></i>
+                                <section>
+                                    <h4 class="homepage-feature-header" ap-translate="MARKETING.INDEX_FEATURES.TRANSPARENT_FEES_TITLE">Transparent Fees</h4>
+                                    <p class="homepage-feature-blurb" ap-translate="MARKETING.INDEX_FEATURES.TRANSPARENT_FEES_CONTENT">Transparent low fees that are easy to understand with no hidden costs.</p>
+                                </section>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+        <!-- End About -->
+        <!-- Platform -->
+        <section id="platform" class="section container-fluid chapter platform">
+            <div class="align-items-center content-box-container">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <div>
+                            <h5 ap-translate="MARKETING.PLATFORM.TITLE">LEADERS IN DIGITAL ASSET TRADING</h5>
+                            <a href="#signup" class="home-btn modal-btn register-btn home--left--signup" ap-translate="MARKETING.PLATFORM.STARTED">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Platform -->
+        <!-- Contact -->
+        <section id="contact" class="section container-fluid chapter contact">
+            <div class="align-items-center content-box-container">
+                <!-- <div class="row mb-25">
+                    <div class="col-sm-12">
+                        <div id="map"></div>
+                    </div>
+                </div> -->
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <h5 ap-translate="MARKETING.CONTACT.SIGNUP">Sign Up</h5>
+                        <hr>
+                        <div id="register" class="register-modal">
+                            <span class="close-m close-register"></span>
+                            <div class="register-container">
+                                <div ap-widget="ShiftRegisterForm" hide-header hideCancelBtn="true">
+                                    <div class="ap-form-test">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="col-sm-12 col-md-12">
+                            <h5 ap-translate="MARKETING.CONTACT.ADDRESS_TITLE">Address</h5>
+                            <hr>
+                            <a class="footer-link" target="_blank" href="https://www.google.com/maps/place/335+Madison+Ave,+New+York,+NY+10017/data=!4m2!3m1!1s0x89c25901eefade89:0xabb26d1fd9d19af6?sa=X&ved=0ahUKEwiH8PCR6qXXAhUJ7SYKHdMqDNoQ8gEIJTAA">
+                                <div class="footer-address" ap-translate="MARKETING.CONTACT.ADDRESS_1">335 Madison Ave, 16th Floor</div>
+                                <div class="footer-address-last" ap-translate="MARKETING.CONTACT.ADDRESS_2">New York, NY 10017</div>
+                            </a>
+                        </div>
+                        <div class="col-sm-12 col-md-12">
+                            <h5 ap-translate="MARKETING.CONTACT.CONTACT_TITLE">Contact</h5>
+                            <hr>
+                            <a class="footer-link" href="mailto:support@cotix.io">
+                                <div class="footer-item">support@cotix.io</div>
+                            </a>
+                            <a href="#" onclick="return false;">
+                                <div class="footer-item footer-item--social">
+                                    <i class="fa fa-twitter social-icon" aria-hidden="true"></i>
+                                    <span class="social-link">Twitter</span>
+                                </div>
+                            </a>
+                            <a href="#" onclick="return false;">
+                                <div class="footer-item footer-item--social">
+                                    <i class="fa fa-facebook social-icon" aria-hidden="true"></i>
+                                    <span class="social-link">Facebook</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-12 col-md-12">
+                            <h5 ap-translate="MARKETING.CONTACT.SITEMAP_TITLE">Sitemap</h5>
+                            <hr>
+                            <!-- <h6 class="footer-item-left">Sitemap |</h6> -->
+                            <a href="/terms.html" class="sitemap-link" ap-translate="MARKETING.CONTACT.SITEMAP_TERMS">
+                                Terms
+                            </a>
+                            <a href="/privacy.html" class="sitemap-link" ap-translate="MARKETING.CONTACT.SITEMAP_PRIVACY">
+                                Privacy policy
+                            </a>
+                            <a href="/fees.html" class="sitemap-link" ap-translate="MARKETING.CONTACT.SITEMAP_FEES">
+                                Fees
+                            </a>
+                            <a href="/public-api.html" class="sitemap-link" ap-translate="MARKETING.CONTACT.SITEMAP_API">
+                                API
+                            </a>
+                        </div>
+                        <div class="col-sm-12 col-md-12">
+                            <h5 ap-translate="MARKETING.CONTACT.LANGUAGES_TITLE">Languages</h5>
+                            <hr>
+                            <div ap-widget="ShiftSelectLanguage"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Contact -->
+    </div>
+    <!-- End Main -->
+    <div id="widget-modal" class="widget-modal">
+        <span class="close-m close-widget"></span>
+        <div class="widget-modal-container">
+            <div id="VerifyEmail" ap-widget="VerifyEmailV2" class="hide" hide-header hideCancelBtn="true">
+                <div class="ap-form-test"></div>
+            </div>
+            <div id="ResetPassword" ap-widget="ResetPasswordV2" class="hide" hide-header hideCancelBtn="true">
+                <div class="ap-form-test"></div>
+            </div>
+            <div id="ConfirmWithdraw" ap-widget="ConfirmWithdrawV2" class="hide" hide-header hideCancelBtn="true">
+                <div class="ap-form-test"></div>
+            </div>
+        </div>
+    </div>
+    <div id="merchantDepositConfirmation" ap-wrapper="MerchantDepositConfirmation"></div>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+    <script type="text/babel" src="js/script.js"></script>
+    <script src="js/lib/growl.js"></script>
+    <!-- Coti -->
+    <script src="js/config.js"></script>
+    <script src="js/library.min.js"></script>
+    <script type="text/javascript">
+    AlphaPoint.config.v2Widgets = true;
+
+    $(document).ready(function() {
+        // $('#footerId').load('footer.html');
+        var loadCount = 0;
+        var totalLoadCount = 1; // number of html pieces loaded
+
+        function runRenders() {
+            loadCount++;
+
+            if (loadCount >= totalLoadCount) {
+                renderWidgetWrapper();
+                renderWidget();
+                renderActionWrapper();
+                renderTranslation();
+                changeLanguage();
+            }
+        }
+    });
+    </script>
+    <script src="js/widgets.min.js"></script>
+</body>
+
+</html>

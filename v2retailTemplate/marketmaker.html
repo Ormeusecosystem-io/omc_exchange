@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <title>ORME | Market Maker</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Favicon -->
+    <link rel="icon" href="./images/logos/orme-fav.png">
+    <!--[if IE]><link rel="shortcut icon" href="./images/logos/orme-fav.png"><![endif]-->
+
+    <!-- Fonts
+    ================================================== -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins:400,300,500,700,600|Ubuntu:300' rel='stylesheet' type='text/css'>
+
+    <!-- Icons
+    ================================================== -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Stylesheets
+    ================================================== -->
+    <link rel="stylesheet" href="assets/css/retail/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/retail/market-maker.css">
+    <link rel="stylesheet" href="assets/css/shift-wallet.css">
+
+    <!--link rel="stylesheet" href="css/bootstrap-theme.min.css"-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    <style>
+        td.borderless {
+            border-top: 1px solid lightgray !important;
+        }
+        .content {
+            padding-top: 0;
+        }
+    </style>
+    <div ap-widget="LoginRequired"></div>
+    <header class="site-header">
+        <!-- Header loads here -->
+    </header>
+
+    <div class="site-main">
+
+        <div class="container">
+
+            <div class="device-sidebar hidden-md hidden-lg">
+
+                <button type="button" class="navbar-toggle btn-slide" id="btn-bar-slide-left">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <nav id="sidebar-menu-slide-left" class="sidebar-menu sidebar-menu-slide-left">
+                </nav><!-- /c-menu slide-left -->
+
+                <div id="sidebar-mask" class="sidebar-mask"></div><!-- /c-mask -->
+
+            </div><!-- /.device-sidebar -->
+
+        </div><!-- /.container -->
+
+    	<div class= "container">
+
+            <div id="buyCustom" class="row">
+
+                <div class="col-md-9 col-md-offset-3 col-xs-12">
+                    <h1 class="site-title">Market Maker</h1>
+                </div><!-- /.col-md-9 > site-title -->
+
+                <div class="col-md-3 hidden-sm hidden-xs">
+                  <div id="activate" class="sidebar">
+                        <!-- sidebar.html template loads here -->
+                    </div>
+                </div><!-- /.col-md-3 -->
+
+                <!--<div class="" ap-widget="BuyCustom" buy="true"></div>-->
+                <!-- <div class="" ap-widget="BUY_SELL"></div>
+                <div ap-widget='BuyOrders' hide-header></div>
+                <div ap-widget='SellOrders' hide-header></div> -->
+
+            </div><!-- /.row -->
+
+        </div><!-- /.container -->
+        <!-- <div class="buy-custom" ap-widget="BuyCustom" hide-header></div> -->
+
+    </div><!-- /.site-main -->
+
+    <!-- Js Files -->
+    <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.smooth-scroll.min.js"></script>
+    <script type="text/javascript" src="js/lib/smoothscroll.js"></script>
+    <script type="text/javascript" src="js/lib/slick.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.waypoints.min.js"></script>
+    <script type="text/javascript" src="js/lib/inview.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.countTo.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.ajaxchimp.min.js"></script>
+    <script type="text/javascript" src="js/lib/validator.js"></script>
+    
+
+
+
+    <!-- Third Party -->
+    <!-- <script src="js/lib/jquery-3.2.0.min.js"></script> -->
+    <script src="js/lib/embed.cryptowatch.js"></script>
+    <script src="js/lib/growl.js"></script>
+    <script src="js/lib/menu.js"></script>
+    <!-- <script src="js/lib/bootstrap.min.js"></script> -->
+
+    <!-- Coti -->
+    <script src="js/config.js"></script>
+    <script src="js/library.min.js"></script>
+    <script src="js/widgets.min.js"></script>
+    <script src='js/tester.js'></script>
+
+    <!-- Charting Library -->
+    <script type="text/javascript" src="libs/charting_library_new/charting_library.min.js"></script>
+    <script type="text/javascript" src="libs/charting_library_new/datafeed/udf/datafeed.js"></script>
+    <script type="text/javascript" src="libs/charting_library_new/datafeed/ChartAPI.js"></script>
+<script>
+
+  /* Slide left instantiation and action.
+   */
+//   var slideLeft = new Menu({
+//     wrapper: 'body',
+//     type: 'slide-left',
+//     menuOpenerClass: '.btn-slide',
+//     maskId: '#sidebar-mask'
+//   });
+
+//   var slideLeftBtn = document.querySelector('#btn-bar-slide-left');
+
+//   slideLeftBtn.addEventListener('click', function(e) {
+//     e.preventDefault;
+//     slideLeft.open();
+//   });
+
+
+</script>
+
+<script>
+    function getUrlVars() {
+        var vars = {};
+        //var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,
+        var parts = window.location.href.replace(/[?&]+([^=&]+)/gi,
+                function (m, key) {
+                    vars[key] = true;
+                });
+        return vars;
+    }
+
+</script>
+<script type="text/javascript">
+$(document).ready(function () {
+
+  var loadCount = 0;
+  var totalLoadCount = 2; // number of html pieces loaded
+
+  if (getUrlVars()['sell']) {
+      $("#buyCustom").append("<div ap-widget='BuyCustomLimit' sell='true'></div>");
+  } else {
+      $("#buyCustom").append("<div ap-widget='BuyCustomLimit'></div>");
+  }
+  $('header').load('header.html',runRenders);
+  $('.sidebar').load('sidebar.html',runRenders);
+  $('#sidebar-menu-slide-left').load('sidebar-mobile.html',runRenders);
+  
+  function runRenders() {
+    loadCount++;
+
+    if (loadCount >= totalLoadCount) {
+      renderWidgetWrapper();
+      renderWidget();
+      renderActionWrapper();
+      renderTranslation();
+      changeLanguage();
+
+    }
+
+  }
+
+
+})
+</script>
+<script type="text/javascript">
+
+</script>
+
+</body>
+</html>
