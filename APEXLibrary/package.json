@@ -24,7 +24,7 @@
     "rx-lite": "^4.0.8",
     "sails.io.js": "^1.2.1",
     "socket.io-client": "^2.2.0",
-    "superagent": "^3.5.2"
+    "superagent": "^5.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
