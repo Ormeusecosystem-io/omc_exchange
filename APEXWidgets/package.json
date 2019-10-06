@@ -101,7 +101,7 @@
     "uglifyjs-webpack-plugin": "^1.2.4",
     "url-loader": "^0.5.9",
     "webpack": "^2.3.2",
-    "webpack-dev-server": "^2.11.2"
+    "webpack-dev-server": "^3.1.11"
   },
   "jest": {
     "collectCoverage": true,
