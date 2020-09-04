@@ -93,7 +93,7 @@
     "jest-junit": "^2.1.0",
     "less": "^3.10.1",
     "less-loader": "^5.0.0",
-    "node-sass": "^4.8.3",
+    "node-sass": "^4.13.1",
     "react-addons-test-utils": "^15.6.2",
     "react-test-renderer": "^15.6.2",
     "sass-loader": "^6.0.7",
