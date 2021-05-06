@@ -28,7 +28,7 @@
     "debounce": "^1.2.0",
     "dotenv": "^6.1.0",
     "fs": "0.0.1-security",
-    "highcharts": "^6.1.0",
+    "highcharts": "^9.0.0",
     "highcharts-react-official": "1.1.0",
     "html2canvas": "^1.0.0-alpha.12",
     "lodash.throttle": "^4.1.1",
